@@ -1,0 +1,209 @@
+/* ::::: http://www.itpachuca.edu.mx/CSS/estilos_itp.css ::::: */
+
+body { width: 980px; margin: 30px auto auto; }
+h1, h2, h3, h4, h5, h6, p, li, dt, dd, fieldset { color: rgb(152, 151, 156); }
+h1 { font-family: 'soberana_titularregular'; }
+h1.itp { font-size: 25px; text-align: left; padding-top: 10px; }
+h1.ESecT { font-size: 12px; text-align: center; color: rgb(165, 39, 63); }
+h5 { font-family: 'soberana_titularregular'; color: rgb(165, 39, 63); text-align: left; padding-top: 25px; padding-left: 285px; }
+h6 { position: absolute; float: left; width: 82px; height: 38px; background-image: url('fecha.png'); background-repeat: no-repeat; padding-left: 15px; padding-top: 8px; font-family: 'soberana_sanslight_italic'; font-size: 13px; margin-top: 147px; }
+a { text-decoration: none; }
+a.gris { color: rgb(152, 151, 156); }
+a.rojo { color: rgb(165, 39, 63); float: right; font-family: 'soberana_sans_lightbold'; }
+input.btnmas { display: block; width: 118px; height: 38px; color: rgb(255, 255, 255); font-family: 'soberana_sans_lightbold'; margin-left: 275px; padding-left: 30px; padding-top: 5px; background-image: url('link.png'); background-repeat: no-repeat; }
+input.btnmas:hover { background-image: url('link2.png'); background-repeat: no-repeat; }
+input.btnmas2 { display: block; width: 118px; height: 38px; color: rgb(255, 255, 255); font-family: 'soberana_sans_lightbold'; margin-left: 105px; padding-left: 30px; padding-top: 5px; background-image: url('link.png'); background-repeat: no-repeat; }
+input.btnmas2:hover { background-image: url('link2.png'); background-repeat: no-repeat; }
+a.modSII { width: 284px; height: 128px; float: left; margin: 30px 5px 25px 30px; box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+a.modSII:link { display: block; background-image: url('sii.bmp'); }
+a.modSII:visited { display: block; background-image: url('sii.bmp'); }
+a.modCE { width: 284px; height: 128px; float: left; margin: 25px 5px 25px 30px; box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+a.modCE:link { display: block; background-image: url('cescolar.bmp'); }
+a.modCE:visited { display: block; background-image: url('cescolar.bmp'); }
+a.modRA { width: 284px; height: 128px; float: left; margin: 25px 5px 25px 30px; box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+a.modRA:link { display: block; background-image: url('rescolar.bmp'); }
+a.modRA:visited { display: block; background-image: url('rescolar.bmp'); }
+a.modAvi { width: 284px; height: 128px; float: left; margin: 25px 5px 25px 30px; box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+a.modAvi:link { display: block; background-image: url('avisos.bmp'); }
+a.modAvi:visited { display: block; background-image: url('avisos.bmp'); }
+
+a.modE5 { width: 284px; height: 128px; float: left; margin: 25px 5px 25px 30px; box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+a.modE5:link { display: block; background-image: url('ecinco.jpg'); }
+a.modE5:visited { display: block; background-image: url('ecinco.jpg'); }
+a.imgFa { width: 34px; height: 32px; float: left; margin-left: 5px; margin-right: 5px; }
+a.imgFa:link { display: block; background-image: url('facebook.png'); }
+a.imgFa:visited { display: block; background-image: url('facebook.png'); }
+a.imgFa:hover { background-image: url('facebook2.png'); }
+a.imgTw { width: 34px; height: 32px; float: left; margin-left: 5px; margin-right: 5px; }
+a.imgTw:link { display: block; background-image: url('twitter.png'); }
+a.imgTw:visited { display: block; background-image: url('twitter.png'); }
+a.imgTw:hover { background-image: url('twitter2.png'); }
+a.imgIn { width: 34px; height: 32px; float: left; margin-left: 5px; margin-right: 5px; }
+a.imgIn:link { display: block; background-image: url('instagram.png'); }
+a.imgIn:visited { display: block; background-image: url('instagram.png'); }
+a.imgIn:hover { background-image: url('instagram2.png'); }
+a.imgYo { width: 34px; height: 32px; float: left; margin-left: 5px; margin-right: 5px; }
+a.imgYo:link { display: block; background-image: url('youtube.png'); }
+a.imgYo:visited { display: block; background-image: url('youtube.png'); }
+a.imgYo:hover { background-image: url('youtube2.png'); }
+img {
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+}
+img.logosep { width: 250px; height: 80px; float: left; margin-right: 60px; }
+img.logosepB { width: 211px; height: 64px; margin-right: 10px; margin-left: 10px; }
+img.logosnit { width: 97px; height: 56px; float: right; margin-top: 20px; }
+img.logoitp { width: 65px; height: 65px; float: right; margin-top: 20px; }
+img.noticia { position: absolute; margin-top: 20px; margin-left: 12px; width: 250px; height: 160px; border: 2px solid rgb(238, 238, 238); box-shadow: 0px 2px 5px rgb(153, 153, 153); }
+img.sombra { position: absolute; margin-top: 15px; }
+input.buscar { font-family: 'soberana_sanslight'; font-size: 14px; color: rgb(152, 151, 156); float: right; width: 150px; border-radius: 5px; padding-left: 5px; margin-top: 5px; }
+input.oculto { visibility: hidden; width: 0px; }
+footer { width: 980px; text-align: center; }
+hr { color: rgb(174, 173, 179); }
+hr.puntos { border-style: dotted; padding-bottom: 1px; }
+hr.puntosMI { border-style: dotted; margin-top: 33px; padding-bottom: 1px; width: 372px; float: left; }
+hr.puntosMD { border-style: dotted; margin-top: 33px; padding-bottom: 1px; width: 372px; float: right; }
+address { font-style: normal; padding-bottom: 30px; font-family: 'soberana_sanslight'; font-size: 12px; color: rgb(152, 151, 156); }
+p { padding-left: 20px; padding-right: 20px; text-indent: 25px; font-family: 'soberana_sanslight'; font-size: 14px; }
+p.pnot { text-indent: 0px; margin-left: 260px; }
+li, dt, dd { padding-left: 20px; padding-right: 20px; font-family: 'soberana_sanslight'; font-size: 14px; }
+li.ESec { padding-left: 5px; }
+#cabezal { width: 980px; font-family: 'soberana_titularregular'; font-size: 14px; text-align: right; color: rgb(152, 151, 156); margin-top: 30px; margin-bottom: 60px; }
+#logos { width: 980px; height: 100px; margin-top: 30px; margin-bottom: 30px; padding-top: 10px; }
+#cuerpo { width: 980px; margin-top: 30px; margin-bottom: 30px; }
+#redessociales { height: 27px; margin-left: 20px; padding-top: 30px; padding-bottom: 5px; }
+#base { width: 980px; text-align: center; margin-bottom: 30px; }
+#ESecundarios { width: 980px; height: 240px; margin: 0px auto; }
+#ESecU { width: 245px; margin-top: 30px; float: left; }
+.last { margin-right: 0px; }
+#NoticiasEnlaces { width: 980px; height: 1130px; }
+#noticias { width: 650px; float: left; }
+.nota { width: 650px; height: 200px; margin-top: 20px; }
+#enlaces { width: 309px; margin-top: 40px; border-left: 1px solid rgb(221, 221, 221); float: right; }
+/* ::::: http://www.itpachuca.edu.mx/CSS/estilos_menu.css ::::: */
+
+#cssmenu ul, #cssmenu li, #cssmenu span, #cssmenu a { margin: 0px; padding: 0px; position: relative; }
+#cssmenu { height: 40px; border-radius: 5px 5px 0px 0px; background: -moz-linear-gradient(center top , rgb(254, 254, 254) 0%, rgb(238, 233, 240) 100%) repeat scroll 0% 0% transparent; border-bottom: 2px solid rgb(221, 221, 221); width: 953px; margin: auto; }
+#cssmenu:after, #cssmenu ul:after { content: ""; display: block; clear: both; }
+#cssmenu a { background: -moz-linear-gradient(center top , rgb(254, 254, 254) 0%, rgb(236, 236, 236) 100%) repeat scroll 0% 0% transparent; color: rgb(0, 0, 0); display: inline-block; font-family: 'soberana_titularregular'; font-size: 17px; line-height: 40px; padding: 0px 23px; text-decoration: none; }
+#cssmenu ul { list-style: none outside none; }
+#cssmenu > ul { float: left; }
+#cssmenu > ul > li { float: left; }
+#cssmenu > ul > li > a { color: rgb(125, 125, 125); font-size: 14px; }
+#cssmenu > ul > li:hover:after { content: ""; display: block; width: 0px; height: 0px; position: absolute; left: 50%; bottom: 0px; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid rgb(221, 221, 221); margin-left: -10px; }
+#cssmenu > ul > li:first-child > a { border-radius: 5px 0px 0px; }
+#cssmenu > ul > li.active:after { content: ""; display: block; width: 0px; height: 0px; position: absolute; left: 50%; bottom: 0px; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid rgb(221, 221, 221); margin-left: -10px; }
+#cssmenu > ul > li.active > a { box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset; background: none repeat scroll 0% 0% rgb(236, 236, 236); }
+#cssmenu > ul > li:hover > a { background: none repeat scroll 0% 0% rgb(236, 236, 236); box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset; }
+#cssmenu .has-sub { z-index: 999; }
+#cssmenu .has-sub:hover > ul { display: block; }
+#cssmenu .has-sub ul { display: none; position: absolute; width: 200px; top: 100%; left: 0px; }
+#cssmenu .has-sub ul li {  }
+#cssmenu .has-sub ul li a { background: none repeat scroll 0% 0% rgb(221, 221, 221); border-bottom: 1px dotted rgb(247, 247, 247); filter: none; font-size: 14px; display: block; line-height: 120%; padding: 10px; color: rgb(125, 125, 125); }
+#cssmenu .has-sub ul li:hover a { background: none repeat scroll 0% 0% rgb(196, 196, 196); }
+#cssmenu .has-sub .has-sub:hover > ul { display: block; }
+#cssmenu .has-sub .has-sub ul { display: none; position: absolute; left: 100%; top: 0px; }
+#cssmenu .has-sub .has-sub ul li a { background: none repeat scroll 0% 0% rgb(196, 196, 196); border-bottom: 1px dotted rgb(247, 247, 247); }
+#cssmenu .has-sub .has-sub ul li a:hover { background: none repeat scroll 0% 0% rgb(183, 183, 183); }
+/* ::::: http://www.itpachuca.edu.mx/CSS/estilos_fuentes.css ::::: */
+
+@font-face {
+	font-family: "soberana_titularregular";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanatitular-regular-webfont.eot') format("embedded-opentype"), url('soberanatitular-regular-webfont.woff') format("woff"), url('soberanatitular-regular-webfont.ttf') format("truetype"), url('soberanatitular-regular-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_titularbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanatitular-bold-webfont.eot') format("embedded-opentype"), url('soberanatitular-bold-webfont.woff') format("woff"), url('soberanatitular-bold-webfont.ttf') format("truetype"), url('soberanatitular-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sans_lightbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-bold-webfont.eot') format("embedded-opentype"), url('soberanasans-bold-webfont.woff') format("woff"), url('soberanasans-bold-webfont.ttf') format("truetype"), url('soberanasans-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-black-webfont.eot') format("embedded-opentype"), url('soberanasans-black-webfont.woff') format("woff"), url('soberanasans-black-webfont.ttf') format("truetype"), url('soberanasans-black-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansbold_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-blackitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-blackitalic-webfont.woff') format("woff"), url('soberanasans-blackitalic-webfont.ttf') format("truetype"), url('soberanasans-blackitalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sanslight";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-light-webfont.eot') format("embedded-opentype"), url('soberanasans-light-webfont.woff') format("woff"), url('soberanasans-light-webfont.ttf') format("truetype"), url('soberanasans-light-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sans_lightBdIt";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-bolditalic-webfont.eot') format("embedded-opentype"), url('soberanasans-bolditalic-webfont.woff') format("woff"), url('soberanasans-bolditalic-webfont.ttf') format("truetype"), url('soberanasans-bolditalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansitalic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-italic-webfont.eot') format("embedded-opentype"), url('soberanasans-italic-webfont.woff') format("woff"), url('soberanasans-italic-webfont.ttf') format("truetype"), url('soberanasans-italic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansultra";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-ultra-webfont.eot') format("embedded-opentype"), url('soberanasans-ultra-webfont.woff') format("woff"), url('soberanasans-ultra-webfont.ttf') format("truetype"), url('soberanasans-ultra-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sanslight_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-lightitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-lightitalic-webfont.woff') format("woff"), url('soberanasans-lightitalic-webfont.ttf') format("truetype"), url('soberanasans-lightitalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansregular";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-regular-webfont.eot') format("embedded-opentype"), url('soberanasans-regular-webfont.woff') format("woff"), url('soberanasans-regular-webfont.ttf') format("truetype"), url('soberanasans-regular-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansultra_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-ultraitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-ultraitalic-webfont.woff') format("woff"), url('soberanasans-ultraitalic-webfont.ttf') format("truetype"), url('soberanasans-ultraitalic-webfont.svg') format("svg");
+}
+
+
+/* ::::: http://www.itpachuca.edu.mx/CSS/js-image-slider.css ::::: */
+
+
+/* ::::: http://www.itpachuca.edu.mx/CSS/tooltip.css ::::: */
+
+div#mcTooltip { line-height: 16px; border-width: 1px; color: rgb(51, 51, 51); border-color: rgb(187, 187, 187); padding: 6px 9px; font-size: 12px; font-family: Verdana,Arial; border-radius: 4px; box-shadow: 0px 1px 6px rgb(170, 170, 170); }
+div#mcTooltip, div.mcTooltipInner { background-color: rgb(234, 236, 240); }
+div#mcttCloseButton { width: 14px; height: 14px; position: absolute; background-image: url('closebtn.gif'); cursor: pointer; overflow: hidden; top: 12px; right: 12px; left: auto; }
+div#mcTooltipWrapper { position: absolute; visibility: hidden; overflow: visible; z-index: 2147483647; top: 0px; }
+div#mcTooltip { float: left; border-style: solid; position: relative; overflow: hidden; }
+div#mcttCo { position: absolute; text-align: left; }
+div#mcttCo em, div#mcttCo b { display: block; width: 0px; height: 0px; overflow: hidden; }
+img.noticia2 {
+position: absolute;
+margin-top: 20px;
+margin-left: 12px;
+width: 140px;
+height: 150px;
+border: 2px solid rgb(238, 238, 238);
+box-shadow: 0px 2px 5px rgb(153, 153, 153);
+}
+
+img.logoAniversario { width: 90px; height: 90px;margin-top: 12px;padding-right: 20px; }
+.TituloTNM{font-family:soberana_sans_lightbold;color:#5B5B5B;   font-size: 23px;padding-top: 10px;text-align:center;}
+.TituloITH{font-family:soberana_sans_lightbold;color:#5B5B5B;   font-size: 18.4px;padding-top: 10px;text-align:center;}

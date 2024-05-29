@@ -1,0 +1,632 @@
+var mTabla1,tprincipal;
+$(document).ready(function() {
+    //index
+//$('.select2').select2();    
+    tprincipal=$("#t_inicio").DataTable({
+        'processing': true,
+        'ajax': {
+            'url': 'php/ingresos/listar.php',
+            'method': 'POST',
+
+        },
+        'order': [],
+        responsive: true,
+        'columnDefs': [{ 'className': 'text-center', 'targets': [9] }],
+        //"bPaginate": false,
+    }); 
+    
+    tUser=$("#t_usuarios").DataTable({
+        'processing': true,
+        'ajax': {
+            'url': 'php/ingresos/usuarios.php',
+            'method': 'POST'
+        },
+        'order': [],
+        responsive: true,
+    });
+
+
+    $("#estado").change(function(event){
+        valor1=$("#estado").val();
+        valor2=$("#tipo").val();
+        valor3=$("#plantel").val();
+        if(valor1!=''){ 
+            $('#t_inicio').DataTable().clear().destroy();
+            $("#t_inicio").DataTable({
+                'processing': true,
+                'ajax': {
+                    'url': 'php/ingresos/listar.php',
+                    'method': 'POST',
+                    'data':{estado:valor1,tipo:valor2,plantel:valor3},
+                },
+                'order': [],
+                responsive: true,
+                //"bPaginate": false,
+            });
+          $.ajax({
+            url: 'php/ingresos/ajax.php', 
+            type: 'POST',
+            data: {Id:valor1,sw:1}, 
+            success:function(datoss){ 
+              $("#plantel").html(datoss);             
+            }
+          });              
+        }else{
+          $.ajax({
+            url: 'php/ingresos/ajax.php', 
+            type: 'POST',
+            data: {sw:2}, 
+            success:function(datoss){ 
+              $("#plantel").html(datoss);             
+            }
+          });           
+            nulos();
+        }
+    }); 
+    $("#tipo").change(function(event){
+        valor2=$("#tipo").val();
+        valor1=$("#estado").val();
+        valor3=$("#plantel").val();
+        if(valor2!=''){ 
+            $('#t_inicio').DataTable().clear().destroy();
+            $("#t_inicio").DataTable({
+                'processing': true,
+                'ajax': {
+                    'url': 'php/ingresos/listar.php',
+                    'method': 'POST',
+                    'data':{tipo:valor2,estado:valor1,plantel:valor3},
+                },
+                'order': [],
+                responsive: true,
+                "bPaginate": false,
+            });
+        }else{
+            nulos();
+        }
+    });     
+    $("#plantel").change(function(event){
+        valor3=$("#plantel").val();
+        valor2=$("#tipo").val();
+        valor1=$("#estado").val();        
+        if(valor3!=''){ 
+            $('#t_inicio').DataTable().clear().destroy();
+            $("#t_inicio").DataTable({
+                'processing': true,
+                'ajax': {
+                    'url': 'php/ingresos/listar.php',
+                    'method': 'POST',
+                    'data':{plantel:valor3,estado:valor1,tipo:valor2},
+                },
+                'order': [],
+                responsive: true,
+                //"bPaginate": false,
+            });
+        }else{
+            nulos();
+        }
+    });
+
+    ////index
+  $("#formLogin").unbind('submit').bind('submit', function(){
+    var user = validar('username');
+    var pass = validar('password');
+    if(user && pass){
+      var form = $(this);
+      $('#btnLogin').html('<span class="spinner-border spinner-border-sm mr-2" ></span> Cargando...').prop('disabled', true);
+      $.ajax({
+        url : 'php/ingresos/sesion.php',
+        type: form.attr('method'), 
+        data: form.serialize(),
+        dataType: 'json',
+        success:function(response){
+          $('#btnLogin').html('Iniciar <i class="fa fa-sign-out"></i>').prop('disabled', false);
+          if(response.success == true){                     
+            $("#formLogin")[0].reset();
+            $("#btnLogin").hide();
+            $("#closeBtn").hide();
+            $(".modal-title").hide();
+            $(".modal-body").hide(); 
+            $('.form-control').removeClass('is-invalid').removeClass('is-valid');
+            $('#messagesLogin').html('<div class="alert alert-success">'+response.messages+'</div>');
+            $(".alert-success").delay(1000).show(10, function(){
+              $(this).delay(1000).hide(10, function(){
+                $(this).remove();
+                window.location='?vista=Registros';
+              });
+            });
+          }
+          else if(response.success == false){
+            $('#messagesLogin').html('<div class="alert alert-warning">'+response.messages+'</div>');
+            $(".alert-warning").delay(1000).show(10, function(){
+              $(this).delay(1000).hide(10, function(){
+                $(this).remove();
+              });
+            });
+          }                   
+        }
+      }); 
+    }
+    return false; 
+  });  
+  
+
+    mTabla1 = $("#ingresos").DataTable({
+        'processing': true,
+        'ajax': {
+            'url': 'php/ingresos/list.php',
+            'method': 'POST',
+        },
+        'order': [],
+        responsive: true,
+        'columnDefs': [{ 'className': 'dt-center', 'targets': '_all' }],
+        //"bPaginate": false,
+    });
+
+    $('#archivo').hide();
+    $('#hiper').hide(); 
+    $('#archivo_e').hide();
+    $('#hiper_e').hide();
+    //$("#e_uno").hide();
+    $("#opcion").change(function(event){
+        valor=$("#opcion").val();
+        if(valor==''){
+            $("#opcion").after('<p class="text-danger" style="font-size:7.5pt">Selecciona una opcion</p>');
+        }
+        if(valor=='AR'){
+            $('#archivo').show();
+            $('#hiper').hide();
+        }
+        if(valor=='HI'){
+            $('#hiper').show();
+            $('#archivo').hide();
+        }        
+    });
+
+    $("#opcion_e").change(function(event){
+        valor=$("#opcion_e").val();
+        if(valor==''){
+            $("#opcion_e").after('<p class="text-danger" style="font-size:7.5pt">Selecciona una opcion</p>');
+        }
+        if(valor=='AR'){
+            $('#archivo_e').show();
+            $('#hiper_e').hide();
+        }
+        if(valor=='HI'){
+            $('#hiper_e').show();
+            $('#archivo_e').hide();
+        }        
+    });    
+    $("#submitForm").unbind('submit').bind('submit',function(){
+        var uno=$('#fecha_p').val();
+        var dos=$('#fecha_ficha').val();
+        var tres=$('#fecha_doc').val();
+        var cuatro=$('#fecha_admision').val();
+        var cinco=$('#fecha_resul').val();
+        var seis=$('#fecha_curso').val();
+        var siete=$('#fecha_prepa').val();
+        var ocho=$('#fecha_insc').val();
+        var nueve=$('#fecha_clase').val();
+        var diez=$('#sede').val();
+        var once=$('#importe').val();
+            if(diez && once){
+            var form = $(this);
+            var formData = new FormData(this);
+            $('#closeBtn1').html('<i class="fa fa-times-circle"></i> Cerrar').prop('disabled', true);
+            $('#createBtn').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Registrando...').prop('disabled',true);
+            $.ajax({
+                url: 'php/ingresos/agregar_convocatoria.php',
+                type: form.attr('method'),
+                data: formData,
+                dataType: 'json',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    $('#closeBtn1').html('<i class="fa fa-times-circle"></i> Cerrar').prop('disabled', false);
+                    $('#createBtn').html('<i class="fa fa fa-sync-alt"></i> Guardar').prop('disabled',false);
+                    if (response.success == true) {
+                        $('#btnR').hide();
+                        $("#submitForm")[0].reset();
+                        mTabla1.ajax.reload(null, false);
+                        $('#add-messages').html('<div class="alert alert-success">' + response.messages + '</div>');
+                        $(".alert-success").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                                $('#addData').modal('hide');
+                            });
+                        });
+                    }
+                    if (response.success == false) {
+                        $('#add-messages').html('<div class="alert alert-warning">' + response.messages + '</div>');
+                        $(".alert-warning").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                            });
+                        });
+                    }                    
+                }
+            });
+        }
+            return false;         
+    });
+
+    $("#formImg").unbind('submit').bind('submit',function(){
+        var uno=$('#imgs').val();
+        //var dos=$('#contenido').val();
+            if(uno){ 
+            var form = $(this);
+            var formData = new FormData(this);
+            $('#agregar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Registrando...').prop('disabled',true);
+            $.ajax({
+                url: 'php/ingresos/agregar_principal.php',
+                type: form.attr('method'),
+                data: formData,
+                dataType: 'json',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    $('#agregar').html('<i class="fa fa-paper-plane"></i> Agregar').prop('disabled',false);
+                    if (response.success == true) {
+                        $("#formImg")[0].reset();
+                        $('#mensaje').html('<div class="alert alert-success">' + response.messages + '</div>');
+                        $(".alert-success").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                                location.reload();
+                            });
+                        });
+                    }
+                    if (response.success == false) {
+                        $('#mensaje').html('<div class="alert alert-warning">' + response.messages + '</div>');
+                        $(".alert-warning").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                            });
+                        });
+                    }                    
+                }
+            });
+        }
+            return false;         
+    });
+
+
+
+    ///actualizacion x campos   
+});
+
+function nulos(){
+    $('#t_inicio').DataTable().destroy();
+    $("#t_inicio").DataTable({
+        'processing': true,
+        'ajax': {
+            'url': 'php/ingresos/listar.php',
+            'method': 'POST'
+        },
+        'order': [],
+        responsive: true,
+        //"bPaginate": false,
+    });    
+}
+
+function uno(row=null){
+    $("#e_uno"+row).show();
+}
+
+function editar(Id){
+    if(Id){
+        $('#Id').remove();
+        $("#editForm")[0].reset();
+        $.ajax({
+            url: 'php/ingresos/select.php',
+            type: 'POST',
+            data: { Id: Id,caso:1},
+            dataType: 'json', 
+        })
+        .done(function(response) {
+            $('#publicacion_e').val(response.fecha_publicacion);
+            $('#ficha_e').val(response.fecha_ficha);
+            $('#recepcion_e').val(response.fecha_regdoc);
+            $('#admision_e').val(response.fecha_examen_a);
+            $('#admision2_e').val(response.fecha_examen_a2);
+            $('#admision3_e').val(response.fecha_examen_a3);
+            $('#resultado_e').val(response. fecha_aceptado);
+            $('#curso_e').val(response.fecha_propedeutico);
+            $('#preparatorio_e').val(response.curso_preparatorio);
+            $('#inscripcion_e').val(response.fecha_inscripcion);
+            $('#semestre_e').val(response.fecha_semestre);
+            $('#usede').val(response.sedeadmin);
+            $('#importe_e').val(response.pago_examen);
+            $('#urlweb_e').val(response.urlweb);
+            $("#footer").after('<input type="hidden" name="Id" id="Id" value="' + response.id_conv + '">');
+            $('#editForm').unbind('submit').bind('submit', function(){
+            var uno=$('#publicacion_e').val();
+            var dos=$('#ficha_e').val(); 
+            var tres=$('#recepcion_e').val();
+            var cuatro=$('#admision_e').val();
+            var cinco=$('#resultado_e').val();
+            var seis=$('#curso_e').val();
+            var siete=$('#preparatorio_e').val();
+            var ocho=$('#inscripcion_e').val();
+            var nueve=$('#semestre_e').val();
+            var diez2=$('#usede').val();
+            var once2=$('#importe_e').val();            
+            if(diez2 && once2){
+            var form = $(this);
+            var formData = new FormData(this);
+            $('#closeBtn2').html('<i class="fa fa-times-circle"></i> Cerrar').prop('disabled', true);
+            $('#updBtn').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Actualizando...').prop('disabled',true);
+            $.ajax({
+                url: form.attr('action'),
+                type: form.attr('method'),
+                data: formData,
+                dataType: 'json',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    $('#closeBtn2').html('<i class="fa fa-times-circle"></i> Cerrar').prop('disabled', false);
+                    $('#updBtn').html('<i class="fa fa fa-sync-alt"></i> Actualizar').prop('disabled',false);
+                    if (response.success == true) {
+                        mTabla1.ajax.reload(null, false);
+                        $('#archivo_e').hide();
+                        $('#hiper_e').hide();
+                        $('#update-messages').html('<div class="alert alert-success">' + response.messages + '</div>');
+                        $(".alert-success").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                                $('#update').modal('hide');
+                            });
+                        });
+                    }
+                    if (response.success == false) {
+                        $('#update-messages').html('<div class="alert alert-warning">' + response.messages + '</div>');
+                        $(".alert-success").delay(1000).show(10, function() {
+                            $(this).delay(1000).hide(10, function() {
+                                $(this).remove();
+                            });
+                        });
+                    }                    
+                }
+            });
+        }
+            return false;
+        });        
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+    
+}
+}
+
+function user(Id){
+    if(Id){
+        $('#Id').remove();
+        $(".text-danger").remove();
+        $('.form-group').removeClass('has-error').removeClass('has-success');
+        $.ajax({
+            url: 'php/ingresos/select.php',
+            type: 'POST',
+            data: { Id: Id,caso:2},
+            dataType: 'json', 
+        })
+        .done(function(response) {
+            if(response.nombre_completo==''){
+                $('#user').val(response.username); 
+           }else{
+                $('#user').val(response.nombre_completo);
+           }
+             
+            $("#footer2").after('<input type="hidden" name="Id" id="Id" value="' + response.id_user + '">');
+            $('#formUser').unbind('submit').bind('submit', function(){
+                $(".text-danger").remove();
+                //var uno=$('#user').val();
+                var dos=$('#contra').val();
+                var cuat=$('#nombre').val(); 
+                if(dos == "") {
+                    $("#contra").after('<p class="text-danger">Ingresa tu contraseña</p>');
+                    $("#contra").closest('.form-group').addClass('has-error');
+                } else {
+                    $("#contra").find('.text-danger').remove();
+                    $("#contra").closest('.form-group').addClass('has-success');       
+                }
+                if(dos && cuat){
+                    var form = $(this);
+                    $('#mod').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Actualizando...').addClass('disabled');
+                    $.ajax({
+                        url: form.attr('action'),
+                        type: form.attr('method'),
+                        data: form.serialize(),
+                        dataType: 'json',
+                        success: function(response) {
+                            $('#mod').html('<i class="fa fa fa-sync-alt"></i> Actualizar').removeClass('disabled');
+                            if (response.success == true) {
+                                mTabla1.ajax.reload(null, false);
+                                $('#userUpdate').modal('hide');
+                                $('#update-messages2').html('<div class="alert alert-success">' + response.messages + '</div>');
+                                $(".alert-success").delay(1000).show(10, function() {
+                                    $(this).delay(1000).hide(10, function() {
+                                        $(this).remove();
+                                        location.reload();
+                                    });
+                                });
+                            }
+                            if (response.success == false) {
+                                $('#warnin').html('<div class="alert alert-warning">' + response.messages + '</div>');
+                                $(".alert-warning").delay(1000).show(10, function() {
+                                    $(this).delay(1000).hide(10, function() {
+                                        $(this).remove();
+                                    });
+                                });
+                            }                            
+                        }
+                    });
+                }
+                return false;
+            });        
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+    }
+}
+
+function updateImg(Id){ 
+    if(Id){
+        $('#Id').remove();
+        $.ajax({
+            url: 'php/ingresos/select.php',
+            type: 'POST',
+            data: { Id: Id,caso:3},
+            dataType: 'json', 
+        })
+        .done(function(response) {
+            $("#pie2").after('<input type="hidden" name="Id" id="Id" value="' + response.id_principal + '">');
+            $('#updImg').unbind('submit').bind('submit', function(){
+                var uno=$('#contenido2').val();
+                if(uno || uno==''){
+                    var form = $(this);
+                    var formData = new FormData(this);
+                    $('#editar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Actualizando...').addClass('disabled');
+                    $.ajax({
+                        url: 'php/ingresos/modificar_requisitos.php',
+                        type: form.attr('method'),
+                        data: formData,
+                        dataType: 'json',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            $('#editar').html('<i class="fa fa fa-sync-alt"></i> Actualizar').removeClass('disabled');
+                            if (response.success == true) {
+                                $('#mensaje2').html('<div class="alert alert-success">' + response.messages + '</div>');
+                                $(".alert-success").delay(1000).show(10, function() {
+                                    $(this).delay(1000).hide(10, function() {
+                                        $(this).remove();
+                                        location.reload();
+                                    });
+                                });
+                            }
+                            if (response.success == false) {
+                                $('#mensaje2').html('<div class="alert alert-warning">' + response.messages + '</div>');
+                                $(".alert-warning").delay(1000).show(10, function() {
+                                    $(this).delay(1000).hide(10, function() {
+                                        $(this).remove();
+                                    });
+                                });
+                            }                            
+                        }
+                    });
+                }
+                return false;
+            });        
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+    }
+}
+
+function quitarbanner(Id){
+    $.ajax({
+        url: 'php/ingresos/quitar.php', 
+        type: 'POST',
+        data: {Id:Id},
+        success:function(response){ 
+            $('#ddBanner').modal('hide');
+                $('#update-messages2').html('<div class="alert alert-success">'+ response +'</div>');
+                $(".alert-success").delay(1000).show(10, function() {
+                    $(this).delay(1000).hide(10, function() {
+                        $(this).remove();
+                        location.reload();
+                    });
+                });                         
+        }
+    });    
+}
+function checkB(Id=null){
+    che2=$("#myonoffswitch"+Id).val();
+    $.ajax({
+        url: 'php/ingresos/check.php', 
+        type: 'POST',
+        data: {chec2:che2,Id:Id}, 
+        dataType: 'json',
+        success:function(response){ 
+            if (response.success == true) { 
+                if(che2==2){
+                   $('#btnR').show(); 
+                }else{
+                    $('#btnR').hide();
+                }
+                mTabla1.ajax.reload(null, false);
+                $('#update-messages2').html('<div class="alert alert-success">'+ response.messages +'</div>');
+                $(".alert-success").delay(1000).show(10, function() {
+                    $(this).delay(1000).hide(10, function() {
+                        $(this).remove();
+                    });
+                });                 
+            }
+            if (response.success == false) {
+                $('#update-messages2').html('<div class="alert alert-danger">'+ response.messages +'</div>');
+                $(".alert-danger").delay(500).show(10, function() {
+                    $(this).delay(500).hide(10, function() {
+                        $(this).remove();
+                    });
+                });                 
+            }            
+        }
+    });       
+}
+
+
+function validar(campo){
+    if (campo==='username'){
+      nombre = $('#'+campo).val(); 
+      if( nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+        $('#'+campo).parent().children('span').text("Este campo es obligatorio").addClass('invalid-feedback').show(); 
+        $('#'+campo).closest('.form-group').addClass('has-error');                   
+        return false;   
+      }
+      else{
+        if(!(/\S+@\S+\.\S+/.test(nombre))){
+          $('#'+campo).parent().children('span').text("Correo electronico").addClass('invalid-feedback').show();
+          $('#'+campo).closest('.form-group').addClass('has-error');                   
+          return false;  
+        }else{
+          $('#'+campo).parent().children('span').hide();
+          $('#'+campo).closest('.form-group').addClass('has-success').removeClass('has-error');
+          return true;
+        }
+      } 
+    } 
+    if (campo==='password'){
+      contras = $('#'+campo).val(); 
+      if( contras == null || contras.length == 0 || /^\s+$/.test(contras)) {
+        $('#'+campo).parent().children('span').text("Este campo es obligatorio").addClass('invalid-feedback').show();
+        $('#'+campo).closest('.form-group').addClass('has-error');                 
+        return false;   
+      }
+      else{
+        if(!(/^[A-Za-z\d$@#$!%*?&-_]+$/.test(contras))){
+          $('#'+campo).parent().children('span').text("Cadena no reconocida").addClass('has-feedback').show();
+          $('#'+campo).closest('.form-group').addClass('has-error');                    
+          return false;  
+        }else{
+          $('#'+campo).parent().children('span').hide();
+          $('#'+campo).closest('.form-group').addClass('has-success').removeClass('has-error');
+          return true;
+        }
+      } 
+    }
+}

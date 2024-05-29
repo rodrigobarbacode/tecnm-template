@@ -1,0 +1,81 @@
+@font-face {
+    font-family: icogobmx;
+    src: url(https://framework-gb.cdn.gob.mx/qa/assets/styles/fonts/icogobmx.eot?xc1rry);
+    src: url(https://framework-gb.cdn.gob.mx/qa/assets/styles/fonts/icogobmx.eot?#iefixxc1rry) format("embedded-opentype"), url(https://framework-gb.cdn.gob.mx/qa/assets/styles/fonts/icogobmx.woff?xc1rry) format("woff"), url(https://framework-gb.cdn.gob.mx/qa/assets/styles/fonts/icogobmx.ttf?xc1rry) format("truetype"), url(https://framework-gb.cdn.gob.mx/qa/assets/styles/fonts/icogobmx.svg?xc1rry#icogobmx) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" icon-"],
+[class^=icon-] {
+    font-family: icogobmx;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-world:before {
+    content: "\e600a"
+}
+
+.icon-phone:before {
+    content: "\e60b"
+}
+
+.icon-tramite:before {
+    content: "\e60c"
+}
+
+.icon-others:before {
+    content: "\e60d"
+}
+
+.icon-phone-user:before {
+    content: "\e60e"
+}
+
+.icon-user:before {
+    content: "\e60f"
+}
+
+.icon-infocircle:before {
+    content: "\e610"
+}
+
+.icon-calendar:before {
+    content: "\e603"
+}
+
+.icon-caret-right:before {
+    content: "\e604"
+}
+
+.icon-caret-down:before {
+    content: "\e605"
+}
+
+.icon-search:before {
+    content: "\e606"
+}
+
+.icon-arrow:before {
+    content: "\e600"
+}
+
+.icon-home:before {
+    content: "\e601"
+}
+
+.icon-printing:before {
+    content: "\e602"
+}
+
+.box.inverted:before,
+hr.red:before {
+    content: " "
+}

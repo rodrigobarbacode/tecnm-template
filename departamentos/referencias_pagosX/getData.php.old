@@ -1,0 +1,50 @@
+<?php
+/*
+ *      getData.php
+ *      
+ *      Copyright 2012  <>
+ *      
+ *      This program is free software; you can redistribute it and/or modify
+ *      it under the terms of the GNU General Public License as published by
+ *      the Free Software Foundation; either version 2 of the License, or
+ *      (at your option) any later version.
+ *      
+ *      This program is distributed in the hope that it will be useful,
+ *      but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *      GNU General Public License for more details.
+ *      
+ *      You should have received a copy of the GNU General Public License
+ *      along with this program; if not, write to the Free Software
+ *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ *      MA 02110-1301, USA.
+ *      
+ *      
+ */
+ 	mysql_connect('127.0.0.1','root','itmXoto13');
+	mysql_select_db('pagosbanco');
+function getData($nc,$conc,$factura=0)
+{
+	include("inc/mod22.php");
+	
+	$query = mysql_query("SELECT * FROM daluPagos WHERE ALU_CTR = '$nc'");
+	if (!$query) {
+    echo "No pudo ejecutarse satisfactoriamente la consulta ($sql) " .
+         "en la BD: " . mysql_error();
+    exit;
+	}
+	$query1 = mysql_query("SELECT CONC_MONTO, CONC_NOM FROM conceptos WHERE CONC_CVE = '$conc'");
+	$res = mysql_fetch_assoc($query);
+	$res1 = mysql_fetch_assoc($query1);
+		echo "<br /> Numero de Control: <b>" .  $res['ALU_CTR'] . "</b>" ;
+		echo "<br /> Nombre del Alumno: <b>" .  $res['ALU_NOM'] . "</b>";
+		echo "<br /> Concepto: <b>" . $res1['CONC_NOM'] . "</b>";
+		echo "<br /> Monto: <b> $" . $res1['CONC_MONTO'] . ".00</b>";
+		$condensacioncita=$factura.$conc."0000000000";
+		$linea = mod22($res['ALU_CTR'],$condensacioncita,$res1['CONC_MONTO']);
+//		$linea = mod22($res['ALU_CTR'],"00000000000000",$res1['CONC_MONTO']);  linea original
+		$lineafinal = substr($linea, 4);
+		$lineafinal = $factura . $conc . $lineafinal;
+		echo "<br/><font size=\"6\"><b>Linea :".$lineafinal . "</b></font>";
+}
+?>

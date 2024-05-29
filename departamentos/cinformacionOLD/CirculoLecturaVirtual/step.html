@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<meta charset="utf-8"/>
+	<title>Pines Steps</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="JavaScript (jQuery) form steps (wizard) plugin." />
+	<meta property="og:title" content="Pines Steps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://pinesframework.org/psteps/" />
+	<meta property="og:image" content="http://pinesframework.org/psteps/includes/pines-logo.png" />
+	<meta property="og:site_name" content="Pines Steps" />
+	<meta property="fb:admins" content="508999194" />
+	<meta property="og:description" content="JavaScript (jQuery) form steps (wizard) plugin." />
+			 <!-- datepicker -->
+ <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script><script type='text/javascript' src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/d004434a5ff76e7b97c8b07c01f34ca69e635d97/src/js/bootstrap-datetimepicker.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/d004434a5ff76e7b97c8b07c01f34ca69e635d97/build/css/bootstrap-datetimepicker.css">
+		 <!-- datepicker fin -->
+	<!-- extras -->
+		<link rel="stylesheet" type="text/css" href="css/menuVertical.css"><link href="css/admin.css" rel="stylesheet"><script src="js/scripts.js"></script><link href="css/styles.css" rel="stylesheet"><!-- theme --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/result-light.css"><link rel="stylesheet" type="text/css" href="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.css"><script type='text/javascript' src="js/bootstrap-table.js"></script>
+	<!-- extras fin -->
+
+	
+	<!-- Dev Notice -->
+	<link href="devnote.css" rel="stylesheet" type="text/css" />
+	<!-- Page Style -->
+	<link href="includes/style.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<!-- jQuery UI -->
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js"></script>
+	<!-- Bootstrap -->
+
+
+	
+	 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script> 
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Font Awesome -->
+	<link href="includes/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<!--[if IE 7]>
+	<link href="includes/fontawesome/css/font-awesome-ie7.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!-- PNotify -->
+	<link href="includes/pnotify/jquery.pnotify.default.icons.css" rel="stylesheet" type="text/css" />
+	<link href="includes/pnotify/jquery.pnotify.default.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="includes/pnotify/jquery.pnotify.js"></script>
+	<!-- JavaScript Source Formatting -->
+	<link href="includes/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="includes/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="includes/google-code-prettify/lang-css.js"></script>
+	<script type="text/javascript" src="includes/beautify-html.js"></script>
+	<script type="text/javascript" src="includes/beautify-css.js"></script>
+	<script type="text/javascript" src="includes/beautify.js"></script>
+	<!-- Pines Steps -->
+	<script type="text/javascript" src="jquery.psteps.js"></script>
+	<style type="text/css">
+		/* Not psteps specific, just make this page a little more presentable. */
+		
+	
+		/* ##psteps_simple# */
+		/* ##psteps_add_validation# */
+		/* ##psteps_strict# */
+		/* ##psteps_conditional_validation# */
+		/* ##psteps_simple_horiz_layout# */
+		/* ##psteps_horiz_layout# */
+		/* ##psteps_circle_steps_simple# */
+		/* ##psteps_circle_steps# */
+		.step-title {
+			min-height: 20px;
+			float:left;
+			border-radius: 0;
+		}
+		.next-button, .submit-button, .back-button {
+			float:right;
+			margin:3px;
+		}
+		@media (max-width:600px) {
+			.step-content {
+				margin-top: 10px;
+			}
+		}
+		/* #psteps_simple## */
+		/* #psteps_add_validation## */
+		/* #psteps_strict## */
+		/* #psteps_conditional_validation## */
+		/* #psteps_simple_horiz_layout## */
+		/* #psteps_horiz_layout## */
+		/* #psteps_circle_steps_simple## */
+		/* #psteps_circle_steps## */
+
+		/* ##psteps_simple# */
+		/* Vertical Styles */
+		#psteps_simple .step-title {
+			padding-left: 0;
+			padding-right: 0;
+			width: 99.5% !important;
+			min-height: 28px;
+			display: block;
+		}
+		#psteps_simple .step-title .step-order {
+			float: left;
+			margin-left: 12%;
+		}
+		#psteps_simple .step-title .step-name {
+			float: left;
+			margin-left: 2%;
+		}
+		#psteps_simple .step-title [class^="icon-"] {
+			float: right;
+			margin-right: 7%;
+			margin-top: 2%;
+		}
+		/* #psteps_simple## */
+		/* ##psteps_add_validation# */
+		/* Vertical Styles */
+		#psteps_add_validation .step-title {
+			padding-left: 0;
+			padding-right: 0;
+			width: 99.5% !important;
+			min-height: 28px;
+			display: block;
+		}
+		#psteps_add_validation .step-title .step-order {
+			float: left;
+			margin-left: 12%;
+		}
+		#psteps_add_validation .step-title .step-name {
+			float: left;
+			margin-left: 2%;
+		}
+		#psteps_add_validation .step-title [class^="icon-"] {
+			float: right;
+			margin-right: 7%;
+			margin-top: 2%;
+		}
+		#psteps_add_validation .step-title .step-name {
+			margin-left: 12%;
+		}
+		/* #psteps_add_validation## */
+		/* ##psteps_strict# */
+		/* Vertical Styles */
+		#psteps_strict .step-title {
+			padding-left: 0;
+			padding-right: 0;
+			width: 99.5% !important;
+			min-height: 28px;
+			display: block;
+		}
+		#psteps_strict .step-title .step-order {
+			float: left;
+			margin-left: 12%;
+		}
+		#psteps_strict .step-title .step-name {
+			float: left;
+			margin-left: 2%;
+		}
+		#psteps_strict .step-title [class^="icon-"] {
+			float: right;
+			margin-right: 7%;
+			margin-top: 2%;
+		}
+		#psteps_strict .step-title .step-name {
+			margin-left: 12%;
+		}
+		/* #psteps_strict## */
+		/* ##psteps_conditional_validation# */
+		/* Vertical Styles */
+		#psteps_conditional_validation .step-title {
+			padding-left: 0;
+			padding-right: 0;
+			width: 99.5% !important;
+			min-height: 28px;
+			display: block;
+		}
+		#psteps_conditional_validation .step-title .step-order {
+			float: left;
+			margin-left: 12%;
+		}
+		#psteps_conditional_validation .step-title .step-name {
+			float: left;
+			margin-left: 2%;
+		}
+		#psteps_conditional_validation .step-title [class^="icon-"] {
+			float: right;
+			margin-right: 7%;
+			margin-top: 2%;
+		}
+		/* #psteps_conditional_validation## */
+
+		/* ##psteps_circle_steps_simple# */
+		/* ##psteps_circle_steps# */
+		.psteps_circle_titles .circle-step {
+			width: 10px;
+			height: 10px;
+			padding: 5px;
+			line-height: 10px;
+			font-size: 10px;
+			border-radius: 500px 500px 500px 500px;
+			min-height:10px;
+			float:left;
+		}
+		.psteps_circle_titles .step-line {
+			border-bottom: 1px solid #ddd;
+			display: inline-block;
+			width: 20%;
+			float:left;
+			margin-top:10px;
+		}
+		.psteps_circle_contents {
+			background: #F9F9F9;
+			border: 1px dashed #CCCCCC;
+			margin: 15px 0 0;
+			padding: 20px;
+		}
+		/* #psteps_circle_steps## */
+		.before-heading {
+			margin-top: -32px;
+			width: 99%;
+			margin-left: -24px;
+		}
+		/* #psteps_circle_steps_simple## */
+
+		.colored-box {
+			display:inline-block;
+			cursor:pointer;
+			width:50px;
+			height:50px;
+			opacity: .5;
+		}
+
+		.btn-group {
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			_alert = window.alert;
+			window.alert = function(message) {
+				$.pnotify({
+					title: "Alert",
+					text: message
+				});
+			};
+
+
+
+			$('#psteps_horiz_layout').psteps({
+				traverse_titles: 'always',
+				steps_width_percentage: true,
+				alter_width_at_viewport: '2500',
+				steps_height_equalize: true,
+				content_height_equalize: true,
+				validate_use_error_msg: false,
+				content_headings: true,
+				step_order: false,
+				steps_show: function(){
+					var cur_step = $(this),
+						loaded_tooltips = cur_step.siblings('.step-loaded').find('.step-tooltip');
+					loaded_tooltips.tooltip('hide');
+				},
+				steps_onload: function(){
+					var cur_step = $(this),
+						step_tooltip = cur_step.find('.step-tooltip');
+					step_tooltip.tooltip({placement: 'right'});
+					if (cur_step.hasClass('pstep1')) {
+						setTimeout(function(){
+							step_tooltip.tooltip('show');
+						}, 3000);
+					} else {
+						setTimeout(function(){
+							step_tooltip.tooltip('show');
+						}, 1000);
+					}
+
+					if (cur_step.hasClass('pstep2')) {
+						cur_step.find('[name=birthdate]').datepicker({
+							maxDate: 0,
+							changeMonth: true,
+							changeYear: true,
+							yearRange: '-120',
+							defaultDate: '-25y',
+							dateFormat: 'yy-mm-dd'
+						});
+					}
+
+					if (cur_step.hasClass('pstep4')) {
+						var radio_public = cur_step.find('[name=public]'),
+							radio_private = cur_step.find('[name=private]');
+						radio_public.click(function(){
+							if (radio_private.prop('checked') && radio_private.attr('checked')) {
+								radio_private.removeProp('checked').removeAttr('checked');
+							}
+						});
+						radio_private.click(function(){
+							if (radio_public.prop('checked') && radio_public.attr('checked')) {
+								radio_public.removeProp('checked').removeAttr('checked');
+							}
+						});
+					}
+				},
+				validation_rule: function(){
+					var cur_step = $(this);
+					var toggle_completed = function(input, show){
+						if (!show)
+							input.closest('label').find('.pf-required').show().end().find('.pf-completed').hide();
+						else
+							input.closest('label').find('.pf-required').hide().end().find('.pf-completed').show();
+					};
+					var validate_step = function(errors, warnings, false_results){
+						if (errors > 0)
+							return 'error';
+						else if (false_results > 0)
+							return false;
+						else if (warnings > 0)
+							return 'warning';
+						else
+							return true;
+					};
+					if (cur_step.hasClass('pstep1')) {
+						var active = cur_step.hasClass('step-active');
+						// Validation Rule for Step 1
+						var count_false = 0,
+							count_warning = 0,
+							count_error = 0;
+						// Username
+						var input = cur_step.find('.step-validate:[name=username]'),
+							input_val = input.val();
+						if (input_val == '') {
+							count_false++;
+							toggle_completed(input, false);
+						} else if (input_val.length < 6 || input_val.length > 12) {
+							if (active && input.hasClass('cur-validate'))
+								alert('Please type a username that is 6-12 characters.');
+							toggle_completed(input, false);
+							count_error++;
+						} else
+							toggle_completed(input, true);
+
+						// Password
+						var input = cur_step.find('.step-validate:[name=password]'),
+							input_val = input.val();
+						if (input_val == '') {
+							count_false++;
+							toggle_completed(input, false);
+						} else if (input_val.length < 7) {
+							if (active && input.hasClass('cur-validate'))
+								alert('Please type a password that is longer than 6 characters.');
+							toggle_completed(input, false);
+							count_error++;
+						} else
+							toggle_completed(input, true);
+
+						// Email
+						var input = cur_step.find('.step-validate:[name=retype_email]'),
+							input_compare = cur_step.find('.step-validate:[name=email]'),
+							input_val = input.val(),
+							input_compare_val = input_compare.val();
+						if (input_val == '') {
+							count_false++;
+							toggle_completed(input, false);
+						} else if (input_val != input_compare_val) {
+							if (active && (input.hasClass('cur-validate') || input_compare.hasClass('cur-validate') ))
+								alert('Please re-type your email so that both email fields match.');
+							toggle_completed(input, false);
+							count_error++;
+						} else
+							toggle_completed(input, true);
+
+						cur_step.find('.step-validate').removeClass('cur-validate');
+
+						return validate_step(count_error, count_warning, count_false);
+
+					} else if (cur_step.hasClass('pstep2')) {
+						// Validation Rule for Step 2
+						var active = cur_step.hasClass('step-active'),
+							count_false = 0,
+							count_warning = 0,
+							count_error = 0;
+						// Birth Date
+						var input = cur_step.find('.step-validate:[name=birthdate]'),
+							input_val = input.val();
+						if (input_val == '') {
+							count_false += 1;
+							toggle_completed(input, false);
+						} else if (input_val.length < 6 || input_val.length > 12) {
+							if (active && input.hasClass('cur-validate'))
+								alert('Please type a username that is 6-12 characters.');
+							toggle_completed(input, false);
+							count_error += 1;
+						} else
+							toggle_completed(input, true);
+
+						return validate_step(count_error, count_warning, count_false);
+
+					} else if (cur_step.hasClass('pstep3')) {
+						// Validation Rule for Step 3
+						var active = cur_step.hasClass('step-active'),
+							count_false = 0,
+							count_warning = 0,
+							count_error = 0;
+						// Terms of Service
+						var check_box = cur_step.find('.step-validate:[name=terms]');
+						if (check_box.is(':checked'))
+							toggle_completed(check_box, true);
+						else if (check_box.hasClass('cur-validate')) {
+							count_error++;
+							toggle_completed(check_box, false);
+						} else {
+							count_false++;
+							toggle_completed(check_box, false);
+						}
+
+						return validate_step(count_error, count_warning, count_false);
+
+					} else if (cur_step.hasClass('pstep4')) {
+						// Validation Rule for Step 3
+						var radio_public = cur_step.find('.step-validate:[name=public]'),
+							radio_private = cur_step.find('.step-validate:[name=private]');
+						return (radio_public.hasClass('cur-validate') || radio_private.hasClass('cur-validate'));
+					}
+				},
+				before_next: "Debe completar los campos faltantes.",
+				before_submit: "Please complete all sections before submitting."
+			}).find('.step-validate').on('focusout', function(){
+				var elem = $(this);
+				elem.addClass('cur-validate')
+				if (elem.attr('name') == "birthdate") {
+					setTimeout(function(){
+						elem.trigger('validate.psteps');
+					}, 500);
+				} else
+					elem.trigger('validate.psteps');
+			}).end().find('pf-completed').hide();
+
+
+
+
+
+
+		});
+	</script>
+	<!-- PForm -->
+	<link href="includes/pform.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="includes/pform-bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 8]>
+	<link href="includes/pform-ie-lt-8.css" media="all" rel="stylesheet" type="text/css" />
+	<![endif]-->
+</head>
+<body id="page" data-spy="scroll">
+	
+
+			       
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="img/logotec.png" width="31" height="43" style="float: left; margin-left: -50px; position:fixed;">
+      <span class="navbar-brand glow" style="margin-left: 10px; font-family:'Arial';">Panel de Administracion</span>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Como comenzar?</a>
+        </li>
+        <li>
+          <a href="#">Asistente</a>
+        </li>
+        <li>
+          <a href="#">Tutoriales</a>
+        </li>
+        <li>
+          <a href="#">Glosario de Menu</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+        <!--  <h1>Bootply
+            <p class="lead">The easiest way to apply Bootstrap</p>
+        </h1> -->
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-body panel-default"> 
+             Pagina Principal
+            </div>
+        </div>
+      </div> 
+  </div>
+</div>
+
+<!-- Begin Body -->
+<!-- menu  fin-->
+
+
+<!-- menu  fin-->
+
+<div id="framecontent" class="">
+<div class="innertube ">
+
+           
+<div class="nav-side-menu" >
+    <div class="hederm"><center>Menu De Administracion</center></div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Inicio
+                  </a>
+                </li>
+
+                <li  data-toggle="collapse" data-target="#usuarios" class="collapsed ">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Administrar Usuarios <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="usuarios">
+                    <li class="active"><a href="#">Buscar Usuarios</a></li>
+                    <li><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">Registrar Usuario</a></li>
+                <!--    <li><a href="#">Modificar Usuarios</a></li>
+                    <li><a href="#">Eliminar Usuarios</a></li> -->
+              
+                </ul>
+                
+                  <li  data-toggle="collapse" data-target="#grupos" class="collapsed ">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Manejar Grupos <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="grupos">
+                    <li class="active"><a href="#">Mostrar Grupos</a></li>
+                    <li><a href="#">Agregar Grupos</a></li>
+                    <li><a href="#">Modificar Grupos</a></li>
+                    <li><a href="#">Eliminar Grupos</a></li>
+              
+                </ul>
+
+
+
+     <li  data-toggle="collapse" data-target="#biblioteca" class="collapsed ">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Biblioteca Virtual <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="biblioteca">
+                    <li class="active"><a href="#">Manejar Categorias De Libros</a></li>
+                    <li><a href="#">Manejar Libros</a></li>
+                    <li><a href="#">Agregar Libro</a></li>
+                    <li><a href="#">Modificar Libro</a></li>
+                      <li><a href="#">Agregar Categorias</a></li>
+                       <li><a href="#">Modificar Categorias</a></li>
+              
+                </ul>
+                
+         <li  data-toggle="collapse" data-target="#evalua" class="collapsed ">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Evaluar Usuarios/Grupos<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="evalua">
+                    <li class="active"><a href="#">Candidatos a Obtener Credito!</a></li>
+                    <li><a href="#">Confirmar Libros Ganadores</a></li>
+                    <li><a href="#">Evaluar Comentarios de Foros</a></li>
+                    <li><a href="#">Evaluar Tareas De Grupos</a></li>
+                      <li><a href="#">Seleccionar Mejores Lectores</a></li>
+                       <li><a href="#">Modificar Categorias</a></li>
+              
+                </ul>        
+                
+            
+
+
+                <li data-toggle="collapse" data-target="#eventos" class="collapsed">
+                  <a href="#evento"><i class="fa fa-globe fa-lg"></i>Manejar Eventos<span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="eventos">
+                  <li>Agregar Nuevo Evento</li>
+                  <li>Modificar Evento</li>
+                  <li>Eliminar Eventos</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Registros/Estadisticas<span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>Registro de Actividad</li>
+                  <li>Estadistica de Participacion</li>
+                  <li>Estadistica de participacion por Carreras</li>
+                </ul>
+
+
+               <!--  <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Profile
+                  </a>
+                  </li>
+-->
+                
+            </ul>
+     </div>
+</div>
+                  	
+
+</div>
+</div>
+
+
+
+<div id="maincontent" class="masthead" >
+<div class="innertube ">
+
+	<div id="sec0" class="masthead glow2" style="padding: 15px; margin-top: 25px; font-size: 16px;" ><img src="img/man.png" width="35" height="35"> - Administracion de Usuarios</div>
+         
+ <!-- <div class="alert alert-success" id="eventsResult">
+    Here is the result of event.
+</div> -->
+<div style="padding: 12px;">
+	<div  class="alert alert-info" id="infoBusqueda" >Aqui se muestran los ultimos 300 usuarios registrados para busqueda rapida. Si desea buscar entre todos los usuarios de un click en "Busqueda especifica"
+	 </div>
+	    <button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/add.png">Agregar Usuario</button>
+ 	    <button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target=".agregarGrupo"><img src="img/add.png">Agregar Grupo</button>
+
+<button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/busca.png">Busqueda Especifica</button>
+
+<table   class="info-table" id="eventsTable"
+       data-toggle="table"
+       data-height="400"
+ 
+       data-url="http://localhost/CirculoLecturaVirtual/controller/usuarioController.php?accion=buscar"
+       data-pagination="true"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="false"
+       data-toolbar="#toolbar">
+    <thead>
+    <tr>
+       <!-- <th data-field="state" data-checkbox="false"></th> -->
+        <th data-field="nombreusuario">Ap.Paterno / Ap.Materno / Nombres</th>
+        <th data-field="control">N.Control</th>
+        <th data-field="correousuario">Correo</th>
+        <th data-field="nomcarrera">Carrera</th>
+       
+        <!--  <th data-field="sem">Sem.</th> -->
+        <script>
+$(function() {
+
+});
+
+</script>
+		<div id="cambiaBotones"> <th data-field="action" id="cambiax"  data-formatter="actionFormatter" data-events="actionEvents">Acciones</th> </div>
+    </tr>
+    </thead>
+</table>
+  
+  
+  
+  
+  
+</div>
+           
+              	<hr class="col-md-12">
+              	<div id="respuestaUsuarios"></div>
+              	<a href="#" id="sistemas" >Sistemas</a>
+              	<a href="#" id="otro" >Otro</a>
+              	<script>
+              		$( document ).ready(function() {
+              	var carrera;
+              	$( "#sistemas" ).click(function() {
+                      // $( "#target" ).click();
+                      carrera =  "mario alonso2";
+                       $(document).hacerPost(carrera);
+    
+                 });
+                 
+                 
+                 	$( "#otro" ).click(function() {
+                      // $( "#target" ).click();
+                      carrera =  2;
+                      $(document).hacerPost(carrera);
+                 });
+                 
+                 $.fn.hacerPost = function(carreraa) { //funcion para hacer Posts
+                 //	alert(carrera);
+                 $("#respuestaUsuarios").html("<center><img src='img/loading2.gif' width='50' heigth='50'></center>");
+                 		var pagina = "controller/usuarioController.php";
+              	//	var carrera = 1;
+                        $.ajax({
+                        	url:pagina,
+                        	method:"post",
+                        	data: { usuarios: "muestra", carrera: carreraa },
+                        	cacha: false,
+                        	success:function(data){
+                        	$("#respuestaUsuarios").html(data);
+                        		//alert(data);
+                        	}
+                        });
+                 	 } 
+              
+              	
+                });
+              	</script>
+              	
+              
+              
+              	<h2 id="sec1">Content</h2>
+              	<p>
+                Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.
+              	</p>
+              	<div class="row">
+                  <div class="col-md-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><h3>Hello.</h3></div>
+                      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                      dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                      Aliquam in felis sit amet augue.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="panel panel-default">
+                      <div class="panel-heading"><h3>Hello.</h3></div>
+                      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                      dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                      Aliquam in felis sit amet augue.
+                      </div>
+                    </div>
+                  </div>  
+              	</div>
+              
+              	<hr>
+              
+              	<h2 id="sec2">Section 2</h2>
+              	<p>
+                Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
+              	</p>
+              	<div class="row">
+              		<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+                  	<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+                  	<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+              	</div>
+              
+              	<hr>
+              
+              	<h2 id="sec3">Section 3</h2>
+      			Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+              
+              	<h2 id="sec4">Section 4</h2>
+      			Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+              
+              
+              	<hr>
+           
+              	<hr>
+</div>
+</div>
+<div class="container">
+
+
+	<div class="row">
+  			<div class="col-md-3" id="leftCol" style="float: left; z-index: 88;" >
+ 
+                  	
+              <!--    	
+              	<div class="nav nav-stacked azulfuerte" id="sidebar" style="border: 3px #5c97d6 dotted; padding: 14px;">
+              		
+              	
+              		
+              		
+                    <a href="#sec0">
+                  	<button type="button" class="btn btn-default btn-block" aria-label="Left Align">
+                  	<span class="glyphicon glyphicon-align-left2" aria-hidden="true"> Pagina Principal</span></button>	
+                  	</a><a href="#sec1"><button type="button" class="btn btn-default btn-block" aria-label="Left Align">
+                  	<span class="glyphicon glyphicon-align-left2" aria-hidden="true"> Administrar Usuarios</span></button></a>
+                  		</a><a href="#sec2"><button type="button" class="btn btn-default btn-block" aria-label="Left Align">
+                  	<span class="glyphicon glyphicon-align-left2" aria-hidden="true"> Administrar Biblioteca</span></button></a>
+                  		</a><a href="#sec3"><button type="button" class="btn btn-default btn-block" aria-label="Left Align">
+                  	<span class="glyphicon glyphicon-align-left2" aria-hidden="true"> Administrar Grupos</span></button></a>
+                  		</a><a href="#sec4"><button type="button" class="btn btn-default btn-block" aria-label="Left Align">
+                  	<span class="glyphicon glyphicon-align-left2" aria-hidden="true"> Administrar Noticias</span></button></a>
+                  
+              
+      		</div>  --></div>
+      		<div class="col-md-9" id="mainCol" style="float: right; z-index: 87; position: fixed;">
+              
+              	<br>
+              
+              
+              	
+              	
+      		</div> 
+  	</div>
+</div>
+	
+	
+
+<script type='text/javascript'>
+
+function Hacer(str){
+	alert(str);
+}
+ 
+function actionFormatter(value, row, index) {
+	   var sc = $( window ).width();
+if(sc<=1024){
+    return [
+        '<div class="btn-group ">',
+  '<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">',
+   ' Accion en Usuario <span class="caret"></span> </button>',
+ '<ul class="dropdown-menu" role="menu">',
+  '  <li><a  id="VerUsuario" href="javascript:void(0)">Ver</a></li>',
+  '  <li><a id="EditaUsuario" href="javascript:void(0)">Editar</a></li>',
+   ' <li><a  id="Calificar"  href="javascript:void(0)">Calificar</a></li>',
+     ' <li><a  id="Mensaje"  href="javascript:void(0)">Mensaje</a></li>',
+'    <li class="divider"></li>',
+'    <li><a id="BorraUsuario" href="javascript:void(0)">Borrar</a></li> </ul></div>'
+
+    ].join('');
+}else{
+    return [
+        '<a  id="VerUsuario" class=" btn btn-info btn-xs s" href="javascript:void(0)" title="Like">',
+        '<!-- <i class="glyphicon glyphicon-heart"></i> --> Ver',
+        '</a>',
+        '-<a  id="EditaUsuario" class="btn btn-success btn-xs" href="javascript:void(0)" title="Edit">',
+        ' <i class="glyphicon glyphicon-edit"></i> ',
+        '</a>',
+         '-<a  id="Calificar" class="btn btn-warning btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-user">Calificar</i>',
+        '</a>',
+        '-<a  id="Mensaje" class="btn btn-default btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-user">Mensaje</i>',
+        '</a>',
+              '-<a  id="BorraUsuario" class="btn btn-danger btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-remove"></i>',
+        '</a>'
+    ].join('');
+   }
+}
+
+
+
+
+function Botones(value, row, index) {
+	   var sc = $( window ).width();
+	   	var name = JSON.stringify(row);
+    	var a= $.parseJSON(name);
+if(sc<=1024){
+    return [
+        '<div class="btn-group ">',
+  '<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">',
+   ' Accion en Usuario <span class="caret"></span> </button>',
+ '<ul class="dropdown-menu" role="menu">',
+  '  <li><a  id="VerUsuario" href="javascript:void('+a['nombreusuario']+')">VeUr</a></li>',
+  '  <li><a id="EditaUsuario" href="javascript:void(0)">EditWDAar</a></li>',
+   ' <li><a  id="Calificar"  href="javascript:void(0)">Calificar</a></li>',
+     ' <li><a  id="Mensaje"  href="javascript:void(0)">Mensaje</a></li>',
+'    <li class="divider"></li>',
+'    <li><a id="BorraUsuario" href="javascript:void(0)">Borrar</a></li> </ul></div>'
+
+    ].join('');
+}else{
+    return [
+        ' <a id="myLink" href="#"  class=" btn btn-info btn-xs s" onclick="Hacer('+a['id']+');">Calificar Aqui</a>',
+        '<!-- <i class="glyphicon glyphicon-heart"></i> --> ',
+        '</a>',
+        '-<a  id="EditaUsuario" class="btn btn-success btn-xs" href="javascript:void(0)" title="Edit">',
+        ' <i class="glyphicon glyphicon-edit"></i> ',
+        '</a>',
+         '-<a  id="Calificar" class="btn btn-warning btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-user">Calificar</i>',
+        '</a>',
+        '-<a  id="Mensaje" class="btn btn-default btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-user">Mensaje</i>',
+        '</a>',
+              '-<a  id="BorraUsuario" class="btn btn-danger btn-xs" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-remove"></i>',
+        '</a>'
+    ].join('');
+   }
+}
+
+function botonDrop(value, row, index) {
+    
+}
+
+window.actionEvents = {
+    'click #VerUsuario': function (e, value, row, index) {
+      //  alert('You click like icon, row: ' + JSON.stringify(row));
+       // console.log(value, row, index);
+       	var name = JSON.stringify(row);
+    	var a= $.parseJSON(name);
+      $("#tituloPanelVer").html("");
+         	$('#tituloPanelVer').append("Informacion de Usuario "+a['nombreusuario']);
+              $('.modalVer').modal('show');
+    },
+    'click #EditaUsuario': function (e, value, row, index) {
+    	var name = JSON.stringify(row);
+    	var a= $.parseJSON(name);
+        alert('You click edit icon, row: ' + a['nombre']);
+       // console.log(value, row, index);
+    },
+    'click #BorraUsuario': function (e, value, row, index) {
+        alert('You click remove icon, row: ' + JSON.stringify(row));
+       // console.log(value, row, index);
+    },
+     'click #Calificar': function (e, value, row, index) {
+     	var arreglo = JSON.stringify(row);
+    	var a= $.parseJSON(arreglo);
+    	$("#tituloPanel").html("");
+    	$('#tituloPanel').append("Calificando a "+a['nombreusuario']);
+$('.modalCalifica').modal('show');
+      //  alert('Califica: ' + JSON.stringify(row));
+       // console.log(value, row, index);
+    },
+      'click #Mensaje': function (e, value, row, index) {
+        alert('Enviar Mensaje: ' + JSON.stringify(row));
+       // console.log(value, row, index);
+    }
+};
+
+$(function () {
+
+
+
+
+});
+//]]>  
+
+</script>
+
+
+
+
+	
+		<!-- registro -->
+		
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      <div class="panel panel-default" >
+         <div class="negroFondo " style="padding: 10px;color:#fff;">Registro nuevo en Circulo de Lectura Virtual</div>
+            <div class="panel-body">
+             <div id="respuesta"></div>
+             
+             
+             	<form class='form-horizontal' action="controller/registroController.php"   method="post" role='form' name="registroForm" id="registroForm"> 
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2' for='id_accomodation'>Carrera y N,Control</label>
+					<div class='col-md-2'>
+						<select class='form-control' id='carrera' name="carrera">
+							<option value="1">Ing. Industrial</option>
+							<option value="2">Ing. Logística</option>
+							<option value="3">Ing. Mecatrónica</option>
+							<option value="4">Ing. Mecánica</option>
+							<option value="5">Ing. Sistemas Computacionales</option>
+							<option value="6">Ing. Gestión Empresarial</option>
+							<option value="7">Ing. Informática</option>
+							<option value="8">Ing. Informática</option>
+							<option value="9">Ing. Informática</option>
+							<option value="10">Ing. Energías Renovables</option>
+							<option value="11">Ing. Electrónica</option>
+							<option value="12">Ing. Química</option>
+							<option value="13">Contador Público</option>
+							<option value="14">Ing. Eléctrica</option>
+
+						</select>
+					</div>
+
+					<div class='col-md-3 indent-small'>
+						<div class='form-group internal'>
+							<input class='form-control' id='ncontrol' name="ncontrol" placeholder='Numero De Control' type='number' required>
+						</div>
+					</div>
+
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2' for='id_title'>Nombre</label>
+					<div class='col-md-8'>
+
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='nombre' name="nombre" placeholder='Nombres' type='text' required>
+							</div>
+						</div>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='apellido' name="apellido" placeholder='Apellido Materno' type='text' required>
+							</div>
+						</div>
+
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='apellido2' name="apellido2" placeholder='Apellido Paterno' type='text' required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2' for='id_adults'>Edad/Semestre</label>
+					<div class='col-md-8'>
+						<div class='col-md-3'>
+							<div class='form-group internal'>
+								<input class='form-control col-md-8' id='edad' name="edad" placeholder='Edad' type='number'  required>
+							</div>
+						</div>
+
+						<div class='col-md-4'>
+							<div class='form-group internal'>
+								<input class='form-control col-md-8' id='semestre' name="semestre" placeholder='Semestre en Curso' type='number'  required>
+							</div>
+						</div>
+						<!--    <div class='col-md-3 indent-small'>
+						<div class='form-group internal'>
+						<input class='form-control' id='id_children' placeholder='2-17 years' type='number'>
+						</div>
+						</div>
+						<div class='col-md-3 indent-small'>
+						<div class='form-group internal'>
+						<input class='form-control' id='id_children_free' placeholder='&lt; 2 years' type='number'>
+						</div>
+						</div>-->
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2' for='id_email'>Correo/Usuario</label>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<div class='col-md-11'>
+								<input class='form-control' id='email'  name="email" placeholder='E-mail (Correo Electronico)' type='email'  required>
+							</div>
+						</div>
+						
+							<div class='col-md-11'>
+						<div class='form-group'>
+						<input class='form-control' id='pw'  name="pw" placeholder='Cree una Contraseña (Minimo 7 caracteres)' type='password'  required>
+							
+						</div>
+						</div>
+						<div class='form-group internal'>
+							<div class='col-md-11'>
+								<input class='form-control' id='pw2'name="pw2"  placeholder='Repita su contraseña' type='password' required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Fecha Nacimiento</label>
+					<div class='col-md-8'>
+						<div class='col-md-3'>
+							
+			
+			
+			
+
+        <input type="text" name="fechaN"  class="form-control" id="datetimepicker2"  required />
+			
+						</div>
+
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<div class='col-md-offset-4 col-md-3'>
+						<input type="submit"  class="btn btn-lg btn-primary btn-block" value="Registrar"/>
+					</div>
+					<div class='col-md-3'>
+						<!--   <button class='btn-lg btn-danger' style='float:right' type='submit'>Cancel</button> -->
+					</div>
+				</div>
+			</form>
+			
+			
+<script>
+ 
+/** INSERT INTO `clvbd01`.`cv_carreras` (`idcv_carreras`, `nombre`) VALUES ('1', 'Ing. Industrial'), ('2', 'Ing. Logística'), ('3', 'Ing. Mecatrónica'), ('4', 'Ing. Mecánica'), ('5', 'Ing. Sistemas Computacionales'), ('6', 'Ing. Gestión Empresarial'), ('7', 'Ing. Informática'), ('8', 'Ing. Energías Renovables'), ('9', 'Ing. Electrónica'), ('10', 'Ing. Química'), ('11', 'Contador Público'), ('12', 'Ing. Eléctrica'); **/
+
+ $(document).ready(function() {
+ 	$( "#registroForm" ).submit(function( event ) {
+       var datos =  $("#registroForm :input").serialize();
+     // alert(datos);
+      $("#respuesta").html("<center><img src='img/loading2.gif' width='50' heigth='50'></center>");
+       var curl = "view/index_validarRegistro.php";
+       
+        $.ajax({// Falta validar espacios vacios y caracteres especiales en password y otros post
+        	url: curl,
+        	data: datos,
+        	method:"post",
+        	cacha: false,
+        	context:this,
+        	
+        	success: function(data){
+        		
+        		if(data==1){
+        			$("#respuesta").html("");
+        			//alert('submit');
+        		//	this.submit();
+        			var thepost = "controller/registroController.php";
+        			$.ajax({
+        				url: thepost,
+        				data:datos,
+        				method:"post",
+        				cacha: false,
+        				success:function(data){
+        					//alert("asa");
+        					$("#respuesta").html("Registro Con Exito!");
+        				}
+        			});
+        			
+        		}
+        		else{
+              		$("#respuesta").html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>'+data+'</div>');
+        		}
+        		return false;
+        	}
+        });
+       
+       return false;
+       
+  
+
+    });
+});
+ 	
+ 
+
+</script>
+			
+			
+			
+			
+			
+			
+			
+    	
+			
+			
+			
+             
+             
+           </div>
+    </div>
+      
+    </div>
+  </div>
+</div>
+		
+		<!-- regditro fin -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<!-- AGREGAR GRUPO -->
+		
+		<div class="modal fade agregarGrupo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      <div class="panel panel-default" >
+         <div class="negroFondo " style="padding: 10px;color:#fff;">Agregar Nuevo Grupo</div>
+            <div class="panel-body">
+             <div id="respuesta"></div>
+      
+           				
+			
+				<div id="psteps_horiz_layout" class="pf-form">
+					<div class="row-fluid">
+						<div class="span8" style="margin-left: 1%;">
+							<div class="step-title"><span class="step-order">1.</span> <span class="step-name">Sign Up</span></div>
+							<div class="step-title"><span class="step-order">2.</span> <span class="step-name">Basic Info</span></div>
+							<div class="step-title"><span class="step-order">3.</span> <span class="step-name">Account Settings</span></div>
+							<div class="step-title"><span class="step-order">4.</span> <span class="step-name">Security Settings</span></div>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class="span8 well clearfix">
+							<div class="step-content">
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">First Name</span>
+										<input class="pf-field" type="text" name="first_name" />
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Last Name</span>
+										<input class="pf-field" type="text" name="last_name" />
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label"><strong>Username</strong></span>
+										<input class="pf-field step-validate" type="text" name="username" /> <span class="step-tooltip" data-original-title="6-12 chars."><i class="icon-asterisk pf-required"></i><i class="icon-asterisk pf-completed hide"></i></span>
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label"><strong>Password</strong></span>
+										<input class="pf-field step-validate" type="password" name="password" /> <span class="step-tooltip" data-original-title="Longer than 6 chars."><i class="icon-asterisk pf-required"></i><i class="icon-asterisk pf-completed hide"></i></span>
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Email</span>
+										<input class="pf-field step-validate" type="email" name="email" />
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label"><strong>Retype Email</strong></span>
+										<input class="pf-field step-validate" type="email" name="retype_email" /> <span class="step-tooltip" data-original-title="Must match input above."><i class="icon-asterisk pf-required"></i><i class="icon-asterisk pf-completed hide"></i></span>
+									</label>
+								</div>
+							</div>
+							<div class="step-content hide">
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Birth Date</span>
+										<input class="pf-field step-validate" type="text" name="birthdate" /> <span class="step-tooltip" data-original-title="Required Field"><i class="icon-asterisk pf-required"></i><i class="icon-asterisk pf-completed hide"></i></span>
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Gender</span>
+										<select class="pf-field" name="gender">
+											<option value="blank">Leave Blank</option>
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+										</select>
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Interests</span>
+										<textarea class="pf-field" name="interests"></textarea>
+									</label>
+								</div>
+							</div>
+							<div class="step-content hide">
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Receive Email Notifications</span>
+										<input type="checkbox" class="pf-field" name="notifications" checked="checked"/>
+									</label>
+								</div>
+								<div class="pf-element">
+									<label>
+										<span class="pf-label">Agree to Terms of Service</span>
+										<input type="checkbox" class="pf-field step-validate" name="terms"/> <span class="step-tooltip" data-original-title="Required Field"><i class="icon-asterisk pf-required"></i><i class="icon-asterisk pf-completed hide"></i></span>
+									</label>
+								</div>
+							</div>
+							<div class="step-content hide">
+								<div class="pf-element">
+									<span class="pf-label">Make Profile</span>
+									<div class="pf-group">
+										<label>
+											<input class="pf-field step-validate" type="radio" name="public">
+											Public
+										</label>
+										<label>
+											<input class="pf-field step-validate" type="radio" name="private">
+											Private
+										</label>
+									</div>
+								</div>
+							</div>
+							<div style="clear:both;"></div>
+							<button class="next-button btn hide btn">Next</button>
+							<button class="submit-button btn">Done</button>
+							<button class="back-button btn">Back</button>
+						</div>
+					</div>
+				</div>
+
+
+           </div>
+    </div>
+      
+    </div>
+  </div>
+</div>
+		
+		<!-- FIN AGREGAR GRUPO -->
+  
+
+	<!-- Grupos Usuario -->
+		
+		<div class="modal fade modalCalifica" id="#calificaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+  <div class="alert alert-success" id="events-result" data-es="Aquí se muestra el resultado del evento">
+    Here is the result of event.
+</div>
+<table class="info-table"  id="events-table"  ></table>
+as
+
+
+
+      <script>
+      	$('#events-table').bootstrapTable({
+    url: 'http://localhost/CirculoLecturaVirtual/controller/usuarioController.php?accion=buscar',    
+                striped: true,
+                pagination: true,
+                pageSize: 5,
+                pageList: [10, 25, 50, 100, 200],
+                search: true,
+                showColumns: true,
+                showRefresh: true,
+                minimumCountColumns: 2,
+                clickToSelect: true,
+    columns: [{
+        field: 'nombreusuario',
+        title: 'Item ID'
+    }, {
+        field: 'name',
+        title: 'Item Name'
+    }, {
+    	formatter:'Botones',
+        field: 'price',
+        title: 'Evento'
+    }, ]
+});
+      </script>
+    </div>
+  </div>
+</div>
+		
+		<!-- regditro Grupos de usuario-->
+  
+  
+  
+  
+  	<!-- Ver usuario  -->
+		
+		<div class="modal fade modalVer" id="#modalVer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabe" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+  
+             
+<!-- contenido -->   
+
+     
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-default">
+           
+              <div class="negroFondo" style="padding: 12px;color:#ffffff;"><div id="tituloPanelVer"> </div></div>
+         
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-5 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Nombre:</td>
+                        <td id="infoNombre">Programming</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Num.Control:</td>
+                        <td id="infoControl">Programming</td>
+                      </tr>
+                      <tr>
+                        <td>Correo:</td>
+                        <td id="infoCorreo">06/23/2013</td>
+                      </tr>
+                      <tr>
+                        <td>Carrera:</td>
+                        <td id="infoCarrera">01/24/1988</td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Semestre:</td>
+                        <td id="infoSemestre">Male</td>
+                        <tr>  <td>Telefono:</td>
+                        <td id="infoTelefono"></td></tr>
+                        <tr>  <td>Edad:</td>
+                        <td id="infoEdad"></td></tr>
+                        <tr>  <td>Telefono:</td>
+                        <td id="infoTelefono"></td></tr>
+                        <tr>  <td>Nacimiento:</td>
+                        <td id="infoNacimiento"></td></tr>
+                        <tr>  <td>Se registro el:</td>
+                        <td id="infoRegistro"></td></tr>
+                      
+                      
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a href="#" class="btn btn-primary">My Sales Performance</a>
+                  <a href="#" class="btn btn-primary">Team Sales Performance</a>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i>Enviar Mensaje</a>
+                        <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i>Editar Usuario</a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+
+
+<!-- con fin --> 
+         
+    </div>
+      
+    </div>
+  </div>
+</div>
+		
+		<!--  FIN VER USUARIO -->
+  
+
+
+
+
+
+
+		 <script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+//$('#datetimepicker1').datetimepicker();
+$('#datetimepicker2').datetimepicker({
+	 format: 'DD/MM/YYYY'
+});
+});//]]>  
+
+</script>
+
+				
+	
+</body>
+</html>
