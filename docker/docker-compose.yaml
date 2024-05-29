@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - my_network
+
+  tecnm_node_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    networks:
+      - my_network
+    depends_on:
+      - db
+
+networks:
+  my_network:
+
+volumes:
+  db_data:
