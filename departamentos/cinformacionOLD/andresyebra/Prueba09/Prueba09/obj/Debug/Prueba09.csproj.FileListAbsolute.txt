@@ -1,9 +1,0 @@
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\bin\Debug\Prueba09.exe.config
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\bin\Debug\Prueba09.exe
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\bin\Debug\Prueba09.pdb
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.csprojResolveAssemblyReference.cache
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.Form1.resources
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.Properties.Resources.resources
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.csproj.GenerateResource.Cache
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.exe
-c:\users\andre\documents\visual studio 2015\Projects\Prueba09\Prueba09\obj\Debug\Prueba09.pdb
