@@ -1,5 +1,4 @@
-# Tecnologico Nacional de Mexico Campus Mexicali
-![TecNM](https://www.tecnm.mx/assets/img/tecnm.png)
+# Tecnológico Nacional de Mexico Campus Mexicali
 
 ## Official Website
 [Official Website](https://www.tecnm.mx/)
