@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+	<meta charset="UTF-8">
+	<title>ELEBA</title>
+	<meta name="author" content="ELEBA">
+	<meta name="description" content="Página de ELEBA">
+	<meta name="keywords" content="ELEBA" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="copyright" content="ELEBA" />
+	<meta name="robots" content="ALL">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="img/favicon/ELABA.PNG" />
+	
+	<!-- CSS Bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+		
+	<!-- Mis estilos -->
+	<link rel="stylesheet" href="css/estilos.css">
+	
+	<!-- Iconos con Font Awesome -->
+	<link rel="stylesheet" href="assets/files/main/css/fa-svg-with-js.css">
+	<link rel="stylesheet" href="iconos/iconos.css">
+	
+	<!-- Se agrega para poder usar las fuentes en el css -->
+    <link rel="stylesheet" href="assets/files/main/css/estilo-compresion.min.css"> 
+    <link rel="stylesheet" href="assets/files/main/css/jssorStyle.css">  
+		
+    <link href="css/noticarrusel/slick-theme.css" rel="stylesheet" />
+    <link href="css/noticarrusel/slick.css" rel="stylesheet" />
+
+	<!-- Estilo del carrucel -->
+	<style> 
+		.sitios {
+			width: 50%;
+			margin: 0px auto;
+		}
+
+		.principal {
+			width: 100%;
+			/*height: 60vh;*/
+			margin: 0px 0px;
+			margin-bottom:0px;
+		}
+
+		.slick-slide {
+		  margin: 0px 0px;
+		}
+		
+		 .anexo > .slick-prev:before { /* Flecha azul - lado izquierdo */
+			background: url('img/flechas/izquierda_gris.png');
+			background-size: contain;
+			color: transparent;
+		}
+	   
+		 .anexo > .slick-next:before { /* Flecha azul - lado derecho */
+			background: url('img/flechas/derecha_gris.png');    
+			background-size: contain;
+			color: transparent;
+		}
+		 
+		 #noticias > .slick-prev:before { /* Flecha azul - lado izquierdo */
+			background: url('img/flechas/izquierda_azul.png');
+			background-size: contain;
+			color: transparent;
+		}
+	   
+		 #noticias > .slick-next:before { /* Flecha azul - lado derecho */
+			background: url('img/flechas/derecha_azul.png');    
+			background-size: contain;
+			color: transparent;
+		}
+
+		.slick-slide {
+		  transition: all ease-in-out .3s;
+		  opacity: 1;
+		}
+		
+		.slick-active {
+		  opacity: 1;
+		}
+
+		.slick-current {
+		  opacity: 1;
+		}
+		
+		
+	  .carousel-item {
+		  width:100vw;
+		  height: 60vh;
+		  min-height: 10%;
+		  background-size: contain;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background: round;
+		}
+
+		.card-columns .card {
+		  display: inline-block;
+		  width: 100%;
+		}
+
+		.card-img-top {
+		  width: 100%;
+		  height: 200px !important; 
+		  border-top-left-radius: calc(0.25rem - 1px);
+		  border-top-right-radius: calc(0.25rem - 1px);
+		}
+
+		 @media (max-width: 400px) {
+			.carousel-item  {            
+				height: 30vh;            
+			}
+		}
+
+		@media (max-width: 500px) {
+			.carousel-item  {            
+				height: 25vh;            
+			}
+		}
+	</style>
+
+	<!-- Desface -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			setTimeout(function() {
+				$("#desface_noticias").fadeIn(1000);
+			},50);
+		});
+		$(document).ready(function() {
+			setTimeout(function() {
+				$("#desface").fadeIn(1000);
+			},500);
+		});
+		$(document).ready(function() {
+			setTimeout(function() {
+				$("#desface_footer").fadeIn(1000);
+			},500);
+		});
+		$(document).ready(function() {
+			setTimeout(function() {
+				$("#desface_footer_gob").fadeIn(1000);
+			},1000);
+		});
+	</script>
+	
+	<!-- Sub Menú -->
+	<link rel="stylesheet" href="css/bootnavbar.css">
+	
+	<!-- Menú Fijo -->
+	<style>	
+		#main_navbar, #main_navbar2{ width: 100%; }
+		.menuazul, .menublanco{ position: fixed; }
+		.menublanco{ top: 45px; z-index: 1001; }
+		.menuazul{ top: 82px; z-index: 1000; }
+		@media (max-width: 700px) { .menuazul{ top: 75px; } }
+	</style>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		posicionarMenu2();
+
+		$(window).scroll(function() { posicionarMenu2(); });
+
+		function posicionarMenu2() {
+			var altura_del_header = $('#barraGobmx').outerHeight(true);
+			var altura_del_menu_blanco = $('#main_navbar2').outerHeight(true);
+
+			if($(window).scrollTop() >= altura_del_header){
+				$('#main_navbar2').addClass('menublanco');
+				$('.wrapper').css('margin-top', (altura_del_menu_blanco) + 'px');
+			}else{
+				$('#main_navbar2').removeClass('menublanco');
+				//$('.wrapper').css('margin-top', '0');
+			}
+		}
+		
+		posicionarMenu();
+
+		$(window).scroll(function() { posicionarMenu(); });
+
+		function posicionarMenu() {
+			var altura_del_menu_blanco = $('#main_navbar2').outerHeight(true);
+			var altura_del_menu = $('#main_navbar').outerHeight(true);
+
+			if($(window).scrollTop() >= altura_del_menu_blanco){
+				$('#main_navbar').addClass('menuazul');
+				$('.wrapper').css('margin-top', (altura_del_menu) + 'px');
+			}else{
+				$('#main_navbar').removeClass('menuazul');
+				//$('.wrapper').css('margin-top', '0');
+			}
+		}
+	</script>
+	<!--  -->
+	
+	
+  </head>
+
+  <body>	      
+    <!-- Encabezado principal -->
+	<div class="u-noPaddingContainer contenedorGobierno">
+		<div class="container-cabecera">
+			
+			<div class="row no-gutters">
+				
+				<div class="col-md-12" style="max-width:60%">
+					<div class="d-inline-block text-left">
+						<a href="#" target="_blank" id="pleca_1" class='d-none d-xl-inline'>
+							<img loading='lazy' src="img/logos/ELABA.PNG" alt="ELEBA" class="plecaGob gob">
+						</a>
+						 <a href="#" target="_blank" id="pleca_2">
+							<img loading='lazy' src="img/logos/ELABA.PNG" alt="Educación" class="plecaGob gob">
+						</a>
+						<!--<a href="#"  id="pleca_2">
+							<img loading='lazy' src="img/logos/ELABA.PNG" alt="ELEBA" class="plecaGob gob"  />
+						</a>-->
+					</div>
+				</div>
+			</div>
+		
+				
+				<!--  -->
+
+
+					
+					
+				</div>
+			</div>
+
+        </div>
+    </div>
+	    
+	
+			
+	<!-- Menú Azul  -->
+	<nav class="navbar navbar-expand-xl navbar-dark" style='background-color: #1B396A;' id="main_navbar">
+       
+		<button class="navbar-toggler border-0 text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> Menú Principal
+        </button>
+
+        <div class="collapse navbar-collapse pl-5 pl-lx-0" id="navbarSupportedContent2">
+            <ul class="navbar-nav mr-auto">
+				
+				<div class='d-none d-lg-block' id="tecnmblanco" style="visibility:hidden; ">
+					<img loading='lazy' alt="TecNM" style="width: 90px; height:auto;" src="img/logos/ELABA.PNG" />
+				</div>
+				
+				<li class="nav-item active">
+					<a class="nav-link" href="\"> <span class="icon-home"></span></a>
+                </li> 
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Quienes Somos?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> 
+								Nivel 2 
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+								Nivel 2 
+							</a>						
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+							</ul>
+                        </li>
+					</ul>
+                </li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Preescolar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+					</ul>
+                </li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Primaria
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+					</ul>
+                </li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Secundaria
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+					</ul>
+                </li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        Contacto
+                    </a>
+                </li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Registro
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> Nivel 2 </a>
+                        </li>
+						<li class="nav-item dropdown dropleft">
+							<a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+								Nivel 2
+							</a>									
+							<ul class="dropdown-menu left" aria-labelledby="navbarDropdown1">
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+							</ul>
+                        </li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item" href="#"> 
+								Nivel 2 
+							</a>
+                        </li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+								Nivel 2								
+							</a>									
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+								<li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
+							</ul>
+                        </li>
+					</ul>
+                </li>
+				
+            </ul>
+        </div>
+		
+    </nav>
+	
+	<br>
+	<!-- Slider -->
+	<section class='one-time principal border'>
+		
+		<div class='carousel-item active' style='background-image: url("img/slider/sitio.jpg");'>
+			<a href='img/slider/sitio.jpg' target='_blank'>
+				<div style='width:100%; height:100%'></div>
+			</a>
+		</div>
+		
+		<div class='carousel-item' style='background-image: url("img/slider/sitio2.jpg");'>
+			<a href='img/slider/sitio2.jpg' target='_blank'>
+				<div style='width:100%; height:100%'></div>
+			</a>
+		</div>
+		
+	</section>
+	
+	<!-- Contenidos (Síguenos, Sitios de Interés) -->
+	<div id='desface' style='display: none;'>
+	<div class='container m-0 m-auto mb-3'>
+	
+		
+		<!-- Síguenos -->
+		<div class='row w-100 justify-content-center bg-light py-3 m-0'>
+			
+			<p class='col-12 display-2 text-center'> 
+				Síguenos 
+			</p>
+				
+			<div class='media-container-row text-center'>
+				<!-- Youtube-->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/X-Vm7SNmlN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						 
+				<!-- Facebook -->
+				<iframe src='' width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
+			  
+			</div>
+		</div>
+		<br />
+		</div>
+		
+		<br />
+
+	</div>
+	</div>
+	
+	<!-- Redes Sociales Lateral -->
+    <div class="sticky-container">
+		<ul class="sticky">
+			<li>
+				<img loading='lazy' src="img/redes_sociales/facebook.png" width="32" height="32" alt="facebook" />
+				<p><a href="" target="_blank">Me gusta en<br>Facebook</a></p>
+			</li>
+			<li>
+				<img loading='lazy' src="img/redes_sociales/youtube.png" width="32" height="32" alt="YouTube" />
+				<p><a href="https://www.youtube.com/user/MrPato1967" target="_blank">Suscríbase en<br>YouTube</a></p>
+			</li>
+		</ul>
+	</div>
+	
+	<!-- Dirección y teléfono -->
+	<div id='desface_footer' style='display: none;'>
+	<footer class='border bg-tecnm footer'>
+		
+		<div class='row m-0 justify-content-center p-3'>
+			
+			<div class='h6 col-12 col-lg-3 text-center text-lg-left' style='line-height: 1.5;'>
+				
+				<p class='h5 font-weight-bold my-2 mt-lg-5'>
+					Dirección
+				</p>
+				<p>
+					calle x, numero x.
+				</p>
+				
+				<p class='h5 font-weight-bold mt-lg-5'>
+					Contacto
+				</p>
+				<p>
+					<div class='row'>
+						<div class='col-12'>
+							<p>Email: contacto@xxxxxx.com</p>
+						</div>
+						<div class='col-12'>
+							<p>Telefono: ########</p>
+						</div>
+					</div>
+				</p>
+				
+			</div>
+        
+			<div class='h6 col-12 col-lg-3 text-center text-lg-left' style='line-height: 1.5;'>
+				<p class='h5 font-weight-bold my-2 mt-lg-5'>
+					Enlaces
+				</p>
+				<p>
+			
+				</p>
+				
+				<p class='h5 font-weight-bold my-2'>
+					Número de visitas
+				</p>
+				
+			</div>
+		
+			
+			
+			<div class='vh6 col-12 text-center' style='line-height: 1.5;'>
+				© Copyright 2020 Eleba - Todos los Derechos Reservados
+				<br />
+				
+			</div>
+			
+		</div>
+		
+	</footer>
+	</div>
+	
+	<!-- Opciones de Accesibilidad -->
+	<script src='assets/files/main/js/index.onload.js'></script>
+	
+	
+	<!-- Banner -->
+	<script src='assets/web/assets/jquery/jquery.min.js'></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Configuración de los carrucel -->
+	<script> 
+		$(document).on('ready', function () {
+		
+			$('.one-time').slick({
+              dots: true,
+              infinite: true,
+              speed: 500,
+              slidesToShow: 1,
+              adaptiveHeight: true,
+              adaptiveWidth: true,
+              autoplay: true,
+              autoplaySpeed: 6000,
+              arrows: false,
+              fade: true,
+              pauseOnHover: true
+			});
+
+			$('.center').slick({
+              dots: false,
+              infinite: true,
+              arrows: true,
+              autoplay: true,
+              autoplaySpeed: 4000,
+              centerMode: false,
+              centerPadding: '0px',
+              slidesToShow: 4,
+              responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 2
+                    }
+                },{
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 2
+                    }
+                }
+              ]
+			});
+
+			$('.anexo').slick({
+              dots: false, // puntos
+              infinite: true, 
+              arrows: true, // flechas
+              autoplay: true,
+              autoplaySpeed: 3500,
+              slidesToShow: 4,
+              pauseOnHover: true,
+              responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        //arrows: false,
+                        slidesToShow: 2
+                    }
+                },{
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerPadding: '0px',
+                        slidesToShow: 2
+                    }
+                }
+              ]
+			});
+		});
+	</script>
+	
+	<script src="js/noticarrusel/slick.js"></script>
+	<!-- Menú Azul - Permite el desglose -->
+	<script src="js/bootnavbar.js" ></script>
+    <script>
+        $(function () {
+            $('#main_navbar').bootnavbar({
+                //option
+                //animation: false
+            });
+        })
+    </script>
+	
+  </body>
+</html>
