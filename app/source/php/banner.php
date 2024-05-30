@@ -57,7 +57,7 @@
     </script>
 
     <!-- ITEMS DEL CARRUSEL-->
-     <!--
+    <!--
     <div class="carousel-inner" >
         <div class="carousel-item">
             <a href="" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/evaluacion_2024-1.jpeg" ></a>
