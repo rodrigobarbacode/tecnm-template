@@ -1,3 +1,4 @@
+  
   <div id="cambio" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#cambio" data-slide-to="0" class="active"></li>
@@ -13,7 +14,7 @@
 			
   
             <div class="carousel-item active">
-                <a href="http://bit.ly/3ytBWjb" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/cursos_2024-1.jpeg" ></a>
+                <a href="http://bit.ly/3ytBWjb" target="_blank"><img class="d-block w-100" src="public/assets/images/banners/2024/cursos_2024-1.jpeg" ></a>
             </div>
 			
 			<div class="carousel-item">

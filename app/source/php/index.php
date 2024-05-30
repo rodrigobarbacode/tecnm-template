@@ -78,6 +78,7 @@
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155881186-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Function to open modal -->
   <script type="text/javascript">
