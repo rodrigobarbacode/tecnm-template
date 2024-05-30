@@ -40,7 +40,7 @@
 
   <!-- News -->
   <section class="container-fluid m-auto">
-    <?php require 'noticias/noticias.php' ?>
+    <?php require 'public/assets/noticias/noticias.php' ?>
   </section>
 
   <!-- Links of Interest -->
@@ -78,7 +78,6 @@
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155881186-1"></script>
-
 
   <!-- Function to open modal -->
   <script type="text/javascript">
