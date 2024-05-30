@@ -1,25 +1,59 @@
-  
-<!-- Banner de la pagina principal, funciona como carusel mostrando diferentes actualizaciones del Tec -->
+<!-- Banner de la pagina principal, funciona como carusel mostrando diferentes actualizaciones. -->
 <div id="cambio" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#cambio" data-slide-to="0" class="active"></li>
         <li data-target="#cambio" data-slide-to="1"></li>
         <li data-target="#cambio" data-slide-to="2"></li>
         <li data-target="#cambio" data-slide-to="3"></li>
-        <!--<li data-target="#cambio" data-slide-to="4"></li>
-        <li data-target="#cambio" data-slide-to="5"></li>-->
+        <li data-target="#cambio" data-slide-to="4"></li>
     </ol>
 
-    <!-- ITEMS DEL CARRUSEL-->
-    <div class="carousel-inner" >
-        <div class="carousel-item active">
-            <a href="http://bit.ly/3ytBWjb" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/cursos_2024-1.jpeg" ></a>
-        </div>`
-        
-        <div class="carousel-item">
-            <a href="https://drive.google.com/file/d/1LiYrWQYOCHsb7iNvfr0isBexaJzOyCcE/view" target="_blank"><img class="d-block w-100" src="./img/banners/2024/CURSOS DE VERANO 2024_PROPUESTA.jpeg" ></a>
-        </div>
+    <script>
+        // Función para obtener un archivo JSON local.
+        function fetchLocalJSON(file, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.overrideMimeType("application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    callback(JSON.parse(xhr.responseText));
+                }
+            };
+            xhr.open("GET", file, true);
+            xhr.send(null);
+        }
 
+        // Llamar a función fetchLocalJSON y crear los elementos del carrusel.
+        fetchLocalJSON('/public/json/banner-list.json', function(datos) {
+            var carouselInner = document.createElement('div');
+            carouselInner.className = 'carousel-inner';
+
+            datos.forEach(function(value, key) {
+                var activeClass = (key === 0) ? 'active' : '';
+
+                var carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item ' + activeClass;
+
+                var link = document.createElement('a');
+                link.href = value.url;
+                link.target = '_blank';
+
+                var image = document.createElement('img');
+                image.className = 'd-block w-100';
+                image.src = value.image;
+
+                link.appendChild(image);
+                carouselItem.appendChild(link);
+                carouselInner.appendChild(carouselItem);
+            });
+
+            // Adjuntar los elementos al carrusel.
+            document.querySelector('.carousel').appendChild(carouselInner);
+        });
+    </script>
+
+    <!-- ITEMS DEL CARRUSEL-->
+     <!--
+    <div class="carousel-inner" >
         <div class="carousel-item">
             <a href="" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/evaluacion_2024-1.jpeg" ></a>
         </div>
@@ -168,9 +202,13 @@
             <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/riesgoetico.png" ></a>
         </div>
 
-        <!--
+        
         <div class="carousel-item  ">
             <a href="https://zoom.us/j/83530867862?from=join#success" target="_blank"><img class="d-block w-100" src="./img/banners/2022/platica_induccion.jpg" ></a>
+        </div>
+        
+        <div class="carousel-item">
+            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/riesgoetico.png" ></a>
         </div>
         -->
 
@@ -178,12 +216,12 @@
     <!-- Botones del Carusel -->
     <a class="carousel-control-prev" href="#cambio" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">ANTERIOR</span>
+        <span class="sr-only">Anterior</span>
     </a>
     
     <a class="carousel-control-next" href="#cambio" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">SIGUIENTE</span>
+        <span class="sr-only">Siguiente</span>
     </a>
 
 </div>
