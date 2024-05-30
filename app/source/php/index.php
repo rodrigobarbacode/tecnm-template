@@ -40,7 +40,7 @@
 
   <!-- News -->
   <section class="container-fluid m-auto">
-    <?php require 'noticias/noticias.php' ?>
+    <?php require 'public/assets/noticias/noticias.php' ?>
   </section>
 
   <!-- Links of Interest -->
