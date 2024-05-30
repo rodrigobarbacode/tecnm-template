@@ -4,7 +4,7 @@
     <!-- Boton para responsividad de la pagina en forma de menu -->
     <button class="navbar-toggler border-info " data-target="#collapsibleNavbar2" data-toggle="collapse" type="button">
         <span class="sr-only">Menu</span>
-       <i class="material-icons menu">menu</i>
+        <i class="material-icons menu">menu</i>
     </button>
    
     <!-- Opciones del Tec, de izquierda a derecha en computadora, arriba hacia abajo en telefono-->
@@ -62,331 +62,279 @@
                     </a>
                 </div>
             </li>
+            <!-- Submenu: OFERTA EDUCATIVA -->
             <li class="nav-item dropdown" >
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     OFERTA EDUCATIVA
                 </a>
-              <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                    
-					
-					<a class="dropdown-item" href="./carreras/img/ADMINISTRACION.jpeg">
-                        <span>
-                            Ing. Administracion
-                        </span>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <!-- Opcion: Ing. Administracion -->
+                    <a class="dropdown-item" href="./carreras/img/ADMINISTRACION.jpeg">    
+                        Ing. Administracion
                     </a>
-					
-					<a class="dropdown-item" href="./carreras/cp/contador.html">
-                        <span>
-                            Contador Público
-                        </span>
+                    <!-- Opcion: Contador Publico -->
+                    <a class="dropdown-item" href="./carreras/cp/contador.html">    
+                        Contador Público
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dsc/carreras/ing-sistemas-computacionales">
-                        <span>
-                            Ing. Sistemas Computacionales
-                        </span>
+                    <!-- Opcion: Ing. Sistemas Computacionales -->
+                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dsc/carreras/ing-sistemas-computacionales">    
+                        Ing. Sistemas Computacionales
                     </a>
-                    <a class="dropdown-item" href="./carreras/electrica/electrica.html">
-                        <span>
-                            Ing. Eléctrica
-                        </span>
+                    <!-- Opcion: Ing Electrica -->
+                    <a class="dropdown-item" href="./carreras/electrica/electrica.html">    
+                        Ing. Eléctrica
                     </a>
-                    <a class="dropdown-item" href="./carreras/img/ELECTRONICA.jpg">
-                        <span>
-                            Ing. Electrónica
-                        </span>
+                    <!-- Opcion: Ing. Electronica -->
+                    <a class="dropdown-item" href="./carreras/img/ELECTRONICA.jpg">    
+                        Ing. Electrónica
                     </a>
-                    <a class="dropdown-item" href="./carreras/img/RENOVABLES.jpg">
-                        <span>
-                            Ing. Energías Renovables
-                        </span>
+                    <!-- Opcion: Ing. Energias Renovables -->
+                    <a class="dropdown-item" href="./carreras/img/RENOVABLES.jpg">    
+                        Ing. Energías Renovables
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-gestion-empresarial/inicio">
-                        <span>
-                            Ing. Gestión Empresarial
-                        </span>
+                    <!-- Opcion: Ing. Gestion Empresarial -->
+                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-gestion-empresarial/inicio">    
+                        Ing. Gestión Empresarial
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-industrial/inicio">
-                        <span>
-                            Ing. Industrial
-                        </span>
+                    <!-- Opcion: Ing. Industrial-->
+                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-industrial/inicio">    
+                        Ing. Industrial
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingeniera-logistica/inicio">
-                        <span>
-                            Ing. Logística
-                        </span>
-                    <a class="dropdown-item" href="./carreras/img/MATERIALES.jpg">
-                        <span>
-                            Ing. Materiales
-                        </span>
+                    <!-- Opcion: Ing. Logistica -->
+                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingeniera-logistica/inicio">    
+                        Ing. Logística
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1qsl_wsaDRxOeBhqMDVALpamfRUByLEAf/edit">
-                        <span>
-                            Ing. Mecatrónica
-                        </span>
+                    <!-- Opcion: Ing. Materiales -->
+                    <a class="dropdown-item" href="./carreras/img/MATERIALES.jpg">    
+                        Ing. Materiales
                     </a>
-                    <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1mVmgktr6imZMBnYXM2ZLYpnqq6rFPznA/edit">
-                        <span>
-                            Ing. Mecánica
-                        </span>
+                    <!-- Opcion: Ing. Mecatronica-->
+                    <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1qsl_wsaDRxOeBhqMDVALpamfRUByLEAf/edit">    
+                        Ing. Mecatrónica
                     </a>
-                     <a class="dropdown-item" href="./carreras/quimica/quimica.html">
-                        <span>
-                            Ing. Química
-                        </span>
+                    <!-- Opcion: Ing. Mecanica -->
+                    <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1mVmgktr6imZMBnYXM2ZLYpnqq6rFPznA/edit">    
+                        Ing. Mecánica
                     </a>
-                    <a class="dropdown-item" href="http://posgrado.itmexicali.edu.mx">
-                        <span>
-                            Posgrado
-                        </span>
+                    <!-- Opcion: Ing. Quimica -->
+                    <a class="dropdown-item" href="./carreras/quimica/quimica.html">    
+                        Ing. Química
                     </a>
-					<a class="dropdown-item" href="./prueba_posgrado/index.html">
-                        <span>
-                            Posgrado Maestria en Ingenieria
-                        </span>
+                    <!-- Opcion: Posgrado -->
+                    <a class="dropdown-item" href="http://posgrado.itmexicali.edu.mx">    
+                        Posgrado
+                    </a>
+                    <!-- Opcion: Posgrado Maestria en Ingenieria -->
+                    <a class="dropdown-item" href="./prueba_posgrado/index.html">    
+                        Posgrado Maestria en Ingenieria
                     </a>
                 </div>
             </li>
+            <!-- Submenu: ESTUDIANTES -->
             <li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     ESTUDIANTES
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                   
-						
-                     <a class="dropdown-item" href="./departamentos/dep/">
+                    <!-- Opcion: Division de Estudios Profensionales -->
+                    <a class="dropdown-item" href="./departamentos/dep/">
                         Division de Estudios Profesionales
                     </a>
-					 
-					<a class="dropdown-item" href="https://rinacional.tecnm.mx/">
-                        <span>
-                            Repositorio Institucional del TecNM
-                        </span>
+					<!-- Opcion: Repositorio Institucional del TecNM -->
+					<a class="dropdown-item" href="https://rinacional.tecnm.mx/">    
+                        Repositorio Institucional del TecNM
                     </a>
-					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">
-                        <span>
-                            SGE MindBox
-                        </span>
+                    <!-- Opcion: SGE Mindbox -->
+					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">    
+                        SGE MindBox
                     </a>
-					<a class="dropdown-item" href="https://www.tecnm.mx/normateca/Direcci%C3%B3n%20de%20Asuntos%20Escolares%20y%20Apoyo%20a%20Estudiantes/Reglamento_de_Estudiantes_del_TecNM.pdf">
-                        <span>
-                           Nuevo reglamento del estudiante
-                        </span>
+                    <!-- Opcion: Nuevo Reglamento del Estudiante-->
+					<a class="dropdown-item" href="https://www.tecnm.mx/normateca/Direcci%C3%B3n%20de%20Asuntos%20Escolares%20y%20Apoyo%20a%20Estudiantes/Reglamento_de_Estudiantes_del_TecNM.pdf">    
+                       Nuevo Reglamento del Estudiante
                     </a>
-					 <a class="dropdown-item" href="http://moodle.itmexicali.edu.mx/login/index.php" target="_blank">
-                        <span>
-                            Moodle
-                        </span>
-							
+                    <!-- Opcion: Moodle -->
+					 <a class="dropdown-item" href="http://moodle.itmexicali.edu.mx/login/index.php" target="_blank">    
+                        Moodle
                     </a>
-						<!-- <a class="dropdown-item" href="http://www.itmexicali.edu.mx/departamentos/pagobbva_alu/"> -->
-                    
+					<!-- ???? <a class="dropdown-item" href="http://www.itmexicali.edu.mx/departamentos/pagobbva_alu/"> -->
+                    <!-- Opcion: Repositorio de Formatos -->
 					<a class="dropdown-item" href="https://drive.google.com/drive/folders/1uVIh7qyC6-1x-r9dHDUcVZlCWVcBTHTE?usp=sharing">
                         Repositorio de Formatos
                     </a>
-                   
-                    <a class="dropdown-item" href="https://financieros.itmexicali.edu.mx/pagos">
-                        <span>
-                            Lineas de pago nuevo ingreso y reinscripción
-                        </span>
+                    <!-- Opcion: Lineas de Pago Nuevo Ingreso y Reinscripcion-->
+                    <a class="dropdown-item" href="https://financieros.itmexicali.edu.mx/pagos">    
+                        Lineas de Pago Nuevo Ingreso y Reinscripción
                     </a>
-					
-						<a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">
-                        <span>
-						Desarrollo Académico                        </span>
+					<!-- Opcion: Desarrollo Academico -->
+					<a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">    
+					    Desarrollo Académico
                     </a>
 					<!--
-					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/reinscripcion/">
-                        <span>
-                        Reinscripciones   </span>
+					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/reinscripcion/">    
+                    Reinscripci
                     </a>
 					-->
-					<a class="dropdown-item" href="./departamentos/escolares/escolares.html">
-                        <span>
-                            Servicios Escolares
-                        </span>
+                    <!-- Opcion: Servicios Escolares -->
+					<a class="dropdown-item" href="./departamentos/escolares/escolares.html">    
+                        Servicios Escolares
                     </a>
-                   
-					   
-								
-					   <a class="dropdown-item" href="./departamentos/Residencia/residencias.html" target="_blank">
-                        <span>
-                            Residencia Profesional
-                        </span>
+                    <!-- Opcion: Residencia Profesional -->			
+					<a class="dropdown-item" href="./departamentos/Residencia/residencias.html" target="_blank">    
+                        Residencia Profesional
                     </a>
-					  <a class="dropdown-item" href="./departamentos/ss/ss.html" target="_blank">
-                        <span>
-                            Servicio Social
-                        </span>
+                    <!-- Opcion: Servicio Social -->
+					<a class="dropdown-item" href="./departamentos/ss/ss.html" target="_blank">    
+                        Servicio Social
                     </a>
-
-				
-					<a class="dropdown-item" href="./departamentos/extraescolares/" target="_blank">
-                        <span>
-                            Actividades Extraescolares
-                        </span>
+                    <!-- Opcion: Actividades Extraescolares -->
+					<a class="dropdown-item" href="./departamentos/extraescolares/" target="_blank">    
+                        Actividades Extraescolares
                     </a>
-					
-                    <a class="dropdown-item" href="./departamentos/cinformacion/" target="_blank">
-                        <span>
-                            Centro de Información
-                        </span>
+					<!-- Opcion: Centro de Informacion -->
+                    <a class="dropdown-item" href="./departamentos/cinformacion/" target="_blank">    
+                        Centro de Información
                     </a>
-                    <a class="dropdown-item" href="./documentos/2024/APORTACIONES2024.pdf" target="_blank">
-                        <span>
-                            Lista de Aportaciones
-                        </span>
+                    <!-- Opcion: Lista de Aportaciones-->
+                    <a class="dropdown-item" href="./documentos/2024/APORTACIONES2024.pdf" target="_blank">    
+                        Lista de Aportaciones
                     </a>
-                                   
-              
-                    <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional">
-                        <span>
-                            Cédula Profesional en línea
-                        </span>
+                    <!-- Opcion: Cedula Profesional en Linea-->
+                    <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional">    
+                        Cédula Profesional en línea
                     </a>
-                 
-				  <a class="dropdown-item" href="https://docs.google.com/document/d/1LE4YrtseJwhqbscTY2BnLlIHsigLysxh/edit?usp=sharing&ouid=109390354595918364742&rtpof=true&sd=true" target="_blank">
-                        <span>
-                            Listado de Actividades Complementarias
-                        </span>
+                    <!-- Opcion: Listado de Actividades Complementarias -->
+				    <a class="dropdown-item" href="https://docs.google.com/document/d/1LE4YrtseJwhqbscTY2BnLlIHsigLysxh/edit?usp=sharing&ouid=109390354595918364742&rtpof=true&sd=true" target="_blank">    
+                        Listado de Actividades Complementarias
                     </a>
-                   		 
-				 			 
-                    <a class="dropdown-item" href="./actividades_complementarias/" target="_blank">
-                        <span>
-                            Créditos Complementarios
-                        </span>
+                   	<!-- Opcion: Creditos Complementarios -->
+                    <a class="dropdown-item" href="./actividades_complementarias/" target="_blank">    
+                        Créditos Complementarios
                     </a>
-					 
-					 <a class="dropdown-item" href="https://drive.google.com/file/d/1CfTimZCaDPb0uETEi2DWHYTCZkY7eO10/view?usp=sharing" target="_blank">
-                        <span>
-                            aplicación AMAS Móvil
-                        </span>
+					<!-- Opcion: Aplicacion AMAS Movil --> 
+					<a class="dropdown-item" href="https://drive.google.com/file/d/1CfTimZCaDPb0uETEi2DWHYTCZkY7eO10/view?usp=sharing" target="_blank">    
+                        Aplicación AMAS Móvil
                     </a>
-                   </div>
+                </div>
             </li>
+            <!-- Submenu: ASPIRANTES -->
 			<li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     ASPIRANTES
                 </a>
-                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-				<a class="dropdown-item" href="https://bit.ly/Convocatoria20243">
-                        Convocatoria para ingreso
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <!-- Opcion: Convocatoria para Ingreso -->
+                    <a class="dropdown-item" href="https://bit.ly/Convocatoria20243">
+                            Convocatoria para Ingreso
                     </a>                
-				<a class="dropdown-item" href="https://bit.ly/Equiv20243">
-						Equivalencias de estudio     
-					</a>			
-							
-					<a class="dropdown-item" href="https://itmexicali.mindbox.app/login/aspirante">
-						Acceso a Mindbox     
-					</a>
-                  
+                    <!-- Opcion: Equivalencias de Estudio -->
+                    <a class="dropdown-item" href="https://bit.ly/Equiv20243">
+                        Equivalencias de estudio     
+                    </a>			
+                    <!-- Opcion: Acceso a Mindbox -->
+                    <a class="dropdown-item" href="https://itmexicali.mindbox.app/login/aspirante">
+                        Acceso a Mindbox     
+                    </a>
                 </div>
             </li>
+            <!-- Submenu: PERSONAL ITM -->
             <li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     PERSONAL ITM
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                    <a class="dropdown-item" href="./departamentos/rh/index.html">
-					<span>
+                    <!-- Opcion: Recursos Humanos -->    
+                    <a class="dropdown-item" href="./departamentos/rh/index.html">    
                         Recursos Humanos
-                    </span>
                     </a>
-				   
-				    <a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">
-                        <span>
-                            MindBox
-                        </span>
+                    <!-- Opcion: Mindbox -->
+				    <a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">    
+                        MindBox
                     </a>
-					 <a class="dropdown-item" href="https://cat.tecnm.mx/">
-                        <span>
-                            CAT TecNM
-                        </span>
+                    <!-- Opcion: CAT TecNM-->
+					<a class="dropdown-item" href="https://cat.tecnm.mx/">    
+                        CAT TecNM
                     </a>
-					   <a class="dropdown-item" href="http://www.itmexicali.edu.mx/documentos/correos.pdf">
-                        <span>
-                            Correos Institucionales del personal
-                        </span>
+                    <!-- Opcion: Correos Institucionales del Personal-->
+					   <a class="dropdown-item" href="http://www.itmexicali.edu.mx/documentos/correos.pdf">    
+                        Correos Institucionales del Personal
                     </a>
-				   
-				   
-                    <a class="dropdown-item" href="http://moodle.itmexicali.edu.mx/login/index.php" target="_blank">
-                        <span>
-                            Moodle
-                        </span>
+                    <!-- Opcion: Moodle -->
+                    <a class="dropdown-item" href="http://moodle.itmexicali.edu.mx/login/index.php" target="_blank">    
+                        Moodle
                     </a>
-                    <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/" target="_blank">
-                        <span>
-                           Sistema Integral de Gestión
-                        </span>
+                    <!-- Opcion: Sistema Integral de Gestion -->
+                    <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/" target="_blank">    
+                       Sistema Integral de Gestión
                     </a>
-                   
                 </div>
             </li>
-			
+			<!-- Submenu: EGRESADOS -->
             <li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     EGRESADOS
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                    <a class="dropdown-item" href="./departamentos/escolares/escolares.html">
-                        <span>
-                            Servicios Escolares
-                        </span>
+                    <!-- Opcion: Servicios Escolares-->
+                    <a class="dropdown-item" href="./departamentos/escolares/escolares.html">    
+                        Servicios Escolares
                     </a>
-                    <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional">
-                        <span>
-                            Cédula Profesional en línea
-                        </span>
+                    <!-- Opcion: Cedula Profesional en Linea -->
+                    <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional">    
+                        Cédula Profesional en Línea
                     </a>
                 </div>
             </li>
+            <!-- Submenu: DEPARTAMENTOS-->
             <li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     DEPARTAMENTOS
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                    
-							
-								
-					 <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/inicio?pli=1">
+                    <!-- Opcion: Dpto de Planeacion -->
+                    <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/inicio?pli=1">
                         Dpto de Planeación
                     </a>
-					<a class="dropdown-item" href="./departamentos/cinformacion/" target="_blank">
-                        <span>
-                            Centro de Información
-                        </span>
+                    <!-- Opcion: Centro de Informacion -->
+					<a class="dropdown-item" href="./departamentos/cinformacion/" target="_blank">    
+                        Centro de Información
                     </a>
+                    <!-- Opcion: Recursos Humanos -->
 					<a class="dropdown-item" href="./departamentos/rh/index.html">
                         Recursos Humanos
                     </a>
-						<a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">
-                        <span>
-						Desarrollo Académico                        </span>
+                    <!-- Opcion: Desarrollo Academico-->
+					<a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">    
+		    			Desarrollo Académico         
                     </a>
+                    <!-- Opcion: Centro de Incubacion e Innovacion -->
                     <a class="dropdown-item" href="./eneit/">
                         Centro de Incubación e Innovación
                     </a>
-                    
+                    <!-- Opcion: Centro de Computo-->
                     <a class="dropdown-item" href="./departamentos/ccomputo/">
                         Centro de Cómputo
                     </a>
 					  <a class="dropdown-item" href="./departamentos/extraescolares/">
                         Actividades Extraescolares
                     </a>
-					 <!-- <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/pagina-principal?pli=1&authuser=1">
+
+					<!-- <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/pagina-principal?pli=1&authuser=1">
                         Planeación Programación y Presupuestación
                     </a> -->
-					 <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/materiales/inicio">
+                    
+                    <!-- Opcion: Recursos Materiales -->
+					<a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/materiales/inicio">
                         Dpto de Recursos Materiales
                     </a>
                 </div>
             </li>
+            <!-- Submenu: CORREO -->
             <li class="nav-item dropdown">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     CORREO
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <!-- Opcion: Acceso -->
                     <a class="dropdown-item" href="http://www.itmexicali.edu.mx/departamentos/ccomputo/correo/">
                        Accesos
                     </a>
@@ -401,6 +349,7 @@
                 </a>
             </li>
 			-->
+            
         </ul>
     </div>
 </nav>
