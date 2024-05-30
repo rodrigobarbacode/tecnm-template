@@ -27,6 +27,11 @@
             var carouselInner = document.createElement('div');
             carouselInner.className = 'carousel-inner';
 
+            datos.sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
+            datos = datos.slice(0, 5);
+
             datos.forEach(function(value, key) {
                 var activeClass = (key === 0) ? 'active' : '';
 

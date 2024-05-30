@@ -1,10 +1,12 @@
 [
     {
         "url": "http://bit.ly/3ytBWjb",
-        "image": "/public/assets/banners/2024/cursos_2024-1.jpeg"
+        "image": "/public/assets/banners/2024/cursos_2024-1.jpeg",
+        "date": "2024-01-01"
     },
     {
         "url": "https://drive.google.com/file/d/1LiYrWQYOCHsb7iNvfr0isBexaJzOyCcE/view",
-        "image": "/public/assets/banners/2024/CURSOS DE VERANO 2024_PROPUESTA.jpeg"
+        "image": "/public/assets/banners/2024/CURSOS DE VERANO 2024_PROPUESTA.jpeg",
+        "date": "2024-01-02"
     }
 ]
