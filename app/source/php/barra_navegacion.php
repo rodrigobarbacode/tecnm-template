@@ -1,58 +1,63 @@
+<!-- Barra Principal Azul, con diferentes portales para diferentes servicios del Tecnm de Mexicali -->
 <nav class="navbar navbar-expand-lg navbar-dark ">
+
+    <!-- Boton para responsividad de la pagina en forma de menu -->
     <button class="navbar-toggler border-info " data-target="#collapsibleNavbar2" data-toggle="collapse" type="button">
         <span class="sr-only">Menu</span>
        <i class="material-icons menu">menu</i>
     </button>
    
-		 
+    <!-- Opciones del Tec, de izquierda a derecha en computadora, arriba hacia abajo en telefono-->
     <div class="collapse navbar-collapse" id="collapsibleNavbar2">
         <ul class="navbar-nav ml-auto text-left" >
+            <!-- Submenu: QUIÉNES SOMOS? -->
             <li class="nav-item dropdown " >
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
                     QUIÉNES SOMOS?
                 </a>
                 <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                   
-                     
-					 <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/">
+                    <!-- Opcion: SIG Sistema Integrado de Gestion -->
+					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/">
                        SIG Sistema Integrado de Gestión
                     </a>
-	
-					  <a class="dropdown-item" href="https://www.tecnm.mx/">
+                    <!-- Opcion: TecNM -->
+					<a class="dropdown-item" href="https://www.tecnm.mx/">
                         TecNM
                     </a>
+                    <!-- Opcion: Directorio -->
 					<a class="dropdown-item" href="http://www.itmexicali.edu.mx/directorio/index.html">
                         Directorio
                     </a>
+                    <!-- Opcion: Bienvenida -->
                     <a class="dropdown-item" href="./departamentos/bienvenida/">
                         Bienvenida
                     </a>
-                    
+                    <!-- Opcion: Transparencia y Rendicion de Cuentas -->
                     <a class="dropdown-item" href="./departamentos/transparencia/">
                         Transparencia Y Rendición de Cuentas
                     </a>
+                    <!-- Opcion: Licitaciones -->
 					<a class="dropdown-item" href="./invitacion/">
 						Licitaciones
-						</a>
-                  
-                
-					
-					<a class="dropdown-item" href="./documentos/2024/calendario2024-1.jpeg">
-                        Calendario  imagen 2024-1
+					</a>
+                    <!-- Opcion: Calendario Imagen 2024-1 -->	
+					<a class="dropdown-item" href="public/assets/documentos/2024/calendario2024-1.jpeg">
+                        Calendario Imagen 2024-1
                     </a>
-					<a class="dropdown-item" href="./documentos/2024/calendario2024-1.pdf">
-                        Calendario pdf 2024-1
+                    <!-- Opcion: Calendario PDF 2024-1 -->
+					<a class="dropdown-item" href="public/assets/documentos/2024/calendario2024-1.pdf">
+                        Calendario PDF 2024-1
                     </a>
-					
-					 <a class="dropdown-item" href="https://administracion2.tecnm.mx/">
+					<!-- Opcion: SISAD -->
+					<a class="dropdown-item" href="https://administracion2.tecnm.mx/">
                         SISAD
                     </a>
-					 <a class="dropdown-item" href="https://itmexicali.siapoa.com.mx/">
-                        SIAPOA
-						
+                    <!-- Opcion: SIAPOA -->
+					<a class="dropdown-item" href="https://itmexicali.siapoa.com.mx/">
+                        SIAPOA				
                     </a>
-					 
-					 <a class="dropdown-item" href="https://ivan-imperial.org/air/map">
+					<!-- Opcion: Monitoreo Ambiental --> 
+					<a class="dropdown-item" href="https://ivan-imperial.org/air/map">
                         Monitoreo Ambiental
                     </a>
                 </div>
