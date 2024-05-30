@@ -6,7 +6,6 @@
     <li data-target="#cambio" data-slide-to="3"></li>
 	 <!--<li data-target="#cambio" data-slide-to="4"></li>
 	<li data-target="#cambio" data-slide-to="5"></li>-->
-
  
   </ol>
   <div class="carousel-inner" > <!--BANNERS DEL CARRUSEL-->
@@ -22,7 +21,7 @@
             </div>
     
              <div class="carousel-item ">
-                <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/evaluacion_2024-1.jpeg" ></a>
+                <a href="" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/evaluacion_2024-1.jpeg" ></a>
             </div>
 			
             <div class="carousel-item ">
