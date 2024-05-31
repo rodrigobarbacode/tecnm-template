@@ -1,0 +1,36 @@
+.icon-bar {
+  position: fixed;
+  right: 0;
+  top: 65%;
+  -webkit-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1px;
+}
+.icon-bar a>img{
+  width: 70%;
+}
+
+
+a>img:hover  {
+  color: #eee;
+}
+
+@media only screen and (max-width: 575px) {
+  .icon-bar a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1px;
+}
+}
