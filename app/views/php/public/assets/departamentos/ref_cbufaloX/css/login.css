@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+/*background-image: url("../img/hostd1.png");*/
+}
+#datatable_wrapper{
+	/*border: 1px solid #d98696;*/
+}
+
+.boxlogin{
+	/*border: 1px solid #c0c0c0;*/
+	border-radius: 1px;
+	/*box-shadow: 0px 2px 10px #d6d6d6;*/
+	box-shadow: inset 1px -1px 1px 2px rgba(0,0,0,0.1);
+	margin: 50px auto;
+	width: 320px;
+	-moz-box-shadow: inset 1px -1px 1px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px -1px 1px 2px rgba(0,0,0,0.1);
+	-wbki-border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+#username, #password{
+	border-radius: 1px ;
+	-webkit-border-radius: 1px ;  /* Safari  */
+  -moz-border-radius: 1px ;     /* Firefox */
+}
+#conectarse{
+	/*border: 1px solid #3079ED;*/
+	/*background: #498AF2;*/
+	/*border: 1px solid #ff2a2a;
+	background: #ff8080;*/
+	/*border: 1px solid #171714;
+	background: #272822;*/
+	border: 1px solid #171714;
+	background: #595959;
+	border-radius: 4px  ;
+	-webkit-border-radius: 4px  ;  /* Safari  */
+  -moz-border-radius: 4px ;     /* Firefox */
+}
+#container{
+	background: none;
+	/*background: #F7F7F7;*/
+	/*background-image:url("../img/winter-1.png");
+	background-repeat: no-repeat;
+    	
+	background-size: cover;
+	background-position: center;*/
+}
+#imgHome{
+	/*background-image:url("../img/homegym.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;*/
+}
+
