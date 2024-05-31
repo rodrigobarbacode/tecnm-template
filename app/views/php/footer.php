@@ -1,7 +1,7 @@
-<!-- Footer Text -->
-<div class="text-center text-md-left" >
+<!-- Footer text -->
+<div class="text-center text-md-left">
   <!-- Grid row -->
-  <div class="row pt-3" >
+  <div class="row pt-3">
     <!-- Grid column -->
     <div class="col-12 col-md-3  ">
       <p>
@@ -15,11 +15,11 @@
       </p>
     </div>
     <!-- Grid column -->
-    <div class="col-12 col-md-3" >
+    <div class="col-12 col-md-3">
       <p><strong>Enlaces</strong><br>
         <a href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin">portal de Obligaciones de Transparencia</a><br>
-        <a  href="http://inicio.ifai.org.mx/Sitepages/ifai.aspx">INAI</a><br>
-        <a  href="<?php echo $tec; ?>quejas/">Buzón de Sugerencias</a>
+        <a href="http://inicio.ifai.org.mx/Sitepages/ifai.aspx">INAI</a><br>
+        <a href="<?php echo $tec; ?>quejas/">Buzón de Sugerencias</a>
       </p>
       <p>
         <strong>Número de Visitas:</strong> <br>
@@ -78,9 +78,9 @@
           <!-- <p>Mesa de ayuda: dudas e información<br>gobmx@funcionpublica.gob.mx</p> -->
           <p><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFp54">Denuncia contra servidores públicos</a></p>
           <h4>Síguenos en</h4>
-            <div class="row">
-              <div class="col">
-               <a href="https://www.facebook.com/gobmexico/" target="_blank" class="sendEstFooterRs share-info" red="Facebook" title="enlace a facebook abre en una nueva ventana">
+          <div class="row">
+            <div class="col">
+              <a href="https://www.facebook.com/gobmexico/" target="_blank" class="sendEstFooterRs share-info" red="Facebook" title="enlace a facebook abre en una nueva ventana">
                 <img alt="Facebook" src="https://framework-gb.cdn.gob.mx/landing/img/facebook.png">
               </a>
               <a href="https://twitter.com/GobiernoMX" target="_blank" class="sendEstFooterRs share-info" red="Twitter" title="Enlace a twitter abre en una nueva ventana">

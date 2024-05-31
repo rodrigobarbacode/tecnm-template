@@ -6,12 +6,6 @@
         <span class="sr-only">Menu</span>
         <i class="material-icons menu">menu</i>
     </button>
-   
-    <script>
-        function phpCaller() {
-            window.location.href = "public/assets/departamentos/bienvenida/index.php"
-        }
-    </script>
 
     <!-- Opciones del Tec, de izquierda a derecha en computadora, arriba hacia abajo en telefono-->
     <div class="collapse navbar-collapse" id="collapsibleNavbar2">

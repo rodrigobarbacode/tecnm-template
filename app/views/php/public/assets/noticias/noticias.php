@@ -20,7 +20,6 @@
     news.sort(function(a, b) {
         return new Date(b.date) - new Date(a.date);
     });
-    news = news.slice(0, 5);
 
     for (var i = 0; i < news.length; i++) {
       newsHTML += `
