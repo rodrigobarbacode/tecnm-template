@@ -1,15 +1,24 @@
-<!-- Banner de la pagina principal, funciona como carusel mostrando diferentes actualizaciones. -->
+<!-- Shinia / Yogurt -->
+<!-- Main page banner, functions as a carousel displaying various updates. -->
 <div id="cambio" class="carousel slide" data-ride="carousel">
+    <!-- Carousel Indicators -->
     <ol class="carousel-indicators">
+        <!-- Indicator 1 -->
         <li data-target="#cambio" data-slide-to="0" class="active"></li>
+        <!-- Indicator 2 -->
         <li data-target="#cambio" data-slide-to="1"></li>
+        <!-- Indicator 3 -->
         <li data-target="#cambio" data-slide-to="2"></li>
+        <!-- Indicator 4 -->
         <li data-target="#cambio" data-slide-to="3"></li>
+        <!-- Indicator 5 -->
         <li data-target="#cambio" data-slide-to="4"></li>
     </ol>
+    <!-- Carousel Indicators -->
 
+    <!-- Script to fetch a local JSON file and create carousel elements -->
     <script>
-        // Función para obtener un archivo JSON local.
+        // Function to fetch a local JSON file.
         function fetchLocalJSON(file, callback) {
             var xhr = new XMLHttpRequest();
             xhr.overrideMimeType("application/json");
@@ -22,211 +31,57 @@
             xhr.send(null);
         }
 
-        // Llamar a función fetchLocalJSON y crear los elementos del carrusel.
+        // Call fetchLocalJSON function and create carousel elements.
         fetchLocalJSON('/public/json/banner-list.json', function(datos) {
             var carouselInner = document.createElement('div');
             carouselInner.className = 'carousel-inner';
 
+            // Sort data by date and limit to the first 5 elements.
             datos.sort(function(a, b) {
                 return new Date(b.date) - new Date(a.date);
             });
             datos = datos.slice(0, 5);
 
             datos.forEach(function(value, key) {
+                // Determine if this is the first element (active).
                 var activeClass = (key === 0) ? 'active' : '';
 
+                // Create an element for each carousel item.
                 var carouselItem = document.createElement('div');
                 carouselItem.className = 'carousel-item ' + activeClass;
 
+                // Create a link for the image.
                 var link = document.createElement('a');
                 link.href = value.url;
                 link.target = '_blank';
 
+                // Create an image and set its source.
                 var image = document.createElement('img');
                 image.className = 'd-block w-100';
                 image.src = value.image;
 
+                // Attach the image to the link.
                 link.appendChild(image);
                 carouselItem.appendChild(link);
                 carouselInner.appendChild(carouselItem);
             });
 
-            // Adjuntar los elementos al carrusel.
+            // Append elements to the carousel.
             document.querySelector('.carousel').appendChild(carouselInner);
         });
     </script>
-
-    <!-- ITEMS DEL CARRUSEL-->
-    <!--
-    <div class="carousel-inner" >
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="public/img/banners/2024/evaluacion_2024-1.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/sol_cambio.JPG" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/sol_traslado.JPG" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="https://drive.google.com/drive/folders/1yaiZlDm2yKhlvBX_9Zs2cTviy6uUs1jM" target="_blank"><img class="d-block w-100" src="./img/banners/2024/prodep.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="http://www.itmexicali.edu.mx/img/banners/2024/documentos/Convocatoria2024Extraor.pdf" target="_blank"><img class="d-block w-100" src="./img/banners/2024/Convocatoria2024Extraor.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/PREPARATE.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/Declaranet2etapa.png" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/LLENA_DECLARANET.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/DeclaraNet_completa.png" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/DeclaraNet_informativa.png" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="https://declaracion.declaranet.gob.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/Declaranet_simplificada.png" ></a>
-        </div>
-     
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/mindbox-ambar-estudiantes.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/mindbox-ambar-docentes.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="http://www.itmexicali.edu.mx/img/banners/2024/documentos/ProcesoPromocionPersonalDocente2024.pdf" target="_blank"><img class="d-block w-100" src="./img/banners/2024/ProcesoPromocionPersonalDocente2024.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="http://www.itmexicali.edu.mx/img/banners/2024/documentos/CONVOCATORIA_SNII_2024.pdf" target="_blank"><img class="d-block w-100" src="./img/banners/2024/CONVOCATORIA_SNII_2024.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item ">
-            <a href="http://www.itmexicali.edu.mx/img/banners/2024/documentos/LICENCIA_BECA_COMISION.pdf" target="_blank"><img class="d-block w-100" src="./img/banners/2024/LICENCIA_BECA_COMISION.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="https://rinacional.tecnm.mx/" target="_blank"><img class="d-block w-100" src="./img/banners/2024/repositorio1.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="https://www.facebook.com/profile.php?id=100010686885222&mibextid=uzlsIk" target="_blank"><img class="d-block w-100" src="./img/banners/2024/horario_ingles.jpeg" ></a>
-        </div>
-                
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/derechos_humanos.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://bit.ly/Convocatoria20243" target="_blank"><img class="d-block w-100" src="./img/banners/2024/apirante2024-2.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="https://bit.ly/Equiv20243" target="_blank"><img class="d-block w-100" src="./img/banners/2024/equivalencia.jpeg" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/1_3A.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/1_3B.png" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/1_3C.png" ></a>
-        </div>
-
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/1_3D.png" ></a>
-        </div>
-                
-        <div class="carousel-item">
-            <a href="https://forms.gle/v7wSQ16sA8YxM6PX9" target="_blank"><img class="d-block w-100" src="./img/banners/2024/ingles.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2024/buscador.jpeg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/sida.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/derechos_sexuales.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/articulo8.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/conducta.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/discapacidad.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/etica.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/cartilla_derechos.jpg" ></a>
-        </div>
-            
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/cartilla_derechos2.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="http://www.itmexicali.edu.mx/img/banners/2023/documentos/registro_lineas.pdf" target="_blank"><img class="d-block w-100" src="./img/banners/2023/registro_lineas.jpeg" ></a>
-        </div>
-    
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/riesgoetico.png" ></a>
-        </div>
-
-        
-        <div class="carousel-item  ">
-            <a href="https://zoom.us/j/83530867862?from=join#success" target="_blank"><img class="d-block w-100" src="./img/banners/2022/platica_induccion.jpg" ></a>
-        </div>
-        
-        <div class="carousel-item">
-            <a href="" target="_blank"><img class="d-block w-100" src="./img/banners/2023/riesgoetico.png" ></a>
-        </div>
-        -->
-
-  </div>
-    <!-- Botones del Carusel -->
-    <a class="carousel-control-prev" href="#cambio" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-    </a>
-    
-    <a class="carousel-control-next" href="#cambio" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-    </a>
-
+    <!-- Script to fetch a local JSON file and create carousel elements -->
 </div>
+<!-- Main page banner, functions as a carousel displaying various updates. -->
+
+<!-- Carousel Navigation Buttons -->
+<a class="carousel-control-prev" href="#cambio" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Antes</span>
+</a>
+
+<a class="carousel-control-next" href="#cambio" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+</a>
+<!-- Carousel Navigation Buttons -->
