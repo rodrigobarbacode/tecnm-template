@@ -83,12 +83,14 @@
   <!-- Scripts -->
   <script src="/public/js/popper.min.js"></script>
   <script src="/public/js/jquery.min.js"></script>
-  <script src="/public/js/bootstrap.min.js"></script>
   <script src="/public/js/despliega_submenu.js"></script>
   <script src="/public/js/slick/slick.min.js"></script>
   <script src="/public/js/slinoti.js"></script>
   <script src="/public/js/arriba.js"></script>
   <script src="/public/js/jquery_ajax.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155881186-1"></script>
