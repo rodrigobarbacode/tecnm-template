@@ -1,6 +1,6 @@
 // Loading php-express module.
-const router = express.Router();
 const express = require('express');
+const router = express.Router();
 const phpExpress = require('php-express')({
     binPath: 'php'
 });
