@@ -1,0 +1,35 @@
+ <html ng-app="myApp">
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-autoc.css"/>
+    <link rel="stylesheet" type="text/css" href="css/autocomplete.css"/>
+    <title>Autocomplete</title>
+    </head>
+    <body>
+    
+	<div class="row">
+    	<div class="container">
+    		
+    	<div>
+<script type="text/ng-template" id="customTemplate.html">
+  <a>
+      <span bind-html-unsafe="match.label | typeaheadHighlight:query"></span>
+      <i>({{match.model.Fecha}})</i>
+  </a>
+</script>
+
+<form class="form-search" ng-controller="autocompleteController">
+        <br>
+        <br>
+        <input type="text" ng-model="selectedCountries" placeholder="Buscar" typeahead="c as c.Titulo for c in countries | filter:$viewValue | limitTo:10" typeahead-min-length='1' typeahead-on-select='onSelectPart($item, $model, $label)' typeahead-template-url="customTemplate.html" class="form-control" style="width:450px;">
+        <i class="icon-search nav-search-icon"></i>
+</form>
+</div>
+    	
+    	</div>
+    </div>
+    	
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.9.0.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+    </body>
+</html>

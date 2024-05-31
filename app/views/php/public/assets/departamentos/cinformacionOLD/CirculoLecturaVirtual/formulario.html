@@ -1,0 +1,135 @@
+
+  <div id="message">
+       <div class="alert alert-info" id="events-result" data-es="" style="color:#000033;">   
+Agrega una categoria para Biblioteca Virtual.(La insercion de imagen es Opcional)</div>
+</div>
+            <div class="panel panel-default">
+                <div class="panel-body form-horizontal ">
+                	<form id="addCategoria2" action="controller/bibliotecaController.php"  method="post" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <label for="concept" class="col-sm-3 control-label">Nombre:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="titulo" name="titulo" required placeholder="Escribe un nombre">
+                        </div>
+                    </div>
+                         <div class="form-group">
+                        <label for="concept" class="col-sm-3 control-label">Imagen de Categoria:</label>
+                        <div class="col-sm-9">
+                               <input type="file" size="60" name="myfile" id="imgInp2">
+                               <input type="hidden" size="60" name="enviarcatalogo" id="imagenc2" value="">
+                        </div>
+                    </div>
+
+                   
+
+ 
+                    <div class="form-group">
+                        <label for="description" class="col-sm-3 control-label">Descripcion:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" required placeholder="Escribe una breve descripcion">
+                        </div>
+                    </div> 
+                    
+                  <!--  <div class="form-group">
+                        <label for="date" class="col-sm-3 control-label">Date</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                  </div>    -->
+                    <div class="form-group">
+                        <div class="col-sm-12 text-right">
+                        	
+               <span class='glyphicon glyphicon-plus'></span> <input type="submit"   class="btn btn-default preview-add-button" value="       Agregar Categoria"><br>
+                           
+                        </div>
+                    </div>
+                    
+                    
+                       <center><div id="imagen2"></div>
+ 
+ <div id="progress">
+       
+</div>
+    </center>        
+         
+<script>
+$(document).ready(function()
+{
+	 
+	    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+            	                	$("#imagenc2").val("imagen");
+            	$("#imagen2").html(' <img   id="blah" src="#" alt="your image"  width="150"/>');
+                $('#blah').attr('src', e.target.result);
+                	$("#progress").html(' <div id="bar"></div><div id="percent">0%</div >');
+
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#imgInp2").change(function(){
+        readURL(this);
+    });
+
+	var options = { 
+    beforeSend: function() 
+    {
+    	$("#progress").show();
+    	//clear everything
+    	$("#bar").width('0%');
+    	$("#message").html("");
+		$("#percent").html("0%");
+    },
+    uploadProgress: function(event, position, total, percentComplete) 
+    {
+    	$("#bar").width(percentComplete+'%');
+    	$("#percent").html(percentComplete+'%');
+
+    
+    },
+    success: function() 
+    {
+        $("#bar").width('100%');
+    	$("#percent").html('100%');
+    	$("#imagenc2").val("");
+    	$("#imgInp2").val("");
+
+    },
+	complete: function(response) 
+	{
+		$("#message").html("<font color='green'>"+response.responseText+"</font>");
+		$("#progress").html('');
+		$("#imagen2").html('');
+		$("#imgInp2").val("");
+	},
+	error: function()
+	{
+		$("#message").html("<font color='red'> ERROR: unable to upload files</font>");
+		$("#progress").html(''); $("#imgInp2").val("");
+		$("#imagen2").html('');
+
+	}
+     
+}; 
+
+     $("#addCategoria2").ajaxForm(options);
+
+});
+
+</script>   
+            
+            
+            
+            </div>            
+        </div> <!-- / panel preview -->
+</form>
+ 
+ 
+             </div>
+             </div>
+
