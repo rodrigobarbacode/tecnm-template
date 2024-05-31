@@ -11,13 +11,13 @@
       <p>
         <strong>Contacto</strong>
         <br>Email: direccion@itmexicali.edu.mx
-        Telefono: (686) 580-4980
+        <br>Telefono: (686) 580-4980
       </p>
     </div>
     <!-- Grid column -->
     <div class="col-12 col-md-3">
       <p><strong>Enlaces</strong><br>
-        <a href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin">portal de Obligaciones de Transparencia</a><br>
+        <a href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin">Portal de Obligaciones de Transparencia</a><br>
         <a href="http://inicio.ifai.org.mx/Sitepages/ifai.aspx">INAI</a><br>
         <a href="<?php echo $tec; ?>quejas/">Buzón de Sugerencias</a>
       </p>
@@ -42,7 +42,7 @@
 
 <div class="main-footer pb-4">
   <div class="list-info">
-    <div class="container">
+    <div class="container" style="padding-top: 15px;">
       <div class="row">
         <div class="col-sm-3">
           <img src="https://framework-gb.cdn.gob.mx/landing/img/logofooter.png" href="/" alt="logo gobierno de méxico" class="logo_footer" style="max-width: 100%;  margin-top: 10%;">

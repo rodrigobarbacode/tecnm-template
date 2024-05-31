@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/x-icon" href="/public/img/iconos/min.ico" />
+  <link rel="stylesheet" href="/public/assets/css/enlaces_interes.css">
   <title>Gobierno de México - TECNM - Campus Mexicali</title>
 
   <!-- Bootstrap CSS -->
