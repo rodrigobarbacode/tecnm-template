@@ -1,4 +1,4 @@
-body{
+body {
 	background-color:#e9ecef5c;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -35,7 +35,7 @@ body{
 .sticky-top-2 {
     position: -webkit-sticky;
     position: sticky;
-    top: 20px;
+    top: 55px;
     z-index: 100;
     font-size: .80rem;
 	background-color: #1B396A;
@@ -49,9 +49,9 @@ body{
 	background-color: #1b396af0;
 }
 .main-footer{
-	background-image: url(https://framework-gb.cdn.gob.mx/landing/img/fondofooter.jpg); */
-    height: auto;
-    background-size: cover;
+	background-image: url(https://framework-gb.cdn.gob.mx/landing/img/fondofooter.jpg);
+  height: auto;
+  background-size: cover;
 }
 a {
     color: #f8f9fa;

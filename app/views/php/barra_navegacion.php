@@ -11,7 +11,7 @@
 
     <!-- Opciones del Tec, de izquierda a derecha en computadora, arriba hacia abajo en telefono-->
     <div class="collapse navbar-collapse" id="collapsibleNavbar2">
-        <ul class="navbar-nav ml-auto text-left">
+        <ul class="navbar-nav ml-auto">
             <!-- Submenu: QUIÉNES SOMOS? -->
             <li class="nav-item dropdown ">
                 <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#" id="navbarDropdown" role="button">
