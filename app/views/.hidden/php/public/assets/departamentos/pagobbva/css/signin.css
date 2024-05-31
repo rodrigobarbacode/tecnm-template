@@ -1,0 +1,106 @@
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* Cambie el color eee por fff*/
+  background-color: #fff;
+}
+
+.form-signin {
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox, .form-signin .radio {
+  margin-bottom: 10px;
+  text-align:center;
+  
+}
+.form-signin .radio {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+ img
+{
+	
+	width:100%;
+
+      
+  
+}
+ 
+ input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: #292321;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+	margin:10px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:#FF0000;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:#090;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+.form-signin select{
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px; 
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width:100%;
+  color:#868ea3;
+  border-color:#d9d9d9;
+}
