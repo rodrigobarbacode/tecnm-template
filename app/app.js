@@ -15,11 +15,21 @@ const app = express();
 // Create an Express application.
 
 // Define the directory where the public files are located.
-const public_dir = path.join(__dirname, 'views/php/public');
+const assets_dir = path.join(__dirname, 'views/php/public/assets');
+const icons_dir = path.join(__dirname, 'views/php/public/icons');
+const images_dir = path.join(__dirname, 'views/php/public/img');
+const pdf_dir = path.join(__dirname, 'views/php/public/pdf');
+const css_dir = path.join(__dirname, 'views/php/public/css');
+const js_dir = path.join(__dirname, 'views/php/public/js');
 // Define the directory where the public files are located.
 
 // Serve static files from the 'public' directory.
-app.use('/public', express.static(public_dir));
+app.use('/assets', express.static(assets_dir));
+app.use('/icons', express.static(icons_dir));
+app.use('/img', express.static(images_dir));
+app.use('/pdf', express.static(pdf_dir));
+app.use('/css', express.static(css_dir));
+app.use('/js', express.static(js_dir));
 // Serve static files from the 'public' directory.
 
 // Setting up the view engine.
