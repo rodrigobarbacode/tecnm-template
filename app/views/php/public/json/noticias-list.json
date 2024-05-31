@@ -63,7 +63,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_04_23.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_18.png",
+        "image": "public/assets/noticias/imgnoticia/2024_04_18.jpg",
         "date_title": "18 ABRIL 2024",
         "date": "2024-04-18",
         "title": "RECIBE ITM VISITA DE ESTUDIANTES DE CONALEP",
@@ -71,7 +71,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_04_18.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_17.png",
+        "image": "public/assets/noticias/imgnoticia/2024_04_17.jpg",
         "date_title": "17 ABRIL 2024",
         "date": "2024-04-17",
         "title": "IMPARTEN CONFERENCIA TOMA DE DECISIONES",
@@ -95,7 +95,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_04_16.4.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_16.3.png",
+        "image": "public/assets/noticias/imgnoticia/2024_04_16.3.jpeg",
         "date_title": "16 ABRIL 2024",
         "date": "2024-04-16",
         "title": "SOSTIENE DIRECTOR REUNIÓN CON DOCTORES",
@@ -119,7 +119,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_04_12.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_02.png",
+        "image": "public/assets/noticias/imgnoticia/2024_04_02.jpeg",
         "date_title": "02 ABRIL 2024",
         "date": "2024-04-02",
         "title": "TRABAJOS DE MANTENIMIENTO DURANTE VACACIONES DE PRIMAVERA",
@@ -137,42 +137,42 @@
     {
         "image": "public/assets/noticias/imgnoticia/2024_03_15.png",
         "date_title": "15 MARZO 2024",
-        "date": "2024-04-15",
+        "date": "2024-03-15",
         "title": "DIRECTOR SE REÚNE CON EL DELEGADO FEDERAL DE LA SECRETARÍA DE EDUCACIÓN PÚBLICA",
         "description": "El día de hoy nuestro director, Manuel de Jesús López Pérez, sostuvo una reunión de presentación con el delegado Federal de la SEP en Baja California, Guadalupe Acuña Álvarez y el Secretario General de la Delegación DV5, Raúl Soto Prado.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_15.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_15.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_14.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_14.png",
         "date_title": "14 MARZO 2024",
-        "date": "2024-04-14",
+        "date": "2024-03-14",
         "title": "SE REÚNE DIRECTOR CON EL PERSONAL FEMENINO DE NUESTRA INSTITUCIÓN",
         "description": "Se llevó a cabo una importante reunión con el personal femenino administrativo de nuestra institución, en la cual nuestro director, el Dr. Manuel de Jesús López Pérez, se presentó y tuvo la oportunidad de conocer a todo el equipo, así como sus respectivas áreas de trabajo.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_14.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_14.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_13.2.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_13.2.png",
         "date_title": "13 MARZO 2024",
-        "date": "2024-04-13",
+        "date": "2024-03-13",
         "title": "SE TITULAN INGENIEROS INDUSTRIALES GESTIÓN EMPRESARIAL Y LOGÍSTICA",
         "description": "Se realizó el acto de Titulación de las carreras de Ingeniero Industrial, Ingeniero en Gestión Empresarial e Ingeniero en Logística en la sala audiovisual del edificio ¨D¨.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_13.2.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_13.2.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_13.1.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_13.1.png",
         "date_title": "13 MARZO 2024",
-        "date": "2024-04-13",
+        "date": "2024-03-13",
         "title": "SE TITULAN INGENIEROS EN MECATRÓNICA Y MECÁNICA",
         "description": "Un total de 13 nuevos ingenieros en las carreras de Mecatrónica y Mecánica se titularon el lunes pasado, en el acto de Titulación celebrado en la sala audiovisual del edificio ¨D¨.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_13.1.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_13.1.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_13.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_13.png",
         "date_title": "13 MARZO 2024",
-        "date": "2024-04-23",
+        "date": "2024-03-13",
         "title": "ITM SEDE DE TALLER APRENDE PARA EMPRENDER",
         "description": "El Instituto Tecnológico de Mexicali es sede del taller Aprende para emprender que promueve la dirección de Desarrollo Empresarial y Asistencia Técnica de la Unidad de Promoción Institucional de la Secretaría de Hacienda.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_13.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_13.pdf"
     },
     {
         "image": "public/assets/noticias/imgnoticia/2024_04_12.png",
@@ -183,23 +183,23 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_04_12.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_11.1.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_11.1.png",
         "date_title": "11 MARZO 2024",
-        "date": "2024-04-11",
+        "date": "2024-03-11",
         "title": "Inicia reunión de entrega - recepción por cambio de dirección.",
         "description": "El día de hoy se llevó a cabo en la sala de juntas de dirección la entregarecepción de documentos y el estado que guarda nuestra institución.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_11.1.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_11.1.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_04_11.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_11.jpg",
         "date_title": "11 MARZO 2024",
-        "date": "2024-04-11",
+        "date": "2024-03-11",
         "title": "EXITOSO PANEL LOS DESAFÍOS DE LA MUJER",
         "description": "El viernes pasado se celebró el panel ¨Los Desafíos de la Mujer¨, dentro de la conmemoración del Día Internacional de la Mujer y organizado por el departamento de Ciencias Económico Administrativas.",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_04_11.pdf"
+        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_11.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.4.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_08.4.jpg",
         "date_title": "08 MARZO 2024",
         "date": "2024-03-08",
         "title": "ASISTE DIRECTOR DEL ITM A REUNIÓN NACIONAL 2024 DE DIRECTORES",
@@ -207,7 +207,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_03_08.4.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.3.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_08.3.jpg",
         "date_title": "08 MARZO 2024",
         "date": "2024-03-08",
         "title": "ORGULLO BÚFALO",
@@ -215,7 +215,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_03_08.3.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.2.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_08.2.jpg",
         "date_title": "08 MARZO 2024",
         "date": "2024-03-08",
         "title": "IMPARTEN CLASE DE DANZAS POLINESIAS",
@@ -223,7 +223,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_03_08.2.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.1.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_08.1.jpg",
         "date_title": "08 MARZO 2024",
         "date": "2024-03-08",
         "title": "ESTUDIANTES PARTICIPARON EN CLASE DE DEFENSA PERSONAL",
@@ -231,15 +231,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_03_08.1.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.png",
-        "date_title": "08 MARZO 2024",
-        "date": "2024-03-08",
-        "title": "",
-        "description": "",
-        "pdf": "/public/assets/noticias/noticiaspdf/2024_03_08.pdf"
-    },
-    {
-        "image": "public/assets/noticias/imgnoticia/2024_03_08.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_08.jpg",
         "date_title": "08 MARZO 2024",
         "date": "2024-03-08",
         "title": "COMITÉ DE VINCULACIÓN OTORGA BECAS A ESTUDIANTES 08 de Marzo 2024 TecNM/Mexicali",
@@ -263,7 +255,7 @@
         "pdf": "/public/assets/noticias/noticiaspdf/2024_03_07.pdf"
     },
     {
-        "image": "public/assets/noticias/imgnoticia/2024_03_05.3.png",
+        "image": "public/assets/noticias/imgnoticia/2024_03_05.3.jpg",
         "date_title": "05 MARZO 2024",
         "date": "2024-03-05",
         "title": "Titulación de nuevos Contadores Públicos",
