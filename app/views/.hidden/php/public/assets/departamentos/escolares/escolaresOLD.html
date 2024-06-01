@@ -1,0 +1,912 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="favicon.ico" rel="shortcut icon" type="image/png">
+    <title> Instituto Tecnológico de Mexicali </title>
+    <meta name="description" content="Sitio web oficial del instituto tecnológico de Mexicali ">
+    <meta name="keywords" content="instituto, tecnológico, Mexicali, ITM, itm">
+
+
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link href="page.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-----------Hojas de estilo-secciones------------>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="secciones.css">
+    <link rel="stylesheet" type="text/css" href="ListasStyle.css">
+    <script src="Navegar_por_Seccion.js"></script>
+    <script src="OnLoadResize.js"></script>
+    <!-----------Fin---Hojas de estilo-secciones----------------------->
+
+    <script type="text/javascript">
+        jssor_1_slider_init = function () {
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $Idle: 2000,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+
+
+    </script>
+
+
+
+    <!------------------------------------------------>
+    <style>
+        /* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .jssorb052 .i {position:absolute;cursor:pointer;}
+        .jssorb052 .i .b {fill:#000;fill-opacity:0.3;}
+        .jssorb052 .i:hover .b {fill-opacity:.7;}
+        .jssorb052 .iav .b {fill-opacity: 1;}
+        .jssorb052 .i.idn {opacity:.3;}
+
+        .jssora053 {display:block;position:absolute;cursor:pointer;}
+        .jssora053 .a {fill:#4123eb;stroke:#4123eb;stroke-width:640;stroke-miterlimit:10;}
+        .jssora053:hover {opacity:.8;}
+        .jssora053.jssora053dn {opacity:.5;}
+        .jssora053.jssora053ds {opacity:.3;pointer-events:none;}
+    </style>
+
+    <script src="Incluir/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="jssor.slider.min.js"></script>
+
+
+
+
+
+ <!-------------Google Analytics------------------->
+ <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-85185409-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <style>
+        .navbar>ul>li>a {
+            color: rgb(125, 125, 125);
+            font-size: 16px;
+        }
+		
+		.nota {
+    /* width: 650px; */
+    /* height: 200px; */
+    margin-top: 20px;
+}
+
+		img.noticia {
+    margin-top: 20px;
+    margin-left: 12px;
+    width: 238px;
+    height: 160px;
+    border: 2px solid rgb(238, 238, 238);
+    box-shadow: 0px 2px 5px rgb(153, 153, 153);
+}
+
+
+
+.titulo{
+    font-family: 'soberana_titularregular';
+    color: #a21f43;
+    text-align: left;
+    padding-top: 25px;
+	font-size:18px;
+	font-weight:bold;
+
+}
+
+.contenido{
+color: rgb(152, 151, 156);
+font-size: 15px;
+}
+
+.btnNota{
+background-repeat: no-repeat;
+    width: 35%;
+
+	}
+	
+	.fecha{
+	position: absolute;
+    float: left;
+    width: 82px;
+    height: 38px;
+    background-image: url(fecha.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-top: 8px;
+    font-family: 'soberana_sanslight_italic';
+    font-size: 13px;
+    margin-top: 147px;
+	}
+
+
+    element.style {
+    position: relative;
+    margin: 0px auto;
+    top: 0px;
+    left: 0px;
+    /* width: 919px; */
+    height: 346.875px;
+    overflow: hidden;
+    visibility: visible
+    }
+    
+
+    a.imgFa:visited {
+    display: block;
+    background-image: url(facebook.png);
+}
+a.imgFa:link {
+    display: block;
+    background-image: url(facebook.png);
+}
+a.imgFa {
+    width: 34px;
+    height: 32px;
+    float: left;
+    margin-left: 53px;
+    margin-right: 5px;
+}
+
+a.imgTw:visited {
+    display: block;
+    background-image: url(twitter.png);
+}
+a.imgTw:link {
+    display: block;
+    background-image: url(twitter.png);
+}
+a.imgTw {
+    width: 34px;
+    height: 32px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a.imgIn:visited {
+    display: block;
+    background-image: url(instagram.png);
+}
+a.imgIn:link {
+    display: block;
+    background-image: url(instagram.png);
+}
+a.imgIn {
+    width: 34px;
+    height: 32px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a.imgYo:visited {
+    display: block;
+    background-image: url(youtube.png);
+}
+a.imgYo:link {
+    display: block;
+    background-image: url(youtube.png);
+}
+a.imgYo {
+    width: 34px;
+    height: 32px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a.modAvi:visited {
+    display: block;
+    background-image: url(avisos.bmp);
+}
+a.modAvi:link {
+    display: block;
+    background-image: url(avisos.bmp);
+}
+a.modAvi {
+    width: 284px;
+    height: 128px;
+    float: left;
+    margin: 25px 5px 25px 30px;
+    box-shadow: 0px 2px 5px rgb(153, 153, 153);
+}
+
+img.logosepB {
+    width: 23%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.contenidoFooter{
+    color: rgb(152, 151, 156);
+    font-size: 14px;
+}
+    </style>
+
+</head>
+
+<body onload="reajustarPdf()">
+    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="top:-45;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse">
+                    <span class="sr-only">Interruptor de Navegación</span>
+                    <span class="icon-bar"></span><span class="icon-bar"> </span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand" style="padding-left: 8px;" href="https://www.gob.mx/">
+                    <img src="https://framework-gb.cdn.gob.mx/assets/images/gobmxlogo-2.svg" width="75" height="23" alt="Página de inicio, Gobierno de México"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.gob.mx/tramites" title="Trámites">Trámites</a>
+                    </li>
+                    <li><a href="https://www.gob.mx/gobierno" title="Gobierno">Gobierno</a></li>
+                    <li><a href="https://www.gob.mx/participa" title="Participación Ciudadana">Participa</a></li>
+                    <li><a href="https://datos.gob.mx" title="Datos Abiertos">Datos</a></li>
+                    <li><a href="https://www.gob.mx/busqueda">
+                            <span class="sr-only">Búsqueda</span>
+                            <i class="icon-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-12 ">
+        <!---------HEADER>-------------->
+        <div class="col-md-12 img-responsive">
+            <img src="img/banner_web.png" width="100%">
+        </div>
+    </div>
+    
+    <!---------FIN HEADER------------->
+
+    <!------------CONTENIDO--------------->
+    <div style="float: left; width: 100%; background-color:#1B396A !important;">
+        <ul style="list-style: none;">
+            <li id="imgTec" style="float: left; display: block; width: 3%; height: 10%; margin: 0.5%;"><img src="img/logotipo.png" alt="" width="100%" height="100%"></li>
+            <li id="liOpciones" style="float: left; display: block; margin: 0.5%; margin-left: 1.5%;"><h4 style="position: relative;"><a id="Inicio" class="navx-link dropdown-toggle" href="../../">Inicio</a></h4></li>
+            <li id="liOpciones" style="float: left; display: block; margin: 0.5%; margin-left: 1.5%;"><h4 style="position: relative;"><a id="Inicio" class="navx-link dropdown-toggle" href="#EgreTarget">Egresados</a></h4></li>
+            <li id="liOpciones" style="float: left; display: block; margin: 0.5%; margin-left: 1.5%;"><h4 style="position: relative;"><a id="Inicio" class="navx-link dropdown-toggle" href="#seguroTarget">Seguro</a></h4></li>
+            <li id="liOpciones" style="float: left; display: block; margin: 0.5%; margin-left: 1.5%;"><h4 style="position: relative;"><a id="Inicio" class="navx-link dropdown-toggle" href="#Reglam">Reglamentos</a></h4></li>
+        </ul>
+    </div>
+    <!--------NOTAS--->
+            
+            <center>
+                <h1 id="titulo" class="dir">Departamento de Servicios Escolares</h1>
+            </center>
+            <br>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:360px;overflow:hidden;visibility:hidden;">
+                        <!-- Loading Screen banner -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+                        </div>
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+                                <div><a href="" target="_blank"><img src="img/slaider/servicios.png"  alt="" title="" /></a></div>
+                                <div><a href="" target="_blank"><img src="img/slaider/servicios.png"  alt="" title="" /></a></div>
+                                <div><a href="" target="_blank"><img src="img/slaider/servicios.png"  alt="" title="" /></a></div>
+                        </div>
+                        <!-- Bullet Navigator y fin del banner -->
+                        <div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;"
+                            data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                                <svg viewBox="0 0 16000 16000" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+                                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <div data-u="arrowleft" class="jssora053" style="width:55px;height:55px;top:0px;left:25px;"
+                            data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                            </svg>
+                        </div>
+                        <div data-u="arrowright" class="jssora053" style="width:55px;height:55px;top:0px;right:25px;"
+                            data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+
+
+
+<p></p>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                     
+                    </div>
+                </div>
+            </div>
+            <!----END NOTAS------>
+
+        </div>
+        <!--------FOOTER--------------->
+</div>
+<!-----------------------------------------------------Secciones------------------------------------------------------------------------------->
+<embed id="IMSS_Pasos" src="Documentos/IMSS pasos.pdf#zoom=Tamaño automatico" type="application/pdf" width="80%" style="margin-left: 10%;" height="90%"/>
+<br> <div id="EgreTarget"></div> <br> <br>
+<div class="clearfix" style="width: 80%; margin-left: 10%; background-color: #DDDDDD; border-radius: 6px; border-style: solid;">
+    <div style="width: 100%; height: 7%; background-color: #5f1212; position: relative; margin: 0% !important; padding: 0% !important; ">
+        <h3 style="text-align: center; color: white; padding-top: 0.8%;">EGRESADOS</h3>
+    </div>
+    <div id="Contenedor_Listas" class="div_lista_secciones">
+    <!--------------------- Seccion de OPCIONES DE TITULACION ------------------------------------------------->
+        <ul class="ul_secciones">
+            <li class="li_secciones">
+                <!--------------------------- Seccion de OPCIONES DE TITULACION ------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #dad61a; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">OPCIONES DE TITULACION</h5>
+                    <button type="button" role="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_1"></button>
+                </div>
+                <div id="seccion_1_1" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <ul>
+                        <li>PROCEDIMIENTOS PARA TITULACION</li>
+                            <p> 
+                                <br>
+                                <a href="Documentos/Opcion T. Integrada.doc" target="_blank">TITULACION INTEGRADA  </a> <br> <br>
+                                <a href="Documentos/Titulacion 2004 triptico.doc" target="_blank">EGRESADOS CON NUMERO DE CONTROL DE 04 HACIA ATRAS </a><br> <br>
+                                <a href="Documentos/Titulacion de 2004 hacia adelante triptico.doc" target="_blank">EGRESADOS CON NUMERO DE CONTROL DEL 2004/02 Y ADELANTE  </a><br> <br>
+                                <a href="Documentos/Caracteristicas Generales para los trabajos profesionales en  Opciones V y VII.doc" target="_blank">CARACTERISTICAS DE LOS TRABAJOS PROFESIONALES  </a>
+                            </p>
+                        <li>PORTADAS DE LOS PROYECTOS </li>
+                        <p>
+                            <br>
+                            <a href="Documentos/opcion M. Experiencia P.doc" target="_blank">PORTADAS DEL PROYECTO POR EXPERIENCIA PROFESIONAL  </a> <br> <br>
+                            <a href="Documentos/Opcion T. Integrada.doc" target="_blank">PORTADAS DEL PROYECTO POR TITULACION INTEGRADA</a><br> <br>
+                            <a href="Documentos/Opcion V Cursos E T.doc" target="_blank">PORTADAS DEL PROYECTO POR CURSOS ESPECIALES DE TITULACION </a><br> <br>     
+                        </p>
+                    </ul>
+                </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion de TRAMITE PARA TITULO Y CEDULA ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #288d1f; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">TRAMITE PARA TITULO Y CEDULA</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_2"></button>
+                </div>
+                <div id="seccion_1_2" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <ul>
+                        <li>TRAMITE PARA TITULO Y CEDULA  </li>
+                        <p> 
+                        <br>
+                        <a href="Documentos/procedimientotitulacion18.pdf" target="_blank">TRAMITE PARA TITULO Y CEDULA</a> <br> <br>
+                        </p>
+                    </ul>
+            </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion de TITULOS EN RESGUARDOS ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #2d3ed8; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">TITULOS EN RESGUARDO</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_3"></button>
+                </div>
+                <div id="seccion_1_3" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <ul>
+                        <li>TITULOS EN RESGUARDO</li>
+                        <p> 
+                        <br>
+                        <a href="Documentos/titulosresguardo.pdf" target="_blank">TITULOS EN RESGUARDOS</a> <br> <br>
+                        
+                         </p>
+                    </ul>
+            </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion de TITULACION ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #d11b1b; position: relative; margin-top: 1%;">
+                    <h6 style="margin-left: 2%; padding-top: 1.1%; color: white;">TITULACION</h6>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_4"></button>
+                </div>
+                <div id="seccion_1_4" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                        <ul>
+                            <center>
+                                <H6>MANUAL DE AYUDA PARA EL TRAMITE DE TITULOS DE LICENCIATURA, TECNICO Y TECNICO SUPERIOR UNIVERSITARIO</H6>
+                        </center>
+                        <ul>
+                            <li class="contenidoFooter">
+                            <a href="">Ayuda para llenado del formato CEDULA PROFESIONAL </a> </li>
+                            <li class="contenidoFooter">
+                            <a href="">Claves de carreras Tec Mexicali</a> <br></li>
+                            <li class="contenidoFooter">
+                            <a href="">Video Tutorial de ayuda para trámite de título de Licenciatura </a></li>
+                        </ul>
+                        <p><strong>Inicia el trámite ACCESO AL SISTEMA DE TRAMITES DE TITULOS <a href="https://sirepve.sep.gob.mx/validacionelectronica/master.action">Acceso</a> <br><br>
+                            Trámite para la obtención de la Carta de No Incoveniencia
+                            Este trámite se realiza en Servicios Escolares y es el primer paso para poder iniciar tu titulación, 
+                            la Carta de No Incoveniencia es el documento que indica que no hay inconveniente legal ni académico para poder titularte. <br><br>
+                            
+                            Documentación Requerida para expedir la carta de no inconveniencia: </Strong><br><br>
+            
+                            <Strong> <u>Todas las copias deben ser legibles y tamaño carta</u></strong>            
+                        
+                        <ul style="list-style-type:none;">
+                            <li class="contenidoFooter">*Solicitud de acto profesional.</li>
+                            <li class="contenidoFooter">*Acta de nacimiento original y copia tamaño carta legible y completa</li>
+                            <li class="contenidoFooter">*Curp <a href="">Descargar aqui</a></li> 
+                            <li class="contenidoFooter">*Certificado de preparatoria original y copia, en caso de ser bachillarato del estado debe estar legalizado </li> 
+                            <li class="contenidoFooter">*Equivalencia o revalidación 1 copia ( personas que revalidaron ó se trasladaron de otra universidad) </li>
+                            <li class="contenidoFooter">*Autorización de semestres adicionales  (Casos donde el alumno no concluyó en 12 semestres)</li>
+                            <li class="contenidoFooter">*Liberación de servicio social.</li>
+                            <li class="contenidoFooter">*Acreditación del idioma inglés. </li>
+                            <li class="contenidoFooter">*Certificado de licenciatura y copia tamaño carta legible y completa. </li>
+                         
+                            <strong>Tramite de Licenciatura</strong><br>
+                             <li class="contenidoFooter">* Solicitud de expedición de cédula profesional y trámite de título original LICENCIATURA  
+                             Acceso al Sistema solicitudes SEP </li>
+                             <li class="contenidoFooter">* Hoja de ayuda para pago de derechos al SAT  NIVEL LICENCIATURA  Formato SAT para Word (.docx) <br><br>
+                            </li>
+                             <strong>Trámite de Maestría:</strong>
+                             <li class="contenidoFooter">* Solicitud de expedición de cédula profesional y trámite de título original LICENCIATURA  
+                             Acceso al Sistema solicitudes SEP </li>
+                            <li class="contenidoFooter">*Hoja de ayuda para pago de derechos al SAT  NIVEL MAESTRIA  Formato SAT para Word(.docx)</li>
+                             <li class="contenidoFooter">*4 fotografías tamaño credencial ovaladas blanco y negro de frente con pegamento papel delgado mate sin brillo  </li>
+                            <li class="contenidoFooter">*4 fotografías tamaño infantil blanco y negro de frente con pegamento papel delgado mate sin brillo.</li>
+                          <center> <li class="contenidoFooter">Hombres: saco claro, corbata oscura, bigote y barba recortada.</li></center>
+                          <center> <li class="contenidoFooter">Mujeres: blusa blanca, aretes pequeños, maquillaje discreto, frente y oídos descubiertos.</li></center>
+                        </ul>
+                        </p>
+                        </ul>
+                </div>
+            </li>  
+        </ul>
+        <br>
+    </div>
+</div>
+<div id="seguroTarget"></div>
+<br> <br>
+<div class="clearfix" style="width: 80%; margin-left: 10%; background-color: #DDDDDD; border-radius: 6px; border-style: solid;">
+    <div style="width: 100%; height: 7%; background-color: #5f1212; position: relative; margin: 0% !important; padding: 0% !important; ">
+        <h3 id="seguro" style="text-align: center; color: white; padding-top: 0.8%;">SEGURO INSTITUCIONAL</h3>
+    </div>
+    <div id="Contenedor_Listas" class="div_lista_secciones">
+    <!--------------------- Seccion de OPCIONES DE SEGURO ------------------------------------------------->
+        <ul class="ul_secciones">
+            <li class="li_secciones">
+                <!--------------------------- Cartel Informacion Equivalencia ------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #dad61a; position: relative; margin-top: 1%;">
+                    <h5 id="h5_Size" style="margin-left: 2%; padding-top: 1.1%; color: white;">Cartel Informacion Equivalencia</h5>
+                    <button type="button" role="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_5"></button>
+                </div>
+                <div id="seccion_1_5" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                        <li style="background-color: #ecea5b;"><a href="Documentos/CARTEL INFORMACION EQUIVALENCIA.docx">Cartel Equivalencia </a></li>
+                        </ol>
+                    </div>
+                </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion Solicitud de Convalidación ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #288d1f; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">Solicitud de Convalidación</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_6"></button>
+                </div>
+                <div id="seccion_1_6" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/SOLICITUD DE CONVALIDACION.docx">Solicitud de Convalidación</a></li>
+                        </ol>
+                    </div>  
+                </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion Solicitud IMSS ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #2d3ed8; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">Solicitud IMSS</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_7"></button>
+                </div>
+                <div id="seccion_1_7" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                            <li style="background-color: #616ff0;"><a href="Documentos/SolicitudIMSSitm.doc">Solicitud IMSS</a></li>
+                        </ol>
+                    </div>  
+                </div>
+            </li>
+        </ul>
+        <br>
+    </div>
+</div>
+<div  id="Reglam"></div>
+<br> <br>
+<div class="clearfix" style="width: 80%; margin-left: 10%; background-color: #DDDDDD; border-radius: 6px; border-style: solid;">
+    <div style="width: 100%; height: 7%; background-color: #5f1212; position: relative; margin: 0% !important; padding: 0% !important; ">
+        <h3 style="text-align: center; color: white; padding-top: 0.8%;">REGLAMENTOS</h3>
+    </div>
+    <div id="Contenedor_Listas" class="div_lista_secciones">
+    <!--------------------- Seccion de REGLAMENTOS ------------------------------------------------->
+        <ul class="ul_secciones">
+            <li class="li_secciones">
+                <!--------------------------- Seccion PLANES 2004 Y 2005 ------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #dad61a; position: relative; margin-top: 1%;">
+                    <h5 id="h5_Size" style="margin-left: 2%; padding-top: 1.1%; color: white;">PLANES 2004 Y 2005</h5>
+                    <button type="button" role="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_8"></button>
+                </div>
+                <div id="seccion_1_8" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/ACREDITACION-DE-ASIGNATURAS.pdf">Acreditación de asignaturas</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/CAMBIO-DE-CARRERA.pdf">Cambio de carrera</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/CONVALIDACION-DE-ESTUDIOS.pdf">Convalidación de estudios</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/MOVILIDAD-ESTUDIANTIL.pdf">Movilidad estudiantil</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/EQUIVALENCIAS-DE-ESTUDIOS.pdf">Equivalencias de estudios</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/TRANSITO-ESTUDIANTIL.pdf">Tránsito estudiantil </a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/CURSOS-DE-VERANO.pdf">Cursos de verano</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/RESIDENCIA-PROFESIONAL.pdf">Residencia profesional</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/TITULACION.pdf">Titulación</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/LENGUA-EXTRANJERA.pdf">Lengua extranjera</a></li>
+                            <li style="background-color: #ecea5b;"><a href="Documentos/Reglamentos20042005/TUTORIA.pdf">Tutoría</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion PLANES 2009 y 2010 ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #288d1f; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">PLANES 2009 y 2010</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_1_9"></button>
+                </div>
+                <div id="seccion_1_9" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/">Evaluación Acreditación Asignaturas</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/">Acreditación de Actividades Complementarias</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/Lineamiento_para_la_Operacin_del_Comit_Acadmico.pdf">Operacion Comité Académico</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/">Convalidación Estudios</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/Lineamiento_para_la_Movilidad_Estudiantil.pdf">Movilidad Estudiantil</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/Lineamiento_para_la_Resolucin_de_Equivalencia_de_Estudios.pdf">Resolución Equivalencia Estudios</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/Lineamiento_para_el_Traslado_Estudiantil.pdf">Traslado Estudiantil</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/">Residencia Profesional</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/Reglamentos20092010/">Servicio Social</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/">Cursos de Verano</a></li>
+                            <li style="background-color: #65cf5b;"><a href="Documentos/">Programa de Tutorías</a></li>
+                        </ol>
+                    </div>  
+                </div>
+            </li>
+            <li class="li_secciones">
+                <!------------------------------------------------- Seccion Estudiantes que ingresan a partir de agosto de 2015 ----------------------------------------->
+                <div style="width: 100%; height: 15%; border-radius: 6px; background-color: #2d3ed8; position: relative; margin-top: 1%;">
+                    <h5 style="margin-left: 2%; padding-top: 1.1%; color: white;">Estudiantes que ingresan a partir de agosto de 2015</h5>
+                    <button type="button" class="btn_desplegar_seccion" data-toggle="collapse" data-target="#seccion_2_0"></button>
+                </div>
+                <div id="seccion_2_0" class="collapse" style="border-style: solid; border-radius: 6px; border-width: 1px; background-color: #DDDDDD;">
+                    <br>
+                    <div class="list-type5">
+                        <ol>
+                            <li style="background-color: #616ff0;"><a href="Documentos/Reglamento2015/lineamientos20152.pdf">Lineamientos vigentes TecNM</a></li>
+                        </ol>
+                    </div>  
+                </div>
+            </li>
+        </ul>
+        <br>
+    </div>
+</div>
+<br> <br>
+<!----------------------------------------------------Fin de las secciones--------------------------------------------------------------------->
+    <div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="ESecU">
+                        <span class="titulo">Agenda y Servicios</span>
+                        <ul>
+                            <a href="#">
+                                <li class="contenidoFooter">Avisos</li>
+                            </a>
+                            <a href="#">
+                                <li class="contenidoFooter">Convocatorias</li>
+                            </a>
+                            <a href="#" target="_top">
+                                <li class="contenidoFooter">Calendario Escolar</li>
+                            </a>
+                            <a href="#" target="_top">
+                                <li class="contenidoFooter">Calendario de Actividades</li>
+                            </a>
+
+                            <a href="https://sge.mexicali.tecnm.mx/login" target="_top">
+                                <li class="contenidoFooter">SGE</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="ESecU">
+                        <span class="titulo">Sistema de Gestión Integral</span>
+                        <ul>
+                            <a href="#">
+                                <li class="contenidoFooter">Gestión de Calidad</li>
+                            </a>
+                            <a href="#">
+                                <li class="contenidoFooter">Equidad de Género</li>
+                            </a>
+                            <a href="#">
+                                <li class="contenidoFooter">Gestión Ambiental</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="ESecU">
+                        <span class="titulo">Departamentos</span>
+                        <ul>
+                            <a href="#">
+                                <li class="contenidoFooter">Desarrollo Académico</li>
+                            </a>
+                            <a href="#">
+                                <li class="contenidoFooter">Depto. de Servicios Escolares</li>
+                            </a>
+                            <a href="#">
+                                <li class="contenidoFooter">División de Estudios Profesionales</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="ESecU">
+                        <span class="titulo">Formatos y Reglamentos</span>
+                        <ul>
+                            <a href="#" target="_parent">
+                                <li class="contenidoFooter">Solicitud de Servicio Social</li>
+                            </a>
+                            <a href="#" target="_parent">
+                                <li class="contenidoFooter">Carta Compromiso de S. S.</li>
+                            </a>
+                            <a href="#" target="_parent">
+                                <li class="contenidoFooter">Plan de Actividades de S. S.</li>
+                            </a>
+                            <a href="#" target="_parent">
+                                <li class="contenidoFooter">Reporte Bimestral de S. S.</li>
+                            </a>
+                            <a href="#" target="_top">
+                                <li class="contenidoFooter">Reglamento Escolar</li>
+                            </a>
+                            <a href="#" target="_top">
+                                <li class="contenidoFooter">Reglamento del C. I.</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <hr class="puntos col-md-12 col-xs-12 col-sm-12">
+                <p>
+                    ●<a href="http://www.presidencia.gob.mx/" target="_top" class="contenidoFooter">Presidencia de la
+                        Republica</a>
+                    ●<a href="http://www.sep.gob.mx/" target="_top" class="contenidoFooter">Secretaría de Educación Pública</a>
+                    ●<a href="http://www.tecnm.mx/" target="_top" class="contenidoFooter">Tecnológico Nacional de México</a>
+                    ●<a href="#" class="contenidoFooter">Bolsa de Trabajo</a>
+
+                    ●<a href="http://www.anuies.mx/" class="contenidoFooter" target="_top" title="Asociación Nacional de Universidades e Instituciones de Educación Superior">ANUIES</a>
+                    ●<a href="#" target="_top" class="contenidoFooter">Universia</a>
+
+                    <a href="#" target="_blank"></a>
+                </p>
+                <hr class="puntos">
+
+
+                <div class="col-md-12 col-sm-12">
+                    <center>
+                        <a href="http://www.sep.gob.mx/" target="_top">
+                            <img class="logosepB img-responsive" src="img/logosep.png" title="Secretaría de Educación Pública">
+                        </a>
+                    </center>
+                </div>
+
+                <address class="col-md-12 text-center contenidoFooter">
+                        Instituto Tecnológico de Mexicali
+                        <a href="#" class="gris">www.itmexicali.edu.mx</a>, 
+                        <a href="" class="gris"></a><br>
+                        Ave. Tecnológico S/N C.P. 21376 Colonia Elías Calles, Baja California, México<br>
+                        Teléfonos: (686) 580-4980<br>
+                        PRESIDENCIA DE LA REPúBLICA: Algunos derechos reservados.
+                </address>
+            </div>
+        </div>
+        <!---------END FOOTER------------>
+        
+    </div>
+    <!---------END CONTENIDO------------->
+<div class="col-md-12">
+<footer class="main-footer">
+    <div class="list-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="http://reformas.gob.mx" target="_blank">Reformas</a></li>
+                        <li><a href="http://portaltransparencia.gob.mx" target="_blank">Portal de Obligaciones de Transparencia</a></li>
+                        <li><a href="https://www.infomex.org.mx/gobiernofederal/home.action" target="_blank">Sistema Infomex</a></li>
+                        <li><a href="http://inicio.ifai.org.mx/SitePages/ifai.aspx" target="_blank">INAI</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h5>¿Qué es gob.mx?</h5>
+                    <p>Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx">Leer más</a></p>
+                    <ul>
+                        <li><a href="https://www.gob.mx/en/index">English</a></li>
+                        <li><a href="https://www.gob.mx/temas">Temas</a></li>
+                        <li><a href="https://www.gob.mx/accesibilidad">Declaración de Accesibilidad</a></li>
+                        <li><a href="https://www.gob.mx/privacidadintegral">Aviso de privacidad integral</a></li>
+                        <li><a href="https://www.gob.mx/privacidadsimplificado">Aviso de privacidad simplificado</a></li>
+                        <li><a href="https://www.gob.mx/terminos">Términos y Condiciones</a></li>
+                        <li><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion">Política de seguridad</a></li>
+                        <li><a href="http://www.ordenjuridico.gob.mx" target="_blank">Marco Jurídico</a></li>
+                        <li><a href="https://www.gob.mx/sitemap">Mapa de sitio</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h5>Contacto</h5>
+                    <p>Mesa de ayuda: dudas e información <br> gobmx@funcionpublica.gob.mx</p>
+                    <p><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54">Denuncia contra servidores públicos</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <form role="form" id="subscribete">
+                        <fieldset>
+                            <legend class="vh">Suscríbete</legend>
+                            <label for="email">Mantente informado. Suscríbete.</label>
+                            <div class="form-group-icon">
+                                <input type="text" class="form-control" id="email" name="email" aria-label="Ingresa tu correo electrónico" placeholder="usuario@ejemplo.com"><button id="subscribe" type="button" class="blue-right btn">
+                                    <span class="vh">Suscríbete</span><i class="icon-caret-right"></i>
+                                </button>
+                            </div>
+                                <div class="message-subscribe hidden">
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <h5>Síguenos en</h5>
+                        <ul class="list-inline">
+                            <li><a class="social-icon facebook" target="_blank" href="https://www.facebook.com/gobmx" aria-label="Facebook de presidencia"></a>
+                            </li>
+                            <li>
+                                <a class="social-icon twitter" target="_blank" href="https://twitter.com/gobmx" aria-label="Twitter de presidencia"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="gobmx-footer" src="https://framework-gb.cdn.gob.mx/assets/images/gobmxlogo-2.svg" width="126" height="39" alt="Página de inicio, Gobierno de México">
+                </div>
+                <div class="col-sm-4 col-sm-offset-4">
+
+                </div>
+            </div>
+        </div>
+        <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=17183199&amp;ns_site=gobmx&amp;name=www.gob.guias.grafica" height="1" width="1" alt="*" class="vh">
+        <noscript>
+            <img src="https://sb.scorecardresearch.com/p?c1=2&c2=17183199&cv=2.0&cj=1" />
+        </noscript>
+</footer>
+</div>
+
+
+
+    <!--------------------------Modal emergente---------------------------->
+  
+
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+            var d = new Date();
+            var strDate = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+
+
+            $("#AppModal").show();
+
+            /*
+            if(strDate == "2018/6/8")
+            {
+                $("#AppModal").modal('toggle');
+            }
+            */
+
+
+        });
+
+        function btnImagenOver(ctrl) {
+            $("#" + ctrl).attr("src", "imagenes/btnLeerMasOver.png");
+        }
+
+        function btnImagen(ctrl) {
+            $("#" + ctrl).attr("src", "imagenes/btnLeerMas.png");
+        }
+    </script>
+</body>
+
+</html>
