@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 
 // Welcome endpoint.
 router.get('/bienvenida', (req, res) => {
-    res.render('public/assets/departamentos/bienvenida/index');
+    res.render('../misc-dir/departamentos/bienvenida/index');
 });
 // Welcome endpoint.
 
