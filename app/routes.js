@@ -20,13 +20,13 @@ router.get('/', (req, res) => {
 
 // Welcome endpoint.
 router.get('/bienvenida', (req, res) => {
-    res.render('../misc-dir/departamentos/bienvenida/index');
+    res.render('misc/departamentos/bienvenida/index');
 });
 // Welcome endpoint.
 
 // Transparencia endpoint.
 router.get('/transparencia', (req, res) => {
-    res.render('../misc-dir/departamentos/transparencia/index');
+    res.render('misc/departamentos/transparencia/index');
 });
 // Transparencia endpoint.
 
