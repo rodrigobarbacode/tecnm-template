@@ -33,7 +33,7 @@ app.use('/js', express.static(js_dir));
 // Serve static files from the 'public' directory.
 
 // Setting up the view engine.
-app.set('views', './views/php/');
+app.set('views', './views/php/main');
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 // Setting up the view engine.

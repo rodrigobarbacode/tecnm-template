@@ -47,13 +47,8 @@
                     
                     <!-- Opción: SIG Sistema Integrado de Gestion -->
                     <li class="nav-item dropdown">
-<<<<<<< HEAD
                         <a class="dropdown-item" href="/bienvenida"> 
                             Bienvenida
-=======
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/">
-                            SIG Sistema Integrado de Gestión
->>>>>>> 75f150bd8bce61efb9e948596cbe28580143bdaf
                         </a>
                     </li>
                     
@@ -67,13 +62,6 @@
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="http://www.itmexicali.edu.mx/directorio/index.html">
                             Directorio
-                        </a>
-                    </li>
-                    
-                    <!-- Opción: Bienvenida -->
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/bienvenida">
-                            Bienvenida
                         </a>
                     </li>
                     

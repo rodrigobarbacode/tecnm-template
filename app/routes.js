@@ -14,7 +14,7 @@ router.all(/.+\.php$/, phpExpress.router);
 
 // Home endpoint.
 router.get('/', (req, res) => {
-    res.render('main/index');
+    res.render('index');
 });
 // Home endpoint.
 
@@ -26,7 +26,7 @@ router.get('/bienvenida', (req, res) => {
 
 // Transparencia endpoint.
 router.get('/transparencia', (req, res) => {
-    res.render('main/tec-files/departamentos/transparencia/index');
+    res.render('../misc-dir/departamentos/transparencia/index');
 });
 // Transparencia endpoint.
 
