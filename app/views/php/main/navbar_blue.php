@@ -74,7 +74,7 @@
                     
                     <!-- Opción: Transparencia y Rendición de Cuentas -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/transparencia/">
+                        <a class="dropdown-item" href="/transparencia">
                             Transparencia Y Rendición de Cuentas
                         </a>
                     </li>

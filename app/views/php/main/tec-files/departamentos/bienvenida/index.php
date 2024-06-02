@@ -1,4 +1,4 @@
-<!-- Desarrollado por: Francisco Ruiz - German Avila -->
+
 
 <!DOCTYPE html>
 <html lang="es">

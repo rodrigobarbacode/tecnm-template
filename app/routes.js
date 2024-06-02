@@ -24,6 +24,12 @@ router.get('/bienvenida', (req, res) => {
 });
 // Welcome endpoint.
 
+// Transparencia endpoint.
+router.get('/transparencia', (req, res) => {
+    res.render('main/tec-files/departamentos/transparencia/index');
+});
+// Transparencia endpoint.
+
 // ************* Routes *************
 
 // Export the router.
