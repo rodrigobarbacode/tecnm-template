@@ -14,13 +14,13 @@ router.all(/.+\.php$/, phpExpress.router);
 
 // Home endpoint.
 router.get('/', (req, res) => {
-    res.render('index');
+    res.render('main/index');
 });
 // Home endpoint.
 
 // Welcome endpoint.
 router.get('/bienvenida', (req, res) => {
-    res.render('public/assets/departamentos/bienvenida/index');
+    res.render('main/tec-files/departamentos/bienvenida/index');
 });
 // Welcome endpoint.
 
