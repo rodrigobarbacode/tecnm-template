@@ -30,6 +30,13 @@ router.get('/transparencia', (req, res) => {
 });
 // Transparencia endpoint.
 
+// Transparencia endpoint.
+router.get('/invitacion', (req, res) => {
+    res.render('misc/invitacion/index');
+});
+// Transparencia endpoint.
+
+
 // ************* Routes *************
 
 // Export the router.

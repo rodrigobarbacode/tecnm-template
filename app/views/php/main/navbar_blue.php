@@ -81,7 +81,7 @@
                     
                     <!-- Opción: Licitaciones -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./invitacion/">
+                        <a class="dropdown-item" href="/invitacion">
                             Licitaciones
                         </a>
                     </li>

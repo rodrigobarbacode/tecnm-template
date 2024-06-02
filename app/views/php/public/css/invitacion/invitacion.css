@@ -1,0 +1,44 @@
+/* Configuracion del Banner */
+.conv {
+    /* Posicionamiento */
+    padding-bottom: 60px;
+
+    /* Alineamiento del Contenido */
+    text-align: center;
+}
+
+
+/* Banner Anunciando las Diferentes Convocatorias*/
+.conv-banner {
+    /* Posicionamiento */
+    width: 100vw;
+    padding: 5px;
+
+    /* Background */
+    background:#4F81BD;
+}
+/* Banner Anunciando las Diferentes Convocatorias*/
+
+/* Estilo del Texto de 'Vigente' en el Banner*/
+.vigente-style {
+    color: #2dff38;
+    font-weight: bolder;
+}
+/* Estilo del Texto de 'Vigente' en el Banner*/
+
+/* Boton de Convocatoria */
+.conv-button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #070044;
+    color: #eee;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.conv-button:hover {
+    transform: translateY(-3px);
+}
