@@ -54,7 +54,7 @@
                     </li>
                     <!-- Opción: Directorio -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/directorio/index.html">
+                        <a class="dropdown-item" href="/directorio">
                             Directorio
                         </a>
                     </li>
@@ -273,7 +273,7 @@
 
                     <!-- Opción: Correos Institucionales del Personal-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/documentos/correos.pdf">
+                        <a class="dropdown-item" href="assets/tec-files/documentos/correos.pdf">
                             Correos Institucionales del Personal
                         </a>
                     </li>
