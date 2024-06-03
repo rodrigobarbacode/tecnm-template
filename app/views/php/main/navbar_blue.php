@@ -339,13 +339,6 @@
                         </a>
                     </li>
 
-                    <!-- Opción: Recursos Humanos -->
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/rh/index.html">
-                            Recursos Humanos
-                        </a>
-                    </li>
-
                     <!-- Opción: Desarrollo Académico -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">
@@ -353,23 +346,16 @@
                         </a>
                     </li>
 
-                    <!-- Opción: Centro de Incubación e Innovación -->
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./eneit/">
-                            Centro de Incubación e Innovación
-                        </a>
-                    </li>
-
                     <!-- Opción: Centro de Cómputo -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/ccomputo/">
+                        <a class="dropdown-item" href="/misc/departamentos/ccomputo/index.html">
                             Centro de Cómputo
                         </a>
                     </li>
 
                     <!-- Opción: Actividades Extraescolares -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/extraescolares/">
+                        <a class="dropdown-item" href="/misc/departamentos/extraescolares/index.html">
                             Actividades Extraescolares
                         </a>
                     </li>
