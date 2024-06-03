@@ -45,13 +45,6 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     
-                    <!-- Opción: SIG Sistema Integrado de Gestion -->
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/">
-                            SIG Sistema Integrado de Gestión
-                        </a>
-                    </li>
-                    
                     <!-- Opción: TecNM -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://www.tecnm.mx/">
@@ -294,7 +287,7 @@
                     <!-- Opción: Sistema Integral de Gestión -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/" target="_blank">
-                            Sistema Integral de Gestión
+                            SIG Sistema Integral de Gestión
                         </a>
                     </li>
                 </ul>
@@ -309,7 +302,7 @@
                     
                     <!-- Opción: Servicios Escolares -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/escolares/escolares.html">
+                        <a class="dropdown-item" href="/misc/departamentos/escolares/escolares.html">
                             Servicios Escolares
                         </a>
                     </li>
@@ -341,7 +334,7 @@
 
                     <!-- Opción: Centro de Información -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/cinformacion/" target="_blank">
+                        <a class="dropdown-item" href="/misc/departamentos/cinformacion/index.html" target="_blank">
                             Centro de Información
                         </a>
                     </li>

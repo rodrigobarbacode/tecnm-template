@@ -1,0 +1,87 @@
+p { 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    text-indent: 25px; 
+    font-family: 'soberana_sanslight'; 
+    font-size: 14px;
+    color: rgb(152, 151, 156);
+ }
+.tnota{
+    
+    font-family: 'soberana_titularregular';
+    color: rgb(152, 151, 156);
+    text-align: center;
+}
+
+@font-face {
+	font-family: "soberana_titularregular";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanatitular-regular-webfont.eot') format("embedded-opentype"), url('soberanatitular-regular-webfont.woff') format("woff"), url('soberanatitular-regular-webfont.ttf') format("truetype"), url('soberanatitular-regular-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_titularbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanatitular-bold-webfont.eot') format("embedded-opentype"), url('soberanatitular-bold-webfont.woff') format("woff"), url('soberanatitular-bold-webfont.ttf') format("truetype"), url('soberanatitular-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sans_lightbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-bold-webfont.eot') format("embedded-opentype"), url('soberanasans-bold-webfont.woff') format("woff"), url('soberanasans-bold-webfont.ttf') format("truetype"), url('soberanasans-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-black-webfont.eot') format("embedded-opentype"), url('soberanasans-black-webfont.woff') format("woff"), url('soberanasans-black-webfont.ttf') format("truetype"), url('soberanasans-black-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansbold_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-blackitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-blackitalic-webfont.woff') format("woff"), url('soberanasans-blackitalic-webfont.ttf') format("truetype"), url('soberanasans-blackitalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sanslight";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-light-webfont.eot') format("embedded-opentype"), url('soberanasans-light-webfont.woff') format("woff"), url('soberanasans-light-webfont.ttf') format("truetype"), url('soberanasans-light-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sans_lightBdIt";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-bolditalic-webfont.eot') format("embedded-opentype"), url('soberanasans-bolditalic-webfont.woff') format("woff"), url('soberanasans-bolditalic-webfont.ttf') format("truetype"), url('soberanasans-bolditalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansitalic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-italic-webfont.eot') format("embedded-opentype"), url('soberanasans-italic-webfont.woff') format("woff"), url('soberanasans-italic-webfont.ttf') format("truetype"), url('soberanasans-italic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansultra";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-ultra-webfont.eot') format("embedded-opentype"), url('soberanasans-ultra-webfont.woff') format("woff"), url('soberanasans-ultra-webfont.ttf') format("truetype"), url('soberanasans-ultra-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sanslight_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-lightitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-lightitalic-webfont.woff') format("woff"), url('soberanasans-lightitalic-webfont.ttf') format("truetype"), url('soberanasans-lightitalic-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansregular";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-regular-webfont.eot') format("embedded-opentype"), url('soberanasans-regular-webfont.woff') format("woff"), url('soberanasans-regular-webfont.ttf') format("truetype"), url('soberanasans-regular-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "soberana_sansultra_italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url('soberanasans-ultraitalic-webfont.eot') format("embedded-opentype"), url('soberanasans-ultraitalic-webfont.woff') format("woff"), url('soberanasans-ultraitalic-webfont.ttf') format("truetype"), url('soberanasans-ultraitalic-webfont.svg') format("svg");
+}
