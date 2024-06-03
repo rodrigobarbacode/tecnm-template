@@ -47,7 +47,6 @@
             carouselOuter.appendChild(carouselItem);
         });
     });
-
 </script>
 
 <!-- Carousel Indicators -->
