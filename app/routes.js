@@ -36,11 +36,7 @@ router.get('/invitacion', (req, res) => {
 });
 // Invitacion endpoint.
 
-/* Recursos Humanos endpoint.
-router.get('/rh', (req, res) => {
-    res.render('misc/departamentos/rh/index');
-});
- Recursos Humanos endpoint.*/
+
 
 
 // ************* Routes *************
