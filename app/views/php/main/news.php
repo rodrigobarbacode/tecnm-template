@@ -1,114 +1,100 @@
+<script>
+    // Function to fetch a local JSON file.
+    function fetchLocalJSON(file, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+        xhr.open("GET", file, true);
+        xhr.send(null);
+    }
+
+    // Get news data from the JSON and create slider elements.
+    fetchLocalJSON('/json/news-list.json', function(datos) {
+        // Get the news slider container.
+        var newsOuter = document.querySelector('.news-outer');
+
+        // Sort data by date.
+        datos.sort(function(a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+
+        datos.forEach(function(value, key) {
+            // Create an element for each slider item.
+            var sliderItem = document.createElement('div');
+            sliderItem.className = 'row justify-concent-center';
+            sliderItem.style.position = 'relative';
+
+            // Create an image for the slider item.
+            var img_div = document.createElement('div');
+            img_div.className = 'col-12';
+
+            var img = document.createElement('img');
+            img.className = 'img-fluid mx-auto w-100';
+            img.style.height = '150px';
+            img.src = value.image;
+            img.alt = '';
+
+            img_div.appendChild(img);
+
+            // Create a date over the image.
+            var date = document.createElement('div');
+            date.className = 'h6 col-8 py-2 mb-4';
+            date.style.position = 'absolute';
+            date.style.top = '0px';
+            date.style.left = '15px';
+            date.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            date.style.color = 'white';
+            date.textContent = value.date_title;
+
+            img_div.appendChild(date);
+
+            // Create a title for the slider item.
+            var title = document.createElement('div');
+            title.className = 'h6 col-12 py-2 mb-4';
+            title.textContent = value.title;
+
+            // Create a link for the slider item.
+            var button = document.createElement('div');
+            button.className = 'col-12';
+            button.style.position = 'absolute';
+            button.style.bottom = '0px';
+            
+            var link = document.createElement('a');
+            link.href = value.pdf;
+            link.target = '_blank';
+            link.textContent = 'Leer Más';
+
+            button.appendChild(link);
+
+            // Attach the elements to the slider item.
+            sliderItem.innerHTML = '';
+            sliderItem.appendChild(img_div);
+            sliderItem.appendChild(title);
+            sliderItem.appendChild(button);
+
+            // Attach the slider item to the news slider container.
+            newsOuter.appendChild(sliderItem);
+        });
+    });
+</script>
+
 <div id='desface' style='display: none;'>
     <div class='container m-0 m-auto mb-3'>
-
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center bg-light pb-3 m-0'>
-            <section class='container bg-light px-5 mx-0 pb-3 m-auto' id='desface_noticias' style='display: none;'>
-
+            <section class='container bg-light px-5 mx-0 pb-3 m-auto ' id='desface_noticias' style='display: none;'>
                 <div class='row'>
-
                     <div class='col-12 display-2 text-center my-0 py-3'>
                         <a role='button' href='?vista=Noticias'>
                             Comunicación
                         </a>
                     </div>
-
                 </div>
-                <div class='center slider my-0' id='noticias'>
-
-                    <div class='row justify-concent-center' style='posicion: relative;'>
-
-                        <div class='col-12'>
-                            <img class='img-fluid mx-auto w-100' style='height: 150px;' src='img/noticias/1/A.jpg' alt='' />
-                        </div>
-
-                        <div class='h6 col-12 py-2 mb-4'>
-                            TecNM campus Los Ríos a la vanguardia tecnológica
-                        </div>
-
-                        <div class='col-12' style='position: absolute; bottom: 0px;'>
-                            <a href='?vista=Noticia&id=1' target='_blank'>
-                                LEER MÁS
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class='row justify-concent-center' style='posicion: relative;'>
-
-                        <div class='col-12'>
-                            <img class='img-fluid mx-auto w-100' style='height: 150px;' src='img/noticias/2/A.jpg' alt='' />
-                        </div>
-
-                        <div class='h6 col-12 py-2 mb-4'>
-                            TecNM campus Los Ríos a la vanguardia tecnológica
-                        </div>
-
-                        <div class='col-12' style='position: absolute; bottom: 0px;'>
-                            <a href='?vista=Noticia&id=2' target='_blank'>
-                                LEER MÁS
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class='row justify-concent-center' style='posicion: relative;'>
-
-                        <div class='col-12'>
-                            <img class='img-fluid mx-auto w-100' style='height: 150px;' src='img/noticias/3/A.jpg' alt='' />
-                        </div>
-
-                        <div class='h6 col-12 py-2 mb-4'>
-                            TecNM campus Los Ríos a la vanguardia tecnológica
-                        </div>
-
-                        <div class='col-12' style='position: absolute; bottom: 0px;'>
-                            <a href='?vista=Noticia&id=3' target='_blank'>
-                                LEER MÁS
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class='row justify-concent-center' style='posicion: relative;'>
-
-                        <div class='col-12'>
-                            <img class='img-fluid mx-auto w-100' style='height: 150px;' src='img/noticias/4/A.jpg' alt='' />
-                        </div>
-
-                        <div class='h6 col-12 py-2 mb-4'>
-                            TecNM campus Los Ríos a la vanguardia tecnológica
-                        </div>
-
-                        <div class='col-12' style='position: absolute; bottom: 0px;'>
-                            <a href='?vista=Noticia&id=4' target='_blank'>
-                                LEER MÁS
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class='row justify-concent-center' style='posicion: relative;'>
-
-                        <div class='col-12'>
-                            <img class='img-fluid mx-auto w-100' style='height: 150px;' src='img/noticias/5/A.jpg' alt='' />
-                        </div>
-
-                        <div class='h6 col-12 py-2 mb-4'>
-                            TecNM campus Los Ríos a la vanguardia tecnológica
-                        </div>
-
-                        <div class='col-12' style='position: absolute; bottom: 0px;'>
-                            <a href='?vista=Noticia&id=5' target='_blank'>
-                                LEER MÁS
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <div class='center slider my-0 news-outer' id='noticias'></div>
             </section>
         </div>
-
-        <br />
+        <br/>
