@@ -6,10 +6,10 @@
 	/* Redes Sociales Lateral */
 	.sticky-container{ 
 		padding:0px; 
-		margin:0px; 
+		margin:px; 
 		position:fixed; 
 		right:-135px;
-		top:230px; 
+		top:210px; 
 		width:210px; 
 		z-index: 1100; 
 	}

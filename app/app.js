@@ -18,8 +18,9 @@ const app = express();
 const assets_dir = path.join(__dirname, 'views/php/public/assets');
 const icons_dir = path.join(__dirname, 'views/php/public/icons');
 const images_dir = path.join(__dirname, 'views/php/public/img');
-const pdf_dir = path.join(__dirname, 'views/php/public/pdf');
+const json_dir = path.join(__dirname, 'views/php/public/json');
 const css_dir = path.join(__dirname, 'views/php/public/css');
+const pdf_dir = path.join(__dirname, 'views/php/public/pdf');
 const js_dir = path.join(__dirname, 'views/php/public/js');
 // Define the directory where the public files are located.
 
@@ -27,6 +28,7 @@ const js_dir = path.join(__dirname, 'views/php/public/js');
 app.use('/assets', express.static(assets_dir));
 app.use('/icons', express.static(icons_dir));
 app.use('/img', express.static(images_dir));
+app.use('/json', express.static(json_dir));
 app.use('/pdf', express.static(pdf_dir));
 app.use('/css', express.static(css_dir));
 app.use('/js', express.static(js_dir));
