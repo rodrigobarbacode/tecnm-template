@@ -287,7 +287,7 @@
 
                     <!-- Opción: Sistema Integral de Gestión -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/SIG/" target="_blank">
+                        <a class="dropdown-item" href="/misc/SIG/index.html" target="_blank">
                             SIG Sistema Integral de Gestión
                         </a>
                     </li>
