@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-white" id="main_navbar2">
     <form action='Buscar' class="navbar-brand ml-1" method='POST'>
-        <input class="w-100 h-100 border align-items-center" type="text" name='buscar' placeholder="Buscar" autocomplete='off' />
+        <input class="w-100 h-100 m-1 border align-items-center form-control" type="text" name='buscar' placeholder="Buscar" autocomplete='off' />
         <input type="hidden" name="btn_busqueda" />
     </form>
     

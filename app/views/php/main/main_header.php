@@ -2,7 +2,7 @@
     <div class="container-cabecera">
         
         <div class="row no-gutters">
-            <div class="col-md-12" style="max-width:60%">
+            <div class="col-md-12" style="margin-left:auto">
                 <div class="d-inline-block text-left">
                     <a href="https://www.gob.mx/" target="_blank" id="pleca_1" class='d-none d-xl-inline'>
                         <img loading='lazy' src="img/logos/gobierno_mexico.png" alt="Gobierno de México" class="plecaGob gob">
@@ -18,7 +18,7 @@
         </div>
         
         <!-- Opciones de accesibilidad -->
-        <div class="contenedorAccesibilidad" style="top: 5%;">  
+        <div class="contenedorAccesibilidad" style="top: 25%;">  
             <div class="idiomas text-right">
                 <a href="https://globalpage-prod.webex.com/join?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2F%23%2Fmeetings%2Fjoinbynumber%3FTrackID%3D%26hbxref%3D%26goid%3Dattend-meeting" title="Microsoft Teams" target="_blank">
                     <img loading='lazy' style="height:8%;width:7%" src="img/encabezado/microsoft_teams.png" alt="MT">

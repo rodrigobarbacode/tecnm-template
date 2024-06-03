@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	
 	<!-- Iconos con Font Awesome -->
+    <script src="https://kit.fontawesome.com/8562bd2fa0.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="assets/files/main/css/fa-svg-with-js.css">
 	<link rel="stylesheet" href="/iconos/iconos.css">
 	
@@ -53,7 +54,7 @@
         <nav class="navbar fixed-top" id="barraGobmx" style="background:#0b231e; position: fixed;">
             <div class="container-fluid u-noPaddingContainer">                    
                 <a class="navbar-brand d-none d-lg-block" style="padding-left: 8px;" href="https://www.gob.mx/" target='_blank'>
-                    <img loading='lazy' src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" style="width: 8rem; margin-left: -15%;" height="29" alt="Gobierno de México">
+                    <img loading='lazy' src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" style="width: 8rem; margin-left: -50%;" height="29" alt="Gobierno de México">
                 </a>
                 <div class="barraGobmx-enlaces">
                     <a href="https://www.gob.mx/gobierno" title="Gobierno" class="nav-link text-white" target='_blank'>

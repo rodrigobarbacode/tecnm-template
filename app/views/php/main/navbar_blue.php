@@ -26,18 +26,19 @@
     -->
 
     <!-- Elementos de la Barra -->
-    <div class="collapse navbar-collapse pl-5 pl-lx-0" id="navbarSupportedContent2">
+    <div class="collapse navbar-collapse pl-2 pt-2 pb-2 pl-lx-0" id="navbarSupportedContent2">
         <ul class="navbar-nav mr-auto">
             
             <!-- Logo del Tecnm -->
-            <div class='d-none d-lg-block' id="tecnmblanco" style="visibility:hidden; ">
+            <div class='d-none d-lg-block'>
                 <img loading='lazy' alt="TecNM" style="width: 90px; height:auto;" src="img/logos/tecnm_menu.png" />
             </div>
-            
-            <li class="nav-item active">
-                <a class="nav-link" href="\"> <span class="icon-home"></span></a>
-            </li>
 
+            <!-- Icono de Home -->
+            <li class="nav-item active">
+                <a class="nav-link pl-4" href="/"><i class="fa-solid fa-house"></i></a>
+            </li>
+        
             <!-- Menu: Quienes Somos -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
