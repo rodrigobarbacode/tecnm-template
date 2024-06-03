@@ -1,6 +1,6 @@
 
 <!-- Texto de Anuncio Sobre las Convocatorias -->
-<p class="conv">    
+<p class="conv intro">    
     <br><br>
     Convocatorias para participar por el procedimiento de invitación en a cuando menos tres personas:
 </p>

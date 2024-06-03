@@ -1,3 +1,10 @@
+/* Estilo del Texto Introductorio */
+.intro {
+    font-weight: 700;
+    font-size: 28px;
+}
+/* Estilo del Texto Introductorio */
+
 /* Configuracion del Banner */
 .conv {
     /* Posicionamiento */
@@ -6,6 +13,7 @@
     /* Alineamiento del Contenido */
     text-align: center;
 }
+/* Configuracion del Banner */
 
 
 /* Banner Anunciando las Diferentes Convocatorias*/
@@ -42,3 +50,4 @@
 .conv-button:hover {
     transform: translateY(-3px);
 }
+/* Boton de Convocatoria */
