@@ -26,12 +26,12 @@
     -->
 
     <!-- Elementos de la Barra -->
-    <div class="collapse navbar-collapse pl-2 pt-2 pb-2 pl-lx-0" id="navbarSupportedContent2">
+    <div class="collapse navbar-collapse pl-lx-0" id="navbarSupportedContent2">
         <ul class="navbar-nav mr-auto">
             
             <!-- Logo del Tecnm -->
             <div class='d-none d-lg-block'>
-                <img loading='lazy' alt="TecNM" style="width: 90px; height:auto;" src="img/logos/tecnm_menu.png" />
+                <img loading='lazy' alt="TecNM" style="width: 90px; " src="img/logos/tecnm_menu.png" />
             </div>
 
             <!-- Icono de Home -->

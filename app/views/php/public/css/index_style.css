@@ -91,5 +91,5 @@
 #main_navbar, #main_navbar2{ width: 100%; }
 .menuazul, .menublanco{ position: fixed; }
 .menublanco{ top: 45px; z-index: 1001; }
-.menuazul{ top: 82px; z-index: 1000; }
+.menuazul{ top: 94px; z-index: 1000; }
 @media (max-width: 700px) { .menuazul{ top: 75px; } }
