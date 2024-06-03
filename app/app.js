@@ -22,6 +22,7 @@ const json_dir = path.join(__dirname, 'views/php/public/json');
 const css_dir = path.join(__dirname, 'views/php/public/css');
 const pdf_dir = path.join(__dirname, 'views/php/public/pdf');
 const js_dir = path.join(__dirname, 'views/php/public/js');
+const misc_dir = path.join(__dirname, 'views/php/main/misc');
 // Define the directory where the public files are located.
 
 // Serve static files from the 'public' directory.
@@ -32,6 +33,7 @@ app.use('/json', express.static(json_dir));
 app.use('/pdf', express.static(pdf_dir));
 app.use('/css', express.static(css_dir));
 app.use('/js', express.static(js_dir));
+app.use('/misc', express.static(misc_dir));
 // Serve static files from the 'public' directory.
 
 // Setting up the view engine.

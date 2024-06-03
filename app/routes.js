@@ -30,11 +30,17 @@ router.get('/transparencia', (req, res) => {
 });
 // Transparencia endpoint.
 
-// Transparencia endpoint.
+// Invitacion endpoint.
 router.get('/invitacion', (req, res) => {
     res.render('misc/invitacion/index');
 });
-// Transparencia endpoint.
+// Invitacion endpoint.
+
+/* Recursos Humanos endpoint.
+router.get('/rh', (req, res) => {
+    res.render('misc/departamentos/rh/index');
+});
+ Recursos Humanos endpoint.*/
 
 
 // ************* Routes *************

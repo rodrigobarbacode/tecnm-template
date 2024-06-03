@@ -258,7 +258,7 @@
                     
                     <!-- Opción: Recursos Humanos -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/rh/index.html">
+                        <a class="dropdown-item" href="/misc/departamentos/rh/index.html">
                             Recursos Humanos
                         </a>
                     </li>
