@@ -13,8 +13,17 @@
 <!-- Banner -->
 <?php require 'banner.php' ?>
 
-<!-- Contenidos (Síguenos, Sitios de Interés) -->
-<?php require 'content.php' ?>
+<!-- Contenidos (Noticias) -->
+<?php require 'news.php' ?>
+
+<!-- Contenidos (Siguenos) -->
+<?php require 'follow_us.php' ?>
+
+<!-- Contenidos (Anexos) -->
+<?php require 'annexes.php' ?>
+
+<!-- Contenidos (Sitios de Interes) -->
+<?php require 'interest_sites.php' ?>
 
 <!-- Redes Sociales Lateral -->
 <?php require 'socials.php' ?>
