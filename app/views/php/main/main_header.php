@@ -2,7 +2,7 @@
     <div class="container-cabecera">
         
         <div class="row no-gutters">
-            <div class="col-md-12" style="margin-left:auto">
+            <div class="col-md-12" style="width:100vw; text-align: left;">
                 <div class="d-inline-block text-left">
                     <a href="https://www.gob.mx/" target="_blank" id="pleca_1" class='d-none d-xl-inline'>
                         <img loading='lazy' src="img/logos/gobierno_mexico.png" alt="Gobierno de México" class="plecaGob gob">
@@ -13,21 +13,30 @@
                     <a href="https://www.tecnm.mx"  id="pleca_3">
                         <img loading='lazy' src="img/logos/tecnm.jpg" alt="TecNM" class="plecaTECNM" style="width:20%;height:auto; min-width:80px" />
                     </a>
+                    <a href="https://www.itmexicali.edu.mx"  id="pleca_3">
+                        <img loading='lazy' src="img/logos/itmexicali-logo.png" alt="TecNM de Mexicali" class="plecaTECNM" 
+                        style=
+                        "
+                        padding-left: 25px;
+                        height: 80px; 
+                        min-width:80px;
+                        " />
+                    </a>
                 </div>
             </div>
         </div>
         
         <!-- Opciones de accesibilidad -->
-        <div class="contenedorAccesibilidad" style="top: 25%;">  
+        <div class="contenedorAccesibilidad" style="top: 35%;">  
             <div class="idiomas text-right">
                 <!-- <a href="https://globalpage-prod.webex.com/join?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2F%23%2Fmeetings%2Fjoinbynumber%3FTrackID%3D%26hbxref%3D%26goid%3Dattend-meeting" title="Microsoft Teams" target="_blank">
                     <img loading='lazy' style="height:8%;width:7%" src="img/encabezado/microsoft_teams.png" alt="MT">
                 </a> -->
                 <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
-                    <img loading='lazy' style="height:10%;width:7%" src="img/encabezado/correo-icono.png" alt="Buzón">
+                    <img loading='lazy' style="height:15%;width:10%" src="img/encabezado/correo-icono.png" alt="Buzón">
                 </a>
                 <a href="/assets/tec-files/documentos/2024/calendario2024-1.jpeg" title="Calendario Académico" target="_blank">
-                    <img loading='lazy' style="height:10%;width:7%" src="img/encabezado/calendario-icono.png" alt="Calendario Académico">
+                    <img loading='lazy' style="height:15%;width:10%" src="img/encabezado/calendario-icono.png" alt="Calendario Académico">
                 </a>
                 
                 <!-- Traductor -->
@@ -36,7 +45,7 @@
                             alt='Idioma Mandarín'>
                     </a> -->
                     <a href='index?idioma=ingles#googtrans(es|en)'>
-                        <img style='height:6%;width:6%' src='img/encabezado/usa-icono.png' title='Inglés'
+                        <img style='height:15%;width:10%' src='img/encabezado/usa-icono.png' title='Inglés'
                             alt='Idioma Inglés'>
                     </a>
                     <!-- <a href='index?idioma=frances#googtrans(es|fr)'>
@@ -44,7 +53,7 @@
                             alt='Idioma Francés'>
                     </a> -->
                     <a href='index?idioma=español#googtrans(es|es)' class='mr-3'>
-                        <img style='height:6%;width:6%' src='img/encabezado/mexico-icono.png' title='Español'
+                        <img style='height:15%;width:10%' src='img/encabezado/mexico-icono.png' title='Español'
                             alt='Idioma Español'>
                     </a>
                 <!--  -->
