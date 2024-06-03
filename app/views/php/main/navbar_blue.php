@@ -121,14 +121,14 @@
                     
                     <!-- Opción: Ing. Administracion -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/img/ADMINISTRACION.jpeg">
+                        <a class="dropdown-item" href="/img/carreras/ADMINISTRACION.jpeg">
                             Ing. Administración
                         </a>
                     </li>
                     
                     <!-- Opción: Contador Publico -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/cp/contador.html">
+                        <a class="dropdown-item" href="/assets/tec-files/carreras/cp/contador.html">
                             Contador Público
                         </a>
                     </li>
@@ -142,21 +142,21 @@
 
                     <!-- Opción: Ing Electrica -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/electrica/electrica.html">
+                        <a class="dropdown-item" href="/assets/tec-files/carreras/electrica/electrica.html">
                             Ing. Eléctrica
                         </a>
                     </li>
 
                     <!-- Opción: Ing. Electronica -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/img/ELECTRONICA.jpg">
+                        <a class="dropdown-item" href="/img/carreras/ELECTRONICA.jpg">
                             Ing. Electrónica
                         </a>
                     </li>
 
                     <!-- Opción: Ing. Energias Renovables -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/img/RENOVABLES.jpg">
+                        <a class="dropdown-item" href="/img/carreras/RENOVABLES.jpg">
                             Ing. Energías Renovables
                         </a>
                     </li>
@@ -184,7 +184,7 @@
 
                     <!-- Opción: Ing. Materiales -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/img/MATERIALES.jpg">
+                        <a class="dropdown-item" href="/img/carreras/MATERIALES.jpg">
                             Ing. Materiales
                         </a>
                     </li>
@@ -205,7 +205,7 @@
 
                     <!-- Opción: Ing. Quimica -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./carreras/quimica/quimica.html">
+                        <a class="dropdown-item" href="/assets/tec-files/carreras/quimica/quimica.html">
                             Ing. Química
                         </a>
                     </li>
@@ -214,13 +214,6 @@
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="http://posgrado.itmexicali.edu.mx">
                             Posgrado
-                        </a>
-                    </li>
-
-                    <!-- Opción: Posgrado Maestria en Ingenieria -->
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./prueba_posgrado/index.html">
-                            Posgrado Maestría en Ingeniería
                         </a>
                     </li>
                 </ul>
