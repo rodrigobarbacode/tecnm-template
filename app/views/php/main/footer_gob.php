@@ -1,8 +1,8 @@
 <div id='desface_footer_gob' style='display: none;'>
-    <footer class="main-footer m-0 p-1">
+    <footer class="main-footer m-0">
 
-        <div class="row justify-concent-center list-info w-100 m-0 p-2" id='gobierno_mexico'>
-
+        <div class="row justify-concent-center list-info w-100 m-0 p-2" style="box-shadow: 0px -2px 5px black;" id='gobierno_mexico'>
+ 
             <div class="col-11 col-sm-3 text-center">
                 <img src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" alt="logo gobierno de méxico" class="img-fluid p-3 w-100">
             </div>
