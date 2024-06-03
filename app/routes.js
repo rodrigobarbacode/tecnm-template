@@ -36,6 +36,17 @@ router.get('/invitacion', (req, res) => {
 });
 // Invitacion endpoint.
 
+// Directorio endpoint.
+router.get('/directorio', (req, res) => {
+    res.render('misc/directorio/index');
+});
+// Directorio endpoint.
+
+// SIG endpoint.
+router.get('/sig', (req, res) => {
+    res.render('misc/SIG/index');
+});
+
 
 
 
