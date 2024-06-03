@@ -1,56 +1,38 @@
+<script>
+    // Function to fetch a local JSON file.
+    function fetchLocalJSON(file, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+        xhr.open("GET", file, true);
+        xhr.send(null);
+    }
+
+    // Get annexes data from JSON file to display them.
+    fetchLocalJSON("json/annexes-list.json", function(data) {
+        var annexes = document.querySelector(".annexes-outer");
+        var html = "";
+
+        data.forEach(function(annex) {
+            html += "<div>";
+            html += "<a target='_blank' href='" + annex.link + "'>";
+            html += "<img loading='lazy' src='" + annex.image + "' style='width: 100%; height: 100%; object-fit: cover; padding: 10px'>";
+            html += "</a>";
+            html += "</div>";
+        });
+
+        annexes.innerHTML = html;
+    });
+    
+    
+</script>
+
 <!-- Anexos -->
 <div class='row w-100 justify-content-center bg-light py-3 m-0'>
-    <section class='anexos bg-light pb-2 anexo sitios'>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/pronunciamiento.pdf'>
-                <img loading='lazy' src='img/anexos/pronunciamiento.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/Protocolo_HSyAS.pdf'>
-                <img loading='lazy' src='img/anexos/protocolo_prevencion.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/SFP-CE-2019_Codigo_de_Etica.pdf'>
-                <img loading='lazy' src='img/anexos/codigo_etica.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/M00-CC-01_Codigo_de_Conducta.pdf'>
-                <img loading='lazy' src='img/anexos/codigo_conducta.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/estrategias_austeridad.pdf'>
-                <img loading='lazy' src='img/anexos/estrategias_austeridad.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/Convocatoria_Seguro.pdf'>
-                <img loading='lazy' src='img/anexos/convocatoria_seguro.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/Informe_Anual_Actividades_ CEPCI_TecNM.pdf'>
-                <img loading='lazy' src='img/anexos/comite_etica.png' />
-            </a>
-        </div>
-
-        <div>
-            <a target='_blank' href='pdf/anexos/decreto_tecnm.pdf'>
-                <img loading='lazy' src='img/anexos/decreto_creacion.png' />
-            </a>
-        </div>
-
-    </section>
+    <section class='anexos annexes-outer bg-light pb-2 anexo sitios'></section>
 </div>
-
-<br />
+<br/>
