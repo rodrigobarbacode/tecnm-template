@@ -344,7 +344,7 @@
 
                     <!-- Opción: Centro de Cómputo -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/misc/departamentos/ccomputo/index.html">
+                        <a class="dropdown-item" href="/cco">
                             Centro de Cómputo
                         </a>
                     </li>
