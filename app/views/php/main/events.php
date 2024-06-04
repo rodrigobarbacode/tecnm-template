@@ -82,24 +82,41 @@
     });
 </script>
 
-<div id='desface' style='display: none; background-color: #2f476f'>
-    <div class='container-fluid m-0 m-auto mb-3'>
-        <!-- Comunicación -->
-        <div class='row w-100 justify-content-center pb-3 m-0'>
-            <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase' id='desface_noticias' style='display: none;'>
-                    <div class='row'>
-                        <div class='col-12 display-2 text-left my-0 py-3'>
-                            <a role='button' href='?vista=Noticias'>
-                                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
-                            </a>
-                        </div>
-                    </div>
-                    <div class='center slider my-0 news-outer' id='noticias'></div>
-                </section>
+<section class="container neomorphic-defase px-5 ml-auto mr-auto mt-3 pt-3 pb-3" style="" >
+    <div class="container-fluid events-outer">
+        <div class="row">
+            <div class='row'>
+        <div class='col-12 display-2 text-left my-0 py-3'>
+            <a role='button' href='?vista=Noticias'>
+                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="events-outer">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4 col-4 text-right bordered-con">
+                <h1 style="color: #2f476f;">MAY 02</h1>
             </div>
-            <div class="col-lg-4 col-md-4 col-12">
-                <?php require 'events.php' ?>
+            <div class="col-lg-1 col-md-1 col-1">
+                <style>
+                    .ln {
+                        border-left: 2px solid white;
+                        height: 10vh;
+                    }
+                </style>
+                <div class="ln"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <h6 style="color: white;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora: 9:00</h6>
+                <h6 style="color: white;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-calendar-check"></i></span>Título: Lorem Inpsun</h6>
+                <a href="/">
+                    <p class="mt-2" style="color: #fab005; text-decoration: underline;">Ver información...</p>
+                </a>
             </div>
         </div>
-        <br/>
+    </div>
+    </div>
+        </div>
+    </div>
+</section>
