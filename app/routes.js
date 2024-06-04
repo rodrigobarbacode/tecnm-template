@@ -46,6 +46,13 @@ router.get('/directorio', (req, res) => {
 router.get('/sig', (req, res) => {
     res.render('misc/SIG/index');
 });
+// SIG endpoint.
+
+//CComputo endpoint.
+router.get('/cco', (req, res) => {
+    res.render('misc/departamentos/ccomputo/index');
+});
+//CComputo endpoint.
 
 
 
