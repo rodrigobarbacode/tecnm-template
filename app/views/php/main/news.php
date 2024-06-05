@@ -82,12 +82,12 @@
     });
 </script>
 
-<div id='desface' style='display: none; background-color: #2f476f'>
+<div id='desface' style='display: none; background-color: #2f476f;'>
     <div class='container-fluid m-0 m-auto mb-3'>
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center pb-3 m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase' id='desface_noticias' style='display: none;'>
+                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase' id='desface_noticias' style='display: none; height: 64vh; max-height: 64vh;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
