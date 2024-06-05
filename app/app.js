@@ -1,8 +1,28 @@
 // Importing the required modules.
+const {google} = require('googleapis');
 const routes = require('./routes');
 const express = require('express');
 const path = require('path');
+
+require('dotenv').config();
 // Importing the required modules.
+
+// Provide the required configuration.
+const CREDENTIALS = JSON.parse(process.env.CREDENTIALS);
+const CALENDAR_ID = process.env.CALENDAR_ID;
+// Provide the required configuration.
+
+// Google Calendar API Settings.
+const SCOPES = 'https://www.googleapis.com/auth/calendar';
+const calendar = google.calendar({version : "v3"});
+
+const auth = new google.auth.JWT(
+    CREDENTIALS.client_email,
+    null,
+    CREDENTIALS.private_key,
+    SCOPES
+);
+// Google Calendar API Settings.
 
 // Importing the php-express module.
 const phpExpress = require('php-express')({
@@ -49,6 +69,53 @@ app.all(/.+\.php$/, phpExpress.router);
 // Use the routes defined in the routes.js file.
 app.use(routes);
 // Use the routes defined in the routes.js file.
+
+// ************* Routes *************
+
+const getEvents = async (start, end) => {
+    try {
+        let response = await calendar.events.list({
+            auth: auth,
+            calendarId: CALENDAR_ID,
+            timeMin: start,
+            timeMax: end,
+            timeZone: 'Pacific/Los Angeles'
+        });
+    
+        let items = response.data.items;
+        let events = items.map(item => {
+            return {
+                summary: item.summary,
+                description: item.description,
+                title: item.summary,
+                start: item.start.dateTime,
+                end: item.end.dateTime
+            };
+        });
+        
+        return events;
+    } catch (error) {
+        console.log(`Error at getEvents --> ${error}`);
+        return [];
+    }
+};
+
+let start = '2024-01-01T00:00:00.000Z';
+let end = '2024-07-30T23:59:59.999Z';
+
+// Testing Endpoint
+app.get('/test', (req, res) => {
+    getEvents(start, end)
+     .then((res) => {
+        console.log(res)
+     })
+    .catch((err) => {
+        console.log(err)
+     });
+});
+// Testing Endpoint
+
+// ************* Routes *************
 
 // Define the port where the server will listen for requests.
 const PORT = 81;
