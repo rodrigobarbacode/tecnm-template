@@ -13,11 +13,11 @@
         <!-- Objetivos de CCO -->
         <div class="col-md-8 bg-light">
             <div class="row">
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Objetivos del Centro de Computo</h2>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <ul style="text-align: left;">
                         <li>
                         Propiciar que las tecnologías lleguen a todos los 
@@ -42,11 +42,11 @@
                     </ul>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Objetivos del Centro de Computo establecidos en el manual de organización de los Institutos Tecnológicos</h2>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <ol style="text-align: left;">
                         <li>
                         Planear, Coordinar, controlar y evaluar las actividades 
@@ -112,7 +112,7 @@
         <!-- Organigrama y Servicios -->
         <div class="col-md-4 bg-dark align-center">
             <div class="row">
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Organigrama</h2>
                 </div>
 
@@ -150,7 +150,7 @@
                     </ul>
                 </div>
                 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Servicios que presta dentro de la institucion</h2>
                 </div>
 
@@ -177,7 +177,7 @@
                     </ol>
                 </div>
                 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Servicios a Estudiantes y Personal del ITM</h2>
                 </div>
 
@@ -209,12 +209,12 @@
     <div class="row bg-secondary p-2">
         <div class="col-md-8 bg-light">
             <div class="row">
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h3>¿Cómo solicito o recupero mi usuario y contraseña MINDBOX?</h3>
                     <hr>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <ul style="text-align: left;">
                         <li>
                             El estudiante desde su cuenta de correo institucional @itmexicali.edu.mx, 
@@ -242,11 +242,12 @@
                     </p>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h3>Plan de Trabajo y Desarrollo 2022</h3>
+                    <hr>
                 </div>
 
-                <div class="col-md-12 p-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
                     <ol type="A" style="text-align: left;">
                         <li>
                             Equipamiento Institucional en Laboratorios <br>
@@ -303,14 +304,139 @@
                         </li>
                     </ol>
                 </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h3>¡DATOS DEL PROGRAMA!</h3>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 p-4" style="text-align: left;">
+                    Datos del programa: ADMINISTRACION DE SERVICIOS DE COMPUTO Y TELECOMUNICACIONES <br>
+                    Actividades a desarrollar: TECNICO <br>
+
+                    <ul>
+                        <li>
+                        Servicios de mantenimiento de equipo de cómputo
+                        </li>
+                        
+                        <li>
+                        Mantenimiento de infraestructura de telecomunicaciones
+                        </li>
+                        
+                        <li>
+                        Asesoria técnica
+                        </li>
+                        
+                        <li>
+                        Mantenimiento correctivo y preventivo de equipo de cómputo
+                        </li>
+
+                        <li>
+                        Prestación de servivios de Tecnologias de la Información
+                        </li>
+                    </ul>
+
+                    Programa de actividades/Objetivo: Mantener en operación 
+                    óptima la infraestructura de cómputo y telecomunicaciones 
+                    para la prestación del servicio educativo en el uso de las TICs. <br>
+
+
+                </div>
+
             </div>
         </div>
         <div class="col-md-4 bg-dark">
             <div class="row">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h3>¿Cómo solicito o recupero mi correo electrónico institucional @itmexicali.edu.mx o @mexicali.tecnm.mx?</h3>
+                    <hr>
+                </div>
 
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <a href="#">Clic Aqui</a> <br>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h3>Infraestructura, equipo de cómputo y software de la institución</h3>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <a href="#">| Acceso a Infraestructura |</a>
+                    <a href="#">Descarga de software legalmente Autodesk suite con tu 
+                    cuenta de correo institucional @itmexicali.edu.mx</a>
+                    AUTOCAD, 3DMAX FUSION <br>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h3>Encuestas de la prestación de servicios</h3>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <ul style="text-align: left;">
+                        <li>
+                            <a href="#">
+                                Satisfacción del estudiante en la prestación de servicios en laboratorio de cómputo <br> <br>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                Satisfacción del estudiante en la prestación de servicios red WIFI Tecnologico <br> <br>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                Satisfacción del estudiante en la prestación de servicios red Software instalado en los equipos <br> <br>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h3>Resultados de analisis de la prestación de servicios</h3>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <ul style="text-align: left;">
+                        <li>
+                            <a href="#">
+                                CACEI Proyección de crecimiento <br>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                CACEI Conectividad <br>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                CACEI Equipamiento <br>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                CACEI Software especializado <br>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                CACEI Soporte técnico <br>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Preguntas, Infraestructura, Plan de Trabajo, Encuestas y Resultados -->
         
         
     
