@@ -275,7 +275,7 @@
 
                     <!-- Opción: Centro de Informacion -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/misc/departamentos/cinformacion/index.html" target="_blank">
+                        <a class="dropdown-item" href="/cinformacion" target="_blank">
                             Centro de Información
                         </a>
                     </li> 
