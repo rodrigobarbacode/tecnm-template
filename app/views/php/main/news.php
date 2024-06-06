@@ -83,7 +83,7 @@
 </script>
 
 <div id='desface' style='display: none; background-color: #2f476f;'>
-    <div class='container-fluid m-0 m-auto mb-3'>
+    <div class='container-fluid m-auto mb-3'>
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center pb-3 m-0'>
             <div class="col-lg-8 col-md-8 col-12">
