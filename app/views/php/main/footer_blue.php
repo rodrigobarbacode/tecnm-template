@@ -1,7 +1,7 @@
 <div id='desface_footer' style='display: none;'>
 	<footer class='bg-tecnm footer'>
 
-		<div class='row m-0 justify-content-center ' style="padding: 16px; padding-bottom: 30px;">
+		<div class='row m-0 justify-content-center ' style="padding: 16px; padding-bottom: 30px; box-shadow: 0px -10px 5px #0000002A; ">
 
 			<div class='h6 col-12 col-lg-3 text-center text-lg-left' style='line-height: 1.5;'>
 

@@ -366,7 +366,7 @@
                 </div>
 
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <a href="/infraestructura">| Acceso a Infraestructura |</a>
+                    <a href="#">| Acceso a Infraestructura |</a>
                     <a href="#">Descarga de software legalmente Autodesk suite con tu 
                     cuenta de correo institucional @itmexicali.edu.mx</a>
                     AUTOCAD, 3DMAX FUSION <br>

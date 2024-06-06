@@ -48,13 +48,9 @@ router.get('/sig', (req, res) => {
 });
 // SIG endpoint.
 
-//CComputo endpoint.
-router.get('/cco', (req, res) => {
-    res.render('misc/departamentos/ccomputo/index');
-});
-//CComputo endpoint.
-
-
+// CCO endpoints.
+router.use(require('./cco/cco_routes.js'))
+// CCO endpoints.
 
 
 // ************* Routes *************

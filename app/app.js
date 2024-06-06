@@ -1,6 +1,6 @@
 // Importing the required modules.
 const {google} = require('googleapis');
-const routes = require('./routes');
+const routes = require('./routes/routes');
 const express = require('express');
 const path = require('path');
 
