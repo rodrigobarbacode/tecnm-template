@@ -50,7 +50,7 @@
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
-<body>
+<body style="background-color: #2f476f;" >
     <header id='header'>
         <nav class="navbar fixed-top" id="barraGobmx" style="background:#0b231e; position: fixed;">
             <div class="container-fluid">

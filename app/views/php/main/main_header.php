@@ -1,4 +1,4 @@
-<div class="u-noPaddingContainer contenedorGobierno">
+<div class="u-noPaddingContainer contenedorGobierno" style="background-color: white;">
     <div class="container-cabecera">
         
         <div class="row no-gutters">
