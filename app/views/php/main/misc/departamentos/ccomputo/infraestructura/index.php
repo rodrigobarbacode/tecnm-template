@@ -1,20 +1,20 @@
-<?php require '../../../navbar_gob.php' ?>
+<?php require '../../../../navbar_gob.php' ?>
 
 <!-- Encabezado principal -->
-<?php require '../../../main_header.php' ?>
+<?php require '../../../../main_header.php' ?>
 
 <!-- Menú Blanco -->
-<?php require '../../../navbar_white.php' ?>
+<?php require '../../../../navbar_white.php' ?>
 
 <!-- Menú Azul  -->
-<?php require '../../../navbar_blue.php' ?>
+<?php require '../../../../navbar_blue.php' ?>
 
 <!-- Contenido -->
 <?php require 'infraestructura.php' ?>
 
 
 <!-- Footer Azul -->
-<?php require '../../../footer_blue.php' ?>
+<?php require '../../../../footer_blue.php' ?>
 
 <!-- Footer Gobernación -->
-<?php require '../../../footer_gob.php' ?>
+<?php require '../../../../footer_gob.php' ?>

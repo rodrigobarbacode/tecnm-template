@@ -7,7 +7,7 @@
             <h1>Centro de Computo</h1> 
         </div>
 
-        <!-- Titulo -->
+        <!-- SubTitulo -->
         <div class="col-md-12 bg-warning p-2 align-center">
             <h1>Correos Electrónicos Institucionales</h1> 
         </div>
