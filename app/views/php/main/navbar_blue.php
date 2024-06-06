@@ -262,7 +262,7 @@
            
             <!-- Menu: Personal TecNM -->
             <li class="nav-item dropdown">
-                <a class="nav-link active font-weight-bold" href="http://www.itmexicali.edu.mx/quejas/index.html">
+                <a class="nav-link active font-weight-bold" href="https://forms.gle/goPkoY5f4Ln6G6328">
                     Quejas y Sugerencias
                 </a>
             </li>

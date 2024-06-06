@@ -52,6 +52,12 @@ router.get('/sig', (req, res) => {
 router.use(require('./cco/cco_routes.js'))
 // CCO endpoints.
 
+// Centro de Informacion endpoint.
+router.get('/cinformacion', (req, res) => {
+    res.render('misc/departamentos/cinformacion/index');
+});
+// Centro de Informacion endpoint.
+
 
 // ************* Routes *************
 

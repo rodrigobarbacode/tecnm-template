@@ -2,446 +2,252 @@
 <div class="container-fluid bg-primary p-4 mx-auto">
     <!-- Renglon 'Header' que presenta el nombre del departamento -->
     <div class="row align-center bg-secondary p-5">
-        <!-- Titulo -->
-        <div class="col align-center">
+         <!-- Titulo -->
+         <div class="col-md-12 bg-warning p-2 align-center">
             <h1>Centro de Computo</h1> 
         </div>
+
+        <!-- SubTitulo -->
+        <div class="col-md-12 bg-warning p-2 align-center">
+            <h1>Infraestructura TICs de la Institución</h1> 
+        </div>
     </div>
+
+    <!-- Descripcion -->
+    <div class="row bg-secondary">
+        <div class="col-md-12 p-4" style="text-align: left;">
+            <p>
+                El centro de cómputo, cuenta con un programa de migración 
+                de infraestructura de telecomunicaciones y 
+                equipo de cómputo que se atiende desde el periodo 2018-2. 
+                El reto principal es la atención del servicio de internet 
+                inalámbrico en la institución, derivado de la necesidad 
+                de conexión de dispositivos. Para ello, se requiere una 
+                revolucionada migración de infraestructura y equipamiento 
+                para la atención de la demanda solicitada de estudiantes 
+                y personal del plantel. <br>
+
+                ETAPA 1: Migración del Backbone institucional: 2018-2024: 
+                Flujo LAN 10 Gbps <br>
+
+                ETAPA 2: Migración del sistema telefónico institucional: 
+                2021: VOIP Grandstream 99 terminales telefónicas <br>
+
+                ETAPA 3: Migración de infraestructura Inalámbrica 
+                institucional: 2019-2024:  2021: 80 Puntos de acceso 
+                Unifi, se requieren: 140 AP para alto flujo <br>
+
+                ETAPA 4: Incremento de ancho de banda institucional: 
+                2021: 1.0 Gbps, de acuerdo a la demanda del servicio, 
+                se requiere un flujo de 3Gbps <br>
+            </p>
+
+            <ul>
+                <li>
+                    Reemplazo equipo de laboratorio de cómputo 
+                    multidisciplinario: 245 equipos
+                </li>
+
+                <li>
+                    Actualización de equipo saliente de laboratorio 
+                    para reubicación en espacios administrativos
+                </li>
+
+                <li>
+                    Programación para reemplazo antes de 2024: 
+                    230 equipos de uso académico
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Descripcion -->
     
     <!-- Renglon en el cual tenemos 4 diferentes tipos de contenido -->
     <div class="row bg-secondary p-2">
-        <!-- Objetivos de CCO -->
-        <div class="col-md-8 bg-light">
+        <!-- Infraestructura y Conectividad -->
+        <div class="col-md-6 bg-light">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Objetivos del Centro de Computo</h2>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ul style="text-align: left;">
-                        <li>
-                        Propiciar que las tecnologías lleguen a todos los 
-                        usuarios estudiantes y personal de la institución, 
-                        siendo instrumento para sus investigaciones, ejercicio 
-                        docente o en su defecto herramientas fundamentales 
-                        para el desarrollo educativo <br> <br>
-                        </li>
-
-                        <li>
-                        Propiciar que las tecnologías lleguen a todos los 
-                        usuarios estudiantes y personal de la institución, 
-                        siendo instrumento para sus investigaciones, ejercicio 
-                        docente o en su defecto herramientas fundamentales para 
-                        el desarrollo educativo <br> <br>
-                        </li>
-
-                        <li>
-                        Coordinar los procesos operativos y actividades relacionadas 
-                        con las tecnologías de información y telecomunicaciones. <br> <br>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Objetivos del Centro de Computo establecidos en el manual de organización de los Institutos Tecnológicos</h2>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ol style="text-align: left;">
-                        <li>
-                        Planear, Coordinar, controlar y evaluar las actividades 
-                        de desarrollo de sistemas y servicios de computo. <br> <br>
-                        </li>
-
-                        <li>
-                        Elaborar el programa operativo anual y el anteproyecto de 
-                        presupuesto del Centro de Cómputo y presentarlos a la 
-                        Subdirección de Servicios Administrativos, para lo conducente. <br> <br>
-                        </li>
-
-                        <li>
-                        Aplicar la estructura orgánica autorizada para el 
-                        Centro de Computo y los procedimientos establecidos.<br> <br>
-                        </li>
-
-                        <li>
-                            Organizar, Coordinar y controlar los servicios de almacenamiento, 
-                            captura y procesamiento de informaci6n del instituto tecnológico.<br> <br>
-                        </li>
-
-                        <li>
-                            Establecer y mantener actualizados los sistemas de captación, 
-                            validación y explotación de información del instituto tecnológico.<br> <br>
-                        </li>
-
-                        <li>
-                            Coordinar el análisis, diseño y programación de 
-                            sistemas de los procesos aprobados.<br> <br>
-                        </li>
-
-                        <li>
-                            Controlar la operación y el mantenimiento del equipo 
-                            de cómputo, así como la infraestructura del centro.<br> <br>
-                        </li>
-
-                        <li>
-                            Realizar Estudios de factibilidad para la selección 
-                            de equipo y servicio de computo, a fin de mantenerlos 
-                            actualizados en el instituto tecnológico.<br> <br>
-                        </li>
-
-                        <li>
-                            Diseñar y mantener actualizados los sistemas de 
-                            información del instituto tecnológico.<br> <br>
-                        </li>
-
-                        <li>
-                            Establecer y mantener relaciones e intercambios con 
-                            Instituciones que manejen equipos de cómputo afines.<br> <br>
-                        </li>
-
-                        <li>
-                            Coordinar las actividades del departamento con las demás.<br> <br>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <!-- Objetivos de CCO -->
-
-        <!-- Organigrama y Servicios -->
-        <div class="col-md-4 bg-dark align-center">
-            <div class="row">
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Organigrama</h2>
-                </div>
-
-                <div class="col-md-12">
-                    <ul style="text-align: left;">
-                        <li>
-                            Jefatura
-                            <ul>
-                                <li>
-                                    Coordinaciones
-                                    <ul>
-                                        <li>
-                                            Coordinación de Desarrollo de Sistemas
-                                        </li>
-                                        <li>
-                                            Coordinación de Servicios de Cómputo
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Operador de Centro de Cómputo
-                                </li>
-                                <li>
-                                    Capturista
-                                </li>
-                                <li>
-                                    Técnicos de Mantenimiento
-                                </li>
-                                <li>
-                                    Secretaria
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Servicios que presta dentro de la institucion</h2>
-                </div>
-
-                <div class="col-md-12">
-                    <ol type="a" style="text-align: left;">
-                        <li>
-                            Asesoría y capacitación en el uso de equipo de cómputo institucional. <br> 
-                        </li>
-                        <li>
-                            Instalación y/o configuración de equipo de cómputo institucional. <br> 
-                        </li>
-                        <li>
-                            Mantenimiento preventivo y correctivo a equipo de cómputo institucional. <br> 
-                        </li>
-                        <li>
-                            Mantenimiento preventivo y correctivo de la infraestructura de telecomunicaciones 
-                            de la institución. <br> 
-                        </li>
-                        <li>
-                            Gestión de recursos informáticos para el acceso a los sistemas de 
-                            información institucional académicos y administrativos: MOODLE, DNS, 
-                            WEB, MINDBOX, CACHANILLA, MEZQUITE, CACTUS, SAHUARO, MAIL1, MAIL2. <br> 
-                        </li>
-                    </ol>
-                </div>
-                
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Servicios a Estudiantes y Personal del ITM</h2>
-                </div>
-
-                <div class="col-md-12">
-                    <ul style="text-align: left;">
-                        <li>
-                            Gestión de cuentas de correo electrónico institucional 
-                            para estudiantes y personal de la institución. <br>
-                        </li>
-                        <li>
-                            Gestión de cuentas de acceso a la red inalambrica de 
-                            internet institucional TECNOLOGICO. <br>
-                        </li>
-                        <li>
-                            Orientación  en la gestión de cuentas y contraseñas de la 
-                            plataforma informática institucional MINDBOX. <br>
-                        </li>
-                        <li>
-                            Impresión de credencial institucional. <br>
-                        </li>     
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Organigrama y Servicios -->
-    </div>
-
-    <!-- Preguntas, Infraestructura, Plan de Trabajo, Encuestas y Resultados -->
-    <div class="row bg-secondary p-2">
-        <div class="col-md-8 bg-light">
-            <div class="row">
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>¿Cómo solicito o recupero mi usuario y contraseña MINDBOX?</h3>
+                    <h2>Infraestructura de Telecomunicaciones 2023</h2>
                     <hr>
                 </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ul style="text-align: left;">
-                        <li>
-                            El estudiante desde su cuenta de correo institucional @itmexicali.edu.mx, 
-                            deberá contactar a su coordinador solicitando reinicie su NIP. 
-                            Consulta el directorio de los coordinadores <a href="http://" >aquí.</a> <br> <br>
-                        </li>
-
-                        <li>
-                            El docente, deberá contactar a su jefe académico para el reinicio de su contraseña.<br> <br>
-                        </li>
-
-                        <li>
-                            Todo el personal de la institución que no es docente, podrá solicitar apoyo 
-                            vía correo electrónico desde su cuenta institucional @itmexicali.edu.mx 
-                            al centro de computo a la dirección <a href="mailto:mindbox@itmexicali.edu.mx">mindbox@itmexicali.edu.mx.</a><br> <br>
-                        </li>
-                    </ul>
-
-                    <p>
-                        Cualquier inconsistencia en la operación de MINDBOX puedes 
-                        reportarla al correo 
-                        <a href="mailto:mindbox@itmexicali.edu.mx">mindbox@itmexicali.edu.mx,</a> 
-                        procura ser lo mas preciso posible al momento de hacer 
-                        el reporte para poder gestionar de una mejor manera la atención 
-                        del problema.
-                    </p>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>Plan de Trabajo y Desarrollo 2022</h3>
-                    <hr>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ol type="A" style="text-align: left;">
-                        <li>
-                            Equipamiento Institucional en Laboratorios <br>
-                            <ul>
-                                <li>
-                                    A1: Reubicación de equipos escalados en 
-                                    instalaciones de cubiculos, aulas, laboratorios.: 
-                                    enero diciembre 2022. <br>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            Instalación de cableado estructurado Cat6, reemplado migración de Cat5 a Cat6<br>
-                            <ul>
-                                <li>
-                                    B1: Edificio L, reemplado de cableado estructurado del edificio por 
-                                    daño multiple derivado de fauna y cambios de areas.   Abril 2022<br>
-                                </li>
-
-                                <li>
-                                    B2: Edificio B Centro de Información, reemplado de cableado estructurado 
-                                    del edificio por daño multiple derivado cambios de areas.   Veranol 2022<br>
-                                </li>
-                            </ul>
-
-                        </li>
-                            
-                        <li>
-                            Instalación de terminales telefónicas VOIP<br>
-                            <ul>
-                                <li>
-                                    C1: Instalación de nodos telefónicos Edificios A,B,L,N,D,F,G,H,J,U enero diciembre 2022<br>
-                                </li>
-                            </ul>                      
-                        </li>
-
-                        <li>
-                            Migración Red Truncal Institucional Backbone Intranet a 10Gb<br>
-                            <ul>
-                                <li>
-                                    D1: Migración Intranet 10Gbps MDF enero diciembre 2022<br>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            Videovigilancia<br>
-                            <ul>
-                                <li>
-                                    E1: Perimetral y centro de monitoreo: verano 2022<br>
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>¡DATOS DEL PROGRAMA!</h3>
-                    <hr>
-                </div>
-
-                <div class="col-md-12 p-4" style="text-align: left;">
-                    Datos del programa: ADMINISTRACION DE SERVICIOS DE COMPUTO Y TELECOMUNICACIONES <br>
-                    Actividades a desarrollar: TECNICO <br>
-
+                <div class="col-md-12 pt-4 pr-4 pl-4" style="text-align: left;">
+                    <span style="color: red">Red Principal de Datos, Telefonia</span><br><br>
                     <ul>
                         <li>
-                        Servicios de mantenimiento de equipo de cómputo
-                        </li>
-                        
-                        <li>
-                        Mantenimiento de infraestructura de telecomunicaciones
-                        </li>
-                        
-                        <li>
-                        Asesoria técnica
-                        </li>
-                        
-                        <li>
-                        Mantenimiento correctivo y preventivo de equipo de cómputo
+                            1 Enlace ISP dedicado simétrico de internet de 3Gbps: IPMATRIX<br><br>
                         </li>
 
                         <li>
-                        Prestación de servivios de Tecnologias de la Información
+                            1 Troncal digital telefónica E1: TELNOR<br><br>
+                        </li>
+
+                        <li>
+                            1 Equipo en MDF de ruteo Microtik 32cloud para internet guiado para 10Gb <br><br>
+                        </li>
+
+                        <li>
+                            1 Equipo en MDF de ruteo Microtik 32cloud para internet wifi<br><br>
+                        </li>
+
+                        <li>
+                            17 switch ubiquiti IDF soporte para backbone 10gb. <br><br>
+                        </li>
+
+                        <li>
+                            61 Switch ubiquiti de 48 puertos de 1gbps. <br><br>
+                        </li>
+
+                        <li>
+                            1 equipo de conmutación telefónica Grandstream VOIP. <br><br>
+                        </li>
+
+                        <li>
+                            1 Equipo de conmutación telefónica análoga Panasonic <br><br>
+                        </li>
+
+                        <li>
+                            80 antenas ap ubiquiti unifi para internet institucional wifi red "TecNM" <br><br>
+                        </li>
+
+                        <li>
+                            20 antenas ruteadores dedicados para internet wifi <br><br>
                         </li>
                     </ul>
+                    <span style="color: red">Infraestructura de Servicios</span><br><br>
+                    <ul>
+                        <li>
+                            Servidor Académico Dedicado Moodle<br><br>
+                        </li>
 
-                    Programa de actividades/Objetivo: Mantener en operación 
-                    óptima la infraestructura de cómputo y telecomunicaciones 
-                    para la prestación del servicio educativo en el uso de las TICs. <br>
+                        <li>
+                            Servidor Académico Dedicado Posgrado<br><br>
+                        </li>
 
+                        <li>
+                            Servidor Administrativo DNS <br><br>
+                        </li>
 
-                </div>
+                        <li>
+                            Servidor Administrativo Web<br><br>
+                        </li>
 
+                        <li>
+                            Servidor Servicios Escolares. <br><br>
+                        </li>
+
+                        <li>
+                            Servidor Recursos Financieros <br><br>
+                        </li>
+
+                        <li>
+                            Servidor Administrativo/Académico Mindbox <br><br>
+                        </li>
+
+                        <li>
+                            Servidor Gestor de Correos Electrónicos<br><br>
+                        </li>
+
+                        <li>
+                            Servidor de Aplicaciones Remotas <br><br>
+                        </li>
+
+                        <li>
+                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br><br>
+                        </li>
+
+                        <li>
+                            Servicio Microsoft Outlook Azure 10000 cuentas dominio: mexicali.tecnm.mx <br><br>
+                        </li>
+
+                        <li>
+                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br><br>
+                        </li>
+
+                        <li>
+                            *Servidor Administrativo RF SIATEC <br><br>
+                        </li>
+
+                        <li>
+                            *Servidor Académico SIABUC Centro de Información <br><br>
+                        </li>
+
+                        <li>
+                            *Servidor de políticas de navegación Internet QoS <br><br> 
+                            *Equipos instalados localmente<br><br>
+                        </li>
+
+                    </ul>
+                </div>  
             </div>
         </div>
-        <div class="col-md-4 bg-dark">
+        <!-- Infraestructura -->
+
+        <!-- Conectividad -->
+        <div class="col-md-6 bg-dark">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>
-                        ¿Cómo solicito o recupero mi correo electrónico 
-                        institucional @itmexicali.edu.mx o @mexicali.tecnm.mx?
-                    </h3>
+                    <h2>Conectividad LAN/WIFi TecNM</h2>
                     <hr>
                 </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <a href="/recuperacion_correo">Clic Aqui</a> <br>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>Infraestructura, equipo de cómputo y software de la institución</h3>
-                    <hr>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <a href="#">| Acceso a Infraestructura |</a>
-                    <a href="#">Descarga de software legalmente Autodesk suite con tu 
-                    cuenta de correo institucional @itmexicali.edu.mx</a>
-                    AUTOCAD, 3DMAX FUSION <br>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>Encuestas de la prestación de servicios</h3>
-                    <hr>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ul style="text-align: left;">
+                <div class="col-md-12 pt-4 pr-4 pl-4" style="text-align: left;">
+                    <p>
+                        El reto sin duda es la atención del servicio institucional de internet 
+                        inalambrico que se presta a los estudiantes y personal del plantel. 
+                        Sin embargo el recurso es limitado y la demanda del servicio cada 
+                        vez es mayor. <br> <br>
+                    </p>
+                    <b>El Flujo simétrico asignado a la red WIFI, es prorateado para cada dispositivo conectado </b><br><br>
+                    <ul>
                         <li>
-                            <a href="#">
-                                Satisfacción del estudiante en la prestación de servicios en laboratorio de cómputo <br> <br>
-                            </a>
+                            Estudiantes promedio conectados por 
+                            día TecNM_Estudiantes : 2150 usuarios <br> <br>
                         </li>
-                        
+
                         <li>
-                            <a href="#">
-                                Satisfacción del estudiante en la prestación de servicios red WIFI Tecnologico <br> <br>
-                            </a>
+                            Docentes promedio conectados por día TecNM_Docentes: 
+                            74 usuarios <br> <br>
                         </li>
-                        
+
                         <li>
-                            <a href="#">
-                                Satisfacción del estudiante en la prestación de servicios red Software instalado en los equipos <br> <br>
-                            </a>
+                            TecNM_Estudiantes: 1000 Mbps (1Gbps)<br> <br>
                         </li>
+
+                        <li>
+                            TecNM_Docentes: 200Mbps<br> <br>
+                        </li>
+
+                        <li>
+                            Red guiada para aulas, laboratorios y administración: 300Mbps<br> <br>
+                        </li>                    
                     </ul>
-                </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h3>Resultados de analisis de la prestación de servicios</h3>
-                    <hr>
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <ul style="text-align: left;">
+                    <b>Proyección para 2023 WIFI TecNM: </b><br><br>
+                    <ul>
                         <li>
-                            <a href="#">
-                                CACEI Proyección de crecimiento <br>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
-                                CACEI Conectividad <br>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
-                                CACEI Equipamiento <br>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
-                                CACEI Software especializado <br>
-                            </a>
+                            TecNM_Estudiantes: 2000 Mbps (2Gbps) WIFI <br> <br>
                         </li>
 
                         <li>
-                            <a href="#">
-                                CACEI Soporte técnico <br>
-                            </a>
+                            TecNM_Docentes: 500Mbps WIFI <br> <br>
                         </li>
+
+                        <li>
+                            Laboratorios: 400Mbps LAN<br> <br>
+                        </li>
+
+                        <li>
+                            Administracion: 100Mbps LAN<br> <br>
+                        </li>                   
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- Conectividad -->
     </div>
-    <!-- Preguntas, Infraestructura, Plan de Trabajo, Encuestas y Resultados -->
-        
+
         
     
 
