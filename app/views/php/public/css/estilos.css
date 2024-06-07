@@ -104,6 +104,14 @@
 		-20px -20px 60px #476ba8;
 }
 
+.yogurt-defase {
+	color: rgb(104, 104, 104);
+	border-radius: 20px;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #172336,
+		-20px -20px 60px #06060633;
+}
+
 .bordered-con {
 	background-color: white;
 	border-radius: 18px 18px 18px 18px;

@@ -4,44 +4,39 @@
     <div class="row align-center p-5 m-3 bg-light yogurt-defase" style="color: #4f4f4f;">
         <!-- Titulo -->
         <div class="col-md-12 align-center">
-            <h1>Centro de Información</h1> 
+            <h1>Lorem Ipsums</h1> 
         </div>
 
         <div class="col-md-12 pt-4 pr-4 pl-4" style="">
             <p>
-            En el Centro de Información (CI), se brinda un 
-            servicio de apoyo al área académica integrado 
-            y coordinado, para facilitar el acceso a la información 
-            y el conocimiento, por medio de colecciones 
-            bibliográficas actualizadas y servicios de información 
-            que apoyan al proceso enseñanza-aprendizaje, investigación 
-            y difusión a la comunidad tecnológica.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Officiis fugiat consequuntur, facere itaque, atque quasi 
+                officia amet fugit alias obcaecati aliquid recusandae 
+                incidunt voluptates veniam iusto iste voluptatum autem dolorum.
             </p>
         </div>
     </div>
     
     <!-- Renglon de Contenido -->
     <div class="row yogurt-defase p-2 mt-5 mb-5 m-3" style="color: #4f4f4f;">
-        <!-- Mision y Vision-->
+        <!-- Izquireda -->
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Quienes Somos</h2>
-                    <hr>
+                    <h2>Lorem Ipsum</h2>
                 </div>
 
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h4>MISIÓN</h4> <br>
+                    <h4>Lorem</h4> <br>
                     <p>
-                        Satisfacer las necesidades de información bibliográfica y 
-                        documental en un sistema de recuperación automatizado para 
-                        fomentar y difundir la cultura, apoyar a la docencia y así 
-                        contribuir a la formación integral de profesionistas para 
-                        proporcionar servicios bibliotecarios como lo demanda nuestro 
-                        Sistema de Gestión de Calidad. <br> <br> <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Esse, quo. Sint nesciunt expedita aliquam similique 
+                        voluptatem molestiae dolores obcaecati, iste corporis 
+                        culpa deserunt dolorem sunt a soluta asperiores, unde 
+                        voluptatibus. <br> <br> <br>
                     </p>
 
-                    <h4>VISIÓN</h4> <br>
+                    <h4>Lorem</h4> <br>
                     <p>
                         Ser un espacio capaz de atender las demandas de la formación 
                         con los recursos adecuados y personal especializado, para 
@@ -52,15 +47,14 @@
                 </div>
             </div>
         </div>
-        <!-- Mision y Vision -->
+        <!-- Izquierda -->
 
-        <!-- Servicios que presta -->
+        <!-- Derecha -->
         <div class="col-md-6 align-center">
             <div class="row">
 
                 <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <h2>Servicios Que Prestamos</h2>
-                    <hr>
+                    <h2>Lorem Ipsum Dolor</h2>
                 </div>
 
                 <div class="col-md-12 p-4">
@@ -128,57 +122,26 @@
                 </div>
             </div>
         </div>
-        <!-- Servicios que presta -->
+        <!-- Derecha -->
     </div>
 
-    <!-- Otras bibliotecas oficiales en México -->
-    <div class="row yogurt-defase bg-light m-3 p-2">
-        <div class="col-md-12" style="text-align: center;">
-            <h2>Otras Bibliotecas Oficiales en México:</h2>
+    <!-- Finale -->
+    <div class="row yogurt-defase m-3 p-2">
+        <div class="col-md-8 mx-auto" style="text-align: center;">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.:</h2>
             <hr>
             <div class="row">
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="https://www.bibliotecademexico.gob.mx/">
-                        <img src="/img/cinformacion_images/conaculta.png" alt="Biblioteca de Mexico Conaculta">
-                    </a>
-                </div>
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="http://bdmx.mx/">
-                        <img src="/img/cinformacion_images/digitalmexicana.png" alt="">
-                    </a>
-                    
-                </div>
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="https://www.wdl.org/es/">
-                        <img src="/img/cinformacion_images/digitalmundial.png" alt="">
-                    </a>
-                    
-                </div>
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="http://www.dirbibliotecas.ipn.mx/Paginas/inicio.aspx">
-                        <img src="/img/cinformacion_images/politecnico.png" alt="">
-                    </a>
-                    
-                </div>
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="https://bibliotecas.unam.mx/">
-                        <img src="/img/cinformacion_images/unam.jpg" alt="">
-                    </a>
-                    
-                </div>
-                <div class="col-md-2" style="min-width: 210px">
-                    <a href="http://www.bibliotecavirtualbc.gob.mx/">
-                        <img src="/img/cinformacion_images/virtualBC.png" alt="">
-                    </a>
+                <div class="col-md-12 align-center">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Sunt veniam veritatis neque molestias, fuga explicabo 
+                    dolorum id maiores ullam ea numquam necessitatibus 
+                    fugiat atque! Voluptatibus qui id accusamus dolor consequuntur.
                 </div>
             </div>
             
         </div>
         
     </div>
-    <!-- Otras bibliotecas oficiales en México -->
-        
-        
-    
+    <!-- Finale -->
 
 </div>
