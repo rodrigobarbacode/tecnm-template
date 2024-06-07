@@ -58,6 +58,10 @@ router.get('/cinformacion', (req, res) => {
 });
 // Centro de Informacion endpoint.
 
+// CCO endpoints.
+router.use(require('./carreras/carreras_routes.js'))
+// CCO endpoints.
+
 
 // ************* Routes *************
 

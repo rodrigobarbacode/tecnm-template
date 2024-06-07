@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl navbar-light bg-white w-100" id="main_navbar2">
+<nav class="navbar navbar-expand-xl navbar-light bg-white w-100" style="z-index: 11000;" id="main_navbar2">
     <div class="collapse navbar-collapse pl-lx-0 align-center" id="navbarSupportedContent" style="font-weight: bolder;">
         <ul class="navbar-nav navbar-blue">
             
