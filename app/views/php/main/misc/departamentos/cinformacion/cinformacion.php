@@ -1,13 +1,13 @@
 <!-- Contenedor encapsulador en el cual se hace todo el grid de bootstrap -->
-<div class="container-fluid bg-primary p-4 mx-auto">
+<div class="container-fluid p-4 mx-auto bg-tecnm" >
     <!-- Renglon 'Header' que presenta el nombre del departamento -->
-    <div class="row align-center bg-secondary p-5">
+    <div class="row align-center p-5 m-3 bg-light neomorphic-defase" style="color: #4f4f4f;">
         <!-- Titulo -->
         <div class="col-md-12 align-center">
             <h1>Centro de Información</h1> 
         </div>
 
-        <div class="col-md-12 pt-4 pr-4 pl-4">
+        <div class="col-md-12 pt-4 pr-4 pl-4" style="">
             <p>
             En el Centro de Información (CI), se brinda un 
             servicio de apoyo al área académica integrado 
@@ -21,9 +21,9 @@
     </div>
     
     <!-- Renglon de Contenido -->
-    <div class="row bg-secondary p-2">
+    <div class="row neomorphic-defase bg-light p-2 m-3" style="color: #4f4f4f;">
         <!-- Mision y Vision-->
-        <div class="col-md-6 bg-light">
+        <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Quienes Somos</h2>
@@ -54,7 +54,7 @@
         <!-- Mision y Vision -->
 
         <!-- Servicios que presta -->
-        <div class="col-md-6 bg-dark align-center">
+        <div class="col-md-6 align-center">
             <div class="row">
 
                 <div class="col-md-12 pt-4 pr-4 pl-4">
@@ -130,8 +130,8 @@
     </div>
 
     <!-- Otras bibliotecas oficiales en México -->
-    <div class="row bg-secondary p-2">
-        <div class="col-md-8 mx-auto bg-light" style="text-align: center;">
+    <div class="row neomorphic-defase bg-light m-3 p-2">
+        <div class="col-md-8 mx-auto" style="text-align: center;">
             <h2>Otras Bibliotecas Oficiales en México:</h2>
             <hr>
             <div class="row">
