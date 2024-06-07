@@ -140,7 +140,7 @@
 
                             <!-- Opción: Ing. Administracion -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/img/carreras/ADMINISTRACION.jpeg">
+                                <a class="dropdown-item" href="/l_administracion">
                                     Ing. en Administración
                                 </a>
                             </li>
@@ -161,14 +161,14 @@
 
                             <!-- Opción: Ing. Electronica -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/img/carreras/ELECTRONICA.jpg">
+                                <a class="dropdown-item" href="/l_electronica">
                                     Ing. Electrónica
                                 </a>
                             </li>
 
                             <!-- Opción: Ing. Energias Renovables -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/img/carreras/RENOVABLES.jpg">
+                                <a class="dropdown-item" href="/l_renovables">
                                     Ing. en Energías Renovables
                                 </a>
                             </li>
@@ -196,7 +196,7 @@
 
                             <!-- Opción: Ing. Materiales -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/img/carreras/MATERIALES.jpg">
+                                <a class="dropdown-item" href="/l_materiales">
                                     Ing. en Materiales
                                 </a>
                             </li>
