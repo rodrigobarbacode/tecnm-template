@@ -1,20 +1,24 @@
 <!-- Contenedor encapsulador en el cual se hace todo el grid de bootstrap -->
-<div class="container-fluid bg-primary p-4 mx-auto">
+<div class="container-fluid bg-tecnm p-4 mx-auto">
     <!-- Renglon 'Header' que presenta el nombre del departamento -->
-    <div class="row align-center bg-secondary p-5">
+    <div class="row align-center p-5 m-3 yogurt-defase">
          <!-- Titulo -->
-         <div class="col-md-12 bg-warning p-2 align-center">
+         <div class="col-md-12 align-center">
             <h1>Centro de Computo</h1> 
         </div>
 
-        <!-- SubTitulo -->
-        <div class="col-md-12 bg-warning p-2 align-center">
-            <h1>Infraestructura TICs de la Institución</h1> 
-        </div>
+        
     </div>
 
     <!-- Descripcion -->
-    <div class="row bg-secondary">
+    <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+        <!-- SubTitulo -->
+        <div class="col-md-12 pt-4">
+            <h2>Infraestructura TICs de la Institución</h2> 
+            <hr>
+        </div>
+
+        <!-- Descripcion -->
         <div class="col-md-12 p-4" style="text-align: left;">
             <p>
                 El centro de cómputo, cuenta con un programa de migración 
@@ -62,10 +66,10 @@
     </div>
     <!-- Descripcion -->
     
-    <!-- Renglon en el cual tenemos 4 diferentes tipos de contenido -->
-    <div class="row bg-secondary p-2">
+    <!-- Renglon de Contenido -->
+    <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
         <!-- Infraestructura y Conectividad -->
-        <div class="col-md-6 bg-light">
+        <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Infraestructura de Telecomunicaciones 2023</h2>
@@ -76,39 +80,39 @@
                     <span style="color: red">Red Principal de Datos, Telefonia</span><br><br>
                     <ul>
                         <li>
-                            1 Enlace ISP dedicado simétrico de internet de 3Gbps: IPMATRIX<br><br>
+                            1 Enlace ISP dedicado simétrico de internet de 3Gbps: IPMATRIX<br>
                         </li>
 
                         <li>
-                            1 Troncal digital telefónica E1: TELNOR<br><br>
+                            1 Troncal digital telefónica E1: TELNOR<br>
                         </li>
 
                         <li>
-                            1 Equipo en MDF de ruteo Microtik 32cloud para internet guiado para 10Gb <br><br>
+                            1 Equipo en MDF de ruteo Microtik 32cloud para internet guiado para 10Gb <br>
                         </li>
 
                         <li>
-                            1 Equipo en MDF de ruteo Microtik 32cloud para internet wifi<br><br>
+                            1 Equipo en MDF de ruteo Microtik 32cloud para internet wifi<br>
                         </li>
 
                         <li>
-                            17 switch ubiquiti IDF soporte para backbone 10gb. <br><br>
+                            17 switch ubiquiti IDF soporte para backbone 10gb. <br>
                         </li>
 
                         <li>
-                            61 Switch ubiquiti de 48 puertos de 1gbps. <br><br>
+                            61 Switch ubiquiti de 48 puertos de 1gbps. <br>
                         </li>
 
                         <li>
-                            1 equipo de conmutación telefónica Grandstream VOIP. <br><br>
+                            1 equipo de conmutación telefónica Grandstream VOIP. <br>
                         </li>
 
                         <li>
-                            1 Equipo de conmutación telefónica análoga Panasonic <br><br>
+                            1 Equipo de conmutación telefónica análoga Panasonic <br>
                         </li>
 
                         <li>
-                            80 antenas ap ubiquiti unifi para internet institucional wifi red "TecNM" <br><br>
+                            80 antenas ap ubiquiti unifi para internet institucional wifi red "TecNM" <br>
                         </li>
 
                         <li>
@@ -118,64 +122,64 @@
                     <span style="color: red">Infraestructura de Servicios</span><br><br>
                     <ul>
                         <li>
-                            Servidor Académico Dedicado Moodle<br><br>
+                            Servidor Académico Dedicado Moodle<br>
                         </li>
 
                         <li>
-                            Servidor Académico Dedicado Posgrado<br><br>
+                            Servidor Académico Dedicado Posgrado<br>
                         </li>
 
                         <li>
-                            Servidor Administrativo DNS <br><br>
+                            Servidor Administrativo DNS <br>
                         </li>
 
                         <li>
-                            Servidor Administrativo Web<br><br>
+                            Servidor Administrativo Web<br>
                         </li>
 
                         <li>
-                            Servidor Servicios Escolares. <br><br>
+                            Servidor Servicios Escolares. <br>
                         </li>
 
                         <li>
-                            Servidor Recursos Financieros <br><br>
+                            Servidor Recursos Financieros <br>
                         </li>
 
                         <li>
-                            Servidor Administrativo/Académico Mindbox <br><br>
+                            Servidor Administrativo/Académico Mindbox <br>
                         </li>
 
                         <li>
-                            Servidor Gestor de Correos Electrónicos<br><br>
+                            Servidor Gestor de Correos Electrónicos<br>
                         </li>
 
                         <li>
-                            Servidor de Aplicaciones Remotas <br><br>
+                            Servidor de Aplicaciones Remotas <br>
                         </li>
 
                         <li>
-                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br><br>
+                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br>
                         </li>
 
                         <li>
-                            Servicio Microsoft Outlook Azure 10000 cuentas dominio: mexicali.tecnm.mx <br><br>
+                            Servicio Microsoft Outlook Azure 10000 cuentas dominio: mexicali.tecnm.mx <br>
                         </li>
 
                         <li>
-                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br><br>
+                            Servicio Google Wokspace for Education 15000 cuentas dominio: itmexicali.edu.mx <br>
                         </li>
 
                         <li>
-                            *Servidor Administrativo RF SIATEC <br><br>
+                            *Servidor Administrativo RF SIATEC <br>
                         </li>
 
                         <li>
-                            *Servidor Académico SIABUC Centro de Información <br><br>
+                            *Servidor Académico SIABUC Centro de Información <br>
                         </li>
 
                         <li>
-                            *Servidor de políticas de navegación Internet QoS <br><br> 
-                            *Equipos instalados localmente<br><br>
+                            *Servidor de políticas de navegación Internet QoS <br> 
+                            *Equipos instalados localmente<br>
                         </li>
 
                     </ul>
@@ -185,7 +189,7 @@
         <!-- Infraestructura -->
 
         <!-- Conectividad -->
-        <div class="col-md-6 bg-dark">
+        <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Conectividad LAN/WIFi TecNM</h2>

@@ -247,7 +247,7 @@
                             <li>
                                 El estudiante desde su cuenta de correo institucional @itmexicali.edu.mx, 
                                 deberá contactar a su coordinador solicitando reinicie su NIP. 
-                                Consulta el directorio de los coordinadores <a href="http://" >aquí.</a> <br> <br>
+                                Consulta el directorio de los coordinadores <a href="/directorio" >aquí.</a> <br> <br>
                             </li>
 
                             <li>
@@ -325,19 +325,19 @@
                     <div class="card-body">
                         <ul style="text-align: left;">
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/encuesta calidad 522.pdf">
                                     Satisfacción del estudiante en la prestación de servicios en laboratorio de cómputo <br> <br>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/encuesta calidad 523.pdf">
                                     Satisfacción del estudiante en la prestación de servicios red WIFI Tecnologico <br> <br>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/encuesta calidad 524.pdf">
                                     Satisfacción del estudiante en la prestación de servicios red Software instalado en los equipos <br> <br>
                                 </a>
                             </li>
@@ -360,31 +360,31 @@
                     <div class="card-body">
                         <ul style="text-align: left;">
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei PROYECCION.pdf">
                                     CACEI Proyección de crecimiento <br>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei conectividad.pdf">
                                     CACEI Conectividad <br>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei EQUIPAMIENTO.pdf">
                                     CACEI Equipamiento <br>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei SOFTWARE.pdf">
                                     CACEI Software especializado <br>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
+                                <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei SOPORTE TECNICO.pdf">
                                     CACEI Soporte técnico <br>
                                 </a>
                             </li>
