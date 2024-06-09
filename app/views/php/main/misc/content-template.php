@@ -1,7 +1,7 @@
 <!-- Contenedor encapsulador en el cual se hace todo el grid de bootstrap -->
 <div class="container-fluid p-4 mx-auto bg-tecnm" >
     <!-- Renglon 'Header' que presenta el nombre del departamento -->
-    <div class="row align-center p-5 m-3 bg-light yogurt-defase" style="color: #4f4f4f;">
+    <div class="row align-center p-5 m-3 yogurt-defase">
         <!-- Titulo -->
         <div class="col-md-12 align-center">
             <h1>Lorem Ipsums</h1> 
@@ -18,7 +18,7 @@
     </div>
     
     <!-- Renglon de Contenido -->
-    <div class="row yogurt-defase p-2 mt-5 mb-5 m-3" style="color: #4f4f4f;">
+    <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
         <!-- Izquireda -->
         <div class="col-md-6">
             <div class="row">
