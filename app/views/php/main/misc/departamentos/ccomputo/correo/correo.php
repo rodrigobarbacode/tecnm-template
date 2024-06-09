@@ -1,22 +1,24 @@
 <!-- Contenedor encapsulador en el cual se hace todo el grid de bootstrap -->
-<div class="container-fluid bg-primary p-4 mx-auto">
+<div class="container-fluid bg-tecnm p-4 mx-auto">
     <!-- Renglon 'Header' que presenta el nombre del departamento -->
-    <div class="row align-center bg-secondary p-5">
+    <div class="row align-center p-5 m-3 yogurt-defase">
         <!-- Titulo -->
-        <div class="col-md-12 bg-warning p-2 align-center">
+        <div class="col-md-12  p-2 align-center">
             <h1>Centro de Computo</h1> 
         </div>
 
-        <!-- SubTitulo -->
-        <div class="col-md-12 bg-warning p-2 align-center">
-            <h1>Correos Electrónicos Institucionales</h1> 
-        </div>
+        
     </div>
     
     <!-- Renglon en el cual tenemos el contenido -->
-    <div class="row bg-secondary p-2">
+    <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+        <!-- SubTitulo -->
+        <div class="col-md-12 pt-4 p-2 align-center">
+            <h1>Correos Electrónicos Institucionales</h1> 
+        </div>
+
         <!-- Instrucciones de Recuperacion -->
-        <div class="col-md-8 bg-light">
+        <div class="col-md-8">
             <div class="row">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>
@@ -25,54 +27,70 @@
                     </h2>
                     <hr>
                 </div>
+            </div>
+            
+            <!-- Acordion de Datos -->            
+            <div id="accordion" class="col-md-12">
+                <!-- @itmexicali.edu.mx -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3>
+                                @itmexicali.edu.mx
+                            </h3>
+                        </button>
+                    </h2>
+                    </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4" style="text-align: left;">
-                    <h3>
-                        @itmexicali.edu.mx <br> <br>
-                    </h3>
-                    <p>
-                        Gestión del correo electrónico institucional @itmexicali.edu.mx 
-                        para estudiantes y personal del plantel soportado por GMAIL 
-                        con acceso a los servicios GSuite Education. Si requieres tu 
-                        cuenta de correo electrónico con dominio @itmexicali.edu.mx 
-                        o no recuerdas tu usuario y contraseña, solicitalo a la dirección 
-                        correos@itmexicali.edu.mx indicando tu nombre completo y número 
-                        de control. <br>
-                    </p>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                Gestión del correo electrónico institucional @itmexicali.edu.mx 
+                                para estudiantes y personal del plantel soportado por GMAIL 
+                                con acceso a los servicios GSuite Education. Si requieres tu 
+                                cuenta de correo electrónico con dominio @itmexicali.edu.mx 
+                                o no recuerdas tu usuario y contraseña, solicitalo a la dirección 
+                                correos@itmexicali.edu.mx indicando tu nombre completo y número 
+                                de control. <br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Organigrama -->
 
-                <div class="col-md-12 pt-4 pr-4 pl-4" style="text-align: left;">
-                    <h3>
-                        @mexicali.tecnm.mx <br> <br>
-                    </h3>
-                    <p>
-                        Gestión del correo electrónico institucional del TecNM @mexicali.tecnm.mx 
-                        para estudiantes y personal del plantel soportado por OUTLOOK 
-                        con acceso a servicios Microsoft online como Office365, y requerido 
-                        para trámites oficiales ante el TecNM en la plataforma CAT. 
-                        Si no cuentas con tu usuario y contraseña deberás solicitarlo 
-                        desde tu cuenta institucional @itmexicali.edu.mx a la dirección 
-                        correos@mexicali.tecnm.mx. <br>
-                    </p>
+                <!-- Servicios que presta dentro de la institucion -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3>
+                                @mexicali.tecnm.mx
+                            </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                Gestión del correo electrónico institucional del TecNM @mexicali.tecnm.mx 
+                                para estudiantes y personal del plantel soportado por OUTLOOK 
+                                con acceso a servicios Microsoft online como Office365, y requerido 
+                                para trámites oficiales ante el TecNM en la plataforma CAT. 
+                                Si no cuentas con tu usuario y contraseña deberás solicitarlo 
+                                desde tu cuenta institucional @itmexicali.edu.mx a la dirección 
+                                correos@mexicali.tecnm.mx. <br>
+                            </p>  
+                        </div>
+                    </div>
                 </div>
+                <!-- Servicios que presta dentro de la institucion -->
 
-                <div class="col-md-12 p-4" style="text-align: left;">
-                    <p style="color: red;">
-                        En el trámite y gestión de las cuentas de correo institucional, 
-                        ES RESPONSABILIDAD PERSONAL y deberá tomar en cuenta los tiempos de 
-                        atención y respuesta del mismo, considerando que el Centro de Cómputo 
-                        no tiene permiso sobre la administración de este dominio por lo que 
-                        no hay una respuesta inmediata. <br>
-                    </p>
-                </div>
-
-                
             </div>
         </div>
-        <!-- Instrucciones de Recuperacion -->
 
         <!-- Imagenes con Links -->
-        <div class="col-md-4 bg-dark align-center">
+        <div class="col-md-4 align-center">
             <div class="row">
 
                 <!-- Imagen de itmexicali Gmail -->
@@ -106,5 +124,4 @@
             </div>
         </div>
         <!-- Imagenes con Links -->
-    </div>
 </div>
