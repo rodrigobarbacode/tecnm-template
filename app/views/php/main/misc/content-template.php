@@ -7,7 +7,7 @@
             <h1>Lorem Ipsums</h1> 
         </div>
 
-        <div class="col-md-12 pt-4 pr-4 pl-4" style="">
+        <div class="col-md-12 pt-4 pr-4 pl-4">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Officiis fugiat consequuntur, facere itaque, atque quasi 

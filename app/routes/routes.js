@@ -58,6 +58,19 @@ router.get('/cinformacion', (req, res) => {
 });
 // Centro de Informacion endpoint.
 
+// Personal No Docente endpoint.
+router.get('/personalnodoc', (req, res) => {
+    res.render('misc/reglamentos/personal-no-doc/index');
+});
+// Personal No Docente endpoint.
+
+// Personal Docente endpoint.
+router.get('/personaldoc', (req, res) => {
+    res.render('misc/reglamentos/personal-doc/index');
+});
+// Personal Docente endpoint.
+
+
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
 // CCO endpoints.

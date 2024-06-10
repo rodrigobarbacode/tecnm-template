@@ -8,7 +8,7 @@
 			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span> Menú
 			</button>
-<div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent" style="font-weight: bolder;">
+    <div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent" style="font-weight: bolder;">
         <ul class="navbar-nav ml-auto">
             
             <!-- Menu: Alumnos -->
@@ -128,14 +128,14 @@
 
                     <!-- Opción: Reglamento de Docente -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/departamentos/rh/reglamentos/reglamentodocente.pdf"> 
+                        <a class="dropdown-item" href="/personaldoc"> 
                             Reglamento Interior de Trabajo de Personal Docente
                         </a>
                     </li>
                     
                     <!-- Opción: Reglamento de No Docente-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/departamentos/rh/reglamentos/reglamentonodocente.pdf"> 
+                        <a class="dropdown-item" href="/personalnodoc"> 
                             Reglamento Interior de Trabajo de Personal No Docente
                         </a>
                     </li>
