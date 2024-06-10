@@ -34,10 +34,6 @@ h6 {
     /*padding-bottom: 0.5rem*/
 }
 
-a {
-    color: #32587a
-}
-
 a:hover h1,
 a:hover h2,
 a:hover h3,
@@ -955,7 +951,6 @@ a:hover h5 {
 
 h1 {
     color: #1B396A;
-    font-size: 1.6rem;
     font-weight: 600
 }
 

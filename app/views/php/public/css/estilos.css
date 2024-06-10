@@ -104,10 +104,19 @@
 		-20px -20px 60px #476ba8;
 }
 
+<<<<<<< HEAD
 .shadow-xs {
 	-webkit-box-shadow: 0px 10px 49px 0px rgba(0,0,0,0.60);
 	-moz-box-shadow: 0px 10px 49px 0px rgba(0,0,0,0.60);
 	box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.60);
+=======
+.yogurt-defase {
+	color: rgb(104, 104, 104);
+	border-radius: 20px;
+	background: #ffffff;
+	box-shadow: 20px 20px 60px #172336,
+		-20px -20px 60px #06060633;
+>>>>>>> e3219b9dccb2c6312ff1990ef261e67ef0b21711
 }
 
 .bordered-con {
