@@ -70,6 +70,12 @@ router.get('/personaldoc', (req, res) => {
 });
 // Personal Docente endpoint.
 
+// Servicio Social endpoint.
+router.get('/ss', (req, res) => {
+    res.render('misc/departamentos/ss/index');
+});
+// Servicio Social endpoint.
+
 // Residencia endpoint.
 router.get('/residencia', (req, res) => {
     res.render('misc/departamentos/Residencia/index');

@@ -47,7 +47,7 @@
 
                     <!-- Opción: Servicio Social -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/ss/ss.html" target="_blank">
+                        <a class="dropdown-item" href="/ss" target="_blank">
                             Servicio Social
                         </a>
                     </li>
