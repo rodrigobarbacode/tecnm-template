@@ -1,27 +1,120 @@
 // Importing the required modules.
+const fs = require('fs').promises;
+
+const path = require('path');
+const process = require('process');
 const {google} = require('googleapis');
+const {authenticate} = require('@google-cloud/local-auth');
+
 const routes = require('./routes/routes');
 const express = require('express');
-const path = require('path');
 
 require('dotenv').config();
 // Importing the required modules.
 
 // Provide the required configuration.
-const CREDENTIALS = JSON.parse(process.env.CREDENTIALS);
-const CALENDAR_ID = process.env.CALENDAR_ID;
+// If modifying these scopes, delete token.json.
+const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
+// The file token.json stores the user's access and refresh tokens, and is
+// created automatically when the authorization flow completes for the first
+// time.
+const TOKEN_PATH = path.join(process.cwd(), 'token.json');
+const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 // Provide the required configuration.
 
 // Google Calendar API Settings.
-const SCOPES = 'https://www.googleapis.com/auth/calendar';
-const calendar = google.calendar({version : "v3"});
+/**
+ * Reads previously authorized credentials from the save file.
+ *
+ * @return {Promise<OAuth2Client|null>}
+ */
+async function loadSavedCredentialsIfExist() {
+    try {
+      const content = await fs.readFile(TOKEN_PATH);
+      const credentials = JSON.parse(content);
+      return google.auth.fromJSON(credentials);
+    } catch (err) {
+      return null;
+    }
+  }
+  
+  /**
+   * Serializes credentials to a file compatible with GoogleAuth.fromJSON.
+   *
+   * @param {OAuth2Client} client
+   * @return {Promise<void>}
+   */
+  async function saveCredentials(client) {
+    const content = await fs.readFile(CREDENTIALS_PATH);
+    const keys = JSON.parse(content);
+    const key = keys.installed || keys.web;
+    const payload = JSON.stringify({
+      type: 'authorized_user',
+      client_id: key.client_id,
+      client_secret: key.client_secret,
+      refresh_token: client.credentials.refresh_token,
+    });
+    await fs.writeFile(TOKEN_PATH, payload);
+  }
+  
+  /**
+   * Load or request or authorization to call APIs.
+   *
+   */
+  async function authorize() {
+    let client = await loadSavedCredentialsIfExist();
+    if (client) {
+      return client;
+    }
+    client = await authenticate({
+      scopes: SCOPES,
+      keyfilePath: CREDENTIALS_PATH,
+    });
+    if (client.credentials) {
+      await saveCredentials(client);
+    }
+    return client;
+  }
+  
+  /**
+   * Lists the next 10 events on the user's primary calendar.
+   * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
+   */
+  async function listEvents(auth) {
+    const calendar = google.calendar({version: 'v3', auth});
+    const res = await calendar.events.list({
+      calendarId: 'c_73c7ca073d57a90aec4278cda510a342fd22fb60a753e17f9079d970488f3c88@group.calendar.google.com',
+      timeMin: new Date().toISOString(),
+      maxResults: 5,
+      singleEvents: true,
+      orderBy: 'startTime',
+    });
+    const events = res.data.items;
+    if (!events || events.length === 0) {
+      console.log('No upcoming events found.');
+      return;
+    }
+    console.log('Upcoming 5 events:');
+    var arr = [];
+    var json = {};
+    events.map((event, i) => {
+        var date = new Date(event.start.dateTime);
+        var options = { month: 'long'};
+        var month = new Intl.DateTimeFormat('es-ES', options).format(date);
 
-const auth = new google.auth.JWT(
-    CREDENTIALS.client_email,
-    null,
-    CREDENTIALS.private_key,
-    SCOPES
-);
+        var day = date.getDate();
+        var month = month.charAt(0).toUpperCase() + month.slice(1);
+
+        var start = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        var end = new Date(event.end.dateTime).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+        var url = event.htmlLink;
+
+        arr.push({title: event.summary, description: event.description, day: day, month: month.slice(0, 3), start: start, end: end, url: url});
+    });
+    json = arr;
+    return json;
+  }
 // Google Calendar API Settings.
 
 // Importing the php-express module.
@@ -72,46 +165,12 @@ app.use(routes);
 
 // ************* Routes *************
 
-const getEvents = async (start, end) => {
-    try {
-        let response = await calendar.events.list({
-            auth: auth,
-            calendarId: CALENDAR_ID,
-            timeMin: start,
-            timeMax: end,
-            timeZone: 'Pacific/Los Angeles'
-        });
-    
-        let items = response.data.items;
-        console.log('Eventos recibidos:', items);
-        let events = items.map(item => {
-            let startDate = new Date(item.start.dateTime || item.start.date);
-            let endDate = new Date(item.end.dateTime || item.end.date);
-            return [
-                item.summary || 'No Title',
-                item.description || 'No Description',
-                startDate.getMonth() + 1, // Months are zero-based in JavaScript
-                startDate.getDate(),
-                startDate.toTimeString().split(' ')[0] // Time in HH:MM:SS format
-            ];
-        });
-        
-        return events;
-    } catch (error) {
-        console.log(`Error at getEvents --> ${error}`);
-        return [];
-    }
-};
-
-let start = '2024-01-01T00:00:00.000Z';
-let end = '2024-07-30T23:59:59.999Z';
-
 // Testing Endpoint
 app.get('/test', async (req, res) => {
     try {
-        let events = await getEvents(start, end);
+        console.log('Fetching events...');
+        let events = await listEvents(await authorize());
         console.log(events);
-        res.json(events);
     } catch (err) {
         console.log(err);
         res.status(500).send('Error fetching events');
@@ -122,14 +181,26 @@ app.get('/test', async (req, res) => {
 // Home endpoint.
 app.get('/', async (req, res) => {
     try {
-        let events = await getEvents(start, end);
-        res.render('index', { events: JSON.stringify(events) });
+        let events = await listEvents(await authorize());
+        res.render('index');
     } catch (err) {
         console.log(err);
         res.status(500).send('Error fetching events');
     }
 });
 // Home endpoint.
+
+// Data endpoint.
+app.get('/data/events', async (req, res) => {
+    try {
+        let events = await listEvents(await authorize());
+        res.json(events);
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('Error fetching events');
+    }
+});
+// Data endpoint.
 
 // ************* Routes *************
 
