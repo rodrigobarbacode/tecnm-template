@@ -1,6 +1,15 @@
-<nav class="navbar navbar-expand-xl navbar-light bg-white w-100" style="z-index: 11000;" id="main_navbar2">
-    <div class="collapse navbar-collapse pl-lx-0 align-center" id="navbarSupportedContent" style="font-weight: bolder;">
-        <ul class="navbar-nav navbar-blue">
+<nav class="navbar navbar-expand-xl navbar-light bg-white pt-1 pb-2" style="z-index: 1001;" id="main_navbar2">
+    <!-- <a class="navbar-brand" href="#">TecNM</a> -->
+			<form action='?vista=Buscar' class="navbar-brand ml-1" method='POST'>
+				<input class="w-100 h-100 ml-2 border align-items-center form-control" type="text" name='buscar' placeholder="Buscar" autocomplete='off' required />
+				<input type="hidden" name="btn_busqueda" />
+			</form>
+
+			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span> Menú
+			</button>
+<div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent" style="font-weight: bolder;">
+        <ul class="navbar-nav ml-auto">
             
             <!-- Menu: Alumnos -->
             <li class="nav-item dropdown">

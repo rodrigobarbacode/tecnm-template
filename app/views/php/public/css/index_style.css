@@ -90,15 +90,12 @@
 /*Menu Fijo*/
 #main_navbar, #main_navbar2{ width: 100%; }
 .menuazul, .menublanco{ position: fixed; }
-.menublanco{ top: 45px; z-index: 1001; }
-.menuazul{ top: 85px; z-index: 1000; }
+.menublanco{ top: 41px; }
+.menuazul{ top: 92px; }
 @media (max-width: 700px) { 
   .menuazul {
     top: 80px;
   }
-  .align-center {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 10px;
-  }
 }
+
+/* Para telefonos */

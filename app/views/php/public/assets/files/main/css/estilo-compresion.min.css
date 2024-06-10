@@ -1058,7 +1058,6 @@ hr {
 }
 
 .contenedorGobierno {
-    margin-top: 40px;
     position: relative
 }
 
@@ -2097,11 +2096,12 @@ td {
 }
 
 #barraGobmx {
+    position: fixed;
     background: #eaeaea
 }
 
 .barraGobmx-enlaces a {
-    color: #000;
+    color: white;
     display: inline-block;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -2111,8 +2111,9 @@ td {
 }
 
 .barraGobmx-enlaces a:hover {
-    background: #f6f6f6;
-    color: #000
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    text-decoration: underline
 }
 
 .navbar.navbar-inverse.navbar-fixed-top {
@@ -2564,7 +2565,7 @@ output {
 
 @media screen and (max-width:886px) {
     #barraGobmx {
-        position: relative
+        position: fixed
     }
 
     .contenedorGobierno {
@@ -2572,7 +2573,7 @@ output {
     }
 
     #menu-principal.fixed-top {
-        margin-top: 0
+        margin-top: 20
     }
 }
 
