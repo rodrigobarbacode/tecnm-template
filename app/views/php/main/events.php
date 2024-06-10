@@ -1,5 +1,6 @@
 <script>
     // Function to fetch a local JSON file.
+    /*
     function fetchLocalJSON(file, callback) {
         var xhr = new XMLHttpRequest();
         xhr.overrideMimeType("application/json");
@@ -11,6 +12,7 @@
         xhr.open("GET", file, true);
         xhr.send(null);
     }
+    */
 
     fetchLocalJSON("/json/events.json", function(data) {
         var eventsOuter = document.querySelector(".events-outer");

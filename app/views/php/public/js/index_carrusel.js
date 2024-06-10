@@ -21,25 +21,38 @@ $(document).on('ready', function () {
       infinite: true,
       arrows: true,
       autoplay: true,
-      autoplaySpeed: 4000,
-      centerMode: false,
+      autoplaySpeed: 2000,
+      centerMode: true,
       centerPadding: '0px',
-      slidesToShow: 4,
+      slidesToShow: 3,
       responsive: [{
+            // Breakpoint for Laptop or Desktop
+            breakpoint: 1490,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 2,
+            }
+        },
+        {
+            // Breakpoint for Tablet
             breakpoint: 768,
             settings: {
-                //arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '0px',
                 slidesToShow: 2
             }
-        },{
+        },
+        {
+            // Breakpoint for Mobile
             breakpoint: 480,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '0px',
-                slidesToShow: 2
+                slidesToShow: 1
             }
         }
       ]
