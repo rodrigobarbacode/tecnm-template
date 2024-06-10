@@ -28,56 +28,59 @@
             sliderItem.className = 'row justify-concent-center';
             sliderItem.style.position = 'relative';
 
-            // Create an image for the slider item.
-            var img_div = document.createElement('div');
-            img_div.className = 'col-12';
+            var card = document.createElement('div');
+            card.className = 'card';
+            card.style.width = 'auto';
+            card.style.margin = '0 1rem';
+            card.style.borderRadius = '1rem';
 
             var img = document.createElement('img');
-            img.className = 'img-fluid mx-auto w-100';
-            img.style.height = '150px';
+            img.className = 'card-img-top';
+            img.style.height = '10vh';
+            img.style.borderRadius = '1rem 1rem 0 0';
             img.src = value.image;
-            img.alt = '';
+            img.alt = value.title;
 
-            img_div.appendChild(img);
+            card.appendChild(img);
 
-            // Create a date over the image.
-            var date = document.createElement('div');
-            date.className = 'h6 col-8 py-2 mb-4';
-            date.style.position = 'absolute';
-            date.style.top = '0px';
-            date.style.left = '15px';
-            date.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-            date.style.color = 'white';
-            date.textContent = value.date_title;
+            var cardBody = document.createElement('div');
+            cardBody.className = 'card-body';
+            
+            var cardTitle = document.createElement('h5');
+            cardTitle.className = 'card-title';
+            cardTitle.style.color = '#fab005';
+            cardTitle.style.fontSize = '2vh';
+            cardTitle.style.fontWeight = 'bolder';
+            cardTitle.style.textAlign = 'center';
+            cardTitle.textContent = value.title;
 
-            img_div.appendChild(date);
+            cardBody.appendChild(cardTitle);
 
-            // Create a title for the slider item.
-            var title = document.createElement('div');
-            title.className = 'h6 col-12 py-2 mb-4';
-            title.textContent = value.title;
+            var cardText = document.createElement('p');
+            cardText.className = 'card-text';
+            cardText.style.color = '#000000';
+            cardText.style.fontSize = '1.5vh'
+            cardText.style.textAlign = 'justify';
+            cardText.textContent = value.date_title + ' ' + '\n' + value.description;
 
-            // Create a link for the slider item.
-            var button = document.createElement('div');
-            button.className = 'col-12';
-            button.style.position = 'absolute';
-            button.style.bottom = '0px';
+            cardBody.appendChild(cardText);
 
-            var link = document.createElement('a');
-            link.href = value.pdf;
-            link.target = '_blank';
-            link.textContent = 'Leer Más';
+            var cardLink = document.createElement('a');
+            cardLink.href = value.pdf;
+            cardLink.target = '_blank';
+            cardLink.className = 'btn btn-primary mt-2';
+            cardLink.style.backgroundColor = '#fab005';
+            cardLink.style.borderColor = '#fab005';
+            cardLink.textContent = 'Leer más';
 
-            button.appendChild(link);
+            cardBody.appendChild(cardLink);
 
-            // Attach the elements to the slider item.
-            sliderItem.innerHTML = '';
-            sliderItem.appendChild(img_div);
-            sliderItem.appendChild(title);
-            sliderItem.appendChild(button);
+            card.appendChild(cardBody);
 
-            // Attach the slider item to the news slider container.
+            sliderItem.appendChild(card);
+
             newsOuter.appendChild(sliderItem);
+            
         });
     });
 </script>
@@ -87,7 +90,7 @@
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center pb-3 m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase' id='desface_noticias' style='display: none; height: 64vh; max-height: 64vh;'>
+                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: 64vh; max-height: 64vh; overflow: scroll;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
@@ -95,7 +98,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class='center slider my-0 news-outer' id='noticias'></div>
+                    <div class='center slider my-0 news-outer' id='noticias' ></div>
                 </section>
             </div>
             <div class="col-lg-4 col-md-4 col-12">
