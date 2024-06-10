@@ -83,14 +83,17 @@ const getEvents = async (start, end) => {
         });
     
         let items = response.data.items;
+        console.log('Eventos recibidos:', items);
         let events = items.map(item => {
-            return {
-                summary: item.summary,
-                description: item.description,
-                title: item.summary,
-                start: item.start.dateTime,
-                end: item.end.dateTime
-            };
+            let startDate = new Date(item.start.dateTime || item.start.date);
+            let endDate = new Date(item.end.dateTime || item.end.date);
+            return [
+                item.summary || 'No Title',
+                item.description || 'No Description',
+                startDate.getMonth() + 1, // Months are zero-based in JavaScript
+                startDate.getDate(),
+                startDate.toTimeString().split(' ')[0] // Time in HH:MM:SS format
+            ];
         });
         
         return events;
@@ -104,16 +107,29 @@ let start = '2024-01-01T00:00:00.000Z';
 let end = '2024-07-30T23:59:59.999Z';
 
 // Testing Endpoint
-app.get('/test', (req, res) => {
-    getEvents(start, end)
-     .then((res) => {
-        console.log(res)
-     })
-    .catch((err) => {
-        console.log(err)
-     });
+app.get('/test', async (req, res) => {
+    try {
+        let events = await getEvents(start, end);
+        console.log(events);
+        res.json(events);
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('Error fetching events');
+    }
 });
 // Testing Endpoint
+
+// Home endpoint.
+app.get('/', async (req, res) => {
+    try {
+        let events = await getEvents(start, end);
+        res.render('index', { events: JSON.stringify(events) });
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('Error fetching events');
+    }
+});
+// Home endpoint.
 
 // ************* Routes *************
 

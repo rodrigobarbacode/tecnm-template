@@ -110,7 +110,6 @@
 	box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.60);
 }
 
-
 .yogurt-defase {
 	color: rgb(104, 104, 104);
 	border-radius: 20px;
@@ -118,6 +117,8 @@
 	box-shadow: 20px 20px 60px #172336,
 		-20px -20px 60px #06060633;
 }
+
+
 
 .bordered-con {
 	background-color: white;
