@@ -40,7 +40,7 @@
 
                     <!-- Opción: Residencia Profesional -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/Residencia/residencias.html" target="_blank">
+                        <a class="dropdown-item" href="/residencia" target="_blank">
                             Residencia Profesional
                         </a>
                     </li>

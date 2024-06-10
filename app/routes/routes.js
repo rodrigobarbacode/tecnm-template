@@ -70,6 +70,11 @@ router.get('/personaldoc', (req, res) => {
 });
 // Personal Docente endpoint.
 
+// Residencia endpoint.
+router.get('/residencia', (req, res) => {
+    res.render('misc/departamentos/Residencia/index');
+});
+// Residencia endpoint.
 
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
