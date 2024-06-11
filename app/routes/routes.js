@@ -70,6 +70,24 @@ router.get('/personaldoc', (req, res) => {
 });
 // Personal Docente endpoint.
 
+// Servicio Social endpoint.
+router.get('/ss', (req, res) => {
+    res.render('misc/departamentos/ss/index');
+});
+// Servicio Social endpoint.
+
+// Residencia endpoint.
+router.get('/residencia', (req, res) => {
+    res.render('misc/departamentos/Residencia/index');
+});
+// Residencia endpoint.
+
+
+// Escolares endpoint.
+router.get('/escolares', (req, res) => {
+    res.render('misc/departamentos/escolares/index');
+});
+// Escolares endpoint.
 
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))

@@ -40,14 +40,14 @@
 
                     <!-- Opción: Residencia Profesional -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/Residencia/residencias.html" target="_blank">
+                        <a class="dropdown-item" href="/residencia" target="_blank">
                             Residencia Profesional
                         </a>
                     </li>
 
                     <!-- Opción: Servicio Social -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/ss/ss.html" target="_blank">
+                        <a class="dropdown-item" href="/ss" target="_blank">
                             Servicio Social
                         </a>
                     </li>
@@ -83,7 +83,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- Opción: Calendario -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/documentos/2024/calendario2024-1.pdf"> 
+                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/calendario2024-1.pdf"> 
                             Calendario 2024-1
                         </a>
                     </li>
@@ -249,7 +249,7 @@
 
                     <!-- Opción: Servicios Escolares -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/escolares/">
+                        <a class="dropdown-item" href="/escolares">
                             Servicios Escolares
                         </a>
                     </li> 
@@ -333,20 +333,20 @@
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     Correo
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <!-- Opción: Correo mexicali.tecnm.mx -->
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <!-- Opción: Correo itmexicali.edu.mx -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="">
-                            Correo @mexicali.tecnm.mx
+                        <a class="dropdown-item" href="/recuperacion_correo?show=1">
+                            Correo @itmexicali.edu.mx
                         </a>
                     </li>
                     
-                    <!-- Opción: Correo itmexicali.edu.mx -->
+                    <!-- Opción: Correo mexicali.tecnm.mx -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="">
-                            Correo @itmexicali.edu.mx
+                        <a class="dropdown-item" href="/recuperacion_correo?show=2">
+                            Correo @mexicali.tecnm.mx
                         </a>
-                    </li> 
+                    </li>
                 </ul> 
             </li>
             
