@@ -1,6 +1,6 @@
 /* Estilo del carrucel */
 .sitios {
-    width: 50%;
+    width: 75%;
     margin: 0px auto;
 }
 
@@ -13,6 +13,11 @@
 
 .slick-slide {
   margin: 0px 0px;
+}
+
+.anexo .slick-slide {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .anexo > .slick-prev:before { /* Flecha azul - lado izquierdo */

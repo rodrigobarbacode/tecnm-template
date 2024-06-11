@@ -64,20 +64,22 @@ $(document).on('ready', function () {
       arrows: true, // flechas
       autoplay: true,
       autoplaySpeed: 3500,
-      slidesToShow: 4,
+      slidesToShow: 3,
+      centerMode: true,
       pauseOnHover: true,
       responsive: [{
             breakpoint: 768,
             settings: {
                 //arrows: false,
+                centerMode: true,
                 slidesToShow: 2
             }
         },{
             breakpoint: 480,
             settings: {
+                centerMode: true,
                 arrows: false,
-                centerPadding: '0px',
-                slidesToShow: 2
+                slidesToShow: 1
             }
         }
       ]
