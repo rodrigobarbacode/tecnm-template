@@ -57,9 +57,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Organigrama -->
+                <!-- @itmexicali.edu.mx -->
 
-                <!-- Servicios que presta dentro de la institucion -->
+                <!-- @mexicali.tecnm.mx -->
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Servicios que presta dentro de la institucion -->
+                <!-- @mexicali.tecnm.mx -->
 
             </div>
         </div>
@@ -92,7 +92,6 @@
         <!-- Imagenes con Links -->
         <div class="col-md-4 align-center">
             <div class="row">
-
                 <!-- Imagen de itmexicali Gmail -->
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <a href="https://gmail.google.com/">
@@ -125,3 +124,15 @@
         </div>
         <!-- Imagenes con Links -->
 </div>
+
+<script>
+    let params = new URLSearchParams(window.location.search);
+
+    if (params.get("show") == 1) {
+        let accordionItem = document.getElementById("collapseOne")
+        accordionItem.classList.add("show")
+    } else if (params.get("show") == 2) {
+        let accordionItem = document.getElementById("collapseTwo")
+        accordionItem.classList.add("show")
+    }
+</script>

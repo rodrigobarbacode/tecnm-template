@@ -82,6 +82,13 @@ router.get('/residencia', (req, res) => {
 });
 // Residencia endpoint.
 
+
+// Escolares endpoint.
+router.get('/escolares', (req, res) => {
+    res.render('misc/departamentos/escolares/index');
+});
+// Escolares endpoint.
+
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
 // CCO endpoints.

@@ -16,6 +16,7 @@
             </p>
         </div>
     </div>
+    <!-- Renglon 'Header' que presenta el nombre del departamento -->
     
     <!-- Renglon de Contenido -->
     <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
@@ -124,6 +125,7 @@
         </div>
         <!-- Derecha -->
     </div>
+    <!-- Renglon de Contenido -->
 
     <!-- Finale -->
     <div class="row yogurt-defase m-3 p-2">
