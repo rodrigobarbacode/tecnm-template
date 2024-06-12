@@ -2,7 +2,7 @@
     <div class="">
 
         <div class="row no-gutters">
-            <div class="col-md-12 barra-logos pt-3" style="height: auto; width:100vw; text-align: left;">
+            <div class="col-md-12 barra-logos pt-3" style="text-align: left;">
                 <div class="d-inline-block text-left pb-3">
                     <a href="https://www.gob.mx/" target="_blank" id="pleca_1" class='d-none d-xl-inline'>
                         <img loading='lazy' src="img/logos/gobierno_mexico.png" alt="Gobierno de México" class="plecaGob gob">

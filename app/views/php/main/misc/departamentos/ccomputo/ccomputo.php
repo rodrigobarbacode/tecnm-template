@@ -286,7 +286,8 @@
                 </div>
                 <div id="collapse5" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                        <a href="/recuperacion_correo">Clic Aqui</a> <br>      
+                        Checa la opcion de <b>Correo</b> dentro de nuestra barra de 
+                        navegacion blanca y selecciona el correo que deseas recuperar.<br>      
                     </div>
                 </div>
             </div>
@@ -473,6 +474,7 @@
                     <hr>
                 </div>
 
+                <!-- Datos del programa -->
                 <div class="col-md-12 p-4" style="text-align: left;">
                     Datos del programa: ADMINISTRACION DE SERVICIOS DE COMPUTO Y TELECOMUNICACIONES <br>
                     Actividades a desarrollar: TECNICO <br>
@@ -505,7 +507,7 @@
 
 
                 </div>
-
+                <!-- Datos del programa -->
             </div>
         </div>
         
