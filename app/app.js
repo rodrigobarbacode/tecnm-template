@@ -83,9 +83,9 @@ async function loadSavedCredentialsIfExist() {
   async function listEvents(auth) {
     const calendar = google.calendar({version: 'v3', auth});
     const res = await calendar.events.list({
-      calendarId: 'c_73c7ca073d57a90aec4278cda510a342fd22fb60a753e17f9079d970488f3c88@group.calendar.google.com',
+      calendarId: 'primary',
       timeMin: new Date().toISOString(),
-      maxResults: 5,
+      maxResults: 10,
       singleEvents: true,
       orderBy: 'startTime',
     });
@@ -168,9 +168,7 @@ app.use(routes);
 // Testing Endpoint
 app.get('/test', async (req, res) => {
     try {
-        console.log('Fetching events...');
-        let events = await listEvents(await authorize());
-        console.log(events);
+        authorize().then(listEvents).catch(console.error);
     } catch (err) {
         console.log(err);
         res.status(500).send('Error fetching events');

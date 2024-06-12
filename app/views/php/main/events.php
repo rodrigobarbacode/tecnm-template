@@ -42,7 +42,7 @@
     <div class='row'>
         <div class='col-12 display-2 text-left my-0 py-3'>
             <a role='button' href='?vista=Noticias'>
-                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 1vh;"
+                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 2vh;"
                             class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
             </a>
         </div>

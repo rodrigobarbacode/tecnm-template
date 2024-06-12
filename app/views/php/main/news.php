@@ -86,15 +86,15 @@
 </script>
 
 <div id='desface' style='display: none; background-color: #2f476f;'>
-    <div class='container-fluid m-auto mb-3'>
+    <div class='container-fluid m-auto'>
         <!-- Comunicación -->
-        <div class='row w-100 justify-content-center pb-3 m-0'>
+        <div class='row w-100 justify-content-center m-0'>
             <div class="col-lg-8 col-md-8 col-12">
                 <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: 64vh; max-height: 64vh; overflow: scroll;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
-                                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
+                                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
                             </a>
                         </div>
                     </div>

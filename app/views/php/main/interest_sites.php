@@ -2,9 +2,10 @@
     <!-- Sitios de Interés -->
     <div class='row w-100 justify-content-center pt-3 m-0'>
 
-        <p class='display-2'>
-            Sitios de Interés
-        </p>
+        <h2 style="color: white; font-size: 6vh; padding-top:15px;"><span>
+                <i class="fa-solid fa-flag" style="color: #fab005; padding-right: 2vh;"></i></span>Sitios de Interés
+        </h2>
+
 
     </div>
     <div class='row w-100 justify-content-center pt-3 m-0'>

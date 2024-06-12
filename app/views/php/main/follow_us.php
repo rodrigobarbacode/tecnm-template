@@ -1,22 +1,29 @@
 <!-- Síguenos -->
-<section class="neomorphic-defase ml-3 mr-3 mb-3" >
-    <div class='row w-100 justify-content-center'>
-        <p class='col-12 display-2 text-center'>
-            Síguenos
-        </p>
-        <div class='col-lg-8 col-md-8 col-12 text-center'>
-            <div class="row">
-                <!-- Youtube -->
-                <iframe width='350' height='525' src='https://www.youtube.com/embed/_JMNnHmH4Nk?si=lRZwroFKfZ58LFwt'
-                    frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-                    class="m-auto" allowfullscreen></iframe>
-                <!-- Facebook -->
-                <iframe name="f7dea00bcbffbc8d8" width="350" height="525" data-testid="fb:page Facebook Social Plugin"
-                    title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true"
-                    allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                    src="https://www.facebook.com/v5.0/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df83ebf35c15b861bb%26domain%3Dwww.itmexicali.edu.mx%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fwww.itmexicali.edu.mx%252Ff1e1d47fc2688691c%26relation%3Dparent.parent&amp;container_width=350&amp;height=525&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FITMEXICALI%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=1400px"
-                    style="border: none; visibility: visible;" class="m-auto"></iframe>
-            </div>
+<div class='neomorphic-defase-2 w-100' style=''>
+    <section style='  margin:auto; padding-bottom:15px;' class="text-center" id='Section1'>
+
+        <h2 style="color: white; font-size: 6vh; padding-top:15px;"><span>
+                <i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-thumbs-up"></i></span>Redes
+            Sociales</h2>
+
+        <div class='media-container-row' style='text-align:center'>
+            <!--Facebook-->
+            <iframe style='margin-top:15px;'
+                src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSomosTecNM%2F&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
+                width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0'
+                allowTransparency='true' allow='encrypted-media'></iframe>
+
+            <!--Youtube-->
+            <iframe style='margin-top:15px;' width='350' height='525'
+                src='https://www.youtube.com/embed/_JMNnHmH4Nk?si=lRZwroFKfZ58LFwt' frameborder='0'
+                allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                allowfullscreen></iframe>
+
+            <!--Facebook-->
+            <iframe style='margin-top:15px;'
+                src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSomosTecNM%2F&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
+                width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0'
+                allowTransparency='true' allow='encrypted-media'></iframe>
         </div>
-    </div>
-</section>
+    </section>
+</div>
