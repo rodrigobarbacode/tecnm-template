@@ -1,5 +1,5 @@
 <!-- Barra Azul encargada de desplegar una variedad de opciones relacionadas a los servicios del Tecnologico de Mexicali -->
-<nav class="navbar navbar-expand-xl navbar-dark shadow-xs" style='background-color: #1B396A; z-index: 1000; border-radius: 0px 0px 20px 20px; -moz-border-radius: 0px 0px 20px 20px; -webkit-border-radius: 0px 0px 20px 20px; border: 1px solid #50688f;' id="main_navbar">
+<nav class="navbar navbar-expand-xl navbar-dark shadow-xs" style='background-color: #1B396A; z-index: 1100; border-radius: 0px 0px 20px 20px; -moz-border-radius: 0px 0px 20px 20px; -webkit-border-radius: 0px 0px 20px 20px; border: 1px solid #50688f;' id="main_navbar">
        
     <button class="navbar-toggler border-0 text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
         aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
