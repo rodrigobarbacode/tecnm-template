@@ -2,10 +2,16 @@
 <div class="container-fluid p-0 ml-0 mr-0 bg-tecnm" >
     <div class="row">
         <!-- Sidebar -->
-        <div class="col-md-2 p-0">
         
-            <div class="col-md-12 sidebar">
-                
+
+        <div class="col-md-2 p-0">
+            <div class="sidebar-collapse d-none d-sm-block d-md-block">
+                <a href="#">
+                <img width="35" height="35" src="https://img.icons8.com/ios-filled/50/FFFFFF/double-left.png" alt="double-left"/>
+                </a>
+            </div>
+
+            <div class="col-md-12 d-sm-none d-md-none d-lg-none d-xl-block sidebar">  
                 <div class="sidebar-separator item-style">
                     <span>Example Separator</span>
                 </div>

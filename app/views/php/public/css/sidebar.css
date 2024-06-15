@@ -1,6 +1,7 @@
 /*BG TecNM Color: #1b396a*/
 
 .sidebar {
+    position: relative;
     text-align: left;
     padding: 0;
 }
@@ -11,7 +12,18 @@
 }
 
 .sidebar-separator {
+    font-size: small;
     background-color: rgb(4, 17, 82) !important;
+}
+
+.sidebar-collapse a {
+    position: absolute;
+
+    padding: 0;
+    top: 80px;
+    right: -35px;
+
+    border: 1px solid black;
 }
 
 .submenu a {
