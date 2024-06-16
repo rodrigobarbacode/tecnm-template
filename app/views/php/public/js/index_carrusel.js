@@ -24,7 +24,7 @@ $(document).on('ready', function () {
       autoplaySpeed: 2000,
       centerMode: true,
       centerPadding: '0px',
-      slidesToShow: 3,
+      slidesToShow: 4,
       responsive: [{
             // Breakpoint for Laptop or Desktop
             breakpoint: 1490,

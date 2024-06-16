@@ -1,4 +1,45 @@
 <script>
+    //Function to limit the text length to only 100 characters.
+    function truncateDescription(text) {
+        const maxLength = 100;
+        if (text.length <= maxLength) {
+            return text;
+        }
+
+        // Find the last space within the allowed length
+        let truncated = text.substr(0, maxLength);
+        const lastSpaceIndex = truncated.lastIndexOf(' ');
+
+        // If there's a space within the truncated part, truncate up to the last full word
+        if (lastSpaceIndex > 0) {
+            truncated = truncated.substr(0, lastSpaceIndex);
+        }
+
+        // Add ellipsis
+        return truncated + '...';
+    }
+
+
+    // Function to limit the text length to only 30 characters.
+    function truncateTitle(text) {
+        const maxLength = 30;
+        if (text.length <= maxLength) {
+            return text;
+        }
+
+        // Find the last space within the allowed length
+        let truncated = text.substr(0, maxLength);
+        const lastSpaceIndex = truncated.lastIndexOf(' ');
+
+        // If there's a space within the truncated part, truncate up to the last full word
+        if (lastSpaceIndex > 0) {
+            truncated = truncated.substr(0, lastSpaceIndex);
+        }
+
+        // Add ellipsis
+        return truncated + '...';
+    }
+
     // Function to fetch a local JSON file.
     function fetchLocalJSON(file, callback) {
         var xhr = new XMLHttpRequest();
@@ -36,6 +77,7 @@
 
             var img = document.createElement('img');
             img.className = 'card-img-top';
+            img.style.width = '100%';
             img.style.height = '10vh';
             img.style.borderRadius = '1rem 1rem 0 0';
             img.src = value.image;
@@ -45,14 +87,15 @@
 
             var cardBody = document.createElement('div');
             cardBody.className = 'card-body';
-            
+
             var cardTitle = document.createElement('h5');
             cardTitle.className = 'card-title';
             cardTitle.style.color = '#fab005';
             cardTitle.style.fontSize = '2vh';
             cardTitle.style.fontWeight = 'bolder';
             cardTitle.style.textAlign = 'center';
-            cardTitle.textContent = value.title;
+            var limitTitle = truncateTitle(value.title);
+            cardTitle.textContent = limitTitle;
 
             cardBody.appendChild(cardTitle);
 
@@ -61,7 +104,8 @@
             cardText.style.color = '#000000';
             cardText.style.fontSize = '1.5vh'
             cardText.style.textAlign = 'justify';
-            cardText.textContent = value.date_title + ' ' + '\n' + value.description;
+            var limitDescription = truncateDescription(value.description);
+            cardText.textContent = value.date_title + ' | ' + '\n' + limitDescription;
 
             cardBody.appendChild(cardText);
 
@@ -80,7 +124,7 @@
             sliderItem.appendChild(card);
 
             newsOuter.appendChild(sliderItem);
-            
+
         });
     });
 </script>
@@ -90,7 +134,7 @@
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: 64vh; max-height: 64vh; overflow: scroll;'>
+                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: auto; max-height: auto; overflow: scroll; z-index: 1500;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
@@ -98,7 +142,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class='center slider my-0 news-outer' id='noticias' ></div>
+                    <div class='center slider my-0 news-outer pb-2' id='noticias'></div>
                 </section>
             </div>
             <div class="col-lg-4 col-md-4 col-12">
