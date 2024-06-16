@@ -1,49 +1,33 @@
-<!-- Barra Azul encargada de desplegar una variedad de opciones relacionadas a los servicios del Tecnologico de Mexicali -->
-<nav class="navbar navbar-expand-xl navbar-dark shadow-xs" style='background-color: #1B396A; z-index: 1100; border-radius: 0px 0px 20px 20px; -moz-border-radius: 0px 0px 20px 20px; -webkit-border-radius: 0px 0px 20px 20px; border: 1px solid #50688f;' id="main_navbar">
-       
-    <button class="navbar-toggler border-0 text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
-        aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-xl navbar-dark" style='background-color: #1B396A;' id="main_navbar">
+
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+    <!-- <span id="tecnmblanco" style="visibility:hidden; "> -->
+    <!-- <img loading='lazy' alt="TecNM" style="max-height:50px;" src="images/LogoTecNM%20Blanco.png" /> -->
+    <!-- </span> -->
+
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> Menú Principal
     </button>
 
-    <!--Ejemplo de Submenu NO UTILIZADO-->
-    <!--
-    <li class="nav-item dropdown">
-        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-            Nivel 2 
-        </a>						
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-            <li><a class="dropdown-item" href="#"> Nivel 3 </a></li>
-        </ul> 
-    </li>
-    -->
-    <!-- Ejemplo: Opcion sin Menu 
-    <li class="nav-item dropdown">
-        <a class="nav-link active font-weight-bold" href="TecNM_Virtual">
-            Nivel 1
-        </a>
-    </li>
-    -->
-
-    <!-- Elementos de la Barra -->
-    <div class="collapse navbar-collapse pl-1 pl-lx-0" id="navbarSupportedContent2">
-        <ul class="navbar-nav pl-1">
+    <div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent2">
+        <ul class="navbar-nav mr-auto">
 
             <!-- Icono de Home -->
             <li class="nav-item active">
                 <a class="nav-link font-weight-bold" href="/"><i class="fa-solid fa-house pr-2"></i>Inicio</a>
             </li>
-        
+
             <!-- Menu: Conócenos -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Conócenos
+                    Conócenos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    
+
                     <!-- Opción: Misión y Visión -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/bienvenida"> 
+                        <a class="dropdown-item" href="/bienvenida">
                             Misión y Visión
                         </a>
                     </li>
@@ -68,15 +52,15 @@
                             Transparencia Y Rendición de Cuentas
                         </a>
                     </li>
-                
+
                     <!-- Opción: TecNM -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/assets/tec-files/departamentos/rh/reglamentos/ManualOrgTECNM.pdf">
                             Manual de organización - TecNM
                         </a>
                     </li>
-                    
-                    
+
+
                     <!-- Opción: Licitaciones 
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/invitacion">
@@ -92,14 +76,14 @@
                     Aspirantes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    
+
                     <!-- Opción: Convocatoria para Ingreso -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://bit.ly/Convocatoria20243">
                             Convocatoria
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Equivalencias de Estudio -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://bit.ly/Equiv20243">
@@ -116,7 +100,7 @@
                 </ul>
             </li>
 
-            
+
             <!-- Menu: Oferta Educativa -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle font-weight-bold" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -126,11 +110,11 @@
 
                     <!-- Opción: Licenciatura -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Licenciatura
-                        </a>						
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            
+
                             <!-- Opción: Contador Publico -->
                             <li class="nav-item dropdown">
                                 <a class="dropdown-item" href="/assets/tec-files/carreras/cp/contador.html">
@@ -222,16 +206,16 @@
                                 </a>
                             </li>
 
-                        </ul> 
+                        </ul>
                     </li>
 
                     <!-- Opción: Posgrado -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Posgrado
-                        </a>						
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            
+
                             <!-- Opción: Maestría en Ing. en Electrónica -->
                             <li class="nav-item dropdown">
                                 <a class="dropdown-item" href="#">
@@ -258,17 +242,17 @@
 
                 </ul>
             </li>
-            
-           
+
+
             <!-- Menu: Personal TecNM -->
             <li class="nav-item dropdown">
                 <a class="nav-link active font-weight-bold" href="https://forms.gle/goPkoY5f4Ln6G6328">
                     Quejas y Sugerencias
                 </a>
             </li>
-            
-            
+
+
         </ul>
     </div>
-    
+
 </nav>

@@ -1,16 +1,20 @@
-<nav class="navbar navbar-expand-xl navbar-light bg-white pt-1 pb-2" style="z-index: 1001;" id="main_navbar2">
-    <!-- <a class="navbar-brand" href="#">TecNM</a> -->
-			<form action='?vista=Buscar' class="navbar-brand ml-1" method='POST'>
-				<input class="w-100 h-100 ml-2 border align-items-center form-control" type="text" name='buscar' placeholder="Buscar" autocomplete='off' required />
-				<input type="hidden" name="btn_busqueda" />
-			</form>
+<!-- Menú Blanco -->
 
-			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span> Menú
-			</button>
-    <div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent" style="font-weight: bolder;">
+<nav class="navbar navbar-expand-xl navbar-light bg-white" id="main_navbar2" style="font-weight: bolder;">
+
+    <!-- <a class="navbar-brand" href="#">TecNM</a> -->
+    <form action='?vista=Buscar' class="navbar-brand ml-1" method='POST'>
+        <input class="w-100 h-100 border align-items-center m-1 form-control" type="text" name='buscar' placeholder="Buscar" autocomplete='off' required />
+        <input type="hidden" name="btn_busqueda" />
+    </form>
+
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> Menú
+    </button>
+
+    <div class="collapse navbar-collapse pl-5 pl-lx-0" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            
+
             <!-- Menu: Alumnos -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,11 +23,11 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- Opción: Reglamento del Estudiante -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://www.tecnm.mx/normateca/Direcci%C3%B3n%20de%20Asuntos%20Escolares%20y%20Apoyo%20a%20Estudiantes/Reglamento_de_Estudiantes_del_TecNM.pdf"> 
-                            Reglamento del Estudiante 
+                        <a class="dropdown-item" href="https://www.tecnm.mx/normateca/Direcci%C3%B3n%20de%20Asuntos%20Escolares%20y%20Apoyo%20a%20Estudiantes/Reglamento_de_Estudiantes_del_TecNM.pdf">
+                            Reglamento del Estudiante
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Repositorio de Formatos -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://drive.google.com/drive/folders/1uVIh7qyC6-1x-r9dHDUcVZlCWVcBTHTE?usp=sharing">
@@ -33,7 +37,7 @@
 
                     <!-- Opción: Líneas de Pago Nuevo Ingreso y Reinscripción -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://financieros.itmexicali.edu.mx/pagos"> 
+                        <a class="dropdown-item" href="https://financieros.itmexicali.edu.mx/pagos">
                             Líneas de Pago Nuevo Ingreso y Reinscripción
                         </a>
                     </li>
@@ -51,7 +55,7 @@
                             Servicio Social
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Listado de Aportaciones -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/assets/tec-files/documentos/2024/APORTACIONES2024.pdf" target="_blank">
@@ -65,16 +69,15 @@
                             Listado de Actividades Complementarias
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Créditos Complementarios -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="./actividades_complementarias/" target="_blank">
-                            Sistema de Créditos Complementarios (<=2020) 
-                        </a>
+                            Sistema de Créditos Complementarios (<=2020) </a>
                     </li>
                 </ul>
             </li>
-            
+
             <!-- Menu: Academicos -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,13 +86,13 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- Opción: Calendario -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/calendario2024-1.pdf"> 
+                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/calendario2024-1.pdf">
                             Calendario 2024-1
                         </a>
                     </li>
                 </ul>
             </li>
-            
+
             <!-- Menu: Egresados -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -118,7 +121,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <!-- Menu: Personal -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,49 +131,49 @@
 
                     <!-- Opción: Reglamento de Docente -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/personaldoc"> 
+                        <a class="dropdown-item" href="/personaldoc">
                             Reglamento Interior de Trabajo de Personal Docente
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Reglamento de No Docente-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/personalnodoc"> 
+                        <a class="dropdown-item" href="/personalnodoc">
                             Reglamento Interior de Trabajo de Personal No Docente
                         </a>
                     </li>
 
                     <!-- Opción: CAT TecNM-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://cat.tecnm.mx/"> 
+                        <a class="dropdown-item" href="https://cat.tecnm.mx/">
                             CAT TecNM
                         </a>
                     </li>
 
                     <!-- Opción: CVU TecNM -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://cvu.dpii.tecnm.mx/"> 
+                        <a class="dropdown-item" href="https://cvu.dpii.tecnm.mx/">
                             CVU TecNM
                         </a>
                     </li>
 
                     <!-- Opción: Citas ISSSTE -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://web.citamedicaissste.mx/issste/comun/wpu/nuevacita.aspx"> 
+                        <a class="dropdown-item" href="https://web.citamedicaissste.mx/issste/comun/wpu/nuevacita.aspx">
                             Citas ISSSTE
                         </a>
                     </li>
 
                     <!-- Opción: FOVISSSTE-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://www.gob.mx/fovissste"> 
+                        <a class="dropdown-item" href="https://www.gob.mx/fovissste">
                             FOVISSSTE
                         </a>
                     </li>
 
                     <!-- Opción: DeclaraNET -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://declaranet.gob.mx/"> 
+                        <a class="dropdown-item" href="https://declaranet.gob.mx/">
                             DeclaraNET
                         </a>
                     </li>
@@ -232,9 +235,9 @@
                     </li> -->
                 </ul>
             </li>
-            
+
             <!-- Menu: Departamentos -->
-            <li class="nav-item dropdown"> 
+            <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Departamentos
                 </a>
@@ -245,73 +248,73 @@
                         <a class="dropdown-item" href="./departamentos/dep/">
                             División de Estudios Profesionales
                         </a>
-                    </li> 
+                    </li>
 
                     <!-- Opción: Servicios Escolares -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/escolares">
                             Servicios Escolares
                         </a>
-                    </li> 
-                    
+                    </li>
+
                     <!-- Opción: Desarrollo Academico -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">
                             Desarrollo Académico
                         </a>
-                    </li> 
-                    
+                    </li>
+
                     <!-- Opción: Actividades Extraescolares-->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/misc/departamentos/extraescolares/index.html">
                             Actividades Extraescolares
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Recursos Humanos -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/misc/departamentos/rh/index.html">
                             Recursos Humanos
                         </a>
-                    </li> 
+                    </li>
 
                     <!-- Opción: Planeacion -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/inicio?pli=1">
                             Planeación Programación y Prespuestación
                         </a>
-                    </li> 
+                    </li>
 
                     <!-- Opción: Centro de Informacion -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/cinformacion" target="_blank">
                             Centro de Información
                         </a>
-                    </li> 
+                    </li>
 
                     <!-- Opción: Centro de Computo -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/cco">
                             Centro de Cómputo
                         </a>
-                    </li> 
+                    </li>
 
                     <!-- Opción: Recursos Materiales -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/materiales/inicio">
                             Recursos Materiales y Servicios
                         </a>
-                    </li> 
-                </ul> 
+                    </li>
+                </ul>
             </li>
 
             <!-- Menu: Acceso a Sistemas -->
-            <li class="nav-item dropdown"> 
+            <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Acceso a Sistemas
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    
+
                     <!-- Opción: Moodle -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="http://moodle.itmexicali.edu.mx/login/index.php" target="_blank">
@@ -324,13 +327,13 @@
                         <a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">
                             MindBox
                         </a>
-                    </li>  
-                </ul> 
+                    </li>
+                </ul>
             </li>
 
             <!-- Menu: Correo -->
-            <li class="nav-item dropdown"> 
-                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Correo
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -340,17 +343,17 @@
                             Correo @itmexicali.edu.mx
                         </a>
                     </li>
-                    
+
                     <!-- Opción: Correo mexicali.tecnm.mx -->
                     <li class="nav-item dropdown">
                         <a class="dropdown-item" href="/recuperacion_correo?show=2">
                             Correo @mexicali.tecnm.mx
                         </a>
                     </li>
-                </ul> 
+                </ul>
             </li>
-            
+
         </ul>
     </div>
-    
+
 </nav>

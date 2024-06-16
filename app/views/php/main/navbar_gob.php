@@ -37,7 +37,6 @@
 
     <!-- Estilo del carrucel -->
     <link rel="stylesheet" href="css/index_style.css">
-;
     <!-- Sub Menú -->
     <script src="js/index_func.js"></script>
     <!--  -->

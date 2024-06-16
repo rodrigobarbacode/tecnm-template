@@ -1,9 +1,8 @@
 <div class="u-noPaddingContainer contenedorGobierno" style="background-color: white;">
-    <div class="">
-
+    <div>
         <div class="row no-gutters">
-            <div class="col-md-12 barra-logos pt-3" style="text-align: left;">
-                <div class="d-inline-block text-left pb-3">
+            <div class="col-md-12 barra-logos" style="text-align: left; padding-top: 3rem !important;">
+                <div class="d-inline-block text-left">
                     <a href="https://www.gob.mx/" target="_blank" id="pleca_1" class='d-none d-xl-inline'>
                         <img loading='lazy' src="img/logos/gobierno_mexico.png" alt="Gobierno de México" class="plecaGob gob">
                     </a>
@@ -19,9 +18,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Opciones de accesibilidad -->
-        <div class="contenedorAccesibilidad" style="top: 35%;">
+        <div class="contenedorAccesibilidad" style="top: 50%;">
             <div class="idiomas text-right">
                 <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
                     <img loading='lazy' style="height:15%;width:10%" src="img/encabezado/correo-icono.png" alt="Buzón">
@@ -40,19 +37,5 @@
                 <a class="btn--accesibilidad resetLetra" title="Restablecer tamaño" style="color:#1B396A">A </a>
             </div>
         </div>
-
     </div>
-</div>
-
-<style>
-/* Ocultar barra para teléfonos y tabletas */
-@media (max-width: 1200px) {
-    .barra-logos, .contenedorAccesibilidad {
-        display: none;
-    }
-
-    .contenedorGobierno {
-        height: 8vh;
-    }
-}
-</style>
+</div>  
