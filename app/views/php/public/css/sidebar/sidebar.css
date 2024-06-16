@@ -1,12 +1,20 @@
+/*Animations*/
+@import "animations.css";
+
+
 /*BG TecNM Color: #1b396a*/
 
-.sidebar {
+/*---------------------- Basic Configuration ----------------------*/
+#sidebar {
     position: relative;
     text-align: left;
     padding: 0;
+
+	box-shadow: 20px 20px 60px #172336,
+		-20px -20px 60px #06060633;
 }
 
-.sidebar span, .sidebar a {
+#sidebar span, #sidebar a {
     padding: 0px 20px 0px 20px;
     color: rgb(255, 255, 255);
 }
@@ -16,18 +24,23 @@
     background-color: rgb(4, 17, 82) !important;
 }
 
-.sidebar-collapse a {
-    position: absolute;
+#collapser {
+    position: relative;
+    z-index: 1000;
+}
 
-    padding: 0;
+#collapser a {
+    position: absolute;
+    padding: 5px 0 5px 0;
     top: 80px;
     right: -35px;
 
-    border: 1px solid black;
+    background: #0c1a30;
+    border-radius: 0px 10px 10px 0px;;
 }
 
 .submenu a {
-    padding-left: 40px;
+    padding-left: 40px !important;
 }
 
 .item-style {
@@ -46,6 +59,11 @@
     align-items: center;
 }
 
+.item-style img {
+    margin-right: 10px;
+
+}
+
 .item-style a:hover {
     background-color: #244d8f;
 }
@@ -53,7 +71,5 @@
 .submenu-button {
     margin-left: auto;
 }
-
-
-
+/*---------------------- Basic Configuration ----------------------*/
 

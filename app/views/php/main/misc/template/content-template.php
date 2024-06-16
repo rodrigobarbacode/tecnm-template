@@ -2,16 +2,14 @@
 <div class="container-fluid p-0 ml-0 mr-0 bg-tecnm" >
     <div class="row">
         <!-- Sidebar -->
-        
-
-        <div class="col-md-2 p-0">
-            <div class="sidebar-collapse d-none d-sm-block d-md-block">
-                <a href="#">
-                <img width="35" height="35" src="https://img.icons8.com/ios-filled/50/FFFFFF/double-left.png" alt="double-left"/>
+        <div id="sidebar-holder" class="col-md-2 p-0">
+            <div id="collapser" class="d-none d-sm-block d-md-block">
+                <a href="#" onclick="toggleSidebar()">
+                <img id="collapser-icon" width="35" height="35" src="https://img.icons8.com/ios-filled/50/FFFFFF/double-left.png" alt="double-left"/>
                 </a>
             </div>
 
-            <div class="col-md-12 d-sm-none d-md-none d-lg-none d-xl-block sidebar">  
+            <div id="sidebar" class="col-md-12 d-sm-none d-md-none d-lg-none d-xl-block">  
                 <div class="sidebar-separator item-style">
                     <span>Example Separator</span>
                 </div>
@@ -29,7 +27,6 @@
                         Opcion 2
                     </a>
                 </div>
-            
 
                 <div class="sidebar-separator item-style">
                     <span>Example Separator</span>
@@ -39,7 +36,7 @@
                     <a href="#" onclick="toggleSubmenu('womp')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
                         Opcion 1
-                    <img class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    <img id="womp" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                     </a>
                 </div>
 
@@ -68,9 +65,10 @@
         </div>
         <!-- Sidebar -->
 
-        <div class="col-md-9 mx-auto m-4">
+        <!-- Content -->
+        <div id="content-holder" class="col-md-9 mx-auto m-4">
             <!-- Renglon 'Header' que presenta el nombre del departamento -->
-            <div class="row align-center p-5 m-3 yogurt-defase">
+            <div id="main-title" class="row align-center p-5 m-3 yogurt-defase">
                 <!-- Titulo -->
                 <div class="col-md-12 align-center">
                     <h1>Lorem Ipsums</h1> 
@@ -88,7 +86,7 @@
             <!-- Renglon 'Header' que presenta el nombre del departamento -->
             
             <!-- Renglon de Contenido -->
-            <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+            <div id="content1" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
                 <!-- Izquireda -->
                 <div class="col-md-6">
                     <div class="row">
@@ -197,7 +195,7 @@
             <!-- Renglon de Contenido -->
 
             <!-- Finale -->
-            <div class="row yogurt-defase m-3 p-2">
+            <div id="content2" class="row yogurt-defase m-3 p-2">
                 <div class="col-md-8 mx-auto" style="text-align: center;">
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.:</h2>
                     <hr>
@@ -215,6 +213,7 @@
             </div>
             <!-- Finale -->
         </div>
+        <!-- Content -->
 
     </div>
 
