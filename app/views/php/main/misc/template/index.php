@@ -1,6 +1,6 @@
 <!-- Barra de Gobierno -->
 <?php require '../../navbar_gob.php' ?>
-<link rel="stylesheet" href="/css/sidebar.css">
+<link rel="stylesheet" href="/css/sidebar/sidebar.css">
 
 <!-- Encabezado principal -->
 <?php require '../../main_header.php' ?>
@@ -11,10 +11,9 @@
 <!-- Menú Azul  -->
 <?php require '../../navbar_blue.php' ?>
 
-
 <!-- Contenido -->
 <?php require 'content-template.php' ?>
-<script src="/js/sidebar.js"></script>
+<script src="/js/sidebar/sidebar.js"></script>
 
 <!-- Footer Azul -->
 <?php require '../../footer_blue.php' ?>
