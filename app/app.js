@@ -203,7 +203,7 @@ app.get('/data/events', async (req, res) => {
 // ************* Routes *************
 
 // Define the port where the server will listen for requests.
-const PORT = 81;
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Node / PHP server running on http://localhost:${PORT}`);
 });
