@@ -101,6 +101,7 @@
   border-radius: 0px 0px 15px 15px;
   -moz-border-radius: 0px 0px 15px 15px;
   -webkit-border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 0px 10px #00000085;
 }
 
 #main_navbar,
@@ -136,11 +137,11 @@
 
   .menublanco {
     top: 34px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 1px;
   }
 
   .menuazul {
-    top: 81px;
+    top: 78px;
   }
 }

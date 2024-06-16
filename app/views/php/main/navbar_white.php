@@ -12,7 +12,7 @@
         <span class="navbar-toggler-icon"></span> Menú
     </button>
 
-    <div class="collapse navbar-collapse pl-5 pl-lx-0" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse pl-3 pl-lx-0" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
 
             <!-- Menu: Alumnos -->

@@ -10,7 +10,7 @@
         <span class="navbar-toggler-icon"></span> Menú Principal
     </button>
 
-    <div class="collapse navbar-collapse pl-2 pl-lx-0" id="navbarSupportedContent2">
+    <div class="collapse navbar-collapse pl-3 pl-lx-0" id="navbarSupportedContent2">
         <ul class="navbar-nav mr-auto">
 
             <!-- Icono de Home -->
