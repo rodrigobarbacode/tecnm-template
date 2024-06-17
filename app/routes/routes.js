@@ -88,6 +88,12 @@ router.get('/escolares', (req, res) => {
 });
 // Escolares endpoint.
 
+// Recursos Humanos endpoint.
+router.get('/rh', (req, res) => {
+    res.render('misc/departamentos/rh/index');
+});
+// Recursos Humanos endpoint.
+
 // Template endpoint.
 router.get('/template', (req, res) => {
     res.render('misc/template/index');
