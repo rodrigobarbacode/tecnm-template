@@ -1,3 +1,5 @@
+
+<!-- Navbar Gob -->
 <?php require '../../../navbar_gob.php' ?>
 
 <!-- Encabezado principal -->
@@ -11,7 +13,6 @@
 
 <!-- Contenido -->
 <?php require 'cinformacion.php' ?>
-
 
 <!-- Footer Azul -->
 <?php require '../../../footer_blue.php' ?>

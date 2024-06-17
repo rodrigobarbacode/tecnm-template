@@ -6,12 +6,13 @@
 
 /*---------------------- Basic Configuration ----------------------*/
 #sidebar {
+    height: 100%;
+
     position: relative;
     text-align: left;
     padding: 0;
 
-	box-shadow: 20px 20px 60px #172336,
-		-20px -20px 60px #06060633;
+	box-shadow: 25px 0px 26px -3px rgba(0, 0, 0, 0.39);
 }
 
 #sidebar span, #sidebar a {
