@@ -1,31 +1,39 @@
 version: '3.8'
 
 services:
-  db:
+  app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    working_dir: /usr/src/app
+    volumes:
+      - ../app:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mariadb
+
+  mariadb:
     image: mariadb:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: rootpassword
     volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - my_network
-
-  tecnm_node_app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+      - mariadb_data:/var/lib/mysql
     ports:
-      - "5000:5000"
-    volumes:
-      - .:/app
-    networks:
-      - my_network
-    depends_on:
-      - db
+      - "3306:3306"
 
-networks:
-  my_network:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: rootpassword
+    depends_on:
+      - mariadb
 
 volumes:
-  db_data:
+  mariadb_data:

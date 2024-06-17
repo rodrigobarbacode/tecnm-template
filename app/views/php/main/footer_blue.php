@@ -1,7 +1,7 @@
-<div id='desface_footer' style='display: none;'>
+<div id='desface_footer' style='z-index:2100; display: none; box-shadow: 0px -10px 5px #0000002A;'>
 	<footer class='bg-tecnm footer'>
 
-		<div class='row m-0 justify-content-center ' style="padding: 16px; padding-bottom: 30px; box-shadow: 0px -10px 5px #0000002A; ">
+		<div class='row m-0 justify-content-center ' style="padding: 16px; padding-bottom: 30px;  ">
 
 			<div class='h6 col-12 col-lg-3 text-center text-lg-left' style='line-height: 1.5;'>
 
@@ -47,19 +47,23 @@
 				<p class='h5 font-weight-bold my-2'>
 					Número de visitas
 				</p>
+				<div id="sfc65h961x7l8kaphce2l3m9ajw369dtp7s"></div>
+				<script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=65h961x7l8kaphce2l3m9ajw369dtp7s&down=async" async></script>
+				<noscript><a href="https://www.contadorvisitasgratis.com" title="contadores de visitas"><img src="https://counter4.optistats.ovh/private/contadorvisitasgratis.php?c=65h961x7l8kaphce2l3m9ajw369dtp7s" border="0" title="contadores de visitas" alt="contadores de visitas"></a></noscript>
+
 
 			</div>
 
-			<div class='h6 col-12 col-lg-6 '>
+			<div class='h6 col-12 col-lg-6 text-center pt-5'>
 				<iframe src="https://maps.google.com/maps?q=instituto%20tecnologico%20de%20mexicali&t=k&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="400" frameborder="0" style="border:0;"></iframe>
 			</div>
 
-			<div class='vh6 col-12 text-center' style='line-height: 1.5;'>
-				© Copyright 2020 TecNM - Todos los Derechos Reservados
+			<div class='vh6 col-12 text-center mt-2' style='line-height: 1.5;'>
+				© Copyright 2024 TecNM - Todos los Derechos Reservados
 				<br />
 				<a class='text-white' href='https://www.gob.mx/cms/uploads/attachment/file/328462/Proyecto_Aviso_Privacidad_TecNM_16052018.pdf' target='_blank'> Aviso de Privacidad </a>
 				<br />
-				Última actualización: 5/06/2020
+				Última actualización: 6/16/2024
 			</div>
 
 		</div>

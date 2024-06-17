@@ -19,11 +19,18 @@ router.get('/cco', (req, res) => {
 //CComputo endpoint.
 
 
-//CCO - Correo endpoint.
-router.get('/recuperacion_correo', (req, res) => {
-    res.render('misc/departamentos/ccomputo/correo/index');
+//CCO - Correo itmexicali endpoint.
+router.get('/correo_itm', (req, res) => {
+    res.render('misc/departamentos/ccomputo/correo/itmexicali/index');
 });
-//CCO - Correo endpoint.
+//CCO - Correo itmexicali endpoint.
+
+
+//CCO - Correo mexicalitecnm endpoint.
+router.get('/correo_tecnm', (req, res) => {
+    res.render('misc/departamentos/ccomputo/correo/mexicalitecnm/index');
+});
+//CCO - Correo mexicalitecnm endpoint.
 
 //CCO - Infraestructura endpoint.
 router.get('/infraestructura', (req, res) => {

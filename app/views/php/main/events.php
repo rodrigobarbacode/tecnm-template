@@ -5,14 +5,14 @@
             var eventsOuter = document.querySelector(".events-outer");
             var html = "";
 
-            data.forEach(function (event) {
+            data.forEach(function(event) {
                 html += `
                 <div class="event">
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-md-4 col-4 text-center bordered-con">
                             <p style="color: #2f476f; font-size: 3vh; font-weight: bolder;">${event.month} ${event.day}</p>
                         </div>
-                        <div class="col-lg-1 col-md-1 col-1">
+                        <div class="col-lg-1 col-md-1 col-1 separator-link">
                             <style>
                                 .ln {
                                     border-left: 2px solid white;
@@ -37,15 +37,22 @@
         .catch(error => console.error('Error fetching data:', error));
 </script>
 
-<section class="container neomorphic-defase px-5 ml-auto mr-auto mt-3 pt-3 pb-3 hide-scroll"
-    style="max-height: 64vh; overflow-y: scroll">
+<section class="container events neomorphic-defase px-5 ml-auto mr-auto mt-3 pt-3 pb-3" style="max-height: 38vh; overflow-y: scroll; z-index: 2000;">
     <div class='row'>
         <div class='col-12 display-2 text-left my-0 py-3'>
             <a role='button' href='?vista=Noticias'>
-                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 1vh;"
-                            class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
+                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
             </a>
         </div>
     </div>
     <div class="events-outer overflow"></div>
 </section>
+
+<style>
+    @media (max-width: 768px) {
+        .events {
+            height: 66vh;
+            max-height: 66vh;
+        }
+    }
+</style>

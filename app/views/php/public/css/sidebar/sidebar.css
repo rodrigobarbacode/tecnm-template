@@ -1,0 +1,78 @@
+/*Animations*/
+@import "animations.css";
+
+
+/*BG TecNM Color: #1b396a*/
+
+/*---------------------- Basic Configuration ----------------------*/
+#sidebar {
+    height: 100%;
+
+    position: relative;
+    text-align: left;
+    padding: 0;
+
+	box-shadow: 25px 0px 26px -3px rgba(0, 0, 0, 0.39);
+}
+
+#sidebar span, #sidebar a {
+    padding: 0px 20px 0px 20px;
+    color: rgb(255, 255, 255);
+}
+
+.sidebar-separator {
+    font-size: small;
+    background-color: rgb(4, 17, 82) !important;
+}
+
+
+#collapser {
+    position: relative;
+    z-index: 1000;
+}
+
+#collapser a {
+    position: absolute;
+    padding: 5px 0 5px 0;
+    top: 80px;
+    right: -35px;
+
+    background: #0c1a30;
+    border-radius: 0px 10px 10px 0px;;
+}
+
+.submenu a {
+    padding-left: 40px !important;
+}
+
+.item-style {
+    width: 100%;
+    min-height: 50px;
+    max-height: fit-content;
+
+    background-color: #1b396a;
+}
+
+.item-style a, .item-style span{
+    width: 100%;
+    min-height: 50px;
+    max-height: fit-content;
+
+    display: flex;
+    align-items: center;
+}
+
+.item-style img {
+    margin-right: 10px;
+
+}
+
+.item-style a:hover {
+    background-color: #244d8f;
+}
+
+.submenu-button {
+    margin-left: auto;
+}
+/*---------------------- Basic Configuration ----------------------*/
+

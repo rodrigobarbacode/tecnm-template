@@ -2,15 +2,19 @@
     <ul class="sticky">
         <li>
             <img loading='lazy' src="img/redes_sociales/facebook.png" width="32" height="32" alt="facebook" />
-            <p><a href="https://www.facebook.com/SomosTecNM/" target="_blank">Me gusta en<br>Facebook</a></p>
+            <p><a href="https://www.facebook.com/ITMEXICALI" target="_blank">Me gusta en<br>Facebook</a></p>
+        </li>
+        <li>
+            <img loading='lazy' src="img/redes_sociales/instagram.png" width="32" height="32" alt="facebook" />
+            <p><a href="https://www.instagram.com/tecnm_mexicali/" target="_blank">Me encanta en<br>instagram</a></p>
         </li>
         <li>
             <img loading='lazy' src="img/redes_sociales/youtube.png" width="32" height="32" alt="YouTube" />
-            <p><a href="https://www.youtube.com/user/SNESTMX" target="_blank">Suscríbase en<br>YouTube</a></p>
+            <p><a href="https://www.youtube.com/@tecnmcampusmexicali7369/featured" target="_blank">Suscríbase en<br>Youtube</a></p>
         </li>
         <li>
             <img loading='lazy' src="img/redes_sociales/twitter.png" width="32" height="32" alt="Twitter" />
-            <p><a href="https://twitter.com/TecNM_MX" target="_blank">Síguenos en<br>Twitter</a></p>
+            <p><a href="https://x.com/TecNM_Mexicali" target="_blank">Síguenos en<br>X</a></p>
         </li>
     </ul>
 </div>

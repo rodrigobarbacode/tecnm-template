@@ -82,6 +82,20 @@
 	color: #fff;
 }
 
+#barraGobmx {
+	z-index: 10012;
+}
+
+#main_navbar {
+	z-index: 10004;
+}
+
+#main_navbar2 {
+	z-index: 10008;
+}
+
+
+
 .align-right {
 	display: flex;
 	justify-content: flex-end;
@@ -98,7 +112,14 @@
 
 .neomorphic-defase {
 	color: white;
-	border-radius: 50px;
+	border-radius: 25px;
+	background: #2f476f;
+	box-shadow: 20px 20px 60px #172336,
+		-20px -20px 60px #476ba8;
+}
+
+.neomorphic-defase-2 {
+	color: white;
 	background: #2f476f;
 	box-shadow: 20px 20px 60px #172336,
 		-20px -20px 60px #476ba8;
@@ -118,8 +139,6 @@
 		-20px -20px 60px #06060633;
 }
 
-
-
 .bordered-con {
 	background-color: white;
 	border-radius: 18px 18px 18px 18px;
@@ -131,6 +150,29 @@
 .hide-scroll::-webkit-scrollbar {
 	display: none;
 }
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 18px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Make scrollbar track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round the corners of the scrollbar thumb */
+    border: 3px solid transparent; /* Adds some space around the thumb */
+    background-clip: content-box; /* Clips the thumb to the content box */
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: white transparent; /* Scrollbar thumb color white, track color transparent */
+}
+
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scroll {

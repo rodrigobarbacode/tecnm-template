@@ -52,6 +52,9 @@
 </head>
 
 <body style="background-color: #2f476f;">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
+        nonce="2uMtvFKR"></script>
     <header id='header'>
         <!-- MENU GOBERNACIÓN -->
         <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top" style="position: fixed;" id="barraGobmx">

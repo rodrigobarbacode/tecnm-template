@@ -1,42 +1,51 @@
 /* Estilo del carrucel */
 .sitios {
-    width: 50%;
-    margin: 0px auto;
+  width: 75%;
+  margin: 0px auto;
 }
 
 .principal {
-    width: 100%;
-    /*height: 60vh;*/
-    margin: 0px 0px;
-    margin-bottom:0px;
+  width: 100%;
+  /*height: 60vh;*/
+  margin: 0px 0px;
+  margin-bottom: 0px;
 }
 
 .slick-slide {
   margin: 0px 0px;
 }
 
-.anexo > .slick-prev:before { /* Flecha azul - lado izquierdo */
-    background: url('/img/flechas/izquierda_gris.png');
-    background-size: contain;
-    color: transparent;
+.anexo .slick-slide {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.anexo > .slick-next:before { /* Flecha azul - lado derecho */
-    background: url('/img/flechas/derecha_gris.png');    
-    background-size: contain;
-    color: transparent;
-}
- 
-#noticias > .slick-prev:before { /* Flecha azul - lado izquierdo */
-    background: url('/img/flechas/izquierda_azul.png');
-    background-size: contain;
-    color: transparent;
+.anexo>.slick-prev:before {
+  /* Flecha azul - lado izquierdo */
+  background: url('/img/flechas/izquierda_gris.png');
+  background-size: contain;
+  color: transparent;
 }
 
-#noticias > .slick-next:before { /* Flecha azul - lado derecho */
-    background: url('/img/flechas/derecha_azul.png');    
-    background-size: contain;
-    color: transparent;
+.anexo>.slick-next:before {
+  /* Flecha azul - lado derecho */
+  background: url('/img/flechas/derecha_gris.png');
+  background-size: contain;
+  color: transparent;
+}
+
+#noticias>.slick-prev:before {
+  /* Flecha azul - lado izquierdo */
+  background: url('/img/flechas/izquierda_azul.png');
+  background-size: contain;
+  color: transparent;
+}
+
+#noticias>.slick-next:before {
+  /* Flecha azul - lado derecho */
+  background: url('/img/flechas/derecha_azul.png');
+  background-size: contain;
+  color: transparent;
 }
 
 .slick-slide {
@@ -54,7 +63,7 @@
 
 
 .carousel-item {
-  width:100vw;
+  width: 100vw;
   height: 60vh;
   min-height: 10%;
   background-size: contain;
@@ -70,30 +79,69 @@
 
 .card-img-top {
   width: 100%;
-  height: 200px !important; 
+  height: 200px !important;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
- @media (max-width: 400px) {
-    .carousel-item  {            
-        height: 30vh;            
-    }
+@media (max-width: 400px) {
+  .carousel-item {
+    height: 30vh;
+  }
 }
 
 @media (max-width: 500px) {
-    .carousel-item  {            
-        height: 25vh;            
-    }
+  .carousel-item {
+    height: 25vh;
+  }
 }
 
 /*Menu Fijo*/
-#main_navbar, #main_navbar2{ width: 100%; }
-.menuazul, .menublanco{ position: fixed; }
-.menublanco{ top: 41px; }
-.menuazul{ top: 92px; }
-@media (max-width: 700px) { 
+#main_navbar {
+  border-radius: 0px 0px 15px 15px;
+  -moz-border-radius: 0px 0px 15px 15px;
+  -webkit-border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 0px 10px #00000085;
+}
+
+#main_navbar,
+#main_navbar2 {
+  width: 100%;
+}
+
+.menuazul,
+.menublanco {
+  position: fixed;
+}
+
+.menublanco {
+  top: 41px;
+}
+
+.menuazul {
+  top: 90px;
+}
+
+@media (max-width: 700px) {
+  .contenedorGobierno {
+    height: 37.13px;
+  }
+
+  #pleca_3 {
+    display: none;
+  }
+
+  .container-cabecera {
+    background-color: #1B396A;
+  }
+
+  .menublanco {
+    top: 34px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+  }
+
   .menuazul {
-    top: 80px;
+    top: 78px;
   }
 }
