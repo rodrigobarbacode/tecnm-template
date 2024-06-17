@@ -4,7 +4,7 @@
     <div class="row align-center p-5 neomorphic-defase" style="height: 100vh;">
         <!-- Iframe del PDF -->
         <div class="col-md-12 mx-auto align-center ">
-            <object data='http://website.com/nameoffolder/documentname.pdf#toolbar=1' 
+            <object data='/assets/tec-files/reglamentos/reglamentodocente.pdf' 
             type='application/pdf' 
             width='100%'>
         </object>

@@ -36,6 +36,12 @@ router.get('/l_renovables', (req, res) => {
 });
 //Licenciatura - Renovables endpoint.
 
+// Posgrado endpoint.
+router.get('/posgrado', (req, res) => {
+    res.render('misc/carreras/posgrado/index');
+});
+// Posgrado endpoint.
+
 
 // ************* Routes *************
 
