@@ -24,7 +24,7 @@ $(document).on('ready', function () {
       autoplaySpeed: 2000,
       centerMode: true,
       centerPadding: '0px',
-      slidesToShow: 3,
+      slidesToShow: 4,
       responsive: [{
             // Breakpoint for Laptop or Desktop
             breakpoint: 1490,
@@ -64,7 +64,7 @@ $(document).on('ready', function () {
       arrows: true, // flechas
       autoplay: true,
       autoplaySpeed: 3500,
-      slidesToShow: 3,
+      slidesToShow: 6,
       centerMode: true,
       pauseOnHover: true,
       responsive: [{

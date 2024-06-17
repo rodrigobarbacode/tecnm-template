@@ -91,10 +91,8 @@ async function loadSavedCredentialsIfExist() {
     });
     const events = res.data.items;
     if (!events || events.length === 0) {
-      console.log('No upcoming events found.');
       return;
     }
-    console.log('Upcoming 5 events:');
     var arr = [];
     var json = {};
     events.map((event, i) => {
@@ -166,6 +164,7 @@ app.use(routes);
 // ************* Routes *************
 
 // Testing Endpoint
+/*
 app.get('/test', async (req, res) => {
     try {
         authorize().then(listEvents).catch(console.error);
@@ -174,6 +173,7 @@ app.get('/test', async (req, res) => {
         res.status(500).send('Error fetching events');
     }
 });
+*/
 // Testing Endpoint
 
 // Home endpoint.
@@ -203,7 +203,7 @@ app.get('/data/events', async (req, res) => {
 // ************* Routes *************
 
 // Define the port where the server will listen for requests.
-const PORT = 81;
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Node / PHP server running on http://localhost:${PORT}`);
 });

@@ -29,8 +29,22 @@
       // Create an element for each carousel item.
       var carouselItem = document.createElement('div');
       carouselItem.className = 'carousel-item ' + activeClass;
-      carouselItem.style.backgroundImage = 'url(' + value.image + ')';
       carouselItem.style.borderRadius = '20px';
+
+      // Create an image element for the carousel item.
+      var carouselImage = document.createElement('img');
+      carouselImage.className = 'd-block';
+      carouselImage.style.borderRadius = '20px';
+      carouselImage.style.width = '100%';
+      carouselImage.style.height = '100%';
+      carouselImage.src = value.image;
+      
+      // Create a tag element for the carousel item.
+      var carouselTag = document.createElement('a');
+      carouselTag.href = value.url;
+
+      carouselTag.appendChild(carouselImage);
+      carouselItem.appendChild(carouselTag);
 
       carouselInner.appendChild(carouselItem);
     });
@@ -38,8 +52,8 @@
 </script>
 
 <!-- Carousel Indicators -->
-<div id="carousel-full" class="carousel slide neomorphic-defase ml-3 mr-3 mt-4 mb-3" data-ride="carousel"
-  style="z-index: 999;">
+<div id="carousel-full" class="carousel slide neomorphic-defase mt-4 mb-3" style="margin-left: 1.25rem; margin-right: 1.25rem;" data-ride="carousel"
+  style="z-index: 1500;">
   <ol class="carousel-indicators">
     <li data-target="#carousel-full" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-full" data-slide-to="1"></li>
@@ -48,15 +62,42 @@
     <li data-target="#carousel-full" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner" style="border-radius: 20px;">
-    <!-- Carousel Items -->
+    <!-- Banner items will be added here. -->
   </div>
   <a class="carousel-control-prev" href="#carousel-full" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only"><i class="fa-regular fa-chevron-left" style="font-size: 300px;"></i></span>
+    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-angle-left carousel-object"></i></span>
+    <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carousel-full" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-angle-right carousel-object"></i></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!-- Carousel Indicators -->
+<style>
+  .carousel-object {
+    font-size: 2rem;
+    color: black;
+  }
+
+  .carousel-indicators {
+    color: black;
+  }
+  
+  .fa-angle-left {
+    margin-left: -10.5rem;
+  }
+  
+  .fa-angle-right {
+    margin-right: -10.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .fa-angle-left {
+      display: none;
+    }
+    
+    .fa-angle-right {
+      display: none;
+    }
+  }
+</style>
