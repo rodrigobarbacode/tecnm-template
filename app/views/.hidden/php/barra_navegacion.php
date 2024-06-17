@@ -123,12 +123,8 @@
                         Ing. Química
                     </a>
                     <!-- Opción: Posgrado -->
-                    <a class="dropdown-item" href="http://posgrado.itmexicali.edu.mx">
+                    <a class="dropdown-item" href="/posgrado">
                         Posgrado
-                    </a>
-                    <!-- Opción: Posgrado Maestria en Ingenieria -->
-                    <a class="dropdown-item" href="./prueba_posgrado/index.html">
-                        Posgrado Maestría en Ingeniería
                     </a>
                 </div>
             </li>

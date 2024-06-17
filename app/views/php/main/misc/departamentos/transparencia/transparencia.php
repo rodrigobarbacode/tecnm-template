@@ -1,16 +1,17 @@
-<div class="tab-content">
+<div class="tab-content yogurt-defase mt-4 p-4">
 
 	<center>
-		<h1> <br>Transparencia</h1>
+		<h1> <br>Transparencia<br></h1>
 	</center>
-	<p class="text-justify">
+	<hr>
+	<p class="text-justify col-md-12" style="font-size: 20px;">
 
 		<b></b>
 		El Gobierno de la República está convencido que la transparencia y el acceso a la información, juegan un papel esencial en la construcción de gobiernos más abiertos al escrutinio público, capaces de fomentar una participación creciente de la sociedad en el diseño y evaluación de las políticas públicas gubernamentales y por lo tanto de una mayor rendición de cuentas pública.
 		<br><br>
 		Por lo anterior, la política de transparencia del Tecnológico Nacional de México, tiene como objetivo no sólo contribuir a garantizar el derecho de acceso a la información de los mexicanos, sino también a brindar información oportuna que permita mejorar la toma de las decisiones de los ciudadanos y mejorar la confianza y certidumbre respecto de la acción gubernamental.
 	</p>
-	<ul>
+	<ul class="pt-4" style="font-size: 20px;">
 		<li>
 			<a class="text-secondary" href="http://www.itmexicali.edu.mx/documentos/directorio.pdf"> Directorio de Servidores Públicos </a>
 		</li>

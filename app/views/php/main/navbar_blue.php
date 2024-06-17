@@ -211,33 +211,9 @@
 
                     <!-- Opción: Posgrado -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/posgrado">
                             Posgrado
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-
-                            <!-- Opción: Maestría en Ing. en Electrónica -->
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="#">
-                                    Maestría en Ing. en Electrónica
-                                </a>
-                            </li>
-
-                            <!-- Opción: Maestría en Ing. en Sistemas Computacionales -->
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="#">
-                                    Maestría en Ing. en Sistemas Computacionales
-                                </a>
-                            </li>
-
-                            <!-- Opción: Maestría en Ing. en Sistemas Computacionales -->
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="#">
-                                    Maestría en Ing. en Sistemas Computacionales
-                                </a>
-                            </li>
-
-                        </ul>
                     </li>
 
                 </ul>

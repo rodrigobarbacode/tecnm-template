@@ -94,6 +94,12 @@ router.get('/rh', (req, res) => {
 });
 // Recursos Humanos endpoint.
 
+// Extraescolares endpoint.
+router.get('/extraescolares', (req, res) => {
+    res.render('misc/departamentos/extraescolares/index');
+});
+// Extraescolares endpoint.
+
 // Template endpoint.
 router.get('/template', (req, res) => {
     res.render('misc/template/index');
