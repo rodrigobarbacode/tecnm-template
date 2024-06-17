@@ -3,7 +3,7 @@
     <div class="row">
         <!-- Sidebar -->
         <div id="sidebar-holder" class="col-md-2 p-0">
-            <div id="collapser" class="d-none d-sm-block d-md-block">
+            <div id="collapser" class="d-sm-none d-md-none d-lg-none d-xl-block">
                 <a href="#" onclick="toggleSidebar()">
                 <img id="collapser-icon" width="35" height="35" src="https://img.icons8.com/ios-filled/50/FFFFFF/double-left.png" alt="double-left"/>
                 </a>
@@ -15,14 +15,14 @@
                 </div>
                 
                 <div class="item-style">
-                    <a href="#">
+                    <a href="#" onclick="contentToggle('main-title')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
                         Opcion 1
                     </a>
                 </div>
                 
                 <div class="item-style">
-                    <a href="#">
+                    <a href="#" onclick="contentToggle('content1')">
                     <img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/box--v1.png" alt="box--v1"/>
                         Opcion 2
                     </a>
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="item-style">
-                    <a href="#">
+                    <a href="#" onclick="contentToggle('content2')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/water.png" alt="water"/>                        
                         Opcion 2
                     </a>
@@ -215,10 +215,7 @@
         </div>
         <!-- Content -->
 
+        
+
     </div>
-
-    
-
-    
-
 </div>

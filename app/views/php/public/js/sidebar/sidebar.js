@@ -1,7 +1,32 @@
-/* Sidebar Toggles */
-import * as SBNav from "functionality.js"
 
-const c_elements = getElementById('content-holder')
+
+// Toggle only the first element (the title) 
+const allContent = document.getElementById('content-holder')
+var currentElement = allContent.children[1].id;
+visualViewport.addEventListener("resize", () => {
+    if (window.innerWidth <= 1200) {
+        displayPage()
+    } else {
+        preparePage(currentElement)
+    }
+});
+
+function preparePage(id) {
+    contentToggle(id)
+
+    document.getElementById('sidebar-holder').classList.remove('d-none')
+    document.getElementById('sidebar-holder').classList.add('d-block')
+}
+
+function displayPage() {
+    for (const child of allContent.children) {
+        child.classList.add('d-flex')
+    }
+
+    document.getElementById('sidebar-holder').classList.remove('d-block')
+    document.getElementById('sidebar-holder').classList.add('d-none')
+}
+
 
 //Toggles Visibility of the Submenu
 function toggleSubmenu(submenu_name) {
@@ -21,8 +46,6 @@ function toggleSubmenu(submenu_name) {
             elements[i].classList.toggle('d-none')
         }
     }
-        
-        
 
     var element = document.getElementById(submenu_name)
     if (element.classList.contains('arrow-flip')) {
@@ -54,15 +77,17 @@ function toggleSidebar() {
         }
         
     })
-
+    
     var s_holder = document.getElementById('sidebar-holder')
     s_holder.classList.toggle('col-md-2')
     s_holder.classList.toggle('col')
-
+    
+   
     var c_holder = document.getElementById('content-holder')
     c_holder.classList.toggle('col-md-9')
     c_holder.classList.toggle('mx-auto')
     c_holder.classList.toggle('col-md-10')
+    
 
     var element = document.getElementById('collapser-icon')
     if (element.classList.contains('arrow-flip')) {
@@ -77,4 +102,22 @@ function toggleSidebar() {
     }
 }
 
+function contentToggle(id) {
+    currentElement = id;
 
+    for (const child of allContent.children) {
+        if (child.id != 'main-title') {
+            if (child.id != id) {
+                child.classList.remove('d-flex')
+                child.classList.add('d-none')
+            } else {
+                child.classList.remove('d-none')
+                child.classList.add('d-flex')
+            }
+            
+        } else {
+            continue
+        }
+
+    }
+}
