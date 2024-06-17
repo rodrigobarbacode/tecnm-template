@@ -18,7 +18,7 @@
                     <hr>
                 </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4" style="font-size: 20px;">
                     <ul style="text-align: left;">
                         <li>
                         Propiciar que las tecnologías lleguen a todos los 
@@ -48,7 +48,7 @@
                     <hr>
                 </div>
 
-                <div class="col-md-12 pt-4 pr-4 pl-4">
+                <div class="col-md-12 pt-4 pr-4 pl-4" style="font-size: 20px;">
                     <ol style="text-align: left;">
                         <li>
                         Planear, Coordinar, controlar y evaluar las actividades 
@@ -116,7 +116,7 @@
     <div class="row yogurt-defase p-2 mt-5 mb-5 m-3">
         <div id="accordion" class="col-md-12">
             <!-- Organigrama -->
-            <div class="card">
+            <div class="card" >
                 <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -126,7 +126,7 @@
                 </div>
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px;">
                     <ul style="text-align: left;">
                         <li>
                             Jefatura
@@ -173,7 +173,7 @@
                 </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
+                <div class="card-body" style="font-size: 20px">
                     <ol type="a" style="text-align: left;">
                         <li>
                             Asesoría y capacitación en el uso de equipo de cómputo institucional. <br> 
@@ -209,7 +209,7 @@
                 </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <ul style="text-align: left;">
                             <li>
                                 Gestión de cuentas de correo electrónico institucional 
@@ -242,7 +242,7 @@
                 </h5>
                 </div>
                 <div id="collapse4" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <ul style="text-align: left;">
                             <li>
                                 El estudiante desde su cuenta de correo institucional @itmexicali.edu.mx, 
@@ -285,7 +285,7 @@
                 </h5>
                 </div>
                 <div id="collapse5" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <a href="/recuperacion_correo">Clic Aqui</a> <br>      
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                 </h5>
                 </div>
                 <div id="collapse6" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <a href="/infraestructura">| Acceso a Infraestructura |</a>
                         <a href="#">Descarga de software legalmente Autodesk suite con tu 
                         cuenta de correo institucional @itmexicali.edu.mx</a>
@@ -322,7 +322,7 @@
                 </h5>
                 </div>
                 <div id="collapse7" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <ul style="text-align: left;">
                             <li>
                                 <a href="/assets/tec-files/departamentos/ccomputo/memo/encuesta calidad 522.pdf">
@@ -357,7 +357,7 @@
                 </h5>
                 </div>
                 <div id="collapse8" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body" style="font-size: 20px">
                         <ul style="text-align: left;">
                             <li>
                                 <a href="/assets/tec-files/departamentos/ccomputo/memo/cacei PROYECCION.pdf">
@@ -473,7 +473,7 @@
                     <hr>
                 </div>
 
-                <div class="col-md-12 p-4" style="text-align: left;">
+                <div class="col-md-12 p-4" style="text-align: left; font-size: 20px;">
                     Datos del programa: ADMINISTRACION DE SERVICIOS DE COMPUTO Y TELECOMUNICACIONES <br>
                     Actividades a desarrollar: TECNICO <br>
 

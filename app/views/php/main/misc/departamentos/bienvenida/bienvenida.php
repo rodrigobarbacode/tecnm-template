@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center yogurt-defase">
     <a href="https://www.youtube.com/watch?v=hdsdzWxSxko&feature=youtu.be" style="z-index: 1;" target="_blank">
         <img class="w-100" src="/img/slider/tecnm.jpg">
         </img>
