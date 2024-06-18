@@ -80,7 +80,7 @@
                 <!-- Submenu: Programas - Maestria en Electrónica -->
                 <!-- Submenu: Programas -->
 
-                <!-- Submenu: CAII -->
+                <!-- Submenu: CAII 
                 <div class="item-style">
                     <a href="#" onclick="toggleSubmenu('investigacion')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/microscope.png" alt="user--v1"/>        
@@ -89,36 +89,40 @@
                     </a>
                 </div>
 
-                <!-- Submenu: CAII - Cuerpo Académico Informática Industrial -->
+                 Submenu: CAII - Cuerpo Académico Informática Industrial 
                 <div class="submenu investigacion item-style d-none">
                     <a href="http://caii.itmexicali.edu.mx">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/groups.png" alt="usergroup"/>        
                         Cuerpo Académico Informática Industrial
                     </a>
                 </div>
-                <!-- Submenu: CAII - Cuerpo Académico Informática Industrial -->
+                Submenu: CAII - Cuerpo Académico Informática Industrial -->
                 <!-- Submenu: CAII -->
 
                 <div class="sidebar-separator item-style">
                     <span>Ofertas Educativas</span>
                 </div>
                 
+                <!-- Convocatorias -->
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('')">
+                    <a href="#" onclick="contentToggle('convocatorias')">
                     <img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/checklist--v1.png" alt="checklist"/>                        
                         Convocatorias
                     </a>
                 </div>
+                <!-- Convocatorias -->
 
+                <!-- Codigo de Conducta -->
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('')">
+                    <a href="/assets/tec-files/posgrado/M00-CC-01_Codigo_de_Conducta_del_TecNM.pdf">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/saddle-stitched-booklet.png" alt="openbook"/>                        
                         Código de Conducta
                     </a>
                 </div>
+                <!-- Codigo de Conducta -->
 
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('')">
+                    <a href="#" onclick="contentToggle('contacto')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="phone"/>                        
                         Contacto
                     </a>
@@ -640,6 +644,94 @@
             </div>
             <!-- Maestría En Electronica -->
 
+            <!-- Convocatorias -->
+            <div id="convocatorias" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 p-5">
+                    <h2>Convocatorias</h2>
+                    <hr>
+                    <ul style="text-align: left;">
+                        <li>
+                            <a href="/assets/tec-files/posgrado/Convocatoria Ingreso MSC 2023-2 efirma.pdf">
+                            Convocatoria Ingreso MSC 2023-2 efirma.pdf
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/assets/tec-files/posgrado/Solicitud Ingreso MSC 2023-2.pdf">
+                            Solicitud Ingreso MSC 2023-2.pdf
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/assets/tec-files/posgrado/Convocatoria Ingreso MIE 2023-2 efirma.pdf">
+                            Convocatoria Ingreso MIE 2023-2 efirma.pdf
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/assets/tec-files/posgrado/">
+                            Solicitud Ingreso MIE 2023-2.pdf
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/assets/tec-files/posgrado/Solicitud Ingreso MIE 2023-2.pdf">
+                            Guia EXANI-III 16a edición.pdf
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Convocatorias -->
+
+            <!-- Contacto -->
+            <div id="contacto" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 p-4">
+                    <h2>Contacto</h2>
+                    
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Puesto</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Verónica Quintero Rosas</td>
+                                <td>Coordinador Académico Maestría en Sistemas Computacionales	</td>
+                                <td>coord_msc@itmexicali.edu.mx</td>
+                            </tr>
+                            <tr>
+                                <td>Heber Hernández Tabares</td>
+                                <td>Coordinador académico, maestría en electrónica</td>
+                                <td>coord_mie@itmexicali.edu.mx</td>
+                            </tr>
+                            <tr>
+                                <td>Mario Camarillo Ramos</td>
+                                <td>Jefe de la división de posgrado</td>
+                                <td>posgrado@itmexicali.edu.mx</td>
+                            </tr>
+                            <tr>
+                                <td>Inna L. Urías Murillo</td>
+                                <td>Secretaria de la división de posgrado</td>
+                                <td>sec_posgrado@itmexicali.edu.mx</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <br>
+
+                    <b>Información De Contacto</b> <br>
+                    División de Estudios de Posgrado e 
+                    Investigación del Instituto Tecnológico de Mexicali <br>
+                    Av Tecnológico s/n Col. Elias Calles <br>
+                    C.P. 21397, Mexicali, Baja California, Mexico <br>
+                    Teléfono: (686) 580 4950 <br> <br>
+
+
+                    <b>Coordinacion </b> <br>
+                    veronicaquintero@itmexicali.edu.mx
+                </div>
+            </div>
+            <!-- Contacto -->
 
             <!-- Finale 
             <div id="content2" class="row yogurt-defase m-3 p-2">
