@@ -26,16 +26,26 @@ services:
     ports:
       - "3306:3306"
 
+  nginx:
+    image: nginx:latest
+    ports:
+      - "6672:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - phpmyadmin
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    restart: always
-    ports:
-      - "8080:80"
     environment:
       PMA_HOST: mariadb
       MYSQL_ROOT_PASSWORD: rootpassword
     depends_on:
       - mariadb
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   mariadb_data:
