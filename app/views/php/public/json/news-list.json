@@ -1,5 +1,8 @@
 [
     {
+        "max": 10   
+    },
+    {
         "image": "assets/noticias/imgnoticia/2024_05_02.png",
         "date_title": "02 MAYO 2024",
         "date": "2024-05-02",
