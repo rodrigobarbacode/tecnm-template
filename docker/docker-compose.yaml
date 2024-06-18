@@ -11,8 +11,6 @@ services:
       - ../app:/usr/src/master/app
       - ../docker:/usr/src/master/docker
       - ../.git:/usr/src/master/.git
-    ports:
-      - "3000:3000"
     depends_on:
       - mariadb
 
@@ -24,12 +22,13 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
   nginx:
     image: nginx:latest
     ports:
       - "6672:80"
+      - "6673:81"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
