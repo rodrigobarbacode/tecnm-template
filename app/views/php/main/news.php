@@ -58,10 +58,19 @@
         // Get the news slider container.
         var newsOuter = document.querySelector('.news-outer');
 
+        // Get the limit of news to show.
+        var limit = datos[0].max;
+
+        // Slice the first element of the array.
+        datos = datos.slice(1, datos.length);
+
         // Sort data by date.
         datos.sort(function(a, b) {
             return new Date(b.date) - new Date(a.date);
         });
+
+        // Limit the number of news to show.
+        datos = datos.slice(0, limit);
 
         datos.forEach(function(value, key) {
             // Create an element for each slider item.

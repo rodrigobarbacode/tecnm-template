@@ -5,10 +5,12 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile
-    working_dir: /usr/src/app
+    working_dir: /usr/src/master/app
     volumes:
-      - ../app:/usr/src/app
-      - /usr/src/app/node_modules
+      - /usr/src/master/
+      - ../app:/usr/src/master/app
+      - ../docker:/usr/src/master/docker
+      - ../.git:/usr/src/master/.git
     ports:
       - "3000:3000"
     depends_on:
