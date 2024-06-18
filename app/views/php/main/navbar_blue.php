@@ -211,7 +211,7 @@
 
                     <!-- Opción: Posgrado -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/posgrado">
+                        <a class="dropdown-item" href="/posgrado">
                             Posgrado
                         </a>
                     </li>
