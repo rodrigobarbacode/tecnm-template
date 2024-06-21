@@ -19,6 +19,9 @@ RUN apt-get update && \
 # Crea el directorio de la aplicación.
 WORKDIR /usr/src/master/app
 
+# Instalar dependencias de la aplicación.
+RUN npm --prefix /usr/src/master/app install package.json
+
 # Expone el puerto en el que la aplicación se ejecuta.
 EXPOSE 3000
 
