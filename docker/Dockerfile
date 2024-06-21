@@ -1,19 +1,28 @@
-# Download the latest node.js image from the docker hub.
+# Descarga la imagen más reciente de Node.js desde Docker Hub.
 FROM node:latest
 
-# Install PHP and other necessary packages
-RUN apt-get update && \
-    apt-get install -y php && \
-    apt-get install -y php-xml && \
-    apt-get install -y git && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Instala PHP y otros paquetes necesarios.
 
-# Create app directory.
+# Actualiza la lista de paquetes.
+# Instala PHP.
+# Instala la extensión XML para PHP.
+# Instala Git.
+# Limpia la caché de apt.
+# Elimina la lista de paquetes para reducir el tamaño de la imagen.
+RUN apt-get update && \                            
+    apt-get install -y php && \                    
+    apt-get install -y php-xml && \                
+    apt-get install -y git && \                    
+    apt-get clean && \                             
+    rm -rf /var/lib/apt/lists/*                    
+
+# Crea el directorio de la aplicación.
 WORKDIR /usr/src/master/app
 
-# Expose the port that the app runs on
+# Expone el puerto en el que la aplicación se ejecuta.
 EXPOSE 3000
 
-# Execute app.
-CMD ["npm", "run", "start"]
+# Ejecuta la aplicación.
+
+# Ejecuta el comando para iniciar la aplicación con npm.
+CMD ["npm", "run", "start"]                        
