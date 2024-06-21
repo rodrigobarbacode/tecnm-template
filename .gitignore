@@ -1,2 +1,80 @@
-.cache
-.vscode
+# Node.js.
+
+# Dependencias de Node.js.
+node_modules/
+
+# Logs.
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Entorno.
+.env
+
+# Directorios de construcción y distribución.
+dist/
+build/
+
+# Datos temporales y de ensayo.
+*.tmp
+*.temp
+
+# Caché de módulos y archivos.
+.cache/
+.next/
+out/
+
+# PHP.
+
+# Archivos de configuración específicos del entorno.
+.env.local
+.env.*.local
+
+# Dependencias de Composer.
+/vendor/
+
+# Configuración de IDE y editores.
+.vscode/
+.idea/
+
+# Archivos de respaldo generados por editores de texto.
+*.bak
+*.swp
+*.swo
+
+# Archivos de caché de PHPUnit.
+.phpunit.result.cache
+
+# Archivos y carpetas específicas de frameworks de PHP.
+/storage/
+bootstrap/cache/
+
+# Archivos temporales.
+/tmp/
+
+# Archivos de depuración y pruebas.
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignorar cualquier archivo oculto de sistema operativo.
+*.DS_Store
+
+# Configuración de servidores locales.
+homestead.yaml
+homestead.json
+
+# Ignorar archivos de configuración de deploy.
+.deploy/
+
+# Otros archivos y carpetas temporales.
+*.~*
+*.sass-cache
+*.swp
+*.swo
+*.idea/
+
+# Archivos de configuración de herramientas de desarrollo.
+/.husky/_/
