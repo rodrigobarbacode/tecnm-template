@@ -1,50 +1,54 @@
-version: '3.8'
-
 services:
+  # Servicio de la aplicación principal.
   app:
     build:
-      context: ../
-      dockerfile: docker/Dockerfile
-    working_dir: /usr/src/master/app
+      context: ../                        # Contexto de construcción, el directorio padre.
+      dockerfile: docker/Dockerfile       # Dockerfile para construir la imagen de la aplicación.
+    working_dir: /usr/src/master/app      # Directorio de trabajo dentro del contenedor.
     volumes:
-      - /usr/src/master/
-      - ../app:/usr/src/master/app
-      - ../docker:/usr/src/master/docker
-      - ../.git:/usr/src/master/.git
+      - /usr/src/master/                  # Volumen para mantener el código persistente.
+      - ../app:/usr/src/master/app        # Sincroniza el directorio local app con el directorio del contenedor.
+      - ../docker:/usr/src/master/docker  # Sincroniza el directorio local docker con el directorio del contenedor.
+      - ../.git:/usr/src/master/.git      # Sincroniza el repositorio git local con el contenedor.
     depends_on:
-      - mariadb
+      - mariadb                           # Este servicio depende de mariadb, por lo que mariadb se inicia primero.
 
+  # Servicio de base de datos MariaDB
   mariadb:
-    image: mariadb:latest
-    restart: always
+    image: mariadb:latest                 # Imagen de MariaDB desde Docker Hub.
+    restart: always                       # Reinicia siempre el contenedor si se detiene.
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: rootpassword   # Variable de entorno para establecer la contraseña root de MariaDB.
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql       # Volumen para almacenar datos persistentes de MariaDB.
     ports:
-      - "3307:3306"
+      - "3307:3306"                       # Mapea el puerto 3306 del contenedor al puerto 3307 del host.
 
+  # Servicio NGINX
   nginx:
-    image: nginx:latest
+    image: nginx:latest                   # Imagen de NGINX desde Docker Hub.
     ports:
-      - "6672:80"
-      - "6673:81"
+      - "6672:80"                         # Mapea el puerto 80 del contenedor al puerto 6672 del host.
+      - "6673:81"                         # Mapea el puerto 81 del contenedor al puerto 6673 del host.
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf # Volumen para usar la configuración de NGINX personalizada.
     depends_on:
-      - phpmyadmin
+      - phpmyadmin                        # Este servicio depende de PHPMyAdmin, por lo que PHPMyAdmin se inicia primero.
 
+  # Servicio PHPMyAdmin.
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin/phpmyadmin:latest   # Imagen de PHPMyAdmin desde Docker Hub.
     environment:
-      PMA_HOST: mariadb
-      MYSQL_ROOT_PASSWORD: rootpassword
+      PMA_HOST: mariadb                  # Host de MariaDB para PHPMyAdmin.
+      MYSQL_ROOT_PASSWORD: rootpassword   # Contraseña root de MariaDB para PHPMyAdmin.
     depends_on:
-      - mariadb
+      - mariadb                           # Este servicio depende de mariadb, por lo que mariadb se inicia primero.
 
+# Definición de redes.
 networks:
   app-network:
-    driver: bridge
+    driver: bridge                        # Utiliza el controlador de red bridge.
 
+# Definición de volúmenes.
 volumes:
-  mariadb_data:
+  mariadb_data:                           # Volumen para datos persistentes de MariaDB.
