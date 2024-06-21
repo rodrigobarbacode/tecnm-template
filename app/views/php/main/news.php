@@ -1,3 +1,10 @@
+<style>
+    .swiffy-slider .slider-nav:focus,
+    .swiffy-slider .slider-nav:active {
+        outline: none;
+        box-shadow: none;
+    }
+</style>
 <script>
     //Function to limit the text length to only 100 characters.
     function truncateDescription(text) {
@@ -18,7 +25,6 @@
         // Add ellipsis
         return truncated + '...';
     }
-
 
     // Function to limit the text length to only 30 characters.
     function truncateTitle(text) {
@@ -56,7 +62,7 @@
     // Get news data from the JSON and create slider elements.
     fetchLocalJSON('/json/news-list.json', function(datos) {
         // Get the news slider container.
-        var newsOuter = document.querySelector('.news-outer');
+        var newsOuter = document.querySelector('.swiffy-slider .slider-container');
 
         // Get the limit of news to show.
         var limit = datos[0].max;
@@ -75,7 +81,7 @@
         datos.forEach(function(value, key) {
             // Create an element for each slider item.
             var sliderItem = document.createElement('div');
-            sliderItem.className = 'row justify-concent-center';
+            sliderItem.className = 'swiffy-slider-item';
             sliderItem.style.position = 'relative';
 
             var card = document.createElement('div');
@@ -102,7 +108,6 @@
             cardTitle.style.color = '#fab005';
             cardTitle.style.fontSize = '2vh';
             cardTitle.style.fontWeight = 'bolder';
-            cardTitle.style.textAlign = 'center';
             var limitTitle = truncateTitle(value.title);
             cardTitle.textContent = limitTitle;
 
@@ -111,7 +116,7 @@
             var cardText = document.createElement('p');
             cardText.className = 'card-text';
             cardText.style.color = '#000000';
-            cardText.style.fontSize = '1.5vh'
+            cardText.style.fontSize = '1.5vh';
             cardText.style.textAlign = 'justify';
             var limitDescription = truncateDescription(value.description);
             cardText.textContent = value.date_title + ' | ' + '\n' + limitDescription;
@@ -132,30 +137,40 @@
 
             sliderItem.appendChild(card);
 
+            // Añadir el elemento al contenedor del slider
             newsOuter.appendChild(sliderItem);
-
         });
+
+        // Inicializar Swiffy Slider
+        new SwiffySlider(document.querySelector('.swiffy-slider'));
     });
 </script>
 
+<!-- HTML structure for the Swiffy Slider -->
 <div id='desface' style='display: none; background-color: #2f476f;'>
     <div class='container-fluid m-auto'>
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-3 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: auto; max-height: auto; overflow: scroll; z-index: 1500;'>
+                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-4 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: auto; max-height: auto; overflow: scroll; z-index: 1500;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
-                                <h1 style="color: white; font-size: 6vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
+                                <h1 style="color: white; font-size: 4vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
                             </a>
                         </div>
                     </div>
-                    <div class='center slider my-0 news-outer pb-2' id='noticias'></div>
+                    <div class="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-chevron slider-item-show3">
+                        <div class="slider-container">
+                            <!-- Los elementos generados por JavaScript se insertarán aquí -->
+                        </div>
+                        <button type="button" class="slider-nav" aria-label="Go to previous" style="margin-left: -3rem;"></button>
+                        <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next" style="margin-right: -3rem;"></button>
+                    </div>
                 </section>
             </div>
             <div class="col-lg-4 col-md-4 col-12">
                 <?php require 'events.php' ?>
             </div>
         </div>
-        <br/>
+        <br />

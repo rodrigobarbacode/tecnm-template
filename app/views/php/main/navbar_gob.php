@@ -38,10 +38,12 @@
     <!-- Desface -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
+    <!-- Swiffy Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <!-- Sub Menú -->
     <link rel="stylesheet" href="css/bootnavbar.css">
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/index_func.js"></script>

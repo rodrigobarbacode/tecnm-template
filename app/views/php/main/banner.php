@@ -34,7 +34,6 @@
       // Create an image element for the carousel item.
       var carouselImage = document.createElement('img');
       carouselImage.className = 'd-block';
-      carouselImage.style.borderRadius = '20px';
       carouselImage.style.width = '100%';
       carouselImage.style.height = '100%';
       carouselImage.src = value.image;
@@ -52,7 +51,7 @@
 </script>
 
 <!-- Carousel Indicators -->
-<div id="carousel-full" class="carousel slide neomorphic-defase mt-4 mb-3" style="margin-left: 1.25rem; margin-right: 1.25rem;" data-ride="carousel"
+<div id="carousel-full" class="carousel slide mb-3" data-ride="carousel"
   style="z-index: 1500;">
   <ol class="carousel-indicators">
     <li data-target="#carousel-full" data-slide-to="0" class="active"></li>
@@ -61,7 +60,7 @@
     <li data-target="#carousel-full" data-slide-to="3"></li>
     <li data-target="#carousel-full" data-slide-to="4"></li>
   </ol>
-  <div class="carousel-inner" style="border-radius: 20px;">
+  <div class="carousel-inner">
     <!-- Banner items will be added here. -->
   </div>
   <a class="carousel-control-prev" href="#carousel-full" role="button" data-slide="prev">
