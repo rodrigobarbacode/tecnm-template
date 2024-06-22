@@ -102,12 +102,8 @@
 <script src='assets/web/assets/jquery/jquery.min.js'></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Configuración de los carrucel -->
-<script src="js/index_carrusel.js"> </script>
-<script src="js/noticarrusel/slick.js"></script>
-
 <!-- Menú Azul - Permite el desglose -->
-<script src="js/bootnavbar.js"></script>
+<script src="js/navbar.js"></script>
 
 </body>
 

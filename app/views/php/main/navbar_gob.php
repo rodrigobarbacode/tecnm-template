@@ -18,22 +18,16 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
     <!-- Mis estilos -->
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/general_styles.css">
 
     <!-- Iconos con Font Awesome -->
     <script src="https://kit.fontawesome.com/8562bd2fa0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/files/main/css/fa-svg-with-js.css">
-    <link rel="stylesheet" href="/iconos/iconos.css">
 
     <!-- Se agrega para poder usar las fuentes en el css -->
     <link rel="stylesheet" href="assets/files/main/css/estilo-compresion.min.css">
-    <link rel="stylesheet" href="assets/files/main/css/jssorStyle.css">
-
-    <link href="css/noticarrusel/slick-theme.css" rel="stylesheet" />
-    <link href="css/noticarrusel/slick.css" rel="stylesheet" />
 
     <!-- Estilo del carrucel -->
-    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/index_styles.css">
 
     <!-- Desface -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -43,14 +37,10 @@
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <!-- Sub Menú -->
-    <link rel="stylesheet" href="css/bootnavbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/index_func.js"></script>
-    <!--  -->
-
-    <!-- Traductor -->
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 <body style="background-color: #2f476f;">

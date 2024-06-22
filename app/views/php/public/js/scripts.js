@@ -19,9 +19,6 @@ $(document).ready(function() {
     },1000);
 });
 
-
-
-
 posicionarMenu2();
 
 $(window).scroll(function() { posicionarMenu2(); });
@@ -55,18 +52,3 @@ function posicionarMenu() {
         //$('.wrapper').css('margin-top', '0');
     }
 }
-
-
-
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        autoDisplay: false,
-        gaTrack: true,
-        gaId: 'wewe',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-
-

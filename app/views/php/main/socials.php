@@ -1,4 +1,4 @@
-<div class="sticky-container">
+<div class="sticky-container" style="z-index: 2000;">
     <ul class="sticky">
         <li>
             <img loading='lazy' src="img/redes_sociales/facebook.png" width="32" height="32" alt="facebook" />
