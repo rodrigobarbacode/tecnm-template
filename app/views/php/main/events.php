@@ -1,3 +1,23 @@
+<style>
+    .events {
+        margin-top: 1rem;
+        max-height: 550px;
+    }
+    @media (max-width: 768px) {
+        .events {
+            height: 66vh;
+            max-height: 66vh;
+        }
+    }
+
+    /* Para telefonos */
+    @media (max-width: 576px) {
+        .events {
+            margin-top: 2.5rem;
+        }
+    }
+</style>
+
 <script>
     fetch('/data/events')
         .then(response => response.json())
@@ -50,7 +70,7 @@
                 }
 
                 eventsOuter.innerHTML = html;
-            }, 3000); // Mostrar el spinner por 3 segundos
+            }, 1500); // Mostrar el spinner por 3 segundos
         })
         .catch(error => {
             console.error('Error fetching data:', error);
@@ -58,7 +78,7 @@
         });
 </script>
 
-<section class="container events neomorphic-defase px-5 ml-auto mr-auto mt-3 pt-3 pb-3" style="max-height: 38vh; overflow-y: scroll; z-index: 2000;">
+<section class="container events neomorphic-defase px-5 ml-auto mr-auto pt-3 pb-3" style="height: 100%; overflow-y: scroll; z-index: 2000;">
     <div class='row'>
         <div class='col-12 display-2 text-left my-0 py-3'>
             <a role='button' href='?vista=Noticias'>
@@ -74,12 +94,3 @@
         <p class="mt-3" style="color: white; font-weight: bold; font-size: 1.5rem;">Cargando eventos...</p>
     </div>
 </section>
-
-<style>
-    @media (max-width: 768px) {
-        .events {
-            height: 66vh;
-            max-height: 66vh;
-        }
-    }
-</style>

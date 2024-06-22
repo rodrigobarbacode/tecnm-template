@@ -1,4 +1,8 @@
 <style>
+    .news {
+        height: 100%;
+        max-height: 550px;
+    }
     .swiffy-slider .slider-nav:focus,
     .swiffy-slider .slider-nav:active {
         outline: none;
@@ -86,8 +90,8 @@
 
             var card = document.createElement('div');
             card.className = 'card';
-            card.style.width = 'auto';
-            card.style.margin = '0 1rem';
+            card.style.width = '100%';
+            card.style.height = '100%';
             card.style.borderRadius = '1rem';
 
             var img = document.createElement('img');
@@ -152,7 +156,7 @@
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container px-5 ml-auto mr-auto mt-3 pt-3 pb-4 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: auto; max-height: auto; overflow: scroll; z-index: 1500;'>
+                <section class='container news px-5 ml-auto mr-auto mt-3 pt-3 pb-4 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: 100%; max-height: auto; overflow: scroll; z-index: 1500;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
@@ -160,7 +164,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-chevron slider-item-show3">
+                    <div class="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-chevron slider-item-show4">
                         <div class="slider-container">
                             <!-- Los elementos generados por JavaScript se insertarán aquí -->
                         </div>
