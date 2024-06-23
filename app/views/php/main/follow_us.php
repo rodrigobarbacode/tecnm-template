@@ -26,10 +26,10 @@
 </style>
 
 <!-- Síguenos -->
-<div class='neomorphic-defase follow-us ml-3 mr-3'>
+<div class='bored-defase follow-us ml-3 mr-3'>
     <section style='margin:auto; z-index: 2000' class="text-center" id='Section1'>
 
-        <h2 style="color: white; font-size: 4vh; padding-top: 20px; padding-bottom: 20px;" class="txt-follow"><span>
+        <h2 style="color: #2f476f; font-size: 4vh; padding-top: 20px; padding-bottom: 20px;" class="txt-follow"><span>
                 <i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-thumbs-up"></i></span>Redes
             Sociales</h2>
 

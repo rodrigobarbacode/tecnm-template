@@ -125,9 +125,18 @@
 		-20px -20px 60px #476ba8;
 }
 
+.bored-defase {
+	color: black;
+	border-radius: 10px;
+	background-color: #efefef;
+	-webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.75);
+}
+
 .shadow-xs {
-	-webkit-box-shadow: 0px 10px 49px 0px rgba(0,0,0,0.60);
-	-moz-box-shadow: 0px 10px 49px 0px rgba(0,0,0,0.60);
+	-webkit-box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.60);
+	-moz-box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.60);
 	box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.60);
 }
 
@@ -153,24 +162,32 @@
 
 /* For Webkit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-    width: 18px; /* Width of the scrollbar */
+	width: 18px;
+	/* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Make scrollbar track transparent */
+	background: transparent;
+	/* Make scrollbar track transparent */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: white; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Round the corners of the scrollbar thumb */
-    border: 3px solid transparent; /* Adds some space around the thumb */
-    background-clip: content-box; /* Clips the thumb to the content box */
+	background-color: white;
+	/* Color of the scrollbar thumb */
+	border-radius: 10px;
+	/* Round the corners of the scrollbar thumb */
+	border: 3px solid transparent;
+	/* Adds some space around the thumb */
+	background-clip: content-box;
+	/* Clips the thumb to the content box */
 }
 
 /* For Firefox */
 body {
-    scrollbar-width: thin; /* Makes the scrollbar thinner */
-    scrollbar-color: white transparent; /* Scrollbar thumb color white, track color transparent */
+	scrollbar-width: thin;
+	/* Makes the scrollbar thinner */
+	scrollbar-color: white transparent;
+	/* Scrollbar thumb color white, track color transparent */
 }
 
 

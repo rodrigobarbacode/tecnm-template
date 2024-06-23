@@ -43,7 +43,7 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body style="background-color: #2f476f;">
+<body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
         nonce="2uMtvFKR"></script>

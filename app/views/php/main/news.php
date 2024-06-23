@@ -151,16 +151,16 @@
 </script>
 
 <!-- HTML structure for the Swiffy Slider -->
-<div id='desface' style='display: none; background-color: #2f476f;'>
+<div id='desface' style='display: none;'>
     <div class='container-fluid m-auto'>
         <!-- Comunicación -->
         <div class='row w-100 justify-content-center m-0'>
             <div class="col-lg-8 col-md-8 col-12">
-                <section class='container news px-5 ml-auto mr-auto mt-3 pt-3 pb-4 neomorphic-defase hide-scroll' id='desface_noticias' style='display: none; height: 100%; max-height: auto; overflow: scroll; z-index: 1500;'>
+                <section class='container news px-5 ml-auto mr-auto mt-3 pt-3 pb-4 bored-defase hide-scroll' id='desface_noticias' style='display: none; height: 100%; max-height: auto; overflow: scroll; z-index: 1500;'>
                     <div class='row'>
                         <div class='col-12 display-2 text-left my-0 py-3'>
                             <a role='button' href='?vista=Noticias'>
-                                <h1 style="color: white; font-size: 4vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
+                                <h1 style="font-size: 4vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-newspaper"></i></span>Noticias</h1>
                             </a>
                         </div>
                     </div>

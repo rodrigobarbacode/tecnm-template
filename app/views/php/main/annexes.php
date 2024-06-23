@@ -35,9 +35,9 @@
 </script>
 
 <!-- Anexos -->
-<section class="neomorphic-defase ml-3 mr-3 mt-4">
+<section class="bored-defase ml-3 mr-3 mt-4">
     <div class='row w-100 justify-content-center pt-3 m-0'>
-        <h2 style="color: white; font-size: 4vh; padding-top:15px;"><span>
+        <h2 style="color: #2f476f; font-size: 4vh; padding-top:15px;"><span>
                 <i class="fa-solid fa-circle-info" style="color: #fab005; padding-right: 2vh;"></i></span>Anexos</h2>
     </div>
     <div class='row w-100 justify-content-center py-3'>
