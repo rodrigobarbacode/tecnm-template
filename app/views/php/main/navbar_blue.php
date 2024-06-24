@@ -41,7 +41,7 @@
 
                     <!-- Opción: Sistema Integrado de Gestión -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/sig" target="_blank">
+                        <a class="dropdown-item" href="/sig">
                             Sistema Integrado de Gestión
                         </a>
                     </li>
@@ -222,7 +222,7 @@
 
             <!-- Menu: Personal TecNM -->
             <li class="nav-item dropdown">
-                <a class="nav-link active font-weight-bold" href="https://forms.gle/goPkoY5f4Ln6G6328">
+                <a class="nav-link active font-weight-bold" href="/quejas">
                     Quejas y Sugerencias
                 </a>
             </li>

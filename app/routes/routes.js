@@ -100,6 +100,12 @@ router.get('/extraescolares', (req, res) => {
 });
 // Extraescolares endpoint.
 
+// Quejas endpoint.
+router.get('/quejas', (req, res) => {
+    res.render('misc/quejas/index');
+});
+// Quejas endpoint.
+
 // Template endpoint.
 router.get('/template', (req, res) => {
     res.render('misc/template/index');

@@ -44,21 +44,21 @@
 
                     <!-- Opción: Residencia Profesional -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/residencia" target="_blank">
+                        <a class="dropdown-item" href="/residencia">
                             Residencia Profesional
                         </a>
                     </li>
 
                     <!-- Opción: Servicio Social -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/ss" target="_blank">
+                        <a class="dropdown-item" href="/ss">
                             Servicio Social
                         </a>
                     </li>
 
                     <!-- Opción: Listado de Aportaciones -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/APORTACIONES2024.pdf" target="_blank">
+                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/APORTACIONES2024.pdf">
                             Listado de Aportaciones
                         </a>
                     </li>
@@ -259,7 +259,7 @@
 
                     <!-- Opción: Desarrollo Academico -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio">
+                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dac/inicio" target="_blank">
                             Desarrollo Académico
                         </a>
                     </li>
@@ -280,14 +280,14 @@
 
                     <!-- Opción: Planeacion -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/inicio?pli=1">
+                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/planeacion/inicio?pli=1" target="_blank">
                             Planeación Programación y Prespuestación
                         </a>
                     </li>
 
                     <!-- Opción: Centro de Informacion -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/cinformacion" target="_blank">
+                        <a class="dropdown-item" href="/cinformacion" >
                             Centro de Información
                         </a>
                     </li>
@@ -339,14 +339,14 @@
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <!-- Opción: Correo itmexicali.edu.mx -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/recuperacion_correo?show=1">
+                        <a class="dropdown-item" href="/correo_itm">
                             Correo @itmexicali.edu.mx
                         </a>
                     </li>
 
                     <!-- Opción: Correo mexicali.tecnm.mx -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/recuperacion_correo?show=2">
+                        <a class="dropdown-item" href="/correo_tecnm">
                             Correo @mexicali.tecnm.mx
                         </a>
                     </li>
