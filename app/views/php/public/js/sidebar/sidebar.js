@@ -80,7 +80,7 @@ function toggleSidebar() {
     
     var s_holder = document.getElementById('sidebar-holder')
     s_holder.classList.toggle('col-md-2')
-    s_holder.classList.toggle('col')
+    s_holder.classList.toggle('col-md-1')
     
    
     var c_holder = document.getElementById('content-holder')

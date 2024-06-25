@@ -1,6 +1,8 @@
 <!-- Barra de Gobierno -->
 <?php require '../../../navbar_gob.php' ?>
 <link rel="stylesheet" href="/css/sidebar/sidebar.css">
+<link rel="stylesheet" href="/css/timeline.css">
+<link rel="stylesheet" href="/css/card.css">
 
 <!-- Encabezado principal -->
 <?php require '../../../main_header.php' ?>

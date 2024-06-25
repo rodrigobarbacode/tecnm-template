@@ -22,17 +22,16 @@
                 </div>
                 
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('content1')">
+                    <a href="#" onclick="contentToggle('fechas')">
                     <img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/box--v1.png" alt="box--v1"/>
                         Fechas Importantes
                     </a>
                 </div>
 
                 <div class="item-style">
-                    <a href="#" onclick="toggleSubmenu('womp')">
+                    <a href="#" onclick="contentToggle('coordinadores')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
                         Coordinadores
-                    <img id="womp" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                     </a>
                 </div>
 
@@ -84,7 +83,6 @@
             
             <!-- Inicio -->
             <div id="inicio" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
-                <!-- Izquierda -->
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12 pt-4 pr-4 pl-4">
@@ -99,7 +97,7 @@
                                         </h5>
                                     </div>
 
-                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
                                         <div class="card-body" style="text-align: left;">
                                         <b>¿DÓNDE ENCUENTRO PROYECTOS PARA REALIZAR MI RESIDENCIA PROFESIONAL?</b> <br>
                                         Puedes realizar la residencia profesional por cualquiera de los siguientes mecanismos:
@@ -188,7 +186,7 @@
                                 </div>
                                 <!-- Creditos Complementarios -->
 
-                                <!-- Creditos Complementarios -->
+                                <!-- Comite Academico -->
                                 <div class="card">
                                     <div class="card-header" id="heading4">
                                         <h5 class="mb-0">
@@ -199,43 +197,262 @@
                                     </div>
                                     <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
                                         <div class="card-body">
-                                            <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
+                                            <ul style="text-align: left;">
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/COMITE ACADEMICO.docx">
+                                                    Formato de comité académico
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/BAJA_DE_MATERIAS.docx">
+                                                    Formato de solicitud para Bajas de materias
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/BAJA_TEMPORAL.docx">
+                                                    Formato de solicitud para Baja Temporal
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/CAMBIO_DE_CARRERA.docx">
+                                                    Formato de solicitud para Cambio de carrera
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/SOLICITUD DE TRASLADO.docx">
+                                                    Formato de solicitud para traslado
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/assets/tec-files/departamentos/dep/solicitud_movilidad_estudiantil.docx">
+                                                    Formato de solicitud para movilidad estudiantil
+                                                    </a>
+                                                </li>
                                             </ul>
+
+
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th scope="col">Carrera</th>
+                                                    <th scope="col">Email</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <th scope="row">Ingeniería Industrial</th>
+                                                    <td>cindustrial@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ingeniería Logística</th>
+                                                    <td>clogistica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Gestión Empresarial</th>
+                                                    <td>cgestion@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Electrónica</th>
+                                                    <td>celectronica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Mecatrónica</th>
+                                                    <td>cmecatronica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Mecánica</th>
+                                                    <td>cmecanica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Materiales</th>
+                                                    <td>cmecanica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Química</th>
+                                                    <td>cquimica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Contador Público</th>
+                                                    <td>ccontabilidad@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Eléctrica</th>
+                                                    <td>celectrica@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Energías Renovables</th>
+                                                    <td>cenergias@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">Ing. Sistemas Computacionales</th>
+                                                    <td>csistemas@itmexicali.edu.mx</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Creditos Complementarios -->
+                                <!-- Comite Academico -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Izquierda -->
             </div>
             <!-- Inicio -->
 
-            <!-- Finale -->
-            <div id="content2" class="row yogurt-defase m-3 p-2">
-                <div class="col-md-8 mx-auto" style="text-align: center;">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.:</h2>
+            <!-- Fechas -->
+            <div id="fechas" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 mx-auto">
+                    <h2>Fechas Importantes</h2>
                     <hr>
-                    <div class="row">
-                        <div class="col-md-12 align-center">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Sunt veniam veritatis neque molestias, fuga explicabo 
-                            dolorum id maiores ullam ea numquam necessitatibus 
-                            fugiat atque! Voluptatibus qui id accusamus dolor consequuntur.
+                    <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="" data-original-title="15 al 17 Enero 2024">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">15 al 17 Enero 2024</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Pagos de Reingreso</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="" data-original-title="20 y 21 de Enero">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">20 y 21 de Enero</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Reinscripción en Linea</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="" data-original-title="22 y 23 Enero">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">22 y 23 Enero</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Ajustes de Carga Académica</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="" data-original-title="24 y 26 Enero">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">24 y 26 Enero</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Pagos Casos Especiales</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="" data-original-title="29 Enero al 23 Febrero">
+                                <div class="inner-circle"></div>
+                                <p class="h6 mt-3 mb-1">29 Enero al 23 Febrero</p>
+                                <p class="h6 text-muted mb-0 mb-lg-0">Periodo de Baja Temporales</p>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
-                
             </div>
-            <!-- Finale -->
+            <!-- Fechas -->
+
+            <!-- Coordinadores -->
+            <div id="coordinadores" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12">
+                    <div class="row align-center">
+
+                        <div class="col-md-12 p-2">
+                            <h2>Coordinadores</h2>
+                            <hr>
+                        </div>
+
+                        <!-- Octavio -->
+                        <div class="col-md-3 pt-4 pr-4 pl-4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/octavio.jpeg" alt="Octavio Perez Alvarez">
+                                <h1>Octavio Perez Alvarez</h1>
+                                <p class="titulos">Coordinador de Ingeniería Mecatrónica</p>
+                                <p>cmecatronica@itmexicali.edu.mx</p>
+                                <a href="mailto:cmecatronica@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Octavio -->
+
+                        <!-- Oscar -->
+                        <div class="col-md-3 pt-4 pr-4 pl4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/oscar.jpeg" alt="Oscar Enrique Callejas Melgoza">
+                                <h1>Oscar Enrique Callejas Melgoza</h1>
+                                <p class="titulos">Coordinador de Ingeniería Mecánica</p>
+                                <p>cmecanica@itmexicali.edu.mx</p>
+                                <p class="titulos">Coordinador de Ingeniería en Materiales</p>
+                                <p>cmateriales@itmexicali.edu.mx</p>
+                                <a href="mailto:cmecanica@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Oscar -->
+
+                        <!-- German -->
+                        <div class="col-md-3 pt-4 pr-4 pl4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/german.jpeg" alt="German Rodriguez Avila">
+                                <h1>German Rodriguez Avila</h1>
+                                <p class="titulos">Coordinador de Ingeniería Sistemas Computacionales</p>
+                                <p>csistemas@itmexicali.edu.mx</p>
+                                <p class="titulos">Coordinador de Ingeniería Electronica</p>
+                                <p>celectronica@itmexicali.edu.mx</p>
+                                <a href="mailto:csistemas@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- German --> 
+                        
+                        <!-- Eduardo -->
+                        <div class="col-md-3 pt-4 pr-4 pl4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/eduardo.jpeg" alt="Eduardo Sanchez Gonzalez">
+                                <h1>Eduardo Sanchez Gonzalez</h1>
+                                <p class="titulos">Coordinador de Ingeniería en Gestion Empresarial</p>
+                                <p>cgestion@itmexicali.edu.mx</p>
+                                <p class="titulos">Coordinador de Ingeniería Logistica</p>
+                                <p>clogistica@itmexicali.edu.mx</p>
+                                <a href="mailto:cgestion@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Eduardo -->
+
+                        <!-- Yuliana -->
+                        <div class="col-md-3 pt-4 pr-4 pl-4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/yuliana.jpeg" alt="Yuliana Sarai Martinez Ramos">
+                                <h1>Yuliana Sarai Martinez Ramos</h1>
+                                <p class="titulos">Coordinadora de Ingeniería Industrial</p>
+                                <p>cindustrial@itmexicali.edu.mx</p>
+                                <a href="mailto:cindustrial@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Yuliana -->
+
+                        <!-- Marcos -->
+                        <div class="col-md-3 pt-4 pr-4 pl-4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/marcos.jpg" alt="Marcos Eduardo Cruz Victorio">
+                                <h1>Marcos Eduardo Cruz Victorio</h1>
+                                <p class="titulos">Coordinador de Ingeniería Electrica</p>
+                                <p>celectrica@itmexicali.edu.mx</p>
+                                <p class="titulos">Coordinador de Ingeniería en Energías Renovables</p>
+                                <p>crenovables@itmexicali.edu.mx</p>
+                                <a href="mailto:celectrica@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Marcos -->
+                        
+                        <!-- Adriana -->
+                        <div class="col-md-3 pt-4 pr-4 pl-4">
+                            <div class="profile-card">
+                                <img src="/img/dep/cordis/adriana.jpeg" alt="Adriana Vianey Pacheco Avilez">
+                                <h1>Adriana Vianey Pacheco Avilez</h1>
+                                <p class="titulos">Coordinadora de Titulación</p>
+                                <p>ctitulacion@itmexicali.edu.mx</p>
+                                <a href="mailto:ctitulacion@itmexicali.edu.mx">Email</a>
+                            </div>
+                        </div>
+                        <!-- Adriana -->
+                    </div>
+                </div>
+            </div>
+            <!-- Coordinadores -->
+
+
         </div>
         <!-- Content -->
 
