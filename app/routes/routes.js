@@ -112,6 +112,12 @@ router.get('/template', (req, res) => {
 });
 // Template endpoint.
 
+// Estudios Profesionales endpoint.
+router.get('/dep', (req, res) => {
+    res.render('misc/departamentos/dep/index');
+});
+// Estudios Profesionales endpoint.
+
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
 // CCO endpoints.
