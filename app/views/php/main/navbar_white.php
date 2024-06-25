@@ -245,7 +245,7 @@
 
                     <!-- Opción: Division de Estudios Profesionales -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="./departamentos/dep/">
+                        <a class="dropdown-item" href="/dep">
                             División de Estudios Profesionales
                         </a>
                     </li>
