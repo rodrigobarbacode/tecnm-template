@@ -114,10 +114,9 @@
                             Licenciatura
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-
                             <!-- Opción: Contador Publico -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/assets/tec-files/carreras/cp/contador.html">
+                                <a class="dropdown-item" href="/contador">
                                     Contador Público
                                 </a>
                             </li>
