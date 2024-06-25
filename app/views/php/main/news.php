@@ -50,104 +50,101 @@
         return truncated + '...';
     }
 
-    // Function to fetch a local JSON file.
-    function fetchLocalJSON(file, callback) {
-        var xhr = new XMLHttpRequest();
-        xhr.overrideMimeType("application/json");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-        xhr.open("GET", file, true);
-        xhr.send(null);
-    }
-
-    // Get news data from the JSON and create slider elements.
-    fetchLocalJSON('/json/news-list.json', function(datos) {
-        // Get the news slider container.
-        var newsOuter = document.querySelector('.swiffy-slider .slider-container');
-
-        // Get the limit of news to show.
-        var limit = datos[0].max;
-
-        // Slice the first element of the array.
-        datos = datos.slice(1, datos.length);
-
-        // Sort data by date.
-        datos.sort(function(a, b) {
-            return new Date(b.date) - new Date(a.date);
-        });
-
-        // Limit the number of news to show.
-        datos = datos.slice(0, limit);
-
-        datos.forEach(function(value, key) {
-            // Create an element for each slider item.
-            var sliderItem = document.createElement('div');
-            sliderItem.className = 'swiffy-slider-item';
-            sliderItem.style.position = 'relative';
-
-            var card = document.createElement('div');
-            card.className = 'card';
-            card.style.width = '100%';
-            card.style.height = '100%';
-            card.style.borderRadius = '1rem';
-
-            var img = document.createElement('img');
-            img.className = 'card-img-top';
-            img.style.width = '100%';
-            img.style.height = '10vh';
-            img.style.borderRadius = '1rem 1rem 0 0';
-            img.src = value.image;
-            img.alt = value.title;
-
-            card.appendChild(img);
-
-            var cardBody = document.createElement('div');
-            cardBody.className = 'card-body';
-
-            var cardTitle = document.createElement('h5');
-            cardTitle.className = 'card-title';
-            cardTitle.style.color = '#fab005';
-            cardTitle.style.fontSize = '2vh';
-            cardTitle.style.fontWeight = 'bolder';
-            var limitTitle = truncateTitle(value.title);
-            cardTitle.textContent = limitTitle;
-
-            cardBody.appendChild(cardTitle);
-
-            var cardText = document.createElement('p');
-            cardText.className = 'card-text';
-            cardText.style.color = '#000000';
-            cardText.style.fontSize = '1.5vh';
-            cardText.style.textAlign = 'justify';
-            var limitDescription = truncateDescription(value.description);
-            cardText.textContent = value.date_title + ' | ' + '\n' + limitDescription;
-
-            cardBody.appendChild(cardText);
-
-            var cardLink = document.createElement('a');
-            cardLink.href = value.pdf;
-            cardLink.target = '_blank';
-            cardLink.className = 'btn btn-primary mt-2';
-            cardLink.style.backgroundColor = '#fab005';
-            cardLink.style.borderColor = '#fab005';
-            cardLink.textContent = 'Leer más';
-
-            cardBody.appendChild(cardLink);
-
-            card.appendChild(cardBody);
-
-            sliderItem.appendChild(card);
-
-            // Añadir el elemento al contenedor del slider
-            newsOuter.appendChild(sliderItem);
-        });
-
-        // Inicializar Swiffy Slider
-        new SwiffySlider(document.querySelector('.swiffy-slider'));
+    // Fetch the maximum number of news to show.
+    var limit;
+    fetch('data/news/max').then(response => {
+        return response.json();
+    }).then(a => {
+        var limit = a.max;
+        // Fetch the maximum number of news to show.
+        fetchNews(limit);
     });
+
+    function fetchNews(limit) {
+        // Function to fetch a remote JSON file.
+        fetch('data/news').then(response => {
+            return response.json();
+        }).then(datos => {
+            // Get the news slider container.
+            var newsOuter = document.querySelector('.swiffy-slider .slider-container');
+
+            // Sort data by date.
+            datos.sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
+
+            // Limit the number of news to show.
+            datos = datos.slice(0, limit);
+
+            datos.forEach(function(value, key) {
+                // Create an element for each slider item.
+                var sliderItem = document.createElement('div');
+                sliderItem.className = 'swiffy-slider-item';
+                sliderItem.style.position = 'relative';
+
+                var card = document.createElement('div');
+                card.className = 'card';
+                card.style.width = '100%';
+                card.style.height = '100%';
+                card.style.borderRadius = '1rem';
+
+                var img = document.createElement('img');
+                img.className = 'card-img-top';
+                img.style.width = '100%';
+                img.style.height = '10vh';
+                img.style.borderRadius = '1rem 1rem 0 0';
+                img.src = value.image;
+                img.alt = value.title;
+
+                card.appendChild(img);
+
+                var cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                var cardTitle = document.createElement('h5');
+                cardTitle.className = 'card-title';
+                cardTitle.style.color = '#fab005';
+                cardTitle.style.fontSize = '2vh';
+                cardTitle.style.fontWeight = 'bolder';
+                var limitTitle = truncateTitle(value.title);
+                cardTitle.textContent = limitTitle;
+
+                cardBody.appendChild(cardTitle);
+
+                var cardText = document.createElement('p');
+                cardText.className = 'card-text';
+                cardText.style.color = '#000000';
+                cardText.style.fontSize = '1.5vh';
+                cardText.style.textAlign = 'justify';
+                var limitDescription = truncateDescription(value.description);
+                cardText.textContent = value.date_title + ' | ' + '\n' + limitDescription;
+
+                cardBody.appendChild(cardText);
+
+                var cardLink = document.createElement('a');
+                cardLink.href = value.pdf;
+                cardLink.target = '_blank';
+                cardLink.className = 'btn btn-primary mt-2';
+                cardLink.style.backgroundColor = '#fab005';
+                cardLink.style.borderColor = '#fab005';
+                cardLink.textContent = 'Leer más';
+
+                cardBody.appendChild(cardLink);
+
+                card.appendChild(cardBody);
+
+                sliderItem.appendChild(card);
+
+                // Añadir el elemento al contenedor del slider
+                newsOuter.appendChild(sliderItem);
+            });
+
+            // Inicializar Swiffy Slider
+            new SwiffySlider(document.querySelector('.swiffy-slider'));
+        }).catch(err => {
+            console.log('Error: ', err);
+        });
+    }
 </script>
 
 <!-- HTML structure for the Swiffy Slider -->

@@ -1,123 +1,201 @@
 // Importing the required modules.
-const fs = require('fs').promises;
+const fs = require("fs").promises;
 
-const path = require('path');
-const process = require('process');
-const {google} = require('googleapis');
-const {authenticate} = require('@google-cloud/local-auth');
+const path = require("path");
+const process = require("process");
+const { google } = require("googleapis");
+const { authenticate } = require("@google-cloud/local-auth");
 
-const routes = require('./routes/routes');
-const express = require('express');
+const routes = require("./routes/routes");
+const express = require("express");
 
-require('dotenv').config();
+require("dotenv").config();
 // Importing the required modules.
 
 // Provide the required configuration.
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
+const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly", "https://www.googleapis.com/auth/spreadsheets.readonly"];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = path.join(process.cwd(), 'google_api/token.json');
-const CREDENTIALS_PATH = path.join(process.cwd(), 'google_api/credentials.json');
+const TOKEN_PATH = path.join(process.cwd(), "google_api/token.json");
+const CREDENTIALS_PATH = path.join(
+  process.cwd(),
+  "google_api/credentials.json"
+);
 // Provide the required configuration.
 
-// Google Calendar API Settings.
+// Google API Settings.
 /**
  * Reads previously authorized credentials from the save file.
  *
  * @return {Promise<OAuth2Client|null>}
  */
 async function loadSavedCredentialsIfExist() {
-    try {
-      const content = await fs.readFile(TOKEN_PATH);
-      const credentials = JSON.parse(content);
-      return google.auth.fromJSON(credentials);
-    } catch (err) {
-      return null;
-    }
+  try {
+    const content = await fs.readFile(TOKEN_PATH);
+    const credentials = JSON.parse(content);
+    return google.auth.fromJSON(credentials);
+  } catch (err) {
+    return null;
   }
-  
-  /**
-   * Serializes credentials to a file compatible with GoogleAuth.fromJSON.
-   *
-   * @param {OAuth2Client} client
-   * @return {Promise<void>}
-   */
-  async function saveCredentials(client) {
-    const content = await fs.readFile(CREDENTIALS_PATH);
-    const keys = JSON.parse(content);
-    const key = keys.installed || keys.web;
-    const payload = JSON.stringify({
-      type: 'authorized_user',
-      client_id: key.client_id,
-      client_secret: key.client_secret,
-      refresh_token: client.credentials.refresh_token,
-    });
-    await fs.writeFile(TOKEN_PATH, payload);
-  }
-  
-  /**
-   * Load or request or authorization to call APIs.
-   *
-   */
-  async function authorize() {
-    let client = await loadSavedCredentialsIfExist();
-    if (client) {
-      return client;
-    }
-    client = await authenticate({
-      scopes: SCOPES,
-      keyfilePath: CREDENTIALS_PATH,
-    });
-    if (client.credentials) {
-      await saveCredentials(client);
-    }
+}
+
+/**
+ * Serializes credentials to a file compatible with GoogleAuth.fromJSON.
+ *
+ * @param {OAuth2Client} client
+ * @return {Promise<void>}
+ */
+async function saveCredentials(client) {
+  const content = await fs.readFile(CREDENTIALS_PATH);
+  const keys = JSON.parse(content);
+  const key = keys.installed || keys.web;
+  const payload = JSON.stringify({
+    type: "authorized_user",
+    client_id: key.client_id,
+    client_secret: key.client_secret,
+    refresh_token: client.credentials.refresh_token,
+  });
+  await fs.writeFile(TOKEN_PATH, payload);
+}
+
+/**
+ * Load or request or authorization to call APIs.
+ *
+ */
+async function authorize() {
+  let client = await loadSavedCredentialsIfExist();
+  if (client) {
     return client;
   }
-  
-  /**
-   * Lists the next 10 events on the user's primary calendar.
-   * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
-   */
-  async function listEvents(auth) {
-    const calendar = google.calendar({version: 'v3', auth});
-    const res = await calendar.events.list({
-      calendarId: 'primary',
-      timeMin: new Date().toISOString(),
-      maxResults: 10,
-      singleEvents: true,
-      orderBy: 'startTime',
-    });
-    const events = res.data.items;
-    if (!events || events.length === 0) {
-      return;
-    }
-    var arr = [];
-    var json = {};
-    events.map((event, i) => {
-        var date = new Date(event.start.dateTime);
-        var options = { month: 'long'};
-        var month = new Intl.DateTimeFormat('es-ES', options).format(date);
-
-        var day = date.getDate();
-        var month = month.charAt(0).toUpperCase() + month.slice(1);
-
-        var start = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-        var end = new Date(event.end.dateTime).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-
-        var url = event.htmlLink;
-
-        arr.push({title: event.summary, description: event.description, day: day, month: month.slice(0, 3), start: start, end: end, url: url});
-    });
-    json = arr;
-    return json;
+  client = await authenticate({
+    scopes: SCOPES,
+    keyfilePath: CREDENTIALS_PATH,
+  });
+  if (client.credentials) {
+    await saveCredentials(client);
   }
-// Google Calendar API Settings.
+  return client;
+}
+
+/** Google Calendar API **/
+/**
+ * Lists the next 10 events on the user's primary calendar.
+ * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
+ */
+async function listEvents(auth) {
+  const calendar = google.calendar({ version: "v3", auth });
+  const res = await calendar.events.list({
+    calendarId: "primary",
+    timeMin: new Date().toISOString(),
+    maxResults: 10,
+    singleEvents: true,
+    orderBy: "startTime",
+  });
+  const events = res.data.items;
+  if (!events || events.length === 0) {
+    return;
+  }
+  var arr = [];
+  var json = {};
+  events.map((event, i) => {
+    var date = new Date(event.start.dateTime);
+    var options = { month: "long" };
+    var month = new Intl.DateTimeFormat("es-ES", options).format(date);
+
+    var day = date.getDate();
+    var month = month.charAt(0).toUpperCase() + month.slice(1);
+
+    var start = date.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    var end = new Date(event.end.dateTime).toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    var url = event.htmlLink;
+
+    arr.push({
+      title: event.summary,
+      description: event.description,
+      day: day,
+      month: month.slice(0, 3),
+      start: start,
+      end: end,
+      url: url,
+    });
+  });
+  json = arr;
+  return json;
+}
+/** Google Calendar API **/
+
+/** Google Sheets API **/
+/**
+ * Prints the all news from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+async function listNews(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1_hK4uuM1RgWID7Qo7OlHhEvBTD6Ff0yNn4_644P66k8",
+    range: "A2:F300",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  // Create a JSON object with the data.
+  var arr = [];
+  var json = {};
+  rows.map((row, i) => {
+    arr.push({
+      image: row[0],
+      date_title: row[1],
+      date: row[2],
+      title: row[3],
+      description: row[4],
+      pdf: row[5]
+    });
+  }
+  );
+  json = arr;
+
+  return json;
+}
+
+/**
+ * Get max news from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+
+async function getNewsMax(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1_hK4uuM1RgWID7Qo7OlHhEvBTD6Ff0yNn4_644P66k8",
+    range: "J2",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  return { max: rows[0][0] };
+}
+
+/** Google Sheets API **/
+
+// Google API Settings.
 
 // Importing the php-express module.
-const phpExpress = require('php-express')({
-    binPath: 'php' // Ruta a tu ejecutable de PHP
+const phpExpress = require("php-express")({
+  binPath: "php", // Ruta a tu ejecutable de PHP
 });
 // Importing the php-express module.
 
@@ -126,31 +204,31 @@ const app = express();
 // Create an Express application.
 
 // Define the directory where the public files are located.
-const assets_dir = path.join(__dirname, 'views/php/public/assets');
-const icons_dir = path.join(__dirname, 'views/php/public/icons');
-const images_dir = path.join(__dirname, 'views/php/public/img');
-const json_dir = path.join(__dirname, 'views/php/public/json');
-const misc_dir = path.join(__dirname, 'views/php/main/misc');
-const css_dir = path.join(__dirname, 'views/php/public/css');
-const pdf_dir = path.join(__dirname, 'views/php/public/pdf');
-const js_dir = path.join(__dirname, 'views/php/public/js');
+const assets_dir = path.join(__dirname, "views/php/public/assets");
+const icons_dir = path.join(__dirname, "views/php/public/icons");
+const images_dir = path.join(__dirname, "views/php/public/img");
+const json_dir = path.join(__dirname, "views/php/public/json");
+const misc_dir = path.join(__dirname, "views/php/main/misc");
+const css_dir = path.join(__dirname, "views/php/public/css");
+const pdf_dir = path.join(__dirname, "views/php/public/pdf");
+const js_dir = path.join(__dirname, "views/php/public/js");
 // Define the directory where the public files are located.
 
 // Serve static files from the 'public' directory.
-app.use('/assets', express.static(assets_dir));
-app.use('/icons', express.static(icons_dir));
-app.use('/img', express.static(images_dir));
-app.use('/json', express.static(json_dir));
-app.use('/misc', express.static(misc_dir));
-app.use('/pdf', express.static(pdf_dir));
-app.use('/css', express.static(css_dir));
-app.use('/js', express.static(js_dir));
+app.use("/assets", express.static(assets_dir));
+app.use("/icons", express.static(icons_dir));
+app.use("/img", express.static(images_dir));
+app.use("/json", express.static(json_dir));
+app.use("/misc", express.static(misc_dir));
+app.use("/pdf", express.static(pdf_dir));
+app.use("/css", express.static(css_dir));
+app.use("/js", express.static(js_dir));
 // Serve static files from the 'public' directory.
 
 // Setting up the view engine.
-app.set('views', './views/php/main');
-app.engine('php', phpExpress.engine);
-app.set('view engine', 'php');
+app.set("views", "./views/php/main");
+app.engine("php", phpExpress.engine);
+app.set("view engine", "php");
 // Setting up the view engine.
 
 // Use php-express to serve all .php files.
@@ -164,47 +242,70 @@ app.use(routes);
 // ************* Routes *************
 
 // Testing Endpoint
-/*
+
 app.get('/test', async (req, res) => {
     try {
-        authorize().then(listEvents).catch(console.error);
+      authorize().then(listNews).catch(console.error);
     } catch (err) {
         console.log(err);
         res.status(500).send('Error fetching events');
     }
 });
-*/
+
 // Testing Endpoint
 
 // Home endpoint.
-app.get('/', async (req, res) => {
-    try {
-        let events = await listEvents(await authorize());
-        res.render('index');
-    } catch (err) {
-        console.log(err);
-        res.status(500).send('Error fetching events');
-    }
+app.get("/", async (req, res) => {
+  try {
+    res.render("index");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
 });
 // Home endpoint.
 
-// Data endpoint.
-app.get('/data/events', async (req, res) => {
-    try {
-        let events = await listEvents(await authorize());
-        res.json(events);
-    } catch (err) {
-        console.log(err);
-        res.status(500).send('Error fetching events');
-    }
+// News Data endpoint.
+app.get("/data/news", async (req, res) => {
+  try {
+    let news = await listNews(await authorize());
+    res.json(news);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
 });
-// Data endpoint.
+// News Data endpoint.
+
+// News Max Data endpoint.
+app.get("/data/news/max", async (req, res) => {
+  try {
+    let max = await getNewsMax(await authorize());
+    res.json(max);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
+});
+// News Max Data endpoint.
+
+// Events Data endpoint.
+app.get("/data/events", async (req, res) => {
+  try {
+    let events = await listEvents(await authorize());
+    res.json(events);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
+});
+// Events Data endpoint.
 
 // ************* Routes *************
 
 // Define the port where the server will listen for requests.
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Node / PHP server running on http://localhost:${PORT}`);
+  console.log(`Node / PHP server running on http://localhost:${PORT}`);
 });
 // Define the port where the server will listen for requests.
