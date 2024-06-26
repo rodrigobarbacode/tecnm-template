@@ -7,6 +7,6 @@
 
 El siguiente repositorio está destinado a almacenar el código fuente de la página oficial del Tecnológico Nacional de México, Campus Mexicali.
 
-## 🌱 Rama 'News Google Api'
+## 🌱 Rama Producción
 
-Esta es la rama donde se pretende implementar la API de Google en la sección de noticias de la página oficial del Tecnológico Nacional de México, Campus Mexicali. Permitiendo utilizar un Google Sheet como base de datos para las noticias.
+Esta es la rama de producción, es la página en su funcionalidad final, dedicada para mostrarse en los usuarios.
