@@ -45,21 +45,21 @@
                 </div>
 
                 <div class="submenu perfiles item-style d-none">
-                    <a href="#">
+                    <a href="#" onclick="contentToggle('ingreso')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
                         de Ingreso
                     </a>
                 </div>
 
                 <div class="submenu perfiles item-style d-none">
-                    <a href="#">
+                    <a href="#" onclick="contentToggle('egreso')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
                         de Egreso
                     </a>
                 </div>
 
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('content2')">
+                    <a href="#" onclick="contentToggle('reticula')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/water.png" alt="water"/>                        
                         Reticula
                     </a>
@@ -110,7 +110,7 @@
             <!-- Misión & Visión -->
 
             <!-- Objetivo & Politica -->
-            <div id="oyp" class="row yogurt-defase m-3 p-2">
+            <div id="oyp" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
                     <h2>Objetivo & Politica</h2>
                     <hr>
@@ -138,6 +138,119 @@
                 </div>
             </div>
             <!-- Objetivo & Politica -->
+
+            <!-- Ingreso -->
+            <div id="ingreso" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h2>Perfil de Ingreso</h2>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 p-4" style="text-align: left;">
+                    <p>
+                        <ol>
+                            <li>
+                            Haber egresado del nivel medio superior preferentemente con formación en áreas administrativas y/o contables.
+                            </li>
+                            <li>
+                            Demostrar interés por temas relacionados con las ciencias económico administrativo.
+                            </li>
+                            <li>
+                            Poseer conocimientos básicos de acuerdo con los objetivos del nivel medio superior en: Matemáticas, Estadística, Informática, Cultura general
+                            </li>
+                            <li>
+                            Contar con las siguientes habilidades:
+                            <ul>
+                                <li>Habilidad verbal y matemática.</li>
+                                <li>Habilidad para analizar, sintetizar y emitir una opinión.</li>
+                                <li>Habilidad para trabajar en equipo y capaz de adaptarse a diferentes entornos.</li>
+                            </ul>
+                            </li>
+                            <li>
+                            Poseer capacidad de liderazgo, capacidad de relacionarse armónicamente con otras personas y tener la habilidad de comunicarse en forma oral y escrita.
+                            </li>
+                            <li>
+                            Tener sentido de responsabilidad, iniciativa y servicio
+                            </li>
+                            <li>
+                            Ser una persona con plena conciencia de los principios y valores morales que deben regir al ser humano
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+            <!-- Ingreso -->
+
+            
+            <!-- Egreso -->
+            <div id="egreso" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 pt-4 pr-4 pl-4">
+                    <h2>Perfil de Egreso</h2>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 p-4" style="text-align: left;">
+                    <p>
+                        <ol>
+                            <li>
+                            Diseñar, implantar, controlar, evaluar, asesorar 
+                            e innovar sistemas de información financiera, 
+                            administrativa, fiscal y de auditoría en entidades económicas.
+                            </li>
+                            <li>
+                            Analizar y generar información financiera 
+                            con apego a las Normas de Información Financiera 
+                            para la toma de decisiones.
+                            </li>
+                            <li>
+                            Auditar sistemas financieros, fiscales y administrativos de 
+                            las entidades económicas con apego a las Normas y Procedimientos 
+                            de Auditoria y Normas para Atestiguar.
+                            </li>
+                            <li>
+                            Aplicar el marco legal pertinente a las características y 
+                            necesidades de la entidad económica dentro del campo profesional.
+                            </li>
+                            <li>
+                            Administrar estratégicamente los recursos de las entidades 
+                            económicas con visión emprendedora y competitiva.
+                            </li>
+                            <li>
+                            Conocer y cumplir el código de ética profesional.
+                            </li>
+                            <li>
+                            Utilizar las Tecnologías de Información y Comunicación para 
+                            eficientar los procesos y la toma de decisiones.
+                            </li>
+                            <li>
+                            Desarrollar investigación asumiendo una actitud de liderazgo, 
+                            compromiso y servicio con su entorno social.
+                            </li>
+                            <li>
+                            Elaborar y evaluar proyectos de inversión de acuerdo a las 
+                            características y necesidades del entorno.
+                            </li>
+                            <li>
+                            Asumir actitud de compromiso y servicio con su entorno social y el medio ambiente.
+                            </li>
+                            <li>
+                            Formar y promover el desarrollo de grupos de trabajo 
+                            interdisciplinarios para el logro de los resultados de las 
+                            entidades con un sentido de responsabilidad social y visión integradora.
+                            </li>
+                            <li>
+                            Conocer y proponer estrategias de mercadotecnia que permitan alcanzar los 
+                            objetivos de la empresa.
+                            </li>
+                            <li>
+                            Aplicar métodos de análisis de información financiera para determinar las 
+                            mejores alternativas de inversión y financiamiento.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+            <!-- Egreso -->
         </div>
         <!-- Content -->
 

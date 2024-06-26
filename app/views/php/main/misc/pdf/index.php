@@ -12,7 +12,7 @@
 <?php require '../../navbar_blue.php' ?>
 
 <!-- Contenido -->
-<?php require 'content-template.php' ?>
+<?php require 'pdf.php' ?>
 <script src="/js/sidebar/sidebar.js"></script>
 
 <!-- Footer Azul -->
