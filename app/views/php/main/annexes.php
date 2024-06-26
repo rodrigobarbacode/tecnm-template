@@ -1,19 +1,7 @@
 <script>
-    // Function to fetch a local JSON file.
-    function fetchLocalJSON(file, callback) {
-        var xhr = new XMLHttpRequest();
-        xhr.overrideMimeType("application/json");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-        xhr.open("GET", file, true);
-        xhr.send(null);
-    }
-
-    // Get annexes data from JSON file to display them.
-    fetchLocalJSON("json/annexes-list.json", function(data) {
+    fetch('data/annexes').then(response => {
+        return response.json();
+    }).then(data => {
         var sliderContainer = document.querySelector(".slider-container-annexes");
         var html = "";
 

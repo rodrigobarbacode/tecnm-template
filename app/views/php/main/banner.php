@@ -1,28 +1,15 @@
 <script>
-  // Function to fetch a local JSON file.
-  function fetchLocalJSON(file, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.overrideMimeType("application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        callback(JSON.parse(xhr.responseText));
-      }
-    };
-    xhr.open("GET", file, true);
-    xhr.send(null);
-  }
-
-  // Get banner data from the JSON and create carousel elements.
-  fetchLocalJSON('/json/banner-list.json', function (datos) {
+  fetch('data/banners').then(response => {
+    return response.json();
+  }).then(datos => {
     var carouselInner = document.querySelector('.carousel-inner');
-
     // Sort data by date and limit to the first 5 elements.
-    datos.sort(function (a, b) {
+    datos.sort(function(a, b) {
       return new Date(b.date) - new Date(a.date);
     });
     datos = datos.slice(0, 5);
 
-    datos.forEach(function (value, key) {
+    datos.forEach(function(value, key) {
       // Determine if this is the first element (active).
       var activeClass = (key === 0) ? 'active' : '';
 
@@ -37,7 +24,7 @@
       carouselImage.style.width = '100%';
       carouselImage.style.height = '100%';
       carouselImage.src = value.image;
-      
+
       // Create a tag element for the carousel item.
       var carouselTag = document.createElement('a');
       carouselTag.href = value.url;
@@ -47,12 +34,13 @@
 
       carouselInner.appendChild(carouselItem);
     });
+  }).catch(err => {
+    console.log('Error: ', err);
   });
 </script>
 
 <!-- Carousel Indicators -->
-<div id="carousel-full" class="carousel slide mb-3" data-ride="carousel"
-  style="z-index: 1500;">
+<div id="carousel-full" class="carousel slide mb-3" data-ride="carousel" style="z-index: 1500;">
   <ol class="carousel-indicators">
     <li data-target="#carousel-full" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-full" data-slide-to="1"></li>
@@ -81,11 +69,11 @@
   .carousel-indicators {
     color: black;
   }
-  
+
   .fa-angle-left {
     margin-left: -10.5rem;
   }
-  
+
   .fa-angle-right {
     margin-right: -10.5rem;
   }
@@ -94,7 +82,7 @@
     .fa-angle-left {
       display: none;
     }
-    
+
     .fa-angle-right {
       display: none;
     }

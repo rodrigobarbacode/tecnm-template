@@ -10,6 +10,7 @@ const routes = require("./routes/routes");
 const express = require("express");
 
 require("dotenv").config();
+
 // Importing the required modules.
 
 // Provide the required configuration.
@@ -135,6 +136,38 @@ async function listEvents(auth) {
 
 /** Google Sheets API **/
 /**
+ * Prints the all banners from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+async function listBanners(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1uaPGs-etR0DbNxYyo0XPb6bhjOTt1shyRhTTDkBNnQ0",
+    range: "A2:C30",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  // Create a JSON object with the data.
+  var arr = [];
+  var json = {};
+  rows.map((row, i) => {
+    arr.push({
+      url: row[0],
+      image: row[1],
+      date: row[2]
+    });
+  }
+  );
+  json = arr;
+
+  return json;
+}
+
+/**
  * Prints the all news from the Google Sheet.
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
@@ -189,6 +222,36 @@ async function getNewsMax(auth) {
   return { max: rows[0][0] };
 }
 
+/**
+ * Prints the all annexes from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+async function listAnnexes(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1ITNAswP7Z5VB5IHHe7JQT74M_-IVIF2D2324dkNsnvc",
+    range: "A2:B20",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  // Create a JSON object with the data.
+  var arr = [];
+  var json = {};
+  rows.map((row, i) => {
+    arr.push({
+      link: row[0],
+      image: row[1]
+    });
+  }
+  );
+  json = arr;
+
+  return json;
+}
 /** Google Sheets API **/
 
 // Google API Settings.
@@ -241,8 +304,8 @@ app.use(routes);
 
 // ************* Routes *************
 
+/*
 // Testing Endpoint
-
 app.get('/test', async (req, res) => {
     try {
       authorize().then(listNews).catch(console.error);
@@ -251,8 +314,8 @@ app.get('/test', async (req, res) => {
         res.status(500).send('Error fetching events');
     }
 });
-
 // Testing Endpoint
+*/
 
 // Home endpoint.
 app.get("/", async (req, res) => {
@@ -264,6 +327,17 @@ app.get("/", async (req, res) => {
   }
 });
 // Home endpoint.
+
+// Banners Data endpoint.
+app.get("/data/banners", async (req, res) => {
+  try {
+    let banners = await listBanners(await authorize());
+    res.json(banners);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
+});
 
 // News Data endpoint.
 app.get("/data/news", async (req, res) => {
@@ -300,6 +374,18 @@ app.get("/data/events", async (req, res) => {
   }
 });
 // Events Data endpoint.
+
+// Annexes Data endpoint.
+app.get("/data/annexes", async (req, res) => {
+  try {
+    let annexes = await listAnnexes(await authorize());
+    res.json(annexes);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching events");
+  }
+});
+// Annexes Data endpoint.
 
 // ************* Routes *************
 
