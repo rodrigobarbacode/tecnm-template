@@ -1,0 +1,42 @@
+.Semestre td a {
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.Sem-1 {
+    background-color: #2757a5 ;
+}
+
+.Sem-2 {
+    background-color: #880ED4;
+}
+
+.Sem-3 {
+    background-color: #39FF14;
+}
+
+.Sem-4 {
+    background-color: #000020;
+}
+
+.Sem-5 {
+    background-color: #FF10F0;
+}
+
+.Sem-6 {
+    background-color: #73a2a9;
+}
+
+.Sem-7 {
+    background-color: #000C66;
+}
+
+.Sem-8 {
+    background-color: #574571;
+}
+
+.Sem-9 {
+    background-color: #41FDFE;
+}

@@ -181,7 +181,6 @@
             </div>
             <!-- Ingreso -->
 
-            
             <!-- Egreso -->
             <div id="egreso" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
                 <div class="col-md-12 pt-4 pr-4 pl-4">
@@ -251,6 +250,515 @@
                 </div>
             </div>
             <!-- Egreso -->
+            
+
+            <div id="reticula" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 pt-4 pr-4 pl-4 table-responsive" style ="scrollbar-color: #1b396a !important;">
+                    <h2>Reticula Escolar</h2>
+                    <hr>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <th>Semestre 1</th>
+                            <th>Semestre 2</th>
+                            <th>Semestre 3</th>
+                            <th>Semestre 4</th>
+                            <th>Semestre 5</th>
+                            <th>Semestre 6</th>
+                            <th>Semestre 7</th>
+                            <th>Semestre 8</th>
+                            <th>Semestre 9</th>
+                        </thead>
+                        <tbody>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/cpm1030.pdf')">
+                                    Introduc. A la
+                                    Contabilidad
+                                    Financiera
+                                    CMP-1030
+                                    </a>
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/contabilidad1.pdf')">
+                                    Contabilidad
+                                    Financiera I
+                                    CPM-1030
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/conta2.pdf')">
+                                    Contabilidad
+                                    Financiera II
+                                    CPM-1013
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/cantas.pdf')">
+                                    Contabilidad de
+                                    Sociedades.
+                                    CDC-1011
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpd1010.pdf')">
+                                    Contabilidad
+                                    Avanzada
+                                    CDC-1010
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpd1014.pdf')">
+                                    Contabilidad
+                                    Internacional
+                                    CPD-1014
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cdo1037.pdf')">
+                                    Semirario
+                                    Contaduria
+                                    CDO-1037
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE8/seminario.pdf')">
+                                    Sem de Contraloria
+                                    </a>
+                                </td>
+                                <td class="Sem-9">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE9/labconta.pdf')">
+                                    Lab de Contaduria
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/administracion.pdf')">
+                                    Administración
+                                    CPC-1001
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/etica.pdf')">
+                                    Taller de
+                                    Etica
+                                    ACA-0907
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/mercado.pdf')">
+                                    Mercadotecnia CPC-1032
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/costos.pdf')">
+                                    Sist. de
+                                    Costos
+                                    Historicos
+                                    CPD-1038
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpd1039.pdf')">
+                                    Sist. de
+                                    Costos
+                                    Predeterm
+                                    CPD-1039
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpf1027.pdf')">
+                                    Gestión y
+                                    Toma de
+                                    Decisiones
+                                    CPF-1027
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cpc1002.pdf')">
+                                    Administracion
+                                    Estrategica
+                                    CPC-1002
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE8/impuestos.pdf')">
+                                    Impuestos al
+                                    Comercio Exterior
+                                    y Aduanas
+                                    </a>
+                                </td>
+                                <td class="Sem-9">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE9/planeacion.pdf')">
+                                    Planeación Fiscal
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/algebra.pdf')">
+                                    Algebra
+                                    Lineal
+                                    ACF-0903
+                                    </a>
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/calculo.pdf')">
+                                    Calculo
+                                    Diferencial e
+                                    Integral
+                                    CPD-1008
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/matematicas.pdf')">
+                                    Matematicas Financieras CPC-1032
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/micro.pdf')">
+                                    Micro-Economia CPC-1034
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpc1031.pdf')">
+                                    Macro-
+                                    Economia
+                                    CPC-1031
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpc1003.pdf')">
+                                    Admon de la
+                                    Produc. y
+                                    de las Operac.
+                                    CPC-1003
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cph1021.pdf')">
+                                    Elab y Eval.
+                                    de Proyectos
+                                    de Inversión
+                                    CPH-1021
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE8/medios.pdf')">
+                                    Medios de
+                                    Defensa Fiscal
+                                    </a>
+                                </td>
+                                <td class="Sem-9">
+                                    <a href="javascript:void(0);" >
+                                    Residencia Profesional
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/fundamentos.pdf')">
+                                    Fundamentos de
+                                    Derecho
+                                    CPC-1018
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/mercantil.pdf')">
+                                    Derecho
+                                    Mercantil
+                                    CPC-1019
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/derecholaboral.pdf')">
+                                    Derecho Laboral y Seg. Social CPC-1015
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/derecho.pdf')">
+                                    Derecho
+                                    Tributario
+                                    CPC-1017
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpj1028.pdf')">
+                                    Impuestos
+                                    Personas
+                                    Morales
+                                    CPJ-1028
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpj1029.pdf')">
+                                    Impuestos
+                                    Personas
+                                    Fisicas
+                                    CPJ-1029
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cpj1035.pdf')">
+                                    Otros Impuestos y Contribuciones CPJ-1035
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                <!-- nothing -->
+                                </td>
+                                <td class="Sem-9">
+                                <!-- nothing -->
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/desarrollo.pdf')">
+                                    Desarrollo
+                                    Humano
+                                    CCP-1018
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/dinamica.pdf')">
+                                    Dinamica
+                                    Social
+                                    CPC-1019
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/gestion.pdf')">
+                                    Gestión del Talento Humano CPC-1026
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/auditoria.pdf')">
+                                    Fundamentos de
+                                    Auditoria
+                                    CPC-1024
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpd1006.pdf')">
+                                    Audit.para
+                                    Efectos
+                                    Financieros
+                                    CPD-1006
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpd1007.pdf')">
+                                    Audit. para
+                                    Efectos
+                                    Fiscales
+                                    CPD-1007
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                <!-- nothing -->
+                                </td>
+                                <td class="Sem-8">
+                                    <a href="javascript:void(0);">
+                                    Servicio
+                                    Social
+                                    </a>
+                                </td>
+                                <td class="Sem-9">
+                                <!-- nothing -->
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/semestre1/investigacion.pdf')">
+                                    Fundamentos de
+                                    Investigación
+                                    ACC-0906
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/admin1.pdf')">
+                                    Estadistica
+                                    Admva I
+                                    CPC-1022
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/estadistica2.pdf')">
+                                    Estadistica Admva. II CPC-1023
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/tallerIn1.pdf')">
+                                    Taller de
+                                    Investig. I
+                                    ACA-0909
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/aca0910.pdf')">
+                                    Taller de
+                                    Investigación II
+                                    ACA-0910
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpc1020.pdf')">
+                                    Economia
+                                    Inter-
+                                    Nacional
+                                    CPC-1020
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cpa1041.pdf')">
+                                    Taller de
+                                    Informatica II
+                                    CPA-1041
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                <!--nothing-->
+                                </td>
+                                <td class="Sem-9">
+                                <a href="javascript:void(0);" >
+                                    Actividades Complementarias
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE2/comunicacion.pdf')">
+                                    Comunicación
+                                    Humana
+                                    CPC-1009
+                                    </a>
+                                </td>
+                                <td class="Sem-3">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE3/informatica.pdf')">
+                                    Taller de Informatica I CPC-1009
+                                    </a>
+                                </td>
+                                <td class="Sem-4">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE4/sustentable.pdf')">
+                                    Desarrollo
+                                    Sustentable
+                                    ACD-0908
+                                    </a>
+                                </td>
+                                <td class="Sem-5">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE5/cpc1005.pdf')">
+                                    Anal. E. Interpretacion de
+                                    Est. Finac.
+                                    </a>
+                                </td>
+                                <td class="Sem-6">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE6/cpc1036.pdf')">
+                                    Planeacion
+                                    Financiera
+                                    CPC-1036
+                                    </a>
+                                </td>
+                                <td class="Sem-7">
+                                    <a href="javascript:void(0);" 
+                                    onclick="sendString('/assets/tec-files/carreras/contador/SEMESTRE7/cpc1004.pdf')">
+                                    Alter. de Inversion y Financiamiento CPC-1004
+                                    </a>
+                                </td>
+                                <td class="Sem-8">
+                                <!--nothing-->
+                                </td>
+                                <td class="Sem-9">
+                                <!-- nothing -->
+                                </td>
+                            </tr>
+                            <tr class="Semestre">
+                                <td class="Sem-1">
+                                    <a href="javascript:void(0);">
+                                    Extraescolar
+                                </td>
+                                <td class="Sem-2">
+                                    <a href="javascript:void(0);">
+                                    Extraescolar II
+                                </td>
+                                <td class="Sem-3">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-4">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-5">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-6">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-7">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-8">
+                                    <!--nothing-->
+                                </td>
+                                <td class="Sem-9">
+                                    <!--nothing-->
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                        
+                    </table>
+                </div>
+            </div>
+
+
         </div>
         <!-- Content -->
 

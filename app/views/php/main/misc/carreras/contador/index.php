@@ -1,6 +1,7 @@
 <!-- Barra de Gobierno -->
 <?php require '../../../navbar_gob.php' ?>
 <link rel="stylesheet" href="/css/sidebar/sidebar.css">
+<link rel="stylesheet" href="/css/reticula.css">
 
 <!-- Encabezado principal -->
 <?php require '../../../main_header.php' ?>
@@ -14,6 +15,7 @@
 <!-- Contenido -->
 <?php require 'contador.php' ?>
 <script src="/js/sidebar/sidebar.js"></script>
+<script src="/js/pdf.js"></script>
 
 <!-- Footer Azul -->
 <?php require '../../../footer_blue.php' ?>

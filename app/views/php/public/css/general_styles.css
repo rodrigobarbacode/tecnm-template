@@ -170,7 +170,7 @@
 /* For Firefox */
 body {
     scrollbar-width: thin; /* Makes the scrollbar thinner */
-    scrollbar-color: white transparent; /* Scrollbar thumb color white, track color transparent */
+    scrollbar-color: #1b396a transparent; /* Scrollbar thumb color white, track color transparent */
 }
 
 
