@@ -4,7 +4,12 @@ const router = express.Router();
 const phpExpress = require('php-express')({
     binPath: 'php'
 });
+const bodyParser = require('body-parser');
 // Loading php-express module.
+
+// Use bodyParser middleware to parse request bodies
+router.use(bodyParser.urlencoded({ extended: false }));
+// Use bodyParser middleware to parse request bodies
 
 // Use php-express to serve all .php files.
 router.all(/.+\.php$/, phpExpress.router);
@@ -106,6 +111,12 @@ router.get('/quejas', (req, res) => {
 });
 // Quejas endpoint.
 
+// File-Viewer endpoint.
+router.post('/file-viewer', (req, res) => {
+    res.render('misc/pdf/index');
+});
+// File-Viewer endpoint.
+
 // Template endpoint.
 router.get('/template', (req, res) => {
     res.render('misc/template/index');
@@ -117,6 +128,7 @@ router.get('/dep', (req, res) => {
     res.render('misc/departamentos/dep/index');
 });
 // Estudios Profesionales endpoint.
+
 
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
