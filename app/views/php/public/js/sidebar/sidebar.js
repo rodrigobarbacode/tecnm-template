@@ -106,7 +106,7 @@ function contentToggle(id) {
     currentElement = id;
 
     for (const child of allContent.children) {
-        if (child.id != 'main-title') {
+        if (child.id != 'main-title' && child.id != 'ignore'  ) {
             if (child.id != id) {
                 child.classList.remove('d-flex')
                 child.classList.add('d-none')

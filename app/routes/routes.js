@@ -111,6 +111,12 @@ router.get('/quejas', (req, res) => {
 });
 // Quejas endpoint.
 
+// Sistemas de Prevención y Protección Contra Incendios endpoint.
+router.get('/incendios', (req, res) => {
+    res.render('misc/incendios/index');
+});
+// Sistemas de Prevención y Protección Contra Incendios endpoint.
+
 // File-Viewer endpoint.
 router.post('/file-viewer', (req, res) => {
     res.render('misc/pdf/index');

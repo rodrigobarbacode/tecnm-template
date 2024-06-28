@@ -1,0 +1,16 @@
+#main-title {
+    background-image: url("/img/incendios/banner-header.png");
+    background-size: cover;
+}
+
+#main-title h1, #main-title h3 {
+    text-shadow: 2px 2px 2px black;
+}
+
+#ignore img {
+    width: 100%;
+}
+
+#itm {
+    width: 50% !important;
+}

@@ -132,7 +132,7 @@
     </div>
 
     <!-- Otras bibliotecas oficiales en México -->
-    <div class="row yogurt-defase bg-light m-3 p-2">
+    <div class="row yogurt-defase m-3 p-2">
         <div class="col-md-12" style="text-align: center;">
             <h2>Otras Bibliotecas Oficiales en México:</h2>
             <hr>
