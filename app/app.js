@@ -91,7 +91,7 @@ async function loadSavedCredentialsIfExist() {
     });
     const events = res.data.items;
     if (!events || events.length === 0) {
-      return;
+      return null;
     }
     var arr = [];
     var json = {};

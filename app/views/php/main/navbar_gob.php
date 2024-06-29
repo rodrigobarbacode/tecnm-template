@@ -33,8 +33,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
     <!-- Swiffy Slider -->
-    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="/js/swiffy-slider/swiffy-slider.min.js"></script>
+    <link href="/css/swiffy-slider/swiffy-slider.min.css" rel="stylesheet">
 
     <!-- Sub Menú -->
     <link rel="stylesheet" href="css/navbar.css">

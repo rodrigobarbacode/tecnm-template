@@ -30,7 +30,7 @@
                 var eventsOuter = document.querySelector(".events-outer");
                 var html = "";
 
-                if (data.length === 0) {
+                if (data == null || data.length == 0) {
                     // Si no hay eventos, mostrar un mensaje
                     html = `
                         <div class="no-events-message text-center">
