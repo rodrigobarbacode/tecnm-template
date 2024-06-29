@@ -11,21 +11,21 @@ FROM node:latest
 # Elimina la lista de paquetes para reducir el tamaño de la imagen.
 RUN apt-get update && \                            
     apt-get install -y php && \                    
-    apt-get install -y php-xml && \                
-    apt-get install -y git && \                    
+    apt-get install -y php-xml && \                                
     apt-get clean && \                             
     rm -rf /var/lib/apt/lists/*                    
 
-# Crea el directorio de la aplicación.
-WORKDIR /usr/src/master/app
+# Establecer el directorio de trabajo.
+WORKDIR /usr/src/app
 
-# Instalar dependencias de la aplicación.
-RUN npm --prefix /usr/src/master/app install package.json
+# Copiar el archivo package.json y package-lock.json.
+COPY ../app/package*.json ./
 
-# Expone el puerto en el que la aplicación se ejecuta.
-EXPOSE 3000
+# Instalar las dependencias.
+RUN npm install
 
-# Ejecuta la aplicación.
+# Copiar el resto de los archivos.
+COPY ../app .
 
-# Ejecuta el comando para iniciar la aplicación con npm.
-CMD ["npm", "run", "start"]                        
+# Correr la aplicación.
+CMD ["node", "app.js"]

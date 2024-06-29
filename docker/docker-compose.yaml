@@ -4,12 +4,9 @@ services:
     build:
       context: ../                        # Contexto de construcción, el directorio padre.
       dockerfile: docker/Dockerfile       # Dockerfile para construir la imagen de la aplicación.
-    working_dir: /usr/src/master/app      # Directorio de trabajo dentro del contenedor.
+    working_dir: /usr/src/app             # Directorio de trabajo dentro del contenedor.
     volumes:
-      - /usr/src/master/                  # Volumen para mantener el código persistente.
-      - ../app:/usr/src/master/app        # Sincroniza el directorio local app con el directorio del contenedor.
-      - ../docker:/usr/src/master/docker  # Sincroniza el directorio local docker con el directorio del contenedor.
-      - ../.git:/usr/src/master/.git      # Sincroniza el repositorio git local con el contenedor.
+      - /usr/src/app/                     # Volumen para mantener el código persistente.
     depends_on:
       - mariadb                           # Este servicio depende de mariadb, por lo que mariadb se inicia primero.
 
