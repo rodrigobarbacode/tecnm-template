@@ -16,7 +16,7 @@ RUN apt-get update && \
     apt-get clean && \                             
     rm -rf /var/lib/apt/lists/*                    
 
-# Crea el directorio de la aplicación.
+# Crea el directorio de aplicación.
 WORKDIR /usr/src/master/app
 
 # Instalar dependencias de la aplicación.
