@@ -19,7 +19,7 @@
 </style>
 
 <script>
-    fetch('/data/events')
+    fetch('/api/data/events')
         .then(response => response.json())
         .then(data => {
             // Mostrar el spinner por un máximo de 3 segundos

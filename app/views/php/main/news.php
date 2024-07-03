@@ -164,7 +164,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-chevron slider-item-show4">
+                    <div class="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-chevron slider-item-show3">
                         <div class="slider-container">
                             <!-- Los elementos generados por JavaScript se insertarán aquí -->
                         </div>
