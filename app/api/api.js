@@ -142,6 +142,25 @@ async function listEvents(auth) {
 // Google Calendar API.
 
 // Google Sheets API.
+
+/*
+ * Convert a Google Drive link image to an embedded link.
+ * @param {string} driveLink The Google Drive link.
+ * @return {string} The embedded link.
+ */
+function convertToEmbedded(driveLink) {
+  try {
+    // Obtener el ID del archivo desde el enlace de Google Drive
+    const fileId = driveLink.split('/d/')[1].split('/')[0];
+
+    // Construir el enlace directo para la imagen
+    const directLink = `https://lh3.googleusercontent.com/d/${fileId}?authuser=1/`;
+    return directLink;
+  } catch (error) {
+    return null;
+  }
+}
+
 /*
  * Prints the all banners from the Google Sheet.
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -164,7 +183,7 @@ async function listBanners(auth) {
   rows.map((row, i) => {
     arr.push({
       url: row[0],
-      image: row[1],
+      image: convertToEmbedded(row[1]),
       date: row[2],
     });
   });
@@ -217,7 +236,7 @@ async function listNews(auth) {
 
   rows.map((row, i) => {
     arr.push({
-      image: row[0],
+      image: convertToEmbedded(row[0]),
       date_title: row[1],
       date: row[2],
       title: row[3],
@@ -252,7 +271,7 @@ async function listAnnexes(auth) {
   rows.map((row, i) => {
     arr.push({
       link: row[0],
-      image: row[1],
+      image: convertToEmbedded(row[1])
     });
   });
   json = arr;
