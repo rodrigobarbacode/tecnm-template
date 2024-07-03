@@ -36,6 +36,18 @@ router.get('/l_renovables', (req, res) => {
 });
 //Licenciatura - Renovables endpoint.'
 
+//Licenciatura - Electrica endpoint.
+router.get('/l_electrica', (req, res) => {
+    res.render('misc/carreras/electrica/index');
+});
+//Licenciatura - Electrica endpoint.
+
+//Licenciatura - Quimica endpoint.
+router.get('/l_quimica', (req, res) => {
+    res.render('misc/carreras/quimica/index');
+});
+//Licenciatura - Quimica endpoint.
+
 //Contador Publico endpoint.
 router.get('/contador', (req, res) => {
     res.render('misc/carreras/contador/index');

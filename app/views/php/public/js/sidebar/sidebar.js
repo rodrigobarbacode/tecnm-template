@@ -11,18 +11,35 @@ visualViewport.addEventListener("resize", () => {
     }
 });
 
+function contentHolderPhone() {
+    allContent.classList.remove('col-md-9')
+    allContent.classList.add('col-md-11')
+    allContent.classList.remove('m-4')
+    allContent.classList.add('m-2')
+}
+
+function contentHolderPC() {
+    allContent.classList.add('col-md-9')
+    allContent.classList.remove('col-md-11')
+    allContent.classList.add('m-4')
+    allContent.classList.remove('m-2')
+}
+
 function preparePage(id) {
     contentToggle(id)
-
+    contentHolderPC()
+    
     document.getElementById('sidebar-holder').classList.remove('d-none')
     document.getElementById('sidebar-holder').classList.add('d-block')
 }
 
 function displayPage() {
     for (const child of allContent.children) {
-        child.classList.add('d-flex')
+        child.classList.toggle('d-flex')
     }
 
+    contentHolderPhone()
+    
     document.getElementById('sidebar-holder').classList.remove('d-block')
     document.getElementById('sidebar-holder').classList.add('d-none')
 }

@@ -278,7 +278,7 @@
                         <li>Tener acceso a internet</li>
                     </ul>
                 </div>
-                <div class="col-md-6 p-3">
+                <div class="col-md-5 p-3">
                     <div class="row">
                         <div class="col-md-12 pb-3">
                             <h3>Inscripciones</h3>
@@ -337,39 +337,40 @@
                 
                 <!-- Registro -->
                 <div class="col-md-12 p-3" >
+                   
                     <h2>Registro</h2>
                     <hr> <br>
-                    <form style="text-align: left;">
+                    <form action="/success" method="post" style="text-align: left;">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputNombres">Nombre(s)</label>
-                                <input type="text" class="form-control" id="inputNombres">
+                                <input type="text" class="form-control" name="inputNombres">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputApellidos">Apellidos</label>
-                                <input type="text" class="form-control" id="inputApellidos">
+                                <input type="text" class="form-control" name="inputApellidos">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputAddress">Cargo</label>
-                            <input type="text" class="form-control" id="inputAddress">
+                            <label for="inputCargo">Cargo</label>
+                            <input type="text" class="form-control" name="inputCargo">
                         </div>
                         <div class="form-group">
                             <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="...@itmexicali.edu.mx o ...@mexicali.tecnm.mx">
+                            <input type="email" class="form-control" name="inputEmail" placeholder="...@itmexicali.edu.mx o ...@mexicali.tecnm.mx">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputCity">Ciudad</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <input type="text" class="form-control" name="inputCity">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputState">Estado</label>
-                                <input type="text" class="form-control" id="inputState">
+                                <input type="text" class="form-control" name="inputState">
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Registrarme</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Registrarme</button>
                     </form>
                 </div>
                 <!-- Registro -->

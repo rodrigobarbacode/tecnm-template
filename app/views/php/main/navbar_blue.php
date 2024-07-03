@@ -41,7 +41,7 @@
 
                     <!-- Opción: Sistema Integrado de Gestión -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/sig">
+                        <a class="dropdown-item" href="/sig" target="_blank">
                             Sistema Integrado de Gestión
                         </a>
                     </li>
@@ -114,9 +114,10 @@
                             Licenciatura
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+
                             <!-- Opción: Contador Publico -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/contador">
+                                <a class="dropdown-item" href="/assets/tec-files/carreras/cp/contador.html">
                                     Contador Público
                                 </a>
                             </li>
@@ -221,7 +222,7 @@
 
             <!-- Menu: Personal TecNM -->
             <li class="nav-item dropdown">
-                <a class="nav-link active font-weight-bold" href="/quejas">
+                <a class="nav-link active font-weight-bold" href="https://forms.gle/goPkoY5f4Ln6G6328">
                     Quejas y Sugerencias
                 </a>
             </li>

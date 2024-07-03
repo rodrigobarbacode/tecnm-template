@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="assets/files/main/css/estilo-compresion.min.css">
 
     <!-- Estilo del carrucel -->
-    <link rel="stylesheet" href="css/index_styles.css">
+    <link rel="stylesheet" href="css/index_styles.css">;
 
     <!-- Desface -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>

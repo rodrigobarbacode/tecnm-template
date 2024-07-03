@@ -113,9 +113,16 @@ router.get('/quejas', (req, res) => {
 
 // Sistemas de Prevención y Protección Contra Incendios endpoint.
 router.get('/incendios', (req, res) => {
+    
     res.render('misc/incendios/index');
 });
 // Sistemas de Prevención y Protección Contra Incendios endpoint.
+
+// Mail Handler endpoint.
+router.post('/success', (req, res) => {
+    res.render('misc/mail-handler/mail');
+});
+// Mail Handler endpoint.
 
 // File-Viewer endpoint.
 router.post('/file-viewer', (req, res) => {
