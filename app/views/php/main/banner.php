@@ -12,8 +12,16 @@
     xhr.send(null);
   }
 
+  // Set banner interval time from the JSON.
+    fetchLocalJSON('/json/banner-time.json', function (datos) {
+      var intervalTime = Number(datos.time) * 1000;
+      document.querySelector('.carousel').setAttribute('data-interval', intervalTime);
+    });
+  // Set banner interval time from the JSON.
+
   // Get banner data from the JSON and create carousel elements.
   fetchLocalJSON('/json/banner-list.json', function (datos) {
+    var time = 2000;
     var carouselInner = document.querySelector('.carousel-inner');
 
     // Sort data by date and limit to the first 5 elements.
@@ -48,6 +56,7 @@
       carouselInner.appendChild(carouselItem);
     });
   });
+  // Get banner data from the JSON and create carousel elements.
 </script>
 
 <!-- Carousel Indicators -->

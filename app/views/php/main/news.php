@@ -148,6 +148,14 @@
         // Inicializar Swiffy Slider
         new SwiffySlider(document.querySelector('.swiffy-slider'));
     });
+    // Get news data from the JSON and create slider elements.
+
+    // Set news interval time from the JSON.
+    fetchLocalJSON('/json/news-time.json', function (datos) {
+      var intervalTime = Number(datos.time) * 1000;
+      document.querySelector('.swiffy-slider').setAttribute('data-slider-nav-autoplay-interval', intervalTime);
+    });
+    // Set news interval time from the JSON.
 </script>
 
 <!-- HTML structure for the Swiffy Slider -->

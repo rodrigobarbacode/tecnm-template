@@ -162,6 +162,25 @@ function convertToEmbedded(driveLink) {
 }
 
 /*
+ * Get Changing Time of Banner from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+async function getChangingTimeBanner(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1uaPGs-etR0DbNxYyo0XPb6bhjOTt1shyRhTTDkBNnQ0",
+    range: "D2",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  return { time: rows[0][0] };
+}
+
+/*
  * Prints the all banners from the Google Sheet.
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
@@ -209,6 +228,25 @@ async function getNewsMax(auth) {
     return;
   }
   return { max: rows[0][0] };
+}
+
+/*
+ * Get Changing Time of News from the Google Sheet.
+ * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
+ */
+async function getChangingTimeNews(auth) {
+  const sheets = google.sheets({ version: "v4", auth });
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: "1_hK4uuM1RgWID7Qo7OlHhEvBTD6Ff0yNn4_644P66k8",
+    range: "N2",
+  });
+  const rows = res.data.values;
+  if (!rows || rows.length === 0) {
+    console.log("No data found.");
+    return;
+  }
+  return { time: rows[0][0] };
 }
 
 /*
@@ -314,11 +352,22 @@ router.get("/generate-token", async (req, res) => {
 // Banners Endpoint. (Requires auth_key)
 router.get("/data/banners", authMiddleware, async (req, res) => {
   try {
+    let banners_time = await getChangingTimeBanner(await authorize());
     let banners = await listBanners(await authorize());
 
     fs.writeFile(
       path.join(process.cwd(), "/views/php/public/json/banner-list.json"),
       JSON.stringify(banners),
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+
+    fs.writeFile(
+      path.join(process.cwd(), "/views/php/public/json/banner-time.json"),
+      JSON.stringify(banners_time),
       (err) => {
         if (err) {
           console.log(err);
@@ -337,11 +386,22 @@ router.get("/data/banners", authMiddleware, async (req, res) => {
 // News Data Endpoint. (Requires auth_key)
 router.get("/data/news", authMiddleware, async (req, res) => {
   try {
+    let news_time = await getChangingTimeNews(await authorize());
     let news = await listNews(await authorize());
 
     fs.writeFile(
       path.join(process.cwd(), "/views/php/public/json/news-list.json"),
       JSON.stringify(news),
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+
+    fs.writeFile(
+      path.join(process.cwd(), "/views/php/public/json/news-time.json"),
+      JSON.stringify(news_time),
       (err) => {
         if (err) {
           console.log(err);
