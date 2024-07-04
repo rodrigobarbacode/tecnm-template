@@ -1,5 +1,32 @@
 <!-- Contenedor encapsulador en el cual se hace todo el grid de bootstrap -->
 <div class="container-fluid p-0 ml-0 mr-0 bg-tecnm" >
+    <style>
+        .boton-noticias {
+        --hover-shadows: 16px 16px 33px #909090, -16px -16px 33px #909090;
+        --accent: fuchsia;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        border: none;
+        border-radius: 1.1em;
+        background-color: #ffffff;
+        cursor: pointer;
+        color: #000000;
+        padding: 1em 2em;
+        transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+            letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+        box-shadow: 13px 13px 10px #6a6a6a, -13px -13px 10px #6a6a6a;
+        }
+
+        .boton-noticias:hover {
+        box-shadow: var(--hover-shadows);
+        }
+
+        .boton-noticias:active {
+        box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+        background-color: var(--accent);
+        transform: scale(0.95);
+        }
+    </style>
     <div class="row">
         <!-- Sidebar -->
         <div id="sidebar-holder" class="col-md-2 p-0">
@@ -11,55 +38,163 @@
 
             <div id="sidebar" class="col-md-12 d-sm-none d-md-none d-lg-none d-xl-block">  
                 <div class="sidebar-separator item-style">
-                    <span>Example Separator</span>
+                    <span>Main Menu</span>
                 </div>
                 
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('main-title')">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('quienes')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
-                        Opcion 1
+                        ¿Quiénes Somos?
+                    <img id="quienes" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </div>
+
+                <div class="submenu quienes item-style d-none">
+                    <a href="https://drive.google.com/file/d/1VrZKD_fYe_zUceF_-ueAjSx6pFm77qIg/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Antecedentes
+                    </a>
+                </div>
+
+                <div class="submenu quienes item-style d-none">
+                    <a href="https://drive.google.com/file/d/1AVI4aSmDfQw58fOtaNZKNywQJqHS0eH7/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Organigrama
+                    </a>
+                </div>
+
+                <div class="submenu quienes item-style d-none">
+                    <a href="https://drive.google.com/file/d/1FYbXqSyDbLGQPS5dRd_w7ipCp71ddmsw/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Ubicacion
+                    </a>
+                </div>
+
+                <div class="item-style">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('reglamentos')">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                        Reglamentos
+                    <img id="reglamentos" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </div>
+
+                <div class="submenu reglamentos item-style d-none">
+                    <a href="https://drive.google.com/file/d/1Fp4M2dRhl8BR7-gtrZFu79tTiS_CBNQu/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Reglamento de Creditos Complementarios
+                    </a>
+                </div>
+
+                <div class="submenu reglamentos item-style d-none">
+                    <a href="https://drive.google.com/file/d/1qikRHD1DGt96MtRSi4VfxogfJWYw9Eaf/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Reglamento de Becas
                     </a>
                 </div>
                 
                 <div class="item-style">
-                    <a href="#" onclick="contentToggle('content1')">
-                    <img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/box--v1.png" alt="box--v1"/>
-                        Opcion 2
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('horarios')">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                        Horarios
+                    <img id="horarios" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                     </a>
                 </div>
 
-                <div class="sidebar-separator item-style">
-                    <span>Example Separator</span>
+                <div class="submenu horarios item-style d-none">
+                    <a href="https://drive.google.com/file/d/1C-Ld-gOrY87HevvqdkEokAnx_6WGeHXb/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Horario de atención
+                    </a>
+                </div>
+
+                <div class="submenu horarios item-style d-none">
+                    <a href="https://drive.google.com/file/d/1gkhvZttD2WxJEesPuN7NUnniMtNqn_Cb/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Horarios de Actividades
+                    </a>
                 </div>
 
                 <div class="item-style">
-                    <a href="#" onclick="toggleSubmenu('womp')">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('estadisticas')">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
-                        Opcion 1
+                        Estadisticas
+                    <img id="estadisticas" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </div>
+
+                <div class="submenu estadisticas item-style d-none">
+                    <a href="https://drive.google.com/file/d/1Wavi0dgKWHdqJeYMXeHzv_woEIU3kBIt/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Becas
+                    </a>
+                </div>
+
+                <div class="submenu estadisticas item-style d-none">
+                    <a href="https://drive.google.com/file/d/15RIfQwjJH5RnqYrOTyTDCP3kgAEhg3Ne/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Por Disciplina
+                    </a>
+                </div>
+                
+                <div class="submenu estadisticas item-style d-none">
+                    <a href="https://drive.google.com/file/d/13Ny_uNZbIz5QKuQ2Y9ymNmhb4khXtrZN/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Por Carrera
+                    </a>
+                </div>
+
+                <div class="item-style">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('convoc')">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                        Convocatorias
+                    <img id="convoc" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </div>
+
+                <div class="submenu convoc item-style d-none">
+                    <a href="https://drive.google.com/file/d/1V_iWvFD29HzhR-xrVb38ju5Z10rh_asA/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Convocatorias de Eventos
+                    </a>
+                </div>
+
+                <div class="item-style">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('galer')">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                        Galerias
+                    <img id="galer" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                    </a>
+                </div>
+
+                <div class="submenu galer item-style d-none">
+                    <a href="https://drive.google.com/file/d/1g-9K9VXckcYW2AieukVBclZCeWPSzf_s/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                        Eventos
+                    </a>
+                </div>
+
+                <div class="submenu galer item-style d-none">
+                    <a href="https://drive.google.com/file/d/1fG0Sp00DTc2V8K-pEcslZvjAe0TMlgdz/view?usp=sharing">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                        Proyectos
+                    </a>
+                </div>
+                
+                <div class="item-style">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu('womp')">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                        Inscripciones
                     <img id="womp" class="submenu-button" width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                     </a>
                 </div>
 
                 <div class="submenu womp item-style d-none">
-                    <a href="#">
+                    <a href="https://drive.google.com/file/d/1bYh64DSWj3q_SyC2LD_AcMalXpXIFPWi/view?usp=sharing">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
-                        Opcion 1
+                        Tutorial de Inscripcion
                     </a>
                 </div>
 
-                <div class="submenu womp item-style d-none">
-                    <a href="#">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
-                        Opcion 2
-                    </a>
-                </div>
-                
-                <div class="item-style">
-                    <a href="#" onclick="contentToggle('content2')">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/water.png" alt="water"/>                        
-                        Opcion 2
-                    </a>
-                </div>
                 
             </div>
         </div>
@@ -71,147 +206,49 @@
             <div id="main-title" class="row align-center p-5 m-3 yogurt-defase">
                 <!-- Titulo -->
                 <div class="col-md-12 align-center">
-                    <h1>Lorem Ipsums</h1> 
-                </div>
-
-                <div class="col-md-12 pt-4 pr-4 pl-4">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Officiis fugiat consequuntur, facere itaque, atque quasi 
-                        officia amet fugit alias obcaecati aliquid recusandae 
-                        incidunt voluptates veniam iusto iste voluptatum autem dolorum.
-                    </p>
+                    <h1>Extra-Escolares</h1> 
                 </div>
             </div>
             <!-- Renglon 'Header' que presenta el nombre del departamento -->
             
             <!-- Renglon de Contenido -->
-            <div id="content1" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
-                <!-- Izquireda -->
-                <div class="col-md-6">
+            <div id="inicio" class="row yogurt-defase p-2 mt-5 mb-5 m-3">
+                <div class="col-md-12 p-3 mb-3 mr-3 ml-3 mx-auto">
+                    <h2>Noticias</h2>
+                    <hr>
+                </div>
+                <div class="col-md-12 p-3 mb-3 mr-3 ml-3 mx-auto">
                     <div class="row">
-                        <div class="col-md-12 pt-4 pr-4 pl-4">
-                            <h2>Lorem Ipsum</h2>
+                        <div class="col-md-4">
+                            <a class="boton-noticias" href="">
+                                Civicas
+                            </a>
                         </div>
-
-                        <div class="col-md-12 pt-4 pr-4 pl-4">
-                            <h4>Lorem</h4> <br>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Esse, quo. Sint nesciunt expedita aliquam similique 
-                                voluptatem molestiae dolores obcaecati, iste corporis 
-                                culpa deserunt dolorem sunt a soluta asperiores, unde 
-                                voluptatibus. <br> <br> <br>
-                            </p>
-
-                            <h4>Lorem</h4> <br>
-                            <p>
-                                Ser un espacio capaz de atender las demandas de la formación 
-                                con los recursos adecuados y personal especializado, para 
-                                otorgar asesoría permanente a fin de los usuarios se provean 
-                                de la información que requieren utilizando tecnología de 
-                                vanguardia para la formación de profesionistas competentes. 
-                            </p>
+                        <div class="col-md-4">
+                            <a class="boton-noticias" href="">
+                                Culturales
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a  class="boton-noticias" href="">
+                                Deportivas
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Izquierda -->
 
-                <!-- Derecha -->
-                <div class="col-md-6 align-center">
-                    <div class="row">
-
-                        <div class="col-md-12 pt-4 pr-4 pl-4">
-                            <h2>Lorem Ipsum Dolor</h2>
-                        </div>
-
-                        <div class="col-md-12 p-4">
-                            <ul style="text-align: left;">
-                                <li>
-                                    Orientación a usuarios
-                                </li>
-
-                                <li>
-                                    Consulta interna
-                                </li>
-                                
-                                <li>
-                                    Préstamo a domicilio
-                                </li>
-
-                                <li>
-                                    Préstamo de cubículos de estudio    
-                                </li>
-
-                                <li>
-                                    Internet libre
-                                </li>
-
-                                <li>
-                                    Atención a sugerencias bibliográficas
-                                </li>
-
-                                <li>
-                                    Formación de usuarios I. Visita guiada al Centro de Información
-                                </li>
-
-                                <li>
-                                    Formación de usuarios II. Asesorías para el uso de Recursos Bibliográficos Electrónicos.
-                                </li>
-
-                                <li>
-                                    Sala general
-                                </li>
-
-                                <li>
-                                    Sala de consulta
-                                </li>
-
-                                <li>
-                                    Sala de proyección
-                                </li>
-
-                                <li>
-                                    Sala de capacitación "Eduardo Martínez Palomera"
-                                </li>
-
-                                <li>
-                                    Sala de Lectura Recreativa
-                                </li>
-
-                                <li>
-                                    Hemeroteca
-                                </li>
-
-                                <li>
-                                    70 equipos en el módulo de Servicios Digitales
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-12 p-3 mb-3 mr-3 ml-3 mx-auto">
+                    <h3>
+                    Horario de Atención <br>
+                    Lunes a Viernes <br>
+                    Aula: U43 <br>
+                    9:00 a 18:00 <br>
+                    extraescolares@itmexicali.edu.mx
+                    </h3>
                 </div>
-                <!-- Derecha -->
             </div>
             <!-- Renglon de Contenido -->
 
-            <!-- Finale -->
-            <div id="content2" class="row yogurt-defase m-3 p-2">
-                <div class="col-md-8 mx-auto" style="text-align: center;">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.:</h2>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-12 align-center">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Sunt veniam veritatis neque molestias, fuga explicabo 
-                            dolorum id maiores ullam ea numquam necessitatibus 
-                            fugiat atque! Voluptatibus qui id accusamus dolor consequuntur.
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-            <!-- Finale -->
         </div>
         <!-- Content -->
 

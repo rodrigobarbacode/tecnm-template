@@ -266,7 +266,7 @@
 
                     <!-- Opción: Actividades Extraescolares-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/misc/departamentos/extraescolares/index.html">
+                        <a class="dropdown-item" href="/extraescolares">
                             Actividades Extraescolares
                         </a>
                     </li>

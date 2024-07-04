@@ -23,18 +23,6 @@ router.get('/', (req, res) => {
 });
 // Home endpoint.
 
-// Welcome endpoint.
-router.get('/bienvenida', (req, res) => {
-    res.render('misc/departamentos/bienvenida/index');
-});
-// Welcome endpoint.
-
-// Transparencia endpoint.
-router.get('/transparencia', (req, res) => {
-    res.render('misc/departamentos/transparencia/index');
-});
-// Transparencia endpoint.
-
 // Invitacion endpoint.
 router.get('/invitacion', (req, res) => {
     res.render('misc/invitacion/index');
@@ -53,16 +41,6 @@ router.get('/sig', (req, res) => {
 });
 // SIG endpoint.
 
-// CCO endpoints.
-router.use(require('./cco/cco_routes.js'))
-// CCO endpoints.
-
-// Centro de Informacion endpoint.
-router.get('/cinformacion', (req, res) => {
-    res.render('misc/departamentos/cinformacion/index');
-});
-// Centro de Informacion endpoint.
-
 // Personal No Docente endpoint.
 router.get('/personalnodoc', (req, res) => {
     res.render('misc/reglamentos/personal-no-doc/index');
@@ -74,36 +52,6 @@ router.get('/personaldoc', (req, res) => {
     res.render('misc/reglamentos/personal-doc/index');
 });
 // Personal Docente endpoint.
-
-// Servicio Social endpoint.
-router.get('/ss', (req, res) => {
-    res.render('misc/departamentos/ss/index');
-});
-// Servicio Social endpoint.
-
-// Residencia endpoint.
-router.get('/residencia', (req, res) => {
-    res.render('misc/departamentos/Residencia/index');
-});
-// Residencia endpoint.
-
-// Escolares endpoint.
-router.get('/escolares', (req, res) => {
-    res.render('misc/departamentos/escolares/index');
-});
-// Escolares endpoint.
-
-// Recursos Humanos endpoint.
-router.get('/rh', (req, res) => {
-    res.render('misc/departamentos/rh/index');
-});
-// Recursos Humanos endpoint.
-
-// Extraescolares endpoint.
-router.get('/extraescolares', (req, res) => {
-    res.render('misc/departamentos/extraescolares/index');
-});
-// Extraescolares endpoint.
 
 // Quejas endpoint.
 router.get('/quejas', (req, res) => {
@@ -136,15 +84,17 @@ router.get('/template', (req, res) => {
 });
 // Template endpoint.
 
-// Estudios Profesionales endpoint.
-router.get('/dep', (req, res) => {
-    res.render('misc/departamentos/dep/index');
-});
-// Estudios Profesionales endpoint.
-
 
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
+// CCO endpoints.
+
+// CCO endpoints.
+router.use(require('./departamentos/dep_routes.js'))
+// CCO endpoints.
+
+// CCO endpoints.
+router.use(require('./cco/cco_routes.js'))
 // CCO endpoints.
 
 
