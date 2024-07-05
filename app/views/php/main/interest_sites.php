@@ -1,8 +1,8 @@
-<section class="neomorphic-defase ml-3 mr-3 mb-2">
+<section class="stupid-defase ml-3 mr-3 mb-2">
     <!-- Sitios de Interés -->
     <div class='row w-100 justify-content-center pt-3 m-0'>
 
-        <h2 style="color: white; font-size: 4vh; padding-top:15px;"><span>
+        <h2 style="color: #1B396A; font-size: 4vh; padding-top:15px;"><span>
                 <i class="fa-solid fa-flag" style="color: #fab005; padding-right: 2vh;"></i></span>Sitios de Interés
         </h2>
 

@@ -3,6 +3,7 @@
         margin-top: 1rem;
         max-height: 550px;
     }
+
     @media (max-width: 768px) {
         .events {
             height: 66vh;
@@ -35,7 +36,7 @@
                     html = `
                         <div class="no-events-message text-center">
                             <i class="fa-solid fa-circle-info" style="color: #fab005; font-size: 3rem;"></i>
-                            <p style="color: white; font-size: 1.5rem; margin-top: 1rem;">No hay eventos disponibles por el momento</p>
+                            <p style="color: #1B396A; font-size: 3vh; margin-top: 1rem;">No hay eventos disponibles por el momento</p>
                         </div>
                     `;
                 } else {
@@ -57,8 +58,8 @@
                                         <div class="ln"></div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-6">
-                                        <h6 style="color: white;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora: ${event.start} - ${event.end}</h6>
-                                        <h6 style="color: white;" class="mb-2"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-calendar-check"></i></span>Título: ${event.title}</h6>
+                                        <h6 style="color: #1B396A;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora: ${event.start} - ${event.end}</h6>
+                                        <h6 style="color: #1B396A;" class="mb-2"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-calendar-check"></i></span>Título: ${event.title}</h6>
                                         <a href="${event.url}">
                                             <span style="color: #fab005; text-decoration: underline;">Ver información...</span>
                                         </a>
@@ -78,19 +79,20 @@
         });
 </script>
 
-<section class="container events neomorphic-defase px-5 ml-auto mr-auto pt-3 pb-3" style="height: 100%; overflow-y: scroll; z-index: 2000;">
+<section class="container events stupid-defase px-5 ml-auto mr-auto pt-3 pb-3" style="height: 100%; overflow-y: scroll; z-index: 2000;">
     <div class='row'>
         <div class='col-12 display-2 text-left my-0 py-3'>
             <a role='button' href='?vista=Noticias'>
-                <h1 style="color: white; font-size: 4vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
+                <h1 style="color: #1B396A; font-size: 5vh;"><span><i style="color: #fab005; padding-right: 2vh;" class="fa-solid fa-calendar-days"></i></span>Eventos</h1>
             </a>
         </div>
     </div>
-    <div class="events-outer overflow"></div>
+    <div class="events-outer overflow">
+    </div>
     <div class="text-center mt-3 spinner-outer">
         <div class="spinner-border text-warning" style="width: 5rem; height: 5rem; font-weight: bolder;" role="status">
             <span class="sr-only">Cargando...</span>
         </div>
-        <p class="mt-3" style="color: white; font-weight: bold; font-size: 1.5rem;">Cargando eventos...</p>
+        <p class="mt-3" style="color: #1B396A; font-weight: bold; font-size: 1.5rem;">Cargando eventos...</p>
     </div>
 </section>

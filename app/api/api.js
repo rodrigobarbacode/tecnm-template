@@ -110,7 +110,7 @@ async function listEvents(auth) {
   events.map((event, i) => {
     var date = new Date(event.start.dateTime);
     var options = { month: "long" };
-    var month = new Intl.DateTimeFormat("es-ES", options).format(date);
+    var month = new Intl.DateTimeFormat("en-US", options).format(date);
 
     var day = date.getDate();
     var month = month.charAt(0).toUpperCase() + month.slice(1);

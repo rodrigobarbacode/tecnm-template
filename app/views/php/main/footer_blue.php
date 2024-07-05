@@ -1,3 +1,38 @@
+<style>
+	.shinia-yogurt-null {
+		opacity: 0;
+		/* Inicialmente invisible */
+		transition: opacity 0.3s;
+		/* Transición suave para la visibilidad */
+		display: inline-block;
+		/* Necesario para efectos de texto */
+	}
+
+	.shinia-yogurt-null:hover {
+		opacity: 1;
+		/* Visible al hacer hover */
+		background: linear-gradient(270deg, #ff007a, #ff00ff, #7a00ff, #00c1ff, #00ff9f);
+		background-size: 200% 200%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: gradientAnimation 3s ease infinite;
+	}
+
+	@keyframes gradientAnimation {
+		0% {
+			background-position: 0% 50%;
+		}
+
+		50% {
+			background-position: 100% 50%;
+		}
+
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+</style>
+
 <div id='desface_footer' style='z-index:2100; display: none; box-shadow: 0px -10px 5px #0000002A;'>
 	<footer class='bg-tecnm footer'>
 
@@ -22,6 +57,9 @@
 					</div>
 					<div class='col-12'>
 						<p>Conmutador: (686) 580-4980</p>
+						<b>
+							<p class="shinia-yogurt-null">Made with <i class="fa-solid fa-heart-circle-bolt"></i> by: Shinia, Yogurt Snek, Null.</p>
+						</b>
 					</div>
 				</div>
 				</p>
