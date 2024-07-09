@@ -67,8 +67,8 @@ router.get('/incendios', (req, res) => {
 // Sistemas de Prevención y Protección Contra Incendios endpoint.
 
 // Mail Handler endpoint.
-router.post('/success', (req, res) => {
-    res.render('misc/mail-handler/mail');
+router.get('/mail', (req, res) => {
+    res.render('misc/mail-handler/index');
 });
 // Mail Handler endpoint.
 
