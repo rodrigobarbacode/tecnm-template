@@ -4,7 +4,12 @@ const router = express.Router();
 const phpExpress = require('php-express')({
     binPath: 'php'
 });
+const bodyParser = require('body-parser');
 // Loading php-express module.
+
+// Use bodyParser middleware to parse request bodies
+router.use(bodyParser.urlencoded({ extended: false }));
+// Use bodyParser middleware to parse request bodies
 
 // Use php-express to serve all .php files.
 router.all(/.+\.php$/, phpExpress.router);
@@ -17,18 +22,6 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 // Home endpoint.
-
-// Welcome endpoint.
-router.get('/bienvenida', (req, res) => {
-    res.render('misc/departamentos/bienvenida/index');
-});
-// Welcome endpoint.
-
-// Transparencia endpoint.
-router.get('/transparencia', (req, res) => {
-    res.render('misc/departamentos/transparencia/index');
-});
-// Transparencia endpoint.
 
 // Invitacion endpoint.
 router.get('/invitacion', (req, res) => {
@@ -48,16 +41,6 @@ router.get('/sig', (req, res) => {
 });
 // SIG endpoint.
 
-// CCO endpoints.
-router.use(require('./cco/cco_routes.js'))
-// CCO endpoints.
-
-// Centro de Informacion endpoint.
-router.get('/cinformacion', (req, res) => {
-    res.render('misc/departamentos/cinformacion/index');
-});
-// Centro de Informacion endpoint.
-
 // Personal No Docente endpoint.
 router.get('/personalnodoc', (req, res) => {
     res.render('misc/reglamentos/personal-no-doc/index');
@@ -70,35 +53,30 @@ router.get('/personaldoc', (req, res) => {
 });
 // Personal Docente endpoint.
 
-// Servicio Social endpoint.
-router.get('/ss', (req, res) => {
-    res.render('misc/departamentos/ss/index');
+// Quejas endpoint.
+router.get('/quejas', (req, res) => {
+    res.render('misc/quejas/index');
 });
-// Servicio Social endpoint.
+// Quejas endpoint.
 
-// Residencia endpoint.
-router.get('/residencia', (req, res) => {
-    res.render('misc/departamentos/Residencia/index');
+// Sistemas de Prevención y Protección Contra Incendios endpoint.
+router.get('/incendios', (req, res) => {
+    
+    res.render('misc/incendios/index');
 });
-// Residencia endpoint.
+// Sistemas de Prevención y Protección Contra Incendios endpoint.
 
-// Escolares endpoint.
-router.get('/escolares', (req, res) => {
-    res.render('misc/departamentos/escolares/index');
+// Mail Handler endpoint.
+router.post('/success', (req, res) => {
+    res.render('misc/mail-handler/mail');
 });
-// Escolares endpoint.
+// Mail Handler endpoint.
 
-// Recursos Humanos endpoint.
-router.get('/rh', (req, res) => {
-    res.render('misc/departamentos/rh/index');
+// File-Viewer endpoint.
+router.post('/file-viewer', (req, res) => {
+    res.render('misc/pdf/index');
 });
-// Recursos Humanos endpoint.
-
-// Extraescolares endpoint.
-router.get('/extraescolares', (req, res) => {
-    res.render('misc/departamentos/extraescolares/index');
-});
-// Extraescolares endpoint.
+// File-Viewer endpoint.
 
 // Template endpoint.
 router.get('/template', (req, res) => {
@@ -106,8 +84,17 @@ router.get('/template', (req, res) => {
 });
 // Template endpoint.
 
+
 // CCO endpoints.
 router.use(require('./carreras/carreras_routes.js'))
+// CCO endpoints.
+
+// CCO endpoints.
+router.use(require('./departamentos/dep_routes.js'))
+// CCO endpoints.
+
+// CCO endpoints.
+router.use(require('./cco/cco_routes.js'))
 // CCO endpoints.
 
 

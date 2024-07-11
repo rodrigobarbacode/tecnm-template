@@ -11,18 +11,35 @@ visualViewport.addEventListener("resize", () => {
     }
 });
 
+function contentHolderPhone() {
+    allContent.classList.remove('col-md-9')
+    allContent.classList.add('col-md-11')
+    allContent.classList.remove('m-4')
+    allContent.classList.add('m-2')
+}
+
+function contentHolderPC() {
+    allContent.classList.add('col-md-9')
+    allContent.classList.remove('col-md-11')
+    allContent.classList.add('m-4')
+    allContent.classList.remove('m-2')
+}
+
 function preparePage(id) {
     contentToggle(id)
-
+    contentHolderPC()
+    
     document.getElementById('sidebar-holder').classList.remove('d-none')
     document.getElementById('sidebar-holder').classList.add('d-block')
 }
 
 function displayPage() {
     for (const child of allContent.children) {
-        child.classList.add('d-flex')
+        child.classList.toggle('d-flex')
     }
 
+    contentHolderPhone()
+    
     document.getElementById('sidebar-holder').classList.remove('d-block')
     document.getElementById('sidebar-holder').classList.add('d-none')
 }
@@ -80,7 +97,7 @@ function toggleSidebar() {
     
     var s_holder = document.getElementById('sidebar-holder')
     s_holder.classList.toggle('col-md-2')
-    s_holder.classList.toggle('col')
+    s_holder.classList.toggle('col-md-1')
     
    
     var c_holder = document.getElementById('content-holder')
@@ -106,7 +123,7 @@ function contentToggle(id) {
     currentElement = id;
 
     for (const child of allContent.children) {
-        if (child.id != 'main-title') {
+        if (child.id != 'main-title' && child.id != 'ignore'  ) {
             if (child.id != id) {
                 child.classList.remove('d-flex')
                 child.classList.add('d-none')
