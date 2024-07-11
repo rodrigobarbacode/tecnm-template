@@ -71,6 +71,12 @@ router.get('/ss', (req, res) => {
 });
 // Servicio Social endpoint.
 
+// Contraloria Social endpoint.
+router.get('/contraloria_social', (req, res) => {
+    res.render('misc/departamentos/contraloria-social/index');
+});
+// Contraloria Social endpoint.
+
 
 // ************* Routes *************
 
