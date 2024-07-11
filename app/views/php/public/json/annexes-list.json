@@ -8,15 +8,15 @@
         "image": "/img/enlaces_interes/moocs.png"
     },
     {
-        "link": "http://www.itmexicali.edu.mx/quejas/index.htm",
+        "link": "/quejas",
         "image": "/img/enlaces_interes/quejas.png"
     },
     {
-        "link": "http://www.itmexicali.edu.mx/SIG/",
+        "link": "/sig",
         "image": "/img/enlaces_interes/sistema_gestion.png"
     },
     {
-        "link": "http://www.itmexicali.edu.mx/departamentos/contraloria_social/",
+        "link": "/contraloria_social",
         "image": "/img/enlaces_interes/contraloria_social.jpg"
     },
     {
