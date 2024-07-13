@@ -184,17 +184,36 @@
                                     </div>
                                 </div>
                                 <!-- Creditos Complementarios -->
-
-                                <!-- Comite Academico -->
+                                
+                                <!-- Servicio Social -->
                                 <div class="card">
                                     <div class="card-header" id="heading4">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                                Comite Academico
+                                                Servicio Social
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="/ss">
+                                            Da clic para visitar la pagina de Servicio Social
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Servicio Social -->
+
+                                <!-- Comite Academico -->
+                                <div class="card">
+                                    <div class="card-header" id="heading5">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                Comite Academico
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
                                         <div class="card-body">
                                             <ul style="text-align: left;">
                                                 <li>
@@ -292,6 +311,23 @@
                                     </div>
                                 </div>
                                 <!-- Comite Academico -->
+
+                                <!-- Traslados -->
+                                <div class="card">
+                                    <div class="card-header" id="heading6">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                                Traslados
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+                                        <div class="card-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Traslados -->
                             </div>
                         </div>
                     </div>
