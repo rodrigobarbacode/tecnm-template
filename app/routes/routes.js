@@ -4,12 +4,10 @@ const router = express.Router();
 const phpExpress = require('php-express')({
     binPath: 'php'
 });
-const bodyParser = require('body-parser');
-// Loading php-express module.
+const nodemailer = require('nodemailer');
+const Mailgen = require('mailgen');
+require('dotenv').config();
 
-// Use bodyParser middleware to parse request bodies
-router.use(bodyParser.urlencoded({ extended: false }));
-// Use bodyParser middleware to parse request bodies
 
 // Use php-express to serve all .php files.
 router.all(/.+\.php$/, phpExpress.router);
@@ -67,8 +65,36 @@ router.get('/incendios', (req, res) => {
 // Sistemas de Prevención y Protección Contra Incendios endpoint.
 
 // Mail Handler endpoint.
-router.get('/mail', (req, res) => {
-    res.render('misc/mail-handler/index');
+router.post('/mail', (req, res) => {
+    
+    let config = {
+        service: 'gmail', // your email domain
+        auth: {
+            user: process.env.NODEJS_GMAIL_APP_USER,   // your email address
+            pass: process.env.NODEJS_GMAIL_APP_PASSWORD // your password
+        }
+    }
+    let transporter = nodemailer.createTransport(config);
+
+    let message = {
+        from: 'pootissonic1808@gmail.com', // sender address
+        to: 'a20490703@itmexicali.edu.mx', // list of receivers
+        subject: 'Welcome to ABC Website!', // Subject line
+        html: "<b>Hello world?</b>", // html body
+    };
+
+    transporter.sendMail(message).then((info) => {
+        return res.status(201).json(
+            {
+                msg: "Email sent",
+                info: info.messageId,
+                preview: nodemailer.getTestMessageUrl(info)
+            }
+        )
+    }).catch((err) => {
+        return res.status(500).json({ msg: err });
+    }
+    );
 });
 // Mail Handler endpoint.
 

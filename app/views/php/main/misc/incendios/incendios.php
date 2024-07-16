@@ -340,7 +340,7 @@
                    
                     <h2>Registro</h2>
                     <hr> <br>
-                    <form action="/success" method="post" style="text-align: left;">
+                    <form action="/mail" method="post" style="text-align: left;">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputNombres">Nombre(s)</label>
