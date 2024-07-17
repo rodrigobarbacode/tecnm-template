@@ -113,11 +113,11 @@
                         <a class="dropdown-item dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Licenciatura
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <ul id="licenciatura-menu" class="dropdown-menu" aria-labelledby="navbarDropdown1">
 
                             <!-- Opción: Contador Publico -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/assets/tec-files/carreras/cp/contador.html">
+                                <a class="dropdown-item" href="/contador">
                                     Contador Público
                                 </a>
                             </li>
@@ -138,7 +138,7 @@
 
                             <!-- Opción: Ing Electrica -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/assets/tec-files/carreras/electrica/electrica.html">
+                                <a class="dropdown-item" href="/l_electrica">
                                     Ing. Eléctrica
                                 </a>
                             </li>
@@ -201,7 +201,7 @@
 
                             <!-- Opción: Ing. Quimica -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="/assets/tec-files/carreras/quimica/quimica.html">
+                                <a class="dropdown-item" href="/l_quimica">
                                     Ing. Química
                                 </a>
                             </li>
@@ -222,7 +222,7 @@
 
             <!-- Menu: Personal TecNM -->
             <li class="nav-item dropdown">
-                <a class="nav-link active font-weight-bold" href="https://forms.gle/goPkoY5f4Ln6G6328">
+                <a class="nav-link active font-weight-bold" href="/quejas">
                     Quejas y Sugerencias
                 </a>
             </li>
