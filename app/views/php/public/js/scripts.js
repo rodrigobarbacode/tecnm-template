@@ -1,3 +1,27 @@
+
+//Licenciatura Submenu
+document.addEventListener('DOMContentLoaded', function () {
+    var licenciaturaButton = document.getElementById('navbarDropdown1');
+    var licenciaturaMenu = document.getElementById('licenciatura-menu');
+
+    licenciaturaButton.addEventListener('mouseenter', function (e) {
+        licenciaturaMenu.classList.add('show');
+    });
+    licenciaturaButton.addEventListener('mouseleave', function () {
+        licenciaturaMenu.classList.remove('show');
+    })
+
+    licenciaturaMenu.addEventListener('mouseenter', function (e) {
+        licenciaturaMenu.classList.add('show');
+    });
+    licenciaturaMenu.addEventListener('mouseleave', function () {
+        licenciaturaMenu.classList.remove('show');
+    })
+
+})
+//Licenciatura Submenu
+
+
 $(document).ready(function() {
     setTimeout(function() {
         $("#desface_noticias").fadeIn(1000);
@@ -22,6 +46,7 @@ $(document).ready(function() {
 posicionarMenu2();
 
 $(window).scroll(function() { posicionarMenu2(); });
+
 
 function posicionarMenu2() {
     var altura_del_header = $('#barraGobmx').outerHeight(true);
