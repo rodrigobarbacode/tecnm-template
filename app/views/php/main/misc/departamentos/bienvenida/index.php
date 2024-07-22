@@ -9,11 +9,7 @@
 <!-- Menú Azul  -->
 <?php require '../../../navbar_blue.php' ?>
 
-<!--Seccion para llamar algun archivo para la ventana-->
-<section class="container m-1 mx-auto ">
-  <!--aqui se agrega la ruta  -->
-  <?php require 'bienvenida.php' ?>
-</section>
+<?php require 'bienvenida.php' ?>
 
 <!-- Footer Azul -->
 <?php require '../../../footer_blue.php' ?>
