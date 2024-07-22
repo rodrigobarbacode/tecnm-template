@@ -16,7 +16,7 @@
                 
                 <div class="item-style">
                     <a href="#" onclick="contentToggle('inicio')">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/FFFFFF/user--v1.png" alt="user--v1"/>        
+                    <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/FFFFFF/home.png" alt="home"/>        
                         Inicio
                     </a>
                 </div>
@@ -31,21 +31,21 @@
 
                 <div class="submenu perfiles item-style d-none">
                     <a href="#" onclick="contentToggle('ingreso')">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/fire-element--v1.png" alt="fire-element--v1"/>        
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/hand.png" alt="hand"/>       
                         de Ingreso
                     </a>
                 </div>
 
                 <div class="submenu perfiles item-style d-none">
                     <a href="#" onclick="contentToggle('egreso')">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/door.png" alt="door"/>     
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/graduation-cap--v1.png" alt="graduation-cap--v1"/>    
                         de Egreso
                     </a>
                 </div>
 
                 <div class="item-style">
                     <a href="#" onclick="contentToggle('reticula')">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/water.png" alt="water"/>                        
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/calendar--v1.png" alt="calendar--v1"/>                       
                         Reticulas
                     </a>
                 </div>
