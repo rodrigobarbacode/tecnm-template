@@ -6,12 +6,23 @@ const phpExpress = require('php-express')({
 });
 const nodemailer = require('nodemailer');
 const Mailgen = require('mailgen');
+const multer = require('multer');
+const bodyparser = require('body-parser');
+const xoauth2 = require('xoauth2');
+var upload = multer();
 require('dotenv').config();
 
 
 // Use php-express to serve all .php files.
 router.all(/.+\.php$/, phpExpress.router);
 // Use php-express to serve all .php files.
+
+router.use(express.json())
+
+router.use(bodyparser.urlencoded({ extended: true }))
+
+router.use(upload.array()); 
+router.use(express.static('public'));
 
 // ************* Routes *************
 
@@ -66,25 +77,34 @@ router.get('/incendios', (req, res) => {
 
 // Mail Handler endpoint.
 router.post('/mail', (req, res) => {
+    console.log(req.body)
     
     let config = {
         service: 'gmail', // your email domain
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
-            user: process.env.NODEJS_GMAIL_APP_USER,   // your email address
-            pass: process.env.NODEJS_GMAIL_APP_PASSWORD // your password
+            type: "OAuth2",
+            user: process.env.GMAIL_APP_USER,
+            clientId: process.env.GMAIL_CLIENT_ID,
+            clientSecret: process.env.GMAIL_CLIENT_SECRET,
+            refreshToken: process.env.GMAIL_REFRESH_TOKEN 
         }
     }
+
     let transporter = nodemailer.createTransport(config);
 
     let message = {
         from: 'pootissonic1808@gmail.com', // sender address
-        to: 'a20490703@itmexicali.edu.mx', // list of receivers
+        to: req.body.inputEmail, // list of receivers
         subject: 'Welcome to ABC Website!', // Subject line
         html: "<b>Hello world?</b>", // html body
     };
+    console.log(message)
 
     transporter.sendMail(message).then((info) => {
-        return res.status(201).json(
+        return res.status(200).json(
             {
                 msg: "Email sent",
                 info: info.messageId,
@@ -92,6 +112,7 @@ router.post('/mail', (req, res) => {
             }
         )
     }).catch((err) => {
+        console.log(err)
         return res.status(500).json({ msg: err });
     }
     );
