@@ -4,16 +4,25 @@ const router = express.Router();
 const phpExpress = require('php-express')({
     binPath: 'php'
 });
-const bodyParser = require('body-parser');
-// Loading php-express module.
+const nodemailer = require('nodemailer');
+const Mailgen = require('mailgen');
+const multer = require('multer');
+const bodyparser = require('body-parser');
+const xoauth2 = require('xoauth2');
+var upload = multer();
+require('dotenv').config();
 
-// Use bodyParser middleware to parse request bodies
-router.use(bodyParser.urlencoded({ extended: false }));
-// Use bodyParser middleware to parse request bodies
 
 // Use php-express to serve all .php files.
 router.all(/.+\.php$/, phpExpress.router);
 // Use php-express to serve all .php files.
+
+router.use(express.json())
+
+router.use(bodyparser.urlencoded({ extended: true }))
+
+router.use(upload.array()); 
+router.use(express.static('public'));
 
 // ************* Routes *************
 
@@ -67,8 +76,46 @@ router.get('/incendios', (req, res) => {
 // Sistemas de Prevención y Protección Contra Incendios endpoint.
 
 // Mail Handler endpoint.
-router.post('/success', (req, res) => {
-    res.render('misc/mail-handler/mail');
+router.post('/mail', (req, res) => {
+    console.log(req.body)
+    
+    let config = {
+        service: 'gmail', // your email domain
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+            type: "OAuth2",
+            user: process.env.GMAIL_APP_USER,
+            clientId: process.env.GMAIL_CLIENT_ID,
+            clientSecret: process.env.GMAIL_CLIENT_SECRET,
+            refreshToken: process.env.GMAIL_REFRESH_TOKEN 
+        }
+    }
+
+    let transporter = nodemailer.createTransport(config);
+
+    let message = {
+        from: 'pootissonic1808@gmail.com', // sender address
+        to: req.body.inputEmail, // list of receivers
+        subject: 'Welcome to ABC Website!', // Subject line
+        html: "<b>Hello world?</b>", // html body
+    };
+    console.log(message)
+
+    transporter.sendMail(message).then((info) => {
+        return res.status(200).json(
+            {
+                msg: "Email sent",
+                info: info.messageId,
+                preview: nodemailer.getTestMessageUrl(info)
+            }
+        )
+    }).catch((err) => {
+        console.log(err)
+        return res.status(500).json({ msg: err });
+    }
+    );
 });
 // Mail Handler endpoint.
 

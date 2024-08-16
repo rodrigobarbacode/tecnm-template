@@ -13,10 +13,10 @@
 	</p>
 	<ul class="pt-4" style="font-size: 20px;">
 		<li>
-			<a class="text-secondary" href="http://www.itmexicali.edu.mx/documentos/directorio.pdf"> Directorio de Servidores Públicos </a>
+			<a class="text-secondary" href="/directorio"> Directorio de Servidores Públicos </a>
 		</li>
 		<li>
-			<a class="text-secondary" href="http://www.itmexicali.edu.mx/documentos/correos.pdf"> Lista de correos institucionales de los Servidores Públicos</a>
+			<a class="text-secondary" href="/assets/tec-files/departamentos/transparencia/correos.pdf"> Lista de correos institucionales de los Servidores Públicos</a>
 		</li>
 		<li>
 			<a class="text-secondary" href="#"> Estructura Organica</a>
