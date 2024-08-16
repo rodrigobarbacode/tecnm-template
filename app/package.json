@@ -20,7 +20,8 @@
     "express-handlebars": "^7.1.2",
     "googleapis": "^105.0.0",
     "php-express": "^0.0.3",
-    "swiffy-slider": "^1.6.0"
+    "swiffy-slider": "^1.6.0",
+    "xoauth2": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.2"
