@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/index_styles.css">;
 
     <!-- Desface -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="/assets/web/assets/jquery-3.2.1/jquery.js"></script>
 
     <!-- Swiffy Slider -->
     <script src="/js/swiffy-slider/swiffy-slider.min.js"></script>
@@ -39,7 +39,7 @@
     <!-- Sub Menú -->
     <link rel="stylesheet" href="css/navbar.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/assets/web/assets/jquery-1.11.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
 </head>
 
