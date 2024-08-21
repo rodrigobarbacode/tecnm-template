@@ -8,9 +8,11 @@ const nodemailer = require('nodemailer');
 const Mailgen = require('mailgen');
 const multer = require('multer');
 const bodyparser = require('body-parser');
-const xoauth2 = require('xoauth2');
+const MailTokens = require('../google_api/Email-Sender/tokens.json');
 var upload = multer();
 require('dotenv').config();
+
+
 
 
 // Use php-express to serve all .php files.
@@ -86,20 +88,22 @@ router.post('/mail', (req, res) => {
         secure: true,
         auth: {
             type: "OAuth2",
-            user: process.env.GMAIL_APP_USER,
-            clientId: process.env.GMAIL_CLIENT_ID,
-            clientSecret: process.env.GMAIL_CLIENT_SECRET,
-            refreshToken: process.env.GMAIL_REFRESH_TOKEN 
+            user: "eventos@itmexicali.edu.mx",
+            clientId: MailTokens.client_id,
+            clientSecret: MailTokens.client_secret,
+            refreshToken: MailTokens.refresh_token 
         }
     }
 
     let transporter = nodemailer.createTransport(config);
 
     let message = {
-        from: 'pootissonic1808@gmail.com', // sender address
+        from: 'Automated Email <no-reply@itmexicali.edu.mx>', // sender address
+        sender: 'no-reply@itmexicali.edu.mx',
         to: req.body.inputEmail, // list of receivers
         subject: 'Welcome to ABC Website!', // Subject line
         html: "<b>Hello world?</b>", // html body
+        replyTo: "ss_ccomputo@itmexicali.edu.mx" //Reply Address
     };
     console.log(message)
 
