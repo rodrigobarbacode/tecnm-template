@@ -32,6 +32,9 @@
     <!-- Desface -->
     <script src="/assets/web/assets/jquery-3.2.1/jquery.js"></script>
 
+    <!-- PDF View -->
+    <script src="/js/pdf.js"></script>
+
     <!-- Swiffy Slider -->
     <script src="/js/swiffy-slider/swiffy-slider.min.js"></script>
     <link href="/css/swiffy-slider/swiffy-slider.min.css" rel="stylesheet">
