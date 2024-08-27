@@ -34,7 +34,7 @@
 </style>
 
 <div id='desface_footer' style='z-index:2100; display: none; box-shadow: 0px -10px 5px #0000002A;'>
-	<footer class='bg-tecnm footer'>
+	<footer class='bg-tecnm-2 footer'>
 
 		<div class='row m-0 justify-content-center ' style="padding: 16px; padding-bottom: 30px;  ">
 
