@@ -58,7 +58,7 @@
 
                     <!-- Opción: Listado de Aportaciones -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/documentos/2024/APORTACIONES2024.pdf">
+                        <a class="dropdown-item" href="#" onClick="sendString('/assets/tec-files/documentos/2024/APORTACIONES2024.pdf')">
                             Listado de Aportaciones
                         </a>
                     </li>
@@ -101,21 +101,21 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- Opción: Cedula Profesional -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional">
+                        <a class="dropdown-item" href="https://www.gob.mx/cedulaprofesional" target="_blank">
                             Cédula Profesional en Línea
                         </a>
                     </li>
 
                     <!-- Opción: Tramite de Titulacion -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://bit.ly/2NkUc3i">
+                        <a class="dropdown-item" href="#" onClick="sendString('/pdf/anexos/PROTOCOLO-TRAMITE-DE-ACTO-DE-RECEPCION-PROFESIONAL.pdf')">
                             Trámite de Titulación
                         </a>
                     </li>
 
                     <!-- Opción: Tramite de Certificado -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://bit.ly/3oHrrPU">
+                        <a class="dropdown-item" href="#" onClick="sendString('/pdf/anexos/Aviso-Certificado.pdf')">
                             Trámite de Certificado
                         </a>
                     </li>
@@ -145,35 +145,35 @@
 
                     <!-- Opción: CAT TecNM-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://cat.tecnm.mx/">
+                        <a class="dropdown-item" href="https://cat.tecnm.mx/" target="_blank">
                             CAT TecNM
                         </a>
                     </li>
 
                     <!-- Opción: CVU TecNM -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://cvu.dpii.tecnm.mx/">
+                        <a class="dropdown-item" href="https://cvu.dpii.tecnm.mx/" target="_blank">
                             CVU TecNM
                         </a>
                     </li>
 
                     <!-- Opción: Citas ISSSTE -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://web.citamedicaissste.mx/issste/comun/wpu/nuevacita.aspx">
+                        <a class="dropdown-item" href="https://web.citamedicaissste.mx/issste/comun/wpu/nuevacita.aspx" target="_blank">
                             Citas ISSSTE
                         </a>
                     </li>
 
                     <!-- Opción: FOVISSSTE-->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://www.gob.mx/fovissste">
+                        <a class="dropdown-item" href="https://www.gob.mx/fovissste" target="_blank">
                             FOVISSSTE
                         </a>
                     </li>
 
                     <!-- Opción: DeclaraNET -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://declaranet.gob.mx/">
+                        <a class="dropdown-item" href="https://declaranet.gob.mx/" target="_blank">
                             DeclaraNET
                         </a>
                     </li>
@@ -301,7 +301,7 @@
 
                     <!-- Opción: Recursos Materiales -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/materiales/inicio">
+                        <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/materiales/inicio" target="_blank">
                             Recursos Materiales y Servicios
                         </a>
                     </li>
@@ -324,7 +324,7 @@
 
                     <!-- Opción: Mindbox -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="http://www.itmexicali.edu.mx/mindbox/">
+                        <a class="dropdown-item" href="https://itmexicali.mindbox.app/login/alumno" target="_blank">
                             MindBox
                         </a>
                     </li>
