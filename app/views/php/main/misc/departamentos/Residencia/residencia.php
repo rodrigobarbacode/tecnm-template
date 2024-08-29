@@ -2,7 +2,7 @@
 <div class="container-fluid p-0 ml-0 mr-0 bg-tecnm" >
     <div class="row">
         <!-- Sidebar -->
-        <div id="sidebar-holder" class="col-md-2 p-0">
+        <div id="sidebar-holder" class="col-md-2 bg-tecnm-2 p-0">
             <div id="collapser" class="d-sm-none d-md-none d-lg-none d-xl-block">
                 <a href="#" onclick="toggleSidebar()">
                 <img id="collapser-icon" width="35" height="35" src="https://img.icons8.com/ios-filled/50/FFFFFF/double-left.png" alt="double-left"/>

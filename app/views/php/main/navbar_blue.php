@@ -41,7 +41,7 @@
 
                     <!-- Opción: Sistema Integrado de Gestión -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/sig" target="_blank">
+                        <a class="dropdown-item" href="/sig">
                             Sistema Integrado de Gestión
                         </a>
                     </li>
@@ -55,7 +55,7 @@
 
                     <!-- Opción: TecNM -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="/assets/tec-files/departamentos/rh/reglamentos/ManualOrgTECNM.pdf">
+                        <a class="dropdown-item" href="#" onClick="sendString('/assets/tec-files/departamentos/rh/reglamentos/ManualOrgTECNM.pdf')">
                             Manual de organización - TecNM
                         </a>
                     </li>
@@ -79,21 +79,21 @@
 
                     <!-- Opción: Convocatoria para Ingreso -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://bit.ly/Convocatoria20243">
+                        <a class="dropdown-item" href="https://bit.ly/Convocatoria20243" target="_blank">
                             Convocatoria
                         </a>
                     </li>
 
                     <!-- Opción: Equivalencias de Estudio -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://bit.ly/Equiv20243">
+                        <a class="dropdown-item" href="https://bit.ly/Equiv20243" target="_blank">
                             Ingreso por Equivalencia de Estudios
                         </a>
                     </li>
 
                     <!-- Opción: Solicitud de Ficha -->
                     <li>
-                        <a class="dropdown-item" href="https://itmexicali.mindbox.app/login/aspirante">
+                        <a class="dropdown-item" href="https://itmexicali.mindbox.app/login/aspirante" target="_blank">
                             Solicitud de Ficha
                         </a>
                     </li>
@@ -131,7 +131,7 @@
 
                             <!-- Opción: Ing. Sistemas Computacionales -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dsc/carreras/ing-sistemas-computacionales">
+                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/dsc/carreras/ing-sistemas-computacionales" target="_blank">
                                     Ing. en Sistemas Computacionales
                                 </a>
                             </li>
@@ -159,21 +159,21 @@
 
                             <!-- Opción: Ing. Gestion Empresarial -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-gestion-empresarial/inicio">
-                                    Ing. en Gestión Empresarial
+                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-gestion-empresarial/inicio" target="_blank">
+                                    Ing. en Gestión Empresarial 
                                 </a>
                             </li>
 
                             <!-- Opción: Ing. Industrial-->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-industrial/inicio">
+                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingenieria-industrial/inicio" target="_blank">
                                     Ing. Industrial
                                 </a>
                             </li>
 
                             <!-- Opción: Ing. Logistica -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingeniera-logistica/inicio">
+                                <a class="dropdown-item" href="https://sites.google.com/itmexicali.edu.mx/ingeniera-logistica/inicio" target="_blank">
                                     Ing. Logística
                                 </a>
                             </li>
@@ -187,14 +187,14 @@
 
                             <!-- Opción: Ing. Mecatronica-->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1qsl_wsaDRxOeBhqMDVALpamfRUByLEAf/edit">
+                                <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1qsl_wsaDRxOeBhqMDVALpamfRUByLEAf/edit" target="_blank">
                                     Ing. Mecatrónica
                                 </a>
                             </li>
 
                             <!-- Opción: Ing. Mecanica -->
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1mVmgktr6imZMBnYXM2ZLYpnqq6rFPznA/edit">
+                                <a class="dropdown-item" href="https://sites.google.com/d/1xfNACUTz1yk3zSwa_u17nMUqsNsi_Abb/p/1mVmgktr6imZMBnYXM2ZLYpnqq6rFPznA/edit" target="_blank">
                                     Ing. Mecánica
                                 </a>
                             </li>
