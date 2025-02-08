@@ -322,10 +322,10 @@
                         </a>
                     </li>
 
-                    <!-- Opción: Mindbox -->
+                    <!-- Opción: AMBAR -->
                     <li class="nav-item dropdown">
-                        <a class="dropdown-item" href="https://itmexicali.mindbox.app/login/alumno" target="_blank">
-                            MindBox
+                        <a class="dropdown-item" href="https://mexicali.ambar.tecnm.mx/" target="_blank">
+                            AMBAR
                         </a>
                     </li>
                 </ul>
