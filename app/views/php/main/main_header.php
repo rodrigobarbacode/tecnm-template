@@ -18,20 +18,20 @@
                 </div>
             </div>
         </div>
-        <div class="contenedorAccesibilidad" style="top: 50%;">
+        <div class="contenedorAccesibilidad" style="top: 50%; max-height: fit-content;">
             <div class="idiomas text-right">
                 <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
-                    <img loading='lazy' style="height:15%;width:10%" src="img/encabezado/correo-icono.png" alt="Buzón">
+                    <img loading='lazy' style="width: 16%;" src="img/encabezado/correo-icono.png" alt="Buzón">
                 </a>
                 <a href="/assets/tec-files/documentos/2024/calendario2024-1.jpeg" title="Calendario Académico" target="_blank">
-                    <img loading='lazy' style="height:15%;width:10%" src="img/encabezado/calendario-icono.png" alt="Calendario Académico">
+                    <img loading='lazy'  style="width: 16%;" src="img/encabezado/calendario-icono.png" alt="Calendario Académico">
                 </a>
-                <a href='index?idioma=ingles#googtrans(es|en)'>
+                <!-- <a href='index?idioma=ingles#googtrans(es|en)'>
                     <img style='height:15%;width:10%' src='img/encabezado/usa-icono.png' title='Inglés' alt='Idioma Inglés'>
                 </a>
                 <a href='index?idioma=español#googtrans(es|es)' class='mr-3'>
                     <img style='height:15%;width:10%' src='img/encabezado/mexico-icono.png' title='Español' alt='Idioma Español'>
-                </a>
+                </a> -->
                 <a class="btn--accesibilidad aumentaLetra " title="Aumentar letra" style="color:#1B396A">A+</a>
                 <a class="btn--accesibilidad reduceLetra" title="Disminuir letra" style="color:#1B396A">A-</a>
                 <a class="btn--accesibilidad resetLetra" title="Restablecer tamaño" style="color:#1B396A">A </a>
