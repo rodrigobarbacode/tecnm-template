@@ -2,12 +2,12 @@
 
 <nav class="navbar navbar-expand-xl navbar-light bg-white" id="main_navbar2" style="font-weight: bolder;">
 
-    <!-- <a class="navbar-brand" href="#">TecNM</a> -->
+    <!-- <a class="navbar-brand" href="#">TecNM</a>
     <form action='?vista=Buscar' class="navbar-brand ml-1" method='POST'>
         <input class="w-100 h-100 border align-items-center m-1 form-control" type="text" name='buscar' placeholder="Buscar" autocomplete='off' required />
         <input type="hidden" name="btn_busqueda" />
     </form>
-
+     -->
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> Menú
     </button>
