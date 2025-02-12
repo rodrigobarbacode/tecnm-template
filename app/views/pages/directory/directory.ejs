@@ -1,0 +1,12 @@
+<iframe id="directory-frame" src="/word/directorio" width="100%" style="border:none;"></iframe>
+
+<script>
+    function adjustIframeHeight() {
+        var iframe = document.getElementById("directory-frame");
+        if (iframe.contentWindow.document.body) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+        }
+    }
+
+    document.getElementById("directory-frame").onload = adjustIframeHeight;
+</script>
