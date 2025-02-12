@@ -10,9 +10,6 @@ const express = require("express");
 const api = require("./api");
 const routes = require("./routes");
 
-// Get static files configuration.
-const configureStaticFiles = require("./config/static-files");
-
 // Create the express app.
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,8 +17,8 @@ const PORT = process.env.PORT || 3000;
 // Set EJS as the view engine.
 app.set("view engine", "ejs");
 
-// Configure static files.
-configureStaticFiles(app);
+// Use static folder to serve static files.
+app.use(express.static(path.join(__dirname, "public")));
 
 // Load the routes.
 app.use("/", routes);
