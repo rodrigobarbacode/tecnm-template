@@ -142,3 +142,7 @@
     top: 78px;
   }
 }
+
+.dropdown-c:hover .dropdown-menu-c {
+  display: block;
+}
