@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('partials/statics/styles.ejs') %>
+</head>
+
+<body style="background-color: #eeeeee">
+    <%- include('partials/sections/navbar-government.ejs') %>
+    <%- include('partials/sections/main-header.ejs') %>
+    <%- include('partials/sections/navbar-white.ejs') %>
+    <%- include('partials/sections/navbar-blue.ejs') %>
+
+    <main>
+        <%- content %>
+    </main>
+
+    <%- include('partials/sections/footer-blue.ejs') %>
+    <%- include('partials/sections/footer-government.ejs') %>
+
+    <%- include('partials/statics/scripts.ejs') %>
+</body>
+
+</html>

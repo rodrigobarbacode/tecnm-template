@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "production": "node app.js",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "production": "node app.js",
+    "debug": "node --inspect app.js",
+    "dev": "nodemon --inspect app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,14 +16,13 @@
     "@google-cloud/local-auth": "^2.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "ejs": "^3.1.10",
+    "ejs": "^3.1.6",
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "googleapis": "^105.0.0",
     "mailgen": "^2.0.28",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.14",
-    "php-express": "^0.0.3",
     "swiffy-slider": "^1.6.0",
     "xoauth2": "^1.2.0"
   },
