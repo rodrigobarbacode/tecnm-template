@@ -1,5 +1,6 @@
 <!-- Opciones de Accesibilidad -->
 <script src='assets/files/main/js/index.onload.js'></script>
+<script src="https://cdn.userway.org/widget.js" data-account="Fgb6xuhXaS"></script>
 
 <!-- Twitter -->
 <script id='twitter-wjs' src='https://platform.twitter.com/widgets.js'></script>
@@ -11,14 +12,18 @@
 <!-- Menú Azul - Permite el desglose -->
 <script src="js/navbar.js"></script>
 
+<!-- Menú Lateral -->
 <script src="/js/sidebar/sidebar.js"></script>
 <script src="/js/pdf.js"></script>
 
-<script>
-    window.onerror = function (message, source, lineno, colno, error) {
-    if (source.includes("ErrorUtils")) {
-        return true; // Prevent Facebook-related errors from logging
-    }
-    };
-</script>
+<!-- Styles for after load -->
+<style>
+.userway_buttons_wrapper {
+    position: absolute !important;
+}
 
+.uwy {
+    bottom: 0 !important;
+    margin-bottom: 70px !important;
+}
+</style>
