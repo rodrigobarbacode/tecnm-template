@@ -278,11 +278,11 @@ async function getChangingTimeNews(auth) {
 }
 
 /*
- * Prints the all news from the Google Sheet.
+ * Gets the all news from the Google Sheet.
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-async function listNews(auth) {
+async function getNews(auth) {
   const sheets = google.sheets({ version: "v4", auth });
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId: "1_hK4uuM1RgWID7Qo7OlHhEvBTD6Ff0yNn4_644P66k8",
@@ -293,26 +293,53 @@ async function listNews(auth) {
     console.log("No data found.");
     return;
   }
-  // Create a JSON object with the data.
-  var arr = [];
-  var json = {};
 
-  let news = await getNewsMax(await authorize());
+  const folderPath = path.join(__dirname, "../public/img/news");
+
+  //Clean the news folder
+  await fs.rm(folderPath, { recursive: true, force: true });
+  await fs.mkdir(folderPath);
+
+  const arr = [];
+  const news = await getNewsMax(await authorize());
   arr.push({ max: news.max });
 
-  rows.map((row, i) => {
-    arr.push({
-      image: convertToEmbedded(row[0]),
+  let i = 1;
+  for (const row of rows) {
+    const json = {
+      image: null,
       date_title: row[1],
       date: row[2],
       title: row[3],
       description: row[4],
       pdf: row[5],
-    });
-  });
-  json = arr;
+    }
 
-  return json;
+    try {
+      //Get the new from Google Photos
+      const response = await axios({
+        method: 'GET',
+        url: convertToEmbedded(row[0]),
+        responseType: 'arraybuffer',
+      });
+
+      const filename = `${i}.png`;
+
+      //Save the new in the file system
+      await fs.writeFile(path.join(folderPath, filename), response.data);
+
+      json.image = `img/news/${filename}`
+    } catch (err) {
+      console.error(err);
+      console.log("Error saving a new.");
+    }
+
+    arr.push(json);
+
+    i++;
+  }
+
+  return arr;
 }
 
 /*
@@ -414,8 +441,8 @@ router.get("/data/banners", authMiddleware, async (req, res) => {
 // News Data Endpoint. (Requires auth_key)
 router.get("/data/news", authMiddleware, async (req, res) => {
   try {
-    let news_time = await getChangingTimeNews(await authorize());
-    let news = await listNews(await authorize());
+    const news_time = await getChangingTimeNews(await authorize());
+    const news = await getNews(await authorize());
 
     fs.writeFile(
       path.join(process.cwd(), "/public/json/news-list.json"),
