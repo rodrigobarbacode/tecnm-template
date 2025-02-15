@@ -5,6 +5,7 @@ const config = require("./config.json");
 const path = require("path");
 const express = require("express");
 const process = require("process");
+const axios = require("axios");
 
 const fs = require("fs").promises;
 
@@ -180,11 +181,11 @@ async function getChangingTimeBanner(auth) {
 }
 
 /*
- * Prints the all banners from the Google Sheet.
+ * Gets the all banners from the Google Sheet.
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-async function listBanners(auth) {
+async function getBanners(auth) {
   const sheets = google.sheets({ version: "v4", auth });
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId: "1uaPGs-etR0DbNxYyo0XPb6bhjOTt1shyRhTTDkBNnQ0",
@@ -195,19 +196,47 @@ async function listBanners(auth) {
     console.log("No data found.");
     return;
   }
-  // Create a JSON object with the data.
-  var arr = [];
-  var json = {};
-  rows.map((row, i) => {
-    arr.push({
-      url: row[0],
-      image: convertToEmbedded(row[1]),
-      date: row[2],
-    });
-  });
-  json = arr;
 
-  return json;
+  const folderPath = path.join(__dirname, "../public/img/banners");
+
+  //Clean the banners folder
+  await fs.rm(folderPath, { recursive: true, force: true });
+  await fs.mkdir(folderPath);
+
+  const arr = [];
+  let i = 1;
+  for (const row of rows) {
+    const json = {
+      url: row[0],
+      image: null,
+      date: row[2],
+    }
+
+    try {
+      //Get the banner from Google Photos
+      const response = await axios({
+        method: 'GET',
+        url: convertToEmbedded(row[1]),
+        responseType: 'arraybuffer',
+      });
+
+      const filename = `${i}.png`;
+
+      //Save the banner in the file system
+      await fs.writeFile(path.join(folderPath, filename), response.data);
+
+      json.image = `img/banners/${filename}`;
+    } catch (err) {
+      console.error(err);
+      console.log("Error saving a banner.");
+    }
+
+    arr.push(json);
+
+    i++;
+  }
+
+  return arr;
 }
 
 /*
@@ -351,8 +380,8 @@ router.get("/generate-token", async (req, res) => {
 // Banners Endpoint. (Requires auth_key)
 router.get("/data/banners", authMiddleware, async (req, res) => {
   try {
-    let banners_time = await getChangingTimeBanner(await authorize());
-    let banners = await listBanners(await authorize());
+    const banners_time = await getChangingTimeBanner(await authorize());
+    const banners = await getBanners(await authorize());
 
     fs.writeFile(
       path.join(process.cwd(), "/public/json/banner-list.json"),
