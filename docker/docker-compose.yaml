@@ -16,25 +16,39 @@ services:
     build: ./php
     container_name: php-server
     volumes:
-      - ./app:/var/www/html
+      - ./php/applications/:/var/www/html
     ports:
-      - "7273:80"
-    depends_on:
-      - mariadb-php
+      - "7070:80"
     networks:
       - app-network
-  
+    depends_on:
+      - mariadb-php
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+
   mariadb-php:
-    image: mariadb:latest
+    image: mariadb:11.6.2
     container_name: mariadb-php
-    restart: always
+    restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: app_db
       MYSQL_USER: user
-      MYSQL_PASSWORD: rootpassword
+      MYSQL_PASSWORD: password
     volumes:
-      - db_data:/var/lib/mysql
+      - php_db_data:/var/lib/mysql
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--password=password"]
+      interval: 30s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
 
   mariadb-app:
     image: mariadb:latest   
@@ -69,4 +83,5 @@ networks:
     driver: bridge                        
 
 volumes:
-  mariadb_data:                          
+  mariadb_data:
+  php_db_data:    
