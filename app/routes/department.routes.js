@@ -52,8 +52,13 @@ router.get('/extraescolares', renderPage(
 ));
 
 // Departamento de Estudios Profesionales endpoint.
+router.get("/page/dep", (_, res) => {
+    res.render('pages/departments/departamento-estudios-profesionales/index');
+});
+
+// Departamento de Estudios Profesionales endpoint.
 router.get('/dep', renderPage(
-    p = "pages/departments/dep",
+    p = "pages/departments/departamento-estudios-profesionales/dep",
     t = "TecNM | Departamento de Estudios Profesionales"
 ));
 

@@ -1,0 +1,12 @@
+<iframe id="dep-frame" src="/page/dep" width="100%" style="border:none;"></iframe>
+
+<script>
+    function adjustIframeHeight() {
+        var iframe = document.getElementById("dep-frame");
+        if (iframe.contentWindow.document.body) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+        }
+    }
+
+    document.getElementById("dep-frame").onload = adjustIframeHeight;
+</script>
