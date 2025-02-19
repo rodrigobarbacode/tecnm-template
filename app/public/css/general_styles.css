@@ -209,3 +209,17 @@ body {
 		font-size: 16px;
 	}
 }
+
+.swiffy-slider-item:hover {
+	scale: 1.02;
+	cursor: pointer;
+}
+
+.swiffy-slider-item {
+	transition: all 0.3s;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+}

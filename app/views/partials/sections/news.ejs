@@ -108,16 +108,26 @@
 
             var cardBody = document.createElement('div');
             cardBody.className = 'card-body';
+            
+            var titleContainer = document.createElement('div');
+            titleContainer.style.width = '100%';
+            titleContainer.style.overflow = 'hidden';
+            titleContainer.style.whiteSpace = 'nowrap';
+            titleContainer.style.display = 'block';
+            titleContainer.style.position = 'relative';
 
-            var cardTitle = document.createElement('h5');
+            var cardTitle = document.createElement('span');
             cardTitle.className = 'card-title';
+            cardTitle.style.display = 'inline-block';
             cardTitle.style.color = '#fab005';
             cardTitle.style.fontSize = '2vh';
             cardTitle.style.fontWeight = 'bolder';
-            var limitTitle = truncateTitle(value.title);
-            cardTitle.textContent = limitTitle;
+            cardTitle.style.paddingLeft = '8%';
+            cardTitle.style.animation = 'marquee 15s linear infinite';
+            cardTitle.textContent = value.title;
 
-            cardBody.appendChild(cardTitle);
+            titleContainer.appendChild(cardTitle);
+            cardBody.appendChild(titleContainer);
 
             var cardText = document.createElement('p');
             cardText.className = 'card-text';
