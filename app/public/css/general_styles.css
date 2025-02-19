@@ -140,8 +140,7 @@
 	color: rgb(104, 104, 104);
 	border-radius: 20px;
 	background: #ffffff;
-	box-shadow: 20px 20px 60px #172336,
-		-20px -20px 60px #06060633;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .stupid-defase {
