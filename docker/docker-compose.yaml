@@ -76,7 +76,42 @@ services:
       PMA_HOST: mariadb                  
       MYSQL_ROOT_PASSWORD: rootpassword   
     depends_on:
-      - mariadb-app                           
+      - mariadb-app  
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - app-network
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3030:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=EdqSa6R;&C4fw{Jx=ek<n@
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - app-network
+
+  node-exporter:
+    image: prom/node-exporter
+    network_mode: "host"  
+    pid: "host"          
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/rootfs'              
 
 networks:
   app-network:
@@ -84,4 +119,6 @@ networks:
 
 volumes:
   mariadb_data:
-  php_db_data:    
+  php_db_data:
+  prometheus_data:
+  grafana_data:    
