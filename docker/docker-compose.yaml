@@ -1,124 +1,163 @@
+version: '3.7' # The version of the Docker Compose file
+
+# Services
+
 services:
+
+  # App Server
+
   app-server:
-    container_name: app-server
+    container_name: app-server # The Node.js server container name
+    restart: unless-stopped # Restart the container if it stops
     build:
-      context: ../                        
-      dockerfile: docker/node/Dockerfile      
-    working_dir: /usr/src/app             
+      context: ../ # The build context                        
+      dockerfile: docker/node/Dockerfile # The Node.js server Dockerfile     
+    working_dir: /usr/src/app # The working directory             
     volumes:
-      - /usr/src/app/                     
-    depends_on:
-      - mariadb-app 
+      - /usr/src/app/ # Make the app accessible                     
     networks:
-      - app-network                     
+      - app-network # For future use
+
+  # App Server             
+
+
+  # PHP Server, MariaDB, PHPMyAdmin
 
   php-server:
-    build: ./php
-    container_name: php-server
+    build: ./php # The PHP server build context
+    container_name: php-server # The PHP server container name
+    restart: unless-stopped # Restart the container if it stops
     volumes:
-      - ./php/applications/:/var/www/html
+      - ./php/applications/:/var/www/html # Make the PHP application accessible
+      - ./php/entrypoints/php.ini:/usr/local/etc/php/php.ini # The PHP configuration file
     ports:
-      - "7070:80"
+      - "7070:80" # The PHP server port
     networks:
-      - app-network
+      - php-server-network # Use the PHP server network to communicate with the MariaDB container
     depends_on:
-      - mariadb-php
+      - mariadb-php # Wait for the MariaDB container to start
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80"]
-      interval: 30s
-      retries: 3
-      start_period: 10s
-      timeout: 10s
+      test: ["CMD", "curl", "-f", "http://localhost:80"] # Check if the PHP server is running
+      interval: 30s # Check every 30 seconds
+      retries: 3 # Retry 3 times
+      start_period: 10s # Start after 10 seconds
+      timeout: 10s # Check if the PHP server is running
 
   mariadb-php:
-    image: mariadb:11.6.2
-    container_name: mariadb-php
-    restart: unless-stopped
+    image: mariadb:11.6.2 # The official MariaDB image
+    container_name: mariadb-php # The MariaDB container name
+    restart: unless-stopped # Restart the container if it stops
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: app_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword # Default root password
+      MYSQL_DATABASE: test_db # Create a database
+      MYSQL_USER: test_user # Create a user
+      MYSQL_PASSWORD: test_password # Set the user password
     volumes:
-      - php_db_data:/var/lib/mysql
+      - php_db_data:/var/lib/mysql # Store data persistently
     networks:
-      - app-network
+      - php-server-network # Use the PHP server network to communicate with the PHP server
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--password=password"]
-      interval: 30s
-      retries: 5
-      start_period: 10s
-      timeout: 10s
-
-  mariadb-app:
-    image: mariadb:latest   
-    container_name: mariadb-app              
-    restart: always                       
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword   
-    volumes:
-      - mariadb_data:/var/lib/mysql      
-    ports:
-      - "3307:3306"                      
-
-  nginx:
-    image: nginx:latest                   
-    ports:
-      - "6672:80"                         
-      - "6673:81"                         
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf 
-      - phpmyadmin                        
-
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--password=test_password"] # Check if the MariaDB server is running
+      interval: 30s # Check every 30 seconds
+      retries: 5 # Retry 5 times
+      start_period: 10s # Start after 10 seconds
+      timeout: 10s # Timeout after 10 seconds
+  
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest   
+    image: phpmyadmin/phpmyadmin:latest # The official PHPMyAdmin image
+    container_name: phpmyadmin # The PHPMyAdmin container name
+    restart: always # Restart the container if it stops
     environment:
-      PMA_HOST: mariadb                  
-      MYSQL_ROOT_PASSWORD: rootpassword   
+      PMA_HOST: mariadb-php # Hostname of the MariaDB container             
+      MYSQL_ROOT_PASSWORD: rootpassword # Default root password
+    volumes:
+      - phpmyadmin_data:/var/www/html # Store data persistently
+      - ./themes:/var/www/html/themes # The PHPMyAdmin themes
+    ports:
+      - "8080:80"
     depends_on:
-      - mariadb-app  
+      - mariadb-php # Wait for the MariaDB container to start
+    networks:
+      - php-server-network # Use the PHP server network to communicate with the MariaDB container
+
+  # PHP Server, MariaDB, PHPMyAdmin                                
+
+  
+  # Prometheus, Grafana, Node Exporter
 
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus # The official Prometheus image
     ports:
-      - "9090:9090"
+      - "9090:9090" # The Prometheus web interface
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus_data:/prometheus
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml # The Prometheus configuration file
+      - prometheus_data:/prometheus # Store data persistently
     networks:
-      - app-network
+      - metrics-network # Use the metrics network to communicate with the Node Exporter
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana # The official Grafana image
     ports:
-      - "3030:3000"
+      - "3030:3000" # The Grafana web interface
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=EdqSa6R;&C4fw{Jx=ek<n@
+      - GF_SECURITY_ADMIN_USER=admin # The default Grafana admin user
+      - GF_SECURITY_ADMIN_PASSWORD=EdqSa6R;&C4fw{Jx=ek<n@ # The default Grafana admin password
     volumes:
-      - grafana_data:/var/lib/grafana
+      - grafana_data:/var/lib/grafana # Store data persistently
     networks:
-      - app-network
+      - metrics-network # Use the metrics network to communicate with Prometheus
 
   node-exporter:
-    image: prom/node-exporter
-    network_mode: "host"  
-    pid: "host"          
+    image: prom/node-exporter # The official Node Exporter image
+    network_mode: "host" # Use the host network to access host metrics
+    pid: "host" # Use the host PID namespace to access host metrics         
     volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
+      - /proc:/host/proc:ro # Mount the host /proc directory to access host metrics
+      - /sys:/host/sys:ro # Mount the host /sys directory to access host metrics
+      - /:/rootfs:ro # Mount the root filesystem to access host metrics
     command:
-      - '--path.procfs=/host/proc'
-      - '--path.sysfs=/host/sys'
-      - '--path.rootfs=/rootfs'              
+      - '--path.procfs=/host/proc' # To access the host /proc directory
+      - '--path.sysfs=/host/sys' # To access the host /sys directory
+      - '--path.rootfs=/rootfs' # To access the root filesystem     
+
+  # Prometheus, Grafana, Node Exporter
+
+
+  # NGINX Server Definition 
+  
+  nginx:
+    image: nginx:latest # The official Nginx image                   
+    ports:
+      - "6672:80" # Port for App Server                  
+      - "6673:81" # Port for PHP Server                         
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # The NGINX configuration file
+      # - phpmyadmin
+
+  # NGINX Server Definition  
+
+# Services
+
+
+# Networks
 
 networks:
   app-network:
-    driver: bridge                        
+    driver: bridge # Use the bridge network driver
+  metrics-network:
+    driver: bridge # Use the bridge network driver
+  php-server-network:
+    driver: bridge # Use the bridge network driver
+
+# Networks
+
+
+# Volumes                 
 
 volumes:
-  mariadb_data:
-  php_db_data:
-  prometheus_data:
-  grafana_data:    
+  php_db_data: # Define the volume for the MariaDB data
+  grafana_data: # Define the volume for the Grafana data
+  prometheus_data: # Define the volume for the Prometheus data
+  phpmyadmin_data: # Define the volume for the PHPMyAdmin data
+
+# Volumes
