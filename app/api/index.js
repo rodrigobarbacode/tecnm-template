@@ -17,6 +17,7 @@ const router = express.Router();
 // Import the required libraries.
 const { google } = require("googleapis");
 const { authenticate } = require("@google-cloud/local-auth");
+const { time } = require("console");
 // Import the required libraries.
 
 // Provide the required configuration.
@@ -99,41 +100,68 @@ async function listEvents(auth) {
     timeMin: new Date().toISOString(),
     maxResults: 10,
     singleEvents: true,
-    orderBy: "startTime",
+    orderBy: "startTime"
   });
+  
   const events = res.data.items;
   if (!events || events.length === 0) {
     return null;
   }
+  
   var arr = [];
   var json = {};
   events.map((event, i) => {
-    var date = new Date(event.start.dateTime);
-    var options = { month: "long" };
-    var month = new Intl.DateTimeFormat("en-US", options).format(date);
-
-    var day = date.getDate();
-    var month = month.charAt(0).toUpperCase() + month.slice(1);
-
-    var start = date.toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    var end = new Date(event.end.dateTime).toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
+    var dayOptions = { day: "numeric" };
+    var monthOptions = { month: "long" };
+    var hourOptions = { hour: "2-digit", minute: "2-digit" };
+  
+    var startRaw = event.start.date || event.start.dateTime;
+    var startDate = new Date(startRaw);
+    
+    startDate.setHours(startDate.getHours() + 8);
+  
+    var startDay = startDate.toLocaleString("en-US", dayOptions);
+    var startMonth = new Intl.DateTimeFormat("en-US", monthOptions).format(startDate);
+    startMonth = startMonth.charAt(0).toUpperCase() + startMonth.slice(1);
+    startMonth = startMonth.slice(0, 3);
+  
+    var startHour = startDate.toLocaleTimeString("en-US", hourOptions);
+  
+    var endRaw = event.end.date || event.end.dateTime;
+    var endDate = new Date(endRaw);
+    
+    endDate.setHours(endDate.getHours() + 8);
+  
+    var endDay = endDate.toLocaleString("en-US", dayOptions);
+    var endMonth = new Intl.DateTimeFormat("en-US", monthOptions).format(endDate);
+    endMonth = endMonth.charAt(0).toUpperCase() + endMonth.slice(1);
+    endMonth = endMonth.slice(0, 3);
+  
+    var endHour = endDate.toLocaleTimeString("en-US", hourOptions);
+  
     var url = event.htmlLink;
+
+    var isAllDayEvent = 0;
+    var isOneDayEvent = 0;
+
+    var nextDay = new Date(startDate);
+    nextDay.setDate(startDate.getDate() + 1);
+
+    if (endDate.toDateString() === nextDay.toDateString() && startHour === endHour) {
+      isAllDayEvent = 1;
+    } else if (startDate.toDateString() === endDate.toDateString()) {
+      isOneDayEvent = 1;
+    }
 
     arr.push({
       title: event.summary,
       description: event.description,
-      day: day,
-      month: month.slice(0, 3),
-      start: start,
-      end: end,
+      day: {startDay, endDay},
+      month: {startMonth, endMonth},
+      hour: {startHour, endHour},
       url: url,
+      isAllDayEvent: isAllDayEvent,
+      isOneDayEvent: isOneDayEvent
     });
   });
   json = arr;

@@ -45,9 +45,11 @@
                         html += `
                             <div class="event">
                                 <div class="row align-items-center">
-                                    <div class="col-lg-4 col-md-4 col-4 text-center bordered-con">
-                                        <p style="color: #2f476f; font-size: 3vh; font-weight: bolder;">${event.month} ${event.day}</p>
-                                    </div>
+                                    ${
+                                    event.isAllDayEvent || event.isOneDayEvent
+                                        ? `<div class="col-lg-4 col-md-4 col-4 text-center bordered-con"><p style="color: #2f476f; font-size: 1.8vh; font-weight: bolder;">${event.month.startMonth} ${event.day.startDay}</p></div>`
+                                        : `<div class="col-lg-4 col-md-4 col-4 text-center bordered-con"><p style="color: #2f476f; font-size: 1.8vh; font-weight: bolder;">${event.month.startMonth} ${event.day.startDay} - ${event.month.endMonth} ${event.day.endDay}</p></div>`
+                                    }
                                     <div class="col-lg-1 col-md-1 col-1 separator-link">
                                         <style>
                                             .ln {
@@ -58,7 +60,17 @@
                                         <div class="ln"></div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-6">
-                                        <h6 style="color: #1B396A;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora: ${event.start} - ${event.end}</h6>
+                                        ${
+                                        event.isAllDayEvent
+                                            ? `<h6 style="color: #1B396A;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora:
+                                              ${
+                                              event.hour.startHour === event.hour.endHour
+                                                ? 'Todo el día'
+                                                : `${event.hour.startHour} a ${event.hour.endHour}`
+                                              }
+                                              </h6>`
+                                            : `<h6 style="color: #1B396A;"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-regular fa-clock"></i></span>Hora: ${event.month.startMonth} ${event.day.startDay}, ${event.hour.startHour} a ${event.month.endMonth} ${event.day.endDay}, ${event.hour.endHour}</h6>`
+                                        }
                                         <h6 style="color: #1B396A;" class="mb-2"><span><i style="color: #fab005; padding-right: 1vh;" class="fa-solid fa-calendar-check"></i></span>Título: ${event.title}</h6>
                                         <a href="${event.url}">
                                             <span style="color: #fab005; text-decoration: underline;">Ver información...</span>
