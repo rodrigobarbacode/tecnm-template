@@ -46,7 +46,7 @@
                             <div class="event">
                                 <div class="row align-items-center">
                                     ${
-                                    event.isAllDayEvent || event.isOneDayEvent
+                                    event.isAllDayEvent
                                         ? `<div class="col-lg-4 col-md-4 col-4 text-center bordered-con"><p style="color: #2f476f; font-size: 1.8vh; font-weight: bolder;">${event.month.startMonth} ${event.day.startDay}</p></div>`
                                         : `<div class="col-lg-4 col-md-4 col-4 text-center bordered-con"><p style="color: #2f476f; font-size: 1.8vh; font-weight: bolder;">${event.month.startMonth} ${event.day.startDay} - ${event.month.endMonth} ${event.day.endDay}</p></div>`
                                     }
