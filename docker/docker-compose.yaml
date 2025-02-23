@@ -17,6 +17,7 @@ services:
       - /usr/src/app/ # Make the app accessible                     
     networks:
       - app-network # For future use
+      - nginx-network # For future use
 
   # App Server             
 
@@ -30,10 +31,9 @@ services:
     volumes:
       - ./php/applications/:/var/www/html # Make the PHP application accessible
       - ./php/entrypoints/php.ini:/usr/local/etc/php/php.ini # The PHP configuration file
-    ports:
-      - "7070:80" # The PHP server port
     networks:
       - php-server-network # Use the PHP server network to communicate with the MariaDB container
+      - nginx-network # Use the NGINX network to communicate with the App Server and PHPMyAdmin
     depends_on:
       - mariadb-php # Wait for the MariaDB container to start
     healthcheck:
@@ -70,11 +70,10 @@ services:
     environment:
       PMA_HOST: mariadb-php # Hostname of the MariaDB container             
       MYSQL_ROOT_PASSWORD: rootpassword # Default root password
+    ports:
+      - 8081:80 # The PHPMyAdmin port
     volumes:
       - phpmyadmin_data:/var/www/html # Store data persistently
-      - ./themes:/var/www/html/themes # The PHPMyAdmin themes
-    ports:
-      - "8080:80"
     depends_on:
       - mariadb-php # Wait for the MariaDB container to start
     networks:
@@ -87,18 +86,15 @@ services:
 
   prometheus:
     image: prom/prometheus # The official Prometheus image
-    ports:
-      - "9090:9090" # The Prometheus web interface
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml # The Prometheus configuration file
       - prometheus_data:/prometheus # Store data persistently
     networks:
       - metrics-network # Use the metrics network to communicate with the Node Exporter
+      - nginx-network # Use the NGINX network to communicate with the App Server and PHP Server
 
   grafana:
     image: grafana/grafana # The official Grafana image
-    ports:
-      - "3030:3000" # The Grafana web interface
     environment:
       - GF_SECURITY_ADMIN_USER=admin # The default Grafana admin user
       - GF_SECURITY_ADMIN_PASSWORD=EdqSa6R;&C4fw{Jx=ek<n@ # The default Grafana admin password
@@ -106,6 +102,7 @@ services:
       - grafana_data:/var/lib/grafana # Store data persistently
     networks:
       - metrics-network # Use the metrics network to communicate with Prometheus
+      - nginx-network # Use the NGINX network to communicate with the App Server and PHP Server
 
   node-exporter:
     image: prom/node-exporter # The official Node Exporter image
@@ -128,11 +125,17 @@ services:
   nginx:
     image: nginx:latest # The official Nginx image                   
     ports:
-      - "6672:80" # Port for App Server                  
-      - "6673:81" # Port for PHP Server                         
+      - "6672:6672" # App Server port 
+      - "6673:6673" # PHP Server port
+      - "6674:6674" # PHPMyAdmin port
+      - "6675:6675" # Grafana port         
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf # The NGINX configuration file
       # - phpmyadmin
+    networks:
+      - nginx-network # Use the NGINX network to communicate with the App Server and PHP Server
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Add the host.docker.internal alias to the NGINX container
 
   # NGINX Server Definition  
 
@@ -143,6 +146,8 @@ services:
 
 networks:
   app-network:
+    driver: bridge # Use the bridge network driver
+  nginx-network:
     driver: bridge # Use the bridge network driver
   metrics-network:
     driver: bridge # Use the bridge network driver
