@@ -480,10 +480,21 @@ router.get("/data/news", authMiddleware, async (req, res) => {
 // News Data Endpoint. (Requires auth_key)
 
 // Events Data Endpoint.
-router.get("/data/events", async (req, res) => {
+router.get("/data/events", authMiddleware, async (req, res) => {
   try {
-    let events = await listEvents(await authorize());
-    res.json(events);
+    const events = await listEvents(await authorize());
+
+    fs.writeFile(
+      path.join(process.cwd(), "/public/json/events-list.json"),
+      JSON.stringify(events),
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+
+    res.json({ message: 'Events updated.' });
   } catch (err) {
     console.log(err);
     res.status(500).send("Error fetching events");
