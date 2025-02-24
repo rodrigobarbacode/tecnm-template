@@ -6,6 +6,7 @@ const path = require("path");
 const express = require("express");
 const process = require("process");
 const axios = require("axios");
+const { DateTime } = require("luxon");
 
 const fs = require("fs").promises;
 
@@ -17,6 +18,7 @@ const router = express.Router();
 // Import the required libraries.
 const { google } = require("googleapis");
 const { authenticate } = require("@google-cloud/local-auth");
+const { time } = require("console");
 // Import the required libraries.
 
 // Provide the required configuration.
@@ -99,44 +101,49 @@ async function listEvents(auth) {
     timeMin: new Date().toISOString(),
     maxResults: 10,
     singleEvents: true,
-    orderBy: "startTime",
+    orderBy: "startTime"
   });
+  
   const events = res.data.items;
   if (!events || events.length === 0) {
     return null;
   }
-  var arr = [];
-  var json = {};
-  events.map((event, i) => {
-    var date = new Date(event.start.dateTime);
-    var options = { month: "long" };
-    var month = new Intl.DateTimeFormat("en-US", options).format(date);
 
-    var day = date.getDate();
-    var month = month.charAt(0).toUpperCase() + month.slice(1);
+  const json = events.map(event => {
+    const startRaw = event.start.date || event.start.dateTime;
+    const startDate = DateTime.fromISO(startRaw).setLocale('es-MX');
+  
+    const startDay = startDate.day;
+    const startMonth =  startDate.monthShort.charAt(0).toUpperCase() + startDate.monthShort.slice(1);
+  
+    const startHour = startDate.toFormat("hh:mm a");
+  
+    const endRaw = event.end.date || event.end.dateTime;
+    let endDate = DateTime.fromISO(endRaw).setLocale('es-MX');
+    if (event.start.date !== undefined) {
+      endDate = endDate.minus({ days: 1 });
+    }
+  
+    const endDay = endDate.day;
+    const endMonth = endDate.monthShort.charAt(0).toUpperCase() + endDate.monthShort.slice(1);
+  
+    const endHour = endDate.toFormat("hh:mm a");
+  
+    const url = event.htmlLink;
 
-    var start = date.toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    var end = new Date(event.end.dateTime).toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
+    const isAllDayEvent = startDate.toFormat("YYYY-mm-dd") === endDate.toFormat("YYYY-mm-dd");
 
-    var url = event.htmlLink;
-
-    arr.push({
+    return {
       title: event.summary,
       description: event.description,
-      day: day,
-      month: month.slice(0, 3),
-      start: start,
-      end: end,
-      url: url,
-    });
+      day: {startDay, endDay},
+      month: {startMonth, endMonth},
+      hour: {startHour, endHour},
+      url,
+      isAllDayEvent
+    }
   });
-  json = arr;
+
   return json;
 }
 // Google Calendar API.
@@ -473,10 +480,21 @@ router.get("/data/news", authMiddleware, async (req, res) => {
 // News Data Endpoint. (Requires auth_key)
 
 // Events Data Endpoint.
-router.get("/data/events", async (req, res) => {
+router.get("/data/events", authMiddleware, async (req, res) => {
   try {
-    let events = await listEvents(await authorize());
-    res.json(events);
+    const events = await listEvents(await authorize());
+
+    fs.writeFile(
+      path.join(process.cwd(), "/public/json/events-list.json"),
+      JSON.stringify(events),
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
+      }
+    );
+
+    res.json({ message: 'Events updated.' });
   } catch (err) {
     console.log(err);
     res.status(500).send("Error fetching events");
