@@ -71,7 +71,7 @@ services:
       PMA_HOST: mariadb-php # Hostname of the MariaDB container             
       MYSQL_ROOT_PASSWORD: rootpassword # Default root password
     ports:
-      - 8081:80 # The PHPMyAdmin port
+      - 8080:80 # The PHPMyAdmin port
     volumes:
       - phpmyadmin_data:/var/www/html # Store data persistently
     depends_on:
